@@ -17,6 +17,12 @@ window.ViewDeck = (function () {
   function loadCurrent() {
     try { deck = JSON.parse(localStorage.getItem(LS_CUR)) || blank(); } catch (e) { deck = blank(); }
     if (!Array.isArray(deck.personalities)) deck = blank();   // 旧结构 v1 数据直接重置
+    // 旧版 deck.aspect 是属性卡 id 字符串（如 "aspect-3122"），新版改为 4 维数值数组
+    if (typeof deck.aspect === 'string') {
+      const a = (DB.ranger && DB.ranger.aspects || []).find(x => x.id === deck.aspect);
+      deck.aspect = a ? a.values.slice() : null;
+    }
+    if (Array.isArray(deck.aspect) && deck.aspect.length !== 4) deck.aspect = null;
   }
   function saveCurrent() { localStorage.setItem(LS_CUR, JSON.stringify(deck)); }
   function savedDecks() {
@@ -54,7 +60,8 @@ window.ViewDeck = (function () {
 
   function validate() {
     const errs = [];
-    if (!deck.aspect) errs.push('未选择属性卡');
+    const aspectValid = isAspectValid(deck.aspect);
+    if (!aspectValid) errs.push('属性数值未设置合法（须 4 维各 1-4、总和 8、分布为 [1,2,2,3] 或 [1,1,2,4] 的某种排列）');
     if (deck.personalities.length !== 4) errs.push('性格需选 4 张（每属性各 1 张），当前 ' + deck.personalities.length);
     else if (new Set(deck.personalities.map(id => DB.byId[id] && DB.byId[id].aspect_id)).size !== 4) errs.push('性格卡须覆盖 4 个不同属性');
     if (!deck.background) errs.push('未选择背景');
@@ -93,18 +100,76 @@ window.ViewDeck = (function () {
     return `觉 ${values[0]} / 体 ${values[1]} / 专 ${values[2]} / 精 ${values[3]}`;
   }
 
-  /* 步骤 1：属性卡 */
+  /* 步骤 1：属性数值（4 维自由输入，每维 1-4，总和 8，分布须为 [1,2,2,3] 或 [1,1,2,4] 的某种排列） */
   function renderAspect() {
     const p = document.getElementById('step-aspect');
-    p.innerHTML = `<h3><span class="step-num">1</span>属性卡（12 选 1，决定四维数值）</h3>
-      <div class="setup-grid">${DB.ranger.aspects.map(a => `
-        <div class="setup-item${deck.aspect === a.id ? ' sel' : ''}" data-aspect="${a.id}">
-          <div class="aspect-vals">${a.values.join(' · ')}</div>
-          <div class="si-en">${aspVals(a.values)}</div></div>`).join('')}</div>`;
-    p.querySelectorAll('.setup-item').forEach(it => it.addEventListener('click', () => {
-      deck.aspect = (deck.aspect === it.dataset.aspect) ? null : it.dataset.aspect;
-      saveCurrent(); renderAll();
+    // 旧版数据兼容：deck.aspect 是属性卡 id 字符串，转成 4 维数组
+    if (typeof deck.aspect === 'string') {
+      const a = (DB.ranger && DB.ranger.aspects || []).find(x => x.id === deck.aspect);
+      deck.aspect = a ? a.values.slice() : null;
+    }
+    if (!Array.isArray(deck.aspect) || deck.aspect.length !== 4) deck.aspect = [2, 2, 2, 2];
+    const v = deck.aspect;
+    const labels = ['知觉 AWA', '体质 FIT', '专注 FOC', '精神 SPI'];
+    const colors = ['AWA', 'FIT', 'FOC', 'SPI'];
+    p.innerHTML = `<h3><span class="step-num">1</span>属性数值（自由分配 8 点到 4 维，每维 1-4，分布须为 1/2/2/3 或 1/1/2/4）</h3>
+      <div class="aspect-inputs">${v.map((n, i) => `
+        <div class="asp-input-row asp-${colors[i]}">
+          <span class="asp-label">${labels[i]}</span>
+          <button type="button" class="asp-btn" data-asp="${i}" data-delta="-1" aria-label="减 1">−</button>
+          <input type="number" class="asp-num" min="1" max="4" step="1" value="${n}" data-asp="${i}">
+          <button type="button" class="asp-btn" data-asp="${i}" data-delta="1" aria-label="加 1">+</button>
+        </div>`).join('')}
+        <div class="asp-total ${isAspectValid(v) ? 'ok' : 'bad'}">${aspectTotalText()}</div>
+      </div>`;
+    // 数值输入：仅更新数据 + 局部刷新 total，不重建 DOM（避免失焦）
+    p.querySelectorAll('input.asp-num').forEach(inp => inp.addEventListener('input', e => {
+      const i = +e.target.dataset.asp;
+      let n = parseInt(e.target.value, 10);
+      if (isNaN(n)) n = 1;
+      n = Math.max(1, Math.min(4, n));
+      deck.aspect[i] = n;
+      saveCurrent();
+      updateAspectTotal();
     }));
+    p.querySelectorAll('input.asp-num').forEach(inp => inp.addEventListener('blur', e => {
+      const i = +e.target.dataset.asp;
+      // blur 时把 input 值纠正为合法范围内的整数
+      e.target.value = deck.aspect[i];
+      renderAll();  // 重建以同步下游面板（含属性满足判定）
+    }));
+    // 加减按钮：直接重建 DOM（按钮不持焦）
+    p.querySelectorAll('button.asp-btn').forEach(btn => btn.addEventListener('click', () => {
+      const i = +btn.dataset.asp;
+      const d = +btn.dataset.delta;
+      deck.aspect[i] = Math.max(1, Math.min(4, (deck.aspect[i] || 2) + d));
+      saveCurrent();
+      renderAll();
+    }));
+  }
+  /* 合法分布校验：4 维各 1-4，总和 8，且分布恰为 [1,2,2,3] 或 [1,1,2,4] 的某种排列。
+     前者对应核心盒 12 张属性卡，后者对应扩展包引入的 4211 分布（如允许某维达到 4） */
+  const VALID_DIST = ['1,2,2,3', '1,1,2,4'];
+  function isAspectValid(v) {
+    if (!Array.isArray(v) || v.length !== 4) return false;
+    if (!v.every(n => n >= 1 && n <= 4)) return false;
+    if (v.reduce((s, n) => s + n, 0) !== 8) return false;
+    return VALID_DIST.includes(v.slice().sort().join(','));
+  }
+  function aspectTotalText() {
+    const v = deck.aspect || [0, 0, 0, 0];
+    const total = v.reduce((s, n) => s + (n || 0), 0);
+    const valid = isAspectValid(v);
+    return `已分配 ${total} / 8 ${valid ? '✓' : (total > 8 ? `（超 ${total - 8}）` : `（差 ${8 - total}）`)}`;
+  }
+  function updateAspectTotal() {
+    const p = document.getElementById('step-aspect');
+    if (!p) return;
+    const el = p.querySelector('.asp-total');
+    if (el) {
+      el.className = 'asp-total ' + (isAspectValid(deck.aspect) ? 'ok' : 'bad');
+      el.textContent = aspectTotalText();
+    }
   }
 
   /* 步骤 2：性格（每属性各 1 张） */
@@ -186,11 +251,9 @@ window.ViewDeck = (function () {
   /* 属性需求与满足判定（仿 RangersDB 原站英文模式） */
   const ASPECT_ORDER = ['AWA', 'FIT', 'FOC', 'SPI'];
   function aspectValOf(id) {
-    if (!deck.aspect) return null;
-    const a = DB.ranger.aspects.find(x => x.id === deck.aspect);
-    if (!a) return null;
+    if (!Array.isArray(deck.aspect)) return null;
     const i = ASPECT_ORDER.indexOf(id);
-    return i >= 0 ? a.values[i] : null;
+    return i >= 0 ? deck.aspect[i] : null;
   }
   // null = 无需求（属性卡/角色卡 cost=null），true = 满足，false = 不足
   function cardMeetsAspect(c) {
@@ -271,7 +334,7 @@ window.ViewDeck = (function () {
     const n = deckCount();
     const errs = validate();
     const li = (c, cnt) => c ? `<li><span>${UI.esc(c.name_zh || c.name_en)}</span><b>×${cnt}</b></li>` : '';
-    const aspectCard = deck.aspect ? DB.ranger.aspects.find(a => a.id === deck.aspect) : null;
+    const aspectArr = Array.isArray(deck.aspect) ? deck.aspect : null;
     const roleCard = deck.role ? DB.byId[deck.role] : null;
     const pers = deck.personalities.map(id => li(DB.byId[id], PICK_COPIES)).join('');
     const bg = deck.bgPicks.map(id => li(DB.byId[id], PICK_COPIES)).join('');
@@ -282,7 +345,7 @@ window.ViewDeck = (function () {
     const saved = savedDecks();
     p.innerHTML = `<h3>牌组总览（<span class="deck-count ${n === DECK_SIZE ? 'full' : ''}">${n}</span>/${DECK_SIZE}）</h3>
       <input class="deck-name-input" id="deck-name" value="${UI.esc(deck.name)}" placeholder="牌组名称">
-      ${aspectCard ? `<div class="ov-line">属性卡：${aspectCard.values.join(' · ')}（${UI.esc(aspVals(aspectCard.values))}）</div>` : ''}
+      ${aspectArr ? `<div class="ov-line">属性：${aspVals(aspectArr)}（${aspectArr.join(' · ')}）</div>` : ''}
       ${roleCard ? `<div class="ov-line">角色：${UI.esc(roleCard.name_zh || roleCard.name_en)}（开局在场）</div>` : ''}
       <div class="ov-group">性格</div><ul>${pers || '<li style="color:var(--fg-dim)">未选</li>'}</ul>
       <div class="ov-group">背景</div><ul>${bg || '<li style="color:var(--fg-dim)">未选</li>'}</ul>

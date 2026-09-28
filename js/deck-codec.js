@@ -1,7 +1,9 @@
 /* 牌组分享码编解码：EBR1.<base64url(JSON)>
- * payload v2 = {v:2, b:背景id, s:专长id, a:属性卡id, r:角色卡id,
+ * payload v2 = {v:2, b:背景id, s:专长id, a:属性数组[AWA,FIT,FOC,SPI], r:角色卡id,
  *               p:[4张性格卡id], k:[背景选卡×5], j:[专长选卡×5], i:[兴趣卡×1]}
  * 数量恒定：性格/选卡每张 2 副本，总牌数 = 2×(4+5+5+1) = 30
+ * 注：旧版 a 字段是属性卡 id 字符串，新版改为 4 维数值数组；
+ *     decode 时不做迁移，由 view-deck.js renderAspect/loadCurrent 负责字符串→数组的兜底转换
  */
 window.DeckCodec = (function () {
   function b64urlEncode(str) {

@@ -78,6 +78,22 @@ footer{padding:14px 20px;text-align:center;color:var(--fg-dim);font-size:.75rem;
 .setup-item .si-en{font-size:.72rem;color:var(--fg-dim)}
 .setup-item .si-count{font-size:.72rem;color:var(--fg-dim);margin-top:4px}
 .aspect-vals{font-size:1.1rem;letter-spacing:2px;margin-top:4px}
+
+/* ---- 步骤 1：属性数值自由输入 ---- */
+.aspect-inputs{display:flex;flex-direction:column;gap:8px;max-width:520px}
+.asp-input-row{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:6px}
+.asp-input-row.asp-AWA{border-left-color:var(--awa)}
+.asp-input-row.asp-FIT{border-left-color:var(--fit)}
+.asp-input-row.asp-FOC{border-left-color:var(--foc)}
+.asp-input-row.asp-SPI{border-left-color:var(--spi)}
+.asp-label{flex:0 0 110px;font-size:.92rem;font-weight:600}
+.asp-btn{width:30px;height:30px;border-radius:6px;border:1px solid var(--line);background:var(--bg3);color:var(--fg);cursor:pointer;font-size:1.1rem;line-height:1;padding:0}
+.asp-btn:hover{border-color:var(--accent);color:var(--accent)}
+.asp-num{width:54px;text-align:center;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:6px 4px;font-size:1rem;font-weight:700;-moz-appearance:textfield}
+.asp-num::-webkit-outer-spin-button,.asp-num::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.asp-total{margin-top:4px;font-size:.9rem;font-weight:700}
+.asp-total.ok{color:var(--accent)}
+.asp-total.bad{color:var(--danger)}
 .pool-list{display:flex;flex-direction:column;gap:6px}
 .pool-row{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer}
 .pool-row:hover{border-color:var(--accent2)}
