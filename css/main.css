@@ -1,0 +1,116 @@
+:root{
+  --bg:#141a16; --bg2:#1d2620; --bg3:#26332b; --line:#35443a;
+  --fg:#e8efe9; --fg-dim:#9db0a3; --accent:#7fc97f; --accent2:#4c9a5e;
+  --awa:#5aa9e6; --fit:#e6735a; --foc:#e6c65a; --spi:#b07fe6;
+  --danger:#e65a6e; --warn:#e6b45a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{background:var(--bg);color:var(--fg);font-family:"Microsoft YaHei","PingFang SC",sans-serif;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--accent);text-decoration:none}
+#topbar{display:flex;align-items:center;gap:24px;padding:10px 20px;background:var(--bg2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;flex-wrap:wrap}
+.brand{font-size:1.25rem;font-weight:700;color:var(--accent);cursor:pointer;white-space:nowrap}
+.brand-sub{font-size:.75rem;color:var(--fg-dim);font-weight:400;margin-left:6px}
+#topbar nav{display:flex;gap:4px}
+#topbar nav a{padding:6px 14px;border-radius:6px;color:var(--fg-dim);font-size:.95rem}
+#topbar nav a.active,#topbar nav a:hover{color:var(--fg);background:var(--bg3)}
+#meta-info{margin-left:auto;font-size:.75rem;color:var(--fg-dim)}
+main{flex:1;padding:16px 20px;max-width:1500px;width:100%;margin:0 auto}
+footer{padding:14px 20px;text-align:center;color:var(--fg-dim);font-size:.75rem;border-top:1px solid var(--line)}
+
+/* ---- 筛选器 ---- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;align-items:center}
+.filters input[type=text]{background:var(--bg2);border:1px solid var(--line);color:var(--fg);padding:7px 12px;border-radius:6px;width:220px;font-size:.9rem}
+.filters select{background:var(--bg2);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:6px;font-size:.9rem}
+.filters label{font-size:.85rem;color:var(--fg-dim);display:flex;align-items:center;gap:4px;cursor:pointer}
+.count-info{color:var(--fg-dim);font-size:.85rem;margin-left:auto}
+
+/* ---- 卡牌网格 ---- */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.card-tile{background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;cursor:pointer;transition:transform .12s,border-color .12s;display:flex;flex-direction:column}
+.card-tile:hover{transform:translateY(-3px);border-color:var(--accent2)}
+.card-tile img{width:100%;display:block;background:#000;aspect-ratio:0.7;object-fit:contain}
+.card-tile .ct-body{padding:8px 10px}
+.card-tile .ct-name{font-weight:600;font-size:.95rem;line-height:1.3}
+.card-tile .ct-name-en{color:var(--fg-dim);font-size:.75rem;margin-top:1px}
+.card-tile .ct-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;font-size:.72rem}
+.tag{background:var(--bg3);border-radius:4px;padding:1px 7px;color:var(--fg-dim)}
+.tag.asp-AWA{color:var(--awa)} .tag.asp-FIT{color:var(--fit)}
+.tag.asp-FOC{color:var(--foc)} .tag.asp-SPI{color:var(--spi)}
+.tag.errata{background:var(--danger);color:#fff}
+.tag.noreview{background:transparent;border:1px dashed var(--warn);color:var(--warn)}
+#scroll-sentinel{height:1px}
+
+/* ---- 弹窗 ---- */
+.modal-mask{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal{background:var(--bg2);border:1px solid var(--line);border-radius:10px;max-width:920px;width:100%;max-height:90vh;overflow:auto;position:relative}
+.modal-close{position:absolute;top:10px;right:12px;font-size:1.4rem;color:var(--fg-dim);cursor:pointer;background:none;border:none;z-index:2}
+.modal-close:hover{color:var(--fg)}
+.card-detail{display:flex;gap:20px;padding:22px;flex-wrap:wrap}
+.card-detail img{width:300px;max-width:100%;border-radius:6px;align-self:flex-start}
+.card-detail .cd-info{flex:1;min-width:280px}
+.card-detail h2{font-size:1.4rem}
+.card-detail .cd-en{color:var(--fg-dim);margin-bottom:8px}
+.cd-row{margin:6px 0;font-size:.9rem;color:var(--fg-dim)}
+.cd-text{margin-top:12px;line-height:1.7;font-size:.95rem;white-space:pre-wrap}
+.cd-text .mt-badge{display:inline-block;font-size:.7rem;background:var(--warn);color:#222;border-radius:4px;padding:0 6px;margin-left:8px;vertical-align:middle}
+.cd-text-en{margin-top:10px;color:var(--fg-dim);font-size:.82rem;line-height:1.6;white-space:pre-wrap}
+.errata-box{margin-top:14px;border:1px solid var(--danger);border-radius:8px;padding:10px 14px;background:rgba(230,90,110,.08)}
+.errata-box h4{color:var(--danger);font-size:.9rem;margin-bottom:6px}
+.errata-box .cd-text{font-size:.88rem}
+.errata-toggle{margin-top:6px;font-size:.8rem;cursor:pointer}
+
+/* 文本内的图标 */
+.tok{display:inline-block;min-width:1.15em;text-align:center;border-radius:4px;padding:0 3px;font-size:.82em;font-weight:700;background:var(--bg3)}
+.tok-AWA{color:var(--awa)} .tok-FIT{color:var(--fit)} .tok-FOC{color:var(--foc)} .tok-SPI{color:var(--spi)}
+.tok-harm{color:var(--danger)}
+.flv{opacity:.65;font-style:italic}
+
+/* ---- 组牌器 ---- */
+.deck-layout{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}
+@media(max-width:1000px){.deck-layout{grid-template-columns:1fr}}
+.deck-panel{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px}
+.deck-panel h3{margin-bottom:10px;font-size:1.05rem}
+.setup-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.setup-item{border:1px solid var(--line);border-radius:8px;padding:10px;cursor:pointer;text-align:center;background:var(--bg3)}
+.setup-item:hover{border-color:var(--accent2)}
+.setup-item.sel{border-color:var(--accent);background:rgba(127,201,127,.12)}
+.setup-item .si-en{font-size:.72rem;color:var(--fg-dim)}
+.setup-item .si-count{font-size:.72rem;color:var(--fg-dim);margin-top:4px}
+.aspect-vals{font-size:1.1rem;letter-spacing:2px;margin-top:4px}
+.pool-list{display:flex;flex-direction:column;gap:6px}
+.pool-row{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer}
+.pool-row:hover{border-color:var(--accent2)}
+.pool-row.disabled{opacity:.38;cursor:not-allowed}
+.pool-row .pr-name{flex:1;min-width:0}
+.pool-row .pr-name small{display:block;color:var(--fg-dim)}
+.pool-row .pr-cost{font-weight:700;width:2em;text-align:center}
+.pool-row .pr-ctrl{display:flex;align-items:center;gap:6px}
+.pool-row button{width:26px;height:26px;border-radius:5px;border:1px solid var(--line);background:var(--bg3);color:var(--fg);cursor:pointer;font-size:1rem;line-height:1}
+.pool-row button:hover:not(:disabled){border-color:var(--accent)}
+.pool-row button:disabled{opacity:.3;cursor:not-allowed}
+.deck-side{position:sticky;top:70px}
+.deck-side ul{list-style:none;max-height:46vh;overflow:auto;margin:8px 0}
+.deck-side li{display:flex;justify-content:space-between;padding:3px 4px;font-size:.85rem;border-bottom:1px dashed var(--line)}
+.deck-warnings{color:var(--danger);font-size:.82rem;margin:8px 0;white-space:pre-wrap}
+.deck-ok{color:var(--accent);font-size:.85rem}
+.btn{background:var(--accent2);border:none;color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:.9rem;margin:4px 4px 4px 0}
+.btn:hover{filter:brightness(1.15)}
+.btn.ghost{background:var(--bg3);border:1px solid var(--line)}
+.deck-count{font-size:1.3rem;font-weight:700}
+.deck-count.full{color:var(--accent)}
+textarea.share-out{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:8px;font-size:.75rem;margin-top:8px;resize:vertical}
+.deck-name-input{background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:6px 10px;width:100%;margin-bottom:8px}
+.saved-deck{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:6px;margin-bottom:6px;cursor:pointer}
+.saved-deck:hover{border-color:var(--accent2)}
+.saved-deck .sd-del{color:var(--danger);cursor:pointer;padding:0 6px}
+
+/* ---- 勘误页 ---- */
+.errata-item{background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--danger);border-radius:8px;padding:14px 18px;margin-bottom:14px}
+.errata-item h3{font-size:1.05rem;margin-bottom:4px}
+.errata-item .ei-slug{color:var(--fg-dim);font-size:.78rem;margin-bottom:8px}
+.errata-item .ei-text{white-space:pre-wrap;line-height:1.65;font-size:.9rem}
+.errata-item .ei-link{font-size:.8rem;margin-top:8px;display:inline-block}
+.attached-badge{font-size:.72rem;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.empty-hint{color:var(--fg-dim);text-align:center;padding:60px 0}
+h2.view-title{margin-bottom:14px}

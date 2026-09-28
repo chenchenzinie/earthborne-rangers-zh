@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山谷牌库 · 地缘行者中文组牌站</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand" onclick="location.hash='#/cards'">山谷牌库 <span class="brand-sub">RangersDB 中文版</span></div>
+  <nav>
+    <a href="#/cards" data-nav="cards">卡牌浏览</a>
+    <a href="#/deck" data-nav="deck">组牌器</a>
+    <a href="#/errata" data-nav="errata">官方勘误</a>
+  </nav>
+  <div id="meta-info"></div>
+</header>
+<main id="view"></main>
+<div id="modal-root"></div>
+<footer>
+  非官方粉丝工具 · 卡牌文字与图片版权归 Earthborne Games 所有 · 数据来源 RangersDB ·
+  汉化：辰辰子 · 如版权方要求将立即下架
+</footer>
+<script src="js/data.js"></script>
+<script src="js/deck-codec.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/view-cards.js"></script>
+<script src="js/view-deck.js"></script>
+<script src="js/view-errata.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

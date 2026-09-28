@@ -1,0 +1,860 @@
+{
+ "card_count": 280,
+ "name_zh_count": 236,
+ "text_zh_count": 1,
+ "pending_name": [
+  {
+   "id": "02201",
+   "name_en": "Lambance Rig"
+  },
+  {
+   "id": "02202",
+   "name_en": "\"Lucky\" Cloak"
+  },
+  {
+   "id": "02203",
+   "name_en": "A Frog this Way Comes"
+  },
+  {
+   "id": "02204",
+   "name_en": "The Shapeshifter"
+  },
+  {
+   "id": "02205",
+   "name_en": "Grasp of the Verdessa"
+  },
+  {
+   "id": "02206",
+   "name_en": "Silaro's Fastidiousness"
+  },
+  {
+   "id": "02207",
+   "name_en": "Fate of the Reclaimers"
+  },
+  {
+   "id": "02208",
+   "name_en": "Rebreather"
+  },
+  {
+   "id": "02209",
+   "name_en": "Gus the Mole"
+  },
+  {
+   "id": "02210",
+   "name_en": "Portable Generator"
+  },
+  {
+   "id": "02211",
+   "name_en": "Wanderer Spirit"
+  },
+  {
+   "id": "02212",
+   "name_en": "Expedition Logbook"
+  },
+  {
+   "id": "02213",
+   "name_en": "The Ambition of the Estians"
+  },
+  {
+   "id": "02214",
+   "name_en": "Ren Kobo's Hat"
+  },
+  {
+   "id": "02215",
+   "name_en": "As Above, So Below"
+  },
+  {
+   "id": "02216",
+   "name_en": "Lunn's Door Opener"
+  },
+  {
+   "id": "02217",
+   "name_en": "Stripe, Loyal Lutrinal"
+  },
+  {
+   "id": "02218",
+   "name_en": "Carried by the Wind"
+  },
+  {
+   "id": "02219",
+   "name_en": "Archivist Spirit"
+  },
+  {
+   "id": "02220",
+   "name_en": "Call the Scuttlebus"
+  },
+  {
+   "id": "02221",
+   "name_en": "Quisi's Lantern"
+  },
+  {
+   "id": "02222",
+   "name_en": "Echoes of the Estians"
+  },
+  {
+   "id": "02223",
+   "name_en": "Repellant Spores"
+  },
+  {
+   "id": "02224",
+   "name_en": "Bursting with Life"
+  },
+  {
+   "id": "02225",
+   "name_en": "Memlev Hammock"
+  },
+  {
+   "id": "02226",
+   "name_en": "Mycelial Incense"
+  },
+  {
+   "id": "02227",
+   "name_en": "Gardener Spirit"
+  },
+  {
+   "id": "02228",
+   "name_en": "The Audacity of the Estians"
+  },
+  {
+   "id": "02229",
+   "name_en": "Flowsteel Lithophone"
+  },
+  {
+   "id": "04201",
+   "name_en": "Adaptive Glass Shard"
+  },
+  {
+   "id": "04202",
+   "name_en": "True Friendship"
+  },
+  {
+   "id": "04203",
+   "name_en": "Floral Cloak"
+  },
+  {
+   "id": "04204",
+   "name_en": "Growth Serum"
+  },
+  {
+   "id": "04205",
+   "name_en": "Rousing Speech"
+  },
+  {
+   "id": "05201",
+   "name_en": "Climbing Harness"
+  },
+  {
+   "id": "05202",
+   "name_en": "Memlev Snowshoes"
+  },
+  {
+   "id": "05203",
+   "name_en": "Nimbus Spirit"
+  },
+  {
+   "id": "05204",
+   "name_en": "Aspect of the Elk"
+  },
+  {
+   "id": "05205",
+   "name_en": "Extraspatial Veil"
+  },
+  {
+   "id": "06201",
+   "name_en": "Symbiotic Dendrite"
+  },
+  {
+   "id": "06202",
+   "name_en": "Timely Delivery"
+  },
+  {
+   "id": "06203",
+   "name_en": "Lil' Lunn the Crayfish"
+  },
+  {
+   "id": "06204",
+   "name_en": "Acidic Bile"
+  },
+  {
+   "id": "06205",
+   "name_en": "Electrostatic Bug Net"
+  }
+ ],
+ "pending_traits": [
+  {
+   "id": "01046",
+   "name_en": "Field Journal",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "01047",
+   "name_en": "Hidden Trail",
+   "traits": [
+    "Trail"
+   ]
+  },
+  {
+   "id": "01053",
+   "name_en": "Ferinodex",
+   "traits": [
+    "Book",
+    "Tech"
+   ]
+  },
+  {
+   "id": "01060",
+   "name_en": "Memorill Sketchpad",
+   "traits": [
+    "Book",
+    "Tech"
+   ]
+  },
+  {
+   "id": "01081",
+   "name_en": "Root Snare",
+   "traits": [
+    "Manifestation",
+    "Nature"
+   ]
+  },
+  {
+   "id": "01082",
+   "name_en": "Sky Whip",
+   "traits": [
+    "Manifestation",
+    "Weapon"
+   ]
+  },
+  {
+   "id": "01083",
+   "name_en": "Stave of the Sun",
+   "traits": [
+    "Conduit",
+    "Expert"
+   ]
+  },
+  {
+   "id": "01084",
+   "name_en": "What Should Never Be",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01084-set_01",
+   "name_en": "What Should Never Be",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01085",
+   "name_en": "Shape the Earth",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01086",
+   "name_en": "Staff of the Wanderer",
+   "traits": [
+    "Conduit",
+    "Expert"
+   ]
+  },
+  {
+   "id": "01087",
+   "name_en": "Throng of Life",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01089",
+   "name_en": "Rod of the Clouds",
+   "traits": [
+    "Conduit",
+    "Expert"
+   ]
+  },
+  {
+   "id": "01090",
+   "name_en": "Harmonize",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01091",
+   "name_en": "Seen Through Cycles",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01092",
+   "name_en": "Scepter of Harmony",
+   "traits": [
+    "Conduit",
+    "Expert"
+   ]
+  },
+  {
+   "id": "01202",
+   "name_en": "Scuttler Tunnel",
+   "traits": [
+    "Underground"
+   ]
+  },
+  {
+   "id": "01204",
+   "name_en": "Sil's Sketchbook",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "01205",
+   "name_en": "Light As a Feather",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "01208",
+   "name_en": "Topographone",
+   "traits": [
+    "Tech",
+    "Estian"
+   ]
+  },
+  {
+   "id": "01213",
+   "name_en": "Dolewood Canoe",
+   "traits": [
+    "Vehicle"
+   ]
+  },
+  {
+   "id": "01215",
+   "name_en": "Touch of the Verdessa",
+   "traits": [
+    "Manifestation",
+    "Nature"
+   ]
+  },
+  {
+   "id": "01218",
+   "name_en": "Probability Compass",
+   "traits": [
+    "Tech",
+    "Estian"
+   ]
+  },
+  {
+   "id": "01219",
+   "name_en": "Translocator",
+   "traits": [
+    "Otherworldly"
+   ]
+  },
+  {
+   "id": "02204",
+   "name_en": "The Shapeshifter",
+   "traits": [
+    "Companion",
+    "Biomeld"
+   ]
+  },
+  {
+   "id": "02205",
+   "name_en": "Grasp of the Verdessa",
+   "traits": [
+    "Manifestation",
+    "Nature"
+   ]
+  },
+  {
+   "id": "02207",
+   "name_en": "Fate of the Reclaimers",
+   "traits": [
+    "Tale",
+    "Weapon"
+   ]
+  },
+  {
+   "id": "02208",
+   "name_en": "Rebreather",
+   "traits": [
+    "Tech",
+    "Estian"
+   ]
+  },
+  {
+   "id": "02210",
+   "name_en": "Portable Generator",
+   "traits": [
+    "Tech",
+    "Estian"
+   ]
+  },
+  {
+   "id": "02211",
+   "name_en": "Wanderer Spirit",
+   "traits": [
+    "Spirit",
+    "Estian"
+   ]
+  },
+  {
+   "id": "02212",
+   "name_en": "Expedition Logbook",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "02213",
+   "name_en": "The Ambition of the Estians",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "02218",
+   "name_en": "Carried by the Wind",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "02219",
+   "name_en": "Archivist Spirit",
+   "traits": [
+    "Spirit",
+    "Estian"
+   ]
+  },
+  {
+   "id": "02222",
+   "name_en": "Echoes of the Estians",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "02227",
+   "name_en": "Gardener Spirit",
+   "traits": [
+    "Spirit",
+    "Estian"
+   ]
+  },
+  {
+   "id": "02228",
+   "name_en": "The Audacity of the Estians",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "02229",
+   "name_en": "Flowsteel Lithophone",
+   "traits": [
+    "Tech",
+    "Instrument"
+   ]
+  },
+  {
+   "id": "03002",
+   "name_en": "Grell's Secret Map",
+   "traits": [
+    "Map",
+    "Expert"
+   ]
+  },
+  {
+   "id": "03010",
+   "name_en": "Essays on Shepherding",
+   "traits": [
+    "Book",
+    "Aid"
+   ]
+  },
+  {
+   "id": "03015",
+   "name_en": "Mir's Botany",
+   "traits": [
+    "Book",
+    "Aid"
+   ]
+  },
+  {
+   "id": "03020",
+   "name_en": "Personal Travelogue",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "03033",
+   "name_en": "Slow Time",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "03034",
+   "name_en": "All is Clay",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "03035",
+   "name_en": "Conductor",
+   "traits": [
+    "Manifestation"
+   ]
+  },
+  {
+   "id": "03036",
+   "name_en": "Visions of the Floating Tower",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "03040",
+   "name_en": "Clearer of Ways",
+   "traits": [
+    "Wisdom",
+    "Spiritual"
+   ]
+  },
+  {
+   "id": "03041",
+   "name_en": "Call Upon the Spirits",
+   "traits": [
+    "Knowledge",
+    "Expert"
+   ]
+  },
+  {
+   "id": "03042",
+   "name_en": "Sitka Spirit",
+   "traits": [
+    "Spirit"
+   ]
+  },
+  {
+   "id": "03043",
+   "name_en": "Spirit of the Verdessa",
+   "traits": [
+    "Spirit",
+    "Major"
+   ]
+  },
+  {
+   "id": "03045",
+   "name_en": "Attendant Guide",
+   "traits": [
+    "Knowledge",
+    "Spiritual"
+   ]
+  },
+  {
+   "id": "03046",
+   "name_en": "Atrox Spirit",
+   "traits": [
+    "Spirit"
+   ]
+  },
+  {
+   "id": "03047",
+   "name_en": "Spirit of Mount Nim",
+   "traits": [
+    "Spirit",
+    "Major"
+   ]
+  },
+  {
+   "id": "03048",
+   "name_en": "Carbonforged Drum",
+   "traits": [
+    "Instrument",
+    "Tech"
+   ]
+  },
+  {
+   "id": "03049",
+   "name_en": "The Long Walk",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "03050",
+   "name_en": "Irix Spirit",
+   "traits": [
+    "Spirit"
+   ]
+  },
+  {
+   "id": "03051",
+   "name_en": "Spirit of the Valley",
+   "traits": [
+    "Spirit",
+    "Major"
+   ]
+  },
+  {
+   "id": "03052",
+   "name_en": "That Which Connects Us",
+   "traits": [
+    "Skill",
+    "Spiritual"
+   ]
+  },
+  {
+   "id": "03054",
+   "name_en": "Lutrinal Spirit",
+   "traits": [
+    "Spirit"
+   ]
+  },
+  {
+   "id": "03055",
+   "name_en": "Spirit of the Silverfin",
+   "traits": [
+    "Spirit",
+    "Major"
+   ]
+  },
+  {
+   "id": "03056",
+   "name_en": "The Cats of Elder Atma",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03057",
+   "name_en": "Hush Little Critter",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03058",
+   "name_en": "The Better Part of Valor",
+   "traits": [
+    "Experience",
+    "Tale"
+   ]
+  },
+  {
+   "id": "03059",
+   "name_en": "Wonders of the Valley",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03060",
+   "name_en": "The Buck and the Wolhund",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03062",
+   "name_en": "The Tale of Two Rivers",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03063",
+   "name_en": "Book of Great Deeds",
+   "traits": [
+    "Book"
+   ]
+  },
+  {
+   "id": "03064",
+   "name_en": "Transverse Ocarina",
+   "traits": [
+    "Instrument",
+    "Aid"
+   ]
+  },
+  {
+   "id": "03065",
+   "name_en": "The Tireless Artisan",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03067",
+   "name_en": "The Stouthearted Guardian",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "03068",
+   "name_en": "Dolewood Lute",
+   "traits": [
+    "Instrument",
+    "Aid"
+   ]
+  },
+  {
+   "id": "03071",
+   "name_en": "Enthusiastic",
+   "traits": [
+    "Acquired"
+   ]
+  },
+  {
+   "id": "03202",
+   "name_en": "Superior Trail",
+   "traits": [
+    "Trail"
+   ]
+  },
+  {
+   "id": "03203",
+   "name_en": "Zoological Compendium",
+   "traits": [
+    "Book",
+    "Tech"
+   ]
+  },
+  {
+   "id": "03204",
+   "name_en": "Brightfruit Tree",
+   "traits": [
+    "Flora"
+   ]
+  },
+  {
+   "id": "03205",
+   "name_en": "The Bravest Ranger",
+   "traits": [
+    "Tale"
+   ]
+  },
+  {
+   "id": "04205",
+   "name_en": "Rousing Speech",
+   "traits": [
+    "Skill",
+    "Tale"
+   ]
+  },
+  {
+   "id": "05203",
+   "name_en": "Nimbus Spirit",
+   "traits": [
+    "Spirit"
+   ]
+  },
+  {
+   "id": "05204",
+   "name_en": "Aspect of the Elk",
+   "traits": [
+    "Spiritual"
+   ]
+  },
+  {
+   "id": "05205",
+   "name_en": "Extraspatial Veil",
+   "traits": [
+    "Otherworldly"
+   ]
+  },
+  {
+   "id": "06203",
+   "name_en": "Lil' Lunn the Crayfish",
+   "traits": [
+    "Compansion",
+    "Crustacean"
+   ]
+  }
+ ],
+ "pending_text_count": 275,
+ "errata_total": 16,
+ "errata_unmatched": [
+  {
+   "slug": "general_12_of_15",
+   "reason": "no_card_match",
+   "title": "General Set Card 12 of 15"
+  },
+  {
+   "slug": "general_13_of_15",
+   "reason": "no_card_match",
+   "title": "General Set Card 13 of 15"
+  },
+  {
+   "slug": "loa_mission_10_of_42",
+   "reason": "no_card_match",
+   "title": "LoA Mission Set Card 10 of 42"
+  },
+  {
+   "slug": "loa_mission_17_of_42",
+   "reason": "no_card_match",
+   "title": "LoA Mission Set Card 17 of 42"
+  },
+  {
+   "slug": "location_28_of_37",
+   "reason": "no_card_match",
+   "title": "The Greenbridge - Location Set Card 28 of 37"
+  },
+  {
+   "slug": "mission_14_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 14 of 34"
+  },
+  {
+   "slug": "mission_18_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 18 of 34"
+  },
+  {
+   "slug": "mission_25_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 25 of 34"
+  },
+  {
+   "slug": "mission_26_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 26 of 34"
+  },
+  {
+   "slug": "mission_29_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 29 of 34"
+  },
+  {
+   "slug": "mission_32_of_34",
+   "reason": "no_card_match",
+   "title": "Mission Set Card 32 of 34"
+  },
+  {
+   "slug": "valley_2_of_14",
+   "reason": "no_card_match",
+   "title": "Quisi Vos, Rascal - Valley Set Card 2 of 14"
+  },
+  {
+   "slug": "weather_6_of_8",
+   "reason": "no_card_match",
+   "title": "Thunderhead - Weather Set Card 6 of 8"
+  }
+ ],
+ "upstream_sha": "bd3f91aa19c0f71b89546bb7e6a2fd5b4d93963c"
+}

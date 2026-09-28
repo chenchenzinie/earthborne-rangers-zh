@@ -1,0 +1,494 @@
+{
+ "backgrounds": [
+  {
+   "id": "traveler",
+   "name_en": "Traveler",
+   "name_zh": "旅人",
+   "cards": [
+    "01001",
+    "01002",
+    "01002-set_01",
+    "01004",
+    "01005",
+    "01006",
+    "01007",
+    "01008",
+    "01009",
+    "01009-set_01",
+    "03002",
+    "03003",
+    "03004"
+   ],
+   "image": null
+  },
+  {
+   "id": "artisan",
+   "name_en": "Artisan",
+   "name_zh": "工匠",
+   "cards": [
+    "01010",
+    "01011",
+    "01012",
+    "01013",
+    "01013-set_01",
+    "01014",
+    "01015",
+    "01016",
+    "01017",
+    "01018",
+    "03005",
+    "03006",
+    "03007",
+    "03008"
+   ],
+   "image": null
+  },
+  {
+   "id": "shepherd",
+   "name_en": "Shepherd",
+   "name_zh": "牧者",
+   "cards": [
+    "01019",
+    "01020",
+    "01021",
+    "01021-set_01",
+    "01022",
+    "01023",
+    "01024",
+    "01025",
+    "01026",
+    "01027",
+    "01027-set_01",
+    "03009",
+    "03010",
+    "03011",
+    "03012"
+   ],
+   "image": null
+  },
+  {
+   "id": "forager",
+   "name_en": "Forager",
+   "name_zh": "觅食者",
+   "cards": [
+    "01028",
+    "01029",
+    "01030",
+    "01031",
+    "01032",
+    "01033",
+    "01034",
+    "01035",
+    "01036",
+    "03013",
+    "03014",
+    "03015",
+    "03016"
+   ],
+   "image": null
+  }
+ ],
+ "specialties": [
+  {
+   "id": "conciliator",
+   "name_en": "Conciliator",
+   "name_zh": "调解者",
+   "cards": [
+    "01067",
+    "01068",
+    "01069",
+    "01069-set_01",
+    "01070",
+    "01071",
+    "01072",
+    "01073",
+    "01074",
+    "01074-set_01",
+    "01075",
+    "01075-set_01",
+    "01076",
+    "01077",
+    "01077-set_01",
+    "01078",
+    "03028",
+    "03029",
+    "03031"
+   ],
+   "image": null
+  },
+  {
+   "id": "explorer",
+   "name_en": "Explorer",
+   "name_zh": "探索者",
+   "cards": [
+    "01039",
+    "01040",
+    "01041",
+    "01041-set_01",
+    "01042",
+    "01043",
+    "01044",
+    "01044-set_01",
+    "01045",
+    "01046",
+    "01047",
+    "01048",
+    "01049",
+    "01050",
+    "03018",
+    "03019",
+    "03020",
+    "03021"
+   ],
+   "image": null
+  },
+  {
+   "id": "shaper",
+   "name_en": "Shaper",
+   "name_zh": "塑形者",
+   "cards": [
+    "01081",
+    "01082",
+    "01083",
+    "01084",
+    "01084-set_01",
+    "01085",
+    "01086",
+    "01087",
+    "01088",
+    "01089",
+    "01090",
+    "01091",
+    "01092",
+    "03033",
+    "03034",
+    "03036"
+   ],
+   "image": null
+  },
+  {
+   "id": "artificer",
+   "name_en": "Artificer",
+   "name_zh": "机匠",
+   "cards": [
+    "01053",
+    "01054",
+    "01055",
+    "01056",
+    "01057",
+    "01058",
+    "01059",
+    "01060",
+    "01061",
+    "01062",
+    "01063",
+    "01064",
+    "03024",
+    "03025",
+    "03026"
+   ],
+   "image": null
+  },
+  {
+   "id": "spirit_speaker",
+   "name_en": "Spirit Speaker",
+   "name_zh": "灵语者",
+   "cards": [
+    "03040",
+    "03041",
+    "03042",
+    "03043",
+    "03044",
+    "03045",
+    "03046",
+    "03047",
+    "03048",
+    "03049",
+    "03050",
+    "03051",
+    "03052",
+    "03053",
+    "03054",
+    "03055"
+   ],
+   "image": null
+  },
+  {
+   "id": "talespinner",
+   "name_en": "Talespinner",
+   "name_zh": "吟叙者",
+   "cards": [
+    "03056",
+    "03057",
+    "03058",
+    "03059",
+    "03060",
+    "03061",
+    "03062",
+    "03063",
+    "03064",
+    "03065",
+    "03066",
+    "03067",
+    "03068"
+   ],
+   "image": null
+  }
+ ],
+ "personalities": [
+  {
+   "id": "01093",
+   "name_en": "Insightful",
+   "name_zh": "洞察",
+   "image": null
+  },
+  {
+   "id": "01094",
+   "name_en": "Vigilant",
+   "name_zh": "警觉",
+   "image": null
+  },
+  {
+   "id": "01095",
+   "name_en": "Perceptive",
+   "name_zh": "敏锐",
+   "image": null
+  },
+  {
+   "id": "01096",
+   "name_en": "Thorough",
+   "name_zh": "缜密",
+   "image": null
+  },
+  {
+   "id": "01097",
+   "name_en": "Passionate",
+   "name_zh": "热忱",
+   "image": null
+  },
+  {
+   "id": "01098",
+   "name_en": "Balanced",
+   "name_zh": "平衡",
+   "image": null
+  },
+  {
+   "id": "01099",
+   "name_en": "Determined",
+   "name_zh": "坚毅",
+   "image": null
+  },
+  {
+   "id": "01100",
+   "name_en": "Bold",
+   "name_zh": "果敢",
+   "image": null
+  },
+  {
+   "id": "01101",
+   "name_en": "Meticulous",
+   "name_zh": "细致",
+   "image": null
+  },
+  {
+   "id": "01102",
+   "name_en": "Versatile",
+   "name_zh": "多才",
+   "image": null
+  },
+  {
+   "id": "01103",
+   "name_en": "Inventive",
+   "name_zh": "创新",
+   "image": null
+  },
+  {
+   "id": "01104",
+   "name_en": "Astute",
+   "name_zh": "机敏",
+   "image": null
+  },
+  {
+   "id": "01105",
+   "name_en": "Persuasive",
+   "name_zh": "善言",
+   "image": null
+  },
+  {
+   "id": "01106",
+   "name_en": "Thoughtful",
+   "name_zh": "体贴",
+   "image": null
+  },
+  {
+   "id": "01107",
+   "name_en": "Engaging",
+   "name_zh": "亲和",
+   "image": null
+  },
+  {
+   "id": "01108",
+   "name_en": "Compassionate",
+   "name_zh": "仁慈",
+   "image": null
+  },
+  {
+   "id": "03069",
+   "name_en": "Dauntless",
+   "name_zh": "无畏",
+   "image": null
+  },
+  {
+   "id": "03070",
+   "name_en": "Observant",
+   "name_zh": "善于观察",
+   "image": null
+  },
+  {
+   "id": "03071",
+   "name_en": "Enthusiastic",
+   "name_zh": "热情",
+   "image": null
+  },
+  {
+   "id": "03072",
+   "name_en": "Steadfast",
+   "name_zh": "坚定不移",
+   "image": null
+  },
+  {
+   "id": "03073",
+   "name_en": "Deliberate",
+   "name_zh": "深思熟虑",
+   "image": null
+  },
+  {
+   "id": "03074",
+   "name_en": "Ingenious",
+   "name_zh": "机灵",
+   "image": null
+  },
+  {
+   "id": "03075",
+   "name_en": "Sensible",
+   "name_zh": "明智",
+   "image": null
+  },
+  {
+   "id": "03076",
+   "name_en": "Magnanimous",
+   "name_zh": "宽宏大量",
+   "image": null
+  }
+ ],
+ "aspects": [
+  {
+   "id": "aspect-2213",
+   "values": [
+    2,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "id": "aspect-1322",
+   "values": [
+    1,
+    3,
+    2,
+    2
+   ]
+  },
+  {
+   "id": "aspect-1223",
+   "values": [
+    1,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "id": "aspect-3122",
+   "values": [
+    3,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "id": "aspect-2312",
+   "values": [
+    2,
+    3,
+    1,
+    2
+   ]
+  },
+  {
+   "id": "aspect-3221",
+   "values": [
+    3,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "id": "aspect-1232",
+   "values": [
+    1,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "id": "aspect-2231",
+   "values": [
+    2,
+    2,
+    3,
+    1
+   ]
+  },
+  {
+   "id": "aspect-3212",
+   "values": [
+    3,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "id": "aspect-2132",
+   "values": [
+    2,
+    1,
+    3,
+    2
+   ]
+  },
+  {
+   "id": "aspect-2321",
+   "values": [
+    2,
+    3,
+    2,
+    1
+   ]
+  },
+  {
+   "id": "aspect-2123",
+   "values": [
+    2,
+    1,
+    2,
+    3
+   ]
+  }
+ ]
+}
