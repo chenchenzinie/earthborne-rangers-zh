@@ -60,8 +60,11 @@ window.ViewDeck = (function () {
 
   function validate() {
     const errs = [];
-    const aspectValid = isAspectValid(deck.aspect);
-    if (!aspectValid) errs.push('属性数值未设置合法（须 4 维各 1-4、总和 8、分布为 [1,2,2,3] 或 [1,1,2,4] 的某种排列）');
+    const diag = aspectDiagnostics(deck.aspect);
+    if (!diag.ok) {
+      if (diag.errors.length) diag.errors.forEach(e => errs.push('属性：' + e.text));
+      else errs.push('属性数值未设置合法（须 4 维各 1-4、总和 8、分布为 [1,2,2,3] 或 [1,1,2,4] 的某种排列）');
+    }
     if (deck.personalities.length !== 4) errs.push('性格需选 4 张（每属性各 1 张），当前 ' + deck.personalities.length);
     else if (new Set(deck.personalities.map(id => DB.byId[id] && DB.byId[id].aspect_id)).size !== 4) errs.push('性格卡须覆盖 4 个不同属性');
     if (!deck.background) errs.push('未选择背景');
@@ -101,6 +104,7 @@ window.ViewDeck = (function () {
   }
 
   /* 步骤 1：属性数值（4 维自由输入，每维 1-4，总和 8，分布须为 [1,2,2,3] 或 [1,1,2,4] 的某种排列） */
+  const ASP_NAMES = ['AWA', 'FIT', 'FOC', 'SPI'];
   function renderAspect() {
     const p = document.getElementById('step-aspect');
     // 旧版数据兼容：deck.aspect 是属性卡 id 字符串，转成 4 维数组
@@ -112,17 +116,22 @@ window.ViewDeck = (function () {
     const v = deck.aspect;
     const labels = ['知觉 AWA', '体质 FIT', '专注 FOC', '精神 SPI'];
     const colors = ['AWA', 'FIT', 'FOC', 'SPI'];
+    const diag = aspectDiagnostics(v);
     p.innerHTML = `<h3><span class="step-num">1</span>属性数值（自由分配 8 点到 4 维，每维 1-4，分布须为 1/2/2/3 或 1/1/2/4）</h3>
       <div class="aspect-inputs">${v.map((n, i) => `
-        <div class="asp-input-row asp-${colors[i]}">
+        <div class="asp-input-row asp-${colors[i]}${diag.rowBad[i] ? ' bad' : ''}${diag.rowWarn[i] ? ' warn' : ''}">
           <span class="asp-label">${labels[i]}</span>
           <button type="button" class="asp-btn" data-asp="${i}" data-delta="-1" aria-label="减 1">−</button>
           <input type="number" class="asp-num" min="1" max="4" step="1" value="${n}" data-asp="${i}">
           <button type="button" class="asp-btn" data-asp="${i}" data-delta="1" aria-label="加 1">+</button>
         </div>`).join('')}
-        <div class="asp-total ${isAspectValid(v) ? 'ok' : 'bad'}">${aspectTotalText()}</div>
+        <div class="asp-total ${diag.ok ? 'ok' : 'bad'}">${aspectTotalText()}</div>
+        <div class="asp-feedback">
+          <ul class="asp-errors">${diag.errors.map(e => `<li>${UI.esc(e.text)}</li>`).join('')}</ul>
+          <div class="asp-hint">合法分布参考：核心盒 1/2/2/3（如 3·1·2·2）或扩展 1/1/2/4（如 4·2·1·1）的任意排列，总和 8</div>
+        </div>
       </div>`;
-    // 数值输入：仅更新数据 + 局部刷新 total，不重建 DOM（避免失焦）
+    // 数值输入：仅更新数据 + 局部刷新反馈，不重建 DOM（避免失焦）
     p.querySelectorAll('input.asp-num').forEach(inp => inp.addEventListener('input', e => {
       const i = +e.target.dataset.asp;
       let n = parseInt(e.target.value, 10);
@@ -130,7 +139,7 @@ window.ViewDeck = (function () {
       n = Math.max(1, Math.min(4, n));
       deck.aspect[i] = n;
       saveCurrent();
-      updateAspectTotal();
+      updateAspectFeedback();
     }));
     p.querySelectorAll('input.asp-num').forEach(inp => inp.addEventListener('blur', e => {
       const i = +e.target.dataset.asp;
@@ -154,22 +163,96 @@ window.ViewDeck = (function () {
     if (!Array.isArray(v) || v.length !== 4) return false;
     if (!v.every(n => n >= 1 && n <= 4)) return false;
     if (v.reduce((s, n) => s + n, 0) !== 8) return false;
-    return VALID_DIST.includes(v.slice().sort().join(','));
+    return VALID_DIST.includes(v.slice().sort((a, b) => a - b).join(','));
   }
   function aspectTotalText() {
     const v = deck.aspect || [0, 0, 0, 0];
     const total = v.reduce((s, n) => s + (n || 0), 0);
     const valid = isAspectValid(v);
-    return `已分配 ${total} / 8 ${valid ? '✓' : (total > 8 ? `（超 ${total - 8}）` : `（差 ${8 - total}）`)}`;
+    const tail = valid ? '✓'
+      : (total > 8 ? `（超 ${total - 8}）`
+        : (total < 8 ? `（差 ${8 - total}）` : ''));
+    return `已分配 ${total} / 8 ${tail}`;
   }
-  function updateAspectTotal() {
-    const p = document.getElementById('step-aspect');
-    if (!p) return;
-    const el = p.querySelector('.asp-total');
-    if (el) {
-      el.className = 'asp-total ' + (isAspectValid(deck.aspect) ? 'ok' : 'bad');
-      el.textContent = aspectTotalText();
+  /* 逐维度诊断：
+     rowBad[i]  = 第 i 维数值确定填错（超范围 / 分布不合法时必须改动的行）
+     rowWarn[i] = 第 i 维是修复总和错误的候选调整行（黄框提示）
+     errors     = 人类可读的错误与修改建议 */
+  function aspectDiagnostics(v) {
+    const errors = [];
+    const rowBad = [false, false, false, false];
+    const rowWarn = [false, false, false, false];
+    if (!Array.isArray(v) || v.length !== 4) return { ok: false, errors, rowBad, rowWarn };
+    // 1) 单维范围
+    v.forEach((n, i) => {
+      if (!(n >= 1 && n <= 4)) {   // NaN 也落到这里
+        errors.push({ text: `${ASP_NAMES[i]} = ${n} 超出范围：每维只能填 1-4` });
+        rowBad[i] = true;
+      }
+    });
+    if (errors.length) return { ok: false, errors, rowBad, rowWarn };
+    const total = v.reduce((s, n) => s + n, 0);
+    // 2) 总和不对：指出可调整的具体维度
+    if (total !== 8) {
+      if (total > 8) {
+        const d = total - 8;
+        const cand = v.map((n, i) => (n > 1 ? i : -1)).filter(i => i >= 0);
+        cand.forEach(i => { rowWarn[i] = true; });
+        errors.push({ text: `总和 ${total}，超出 ${d} 点：把 ${cand.map(i => ASP_NAMES[i]).join(' / ')} 中任一维减 ${d}` });
+      } else {
+        const d = 8 - total;
+        const cand = v.map((n, i) => (n < 4 ? i : -1)).filter(i => i >= 0);
+        cand.forEach(i => { rowWarn[i] = true; });
+        errors.push({ text: `总和 ${total}，还差 ${d} 点：把 ${cand.map(i => ASP_NAMES[i]).join(' / ')} 中任一维加 ${d}` });
+      }
+      return { ok: false, errors, rowBad, rowWarn };
     }
+    // 3) 总和对但分布不合法：枚举所有合法排列，找改动位数最少的方案
+    const sorted = v.slice().sort((a, b) => a - b);
+    if (VALID_DIST.includes(sorted.join(','))) return { ok: true, errors, rowBad, rowWarn };
+    const best = nearestLegalArrangement(v);
+    best.changes.forEach(c => { rowBad[c.i] = true; });
+    const desc = best.changes.map(c => `${ASP_NAMES[c.i]} ${c.from}→${c.to}`).join('、');
+    errors.push({ text: `当前分布 [${sorted.join('/')}] 不在合法分布内。建议修改：${desc}` });
+    return { ok: false, errors, rowBad, rowWarn };
+  }
+  /* 在两种合法分布的全部排列中，找与当前 v 改动位置最少的方案 */
+  function nearestLegalArrangement(v) {
+    const uniquePerms = arr => {
+      const out = new Set();
+      (function rec(rest, acc) {
+        if (!rest.length) { out.add(acc.join(',')); return; }
+        rest.forEach((x, i) => rec(rest.filter((_, j) => j !== i), acc.concat(x)));
+      })(arr, []);
+      return [...out].map(s => s.split(',').map(Number));
+    };
+    let best = null;
+    for (const pat of VALID_DIST) {
+      for (const perm of uniquePerms(pat.split(',').map(Number))) {
+        const changes = [];
+        perm.forEach((n, i) => { if (n !== v[i]) changes.push({ i, from: v[i], to: n }); });
+        if (!best || changes.length < best.changes.length) best = { pattern: pat, changes };
+      }
+    }
+    return best;
+  }
+  /* 输入过程中局部刷新：行状态 + 总点数 + 错误列表（不碰 input，保持焦点） */
+  function updateAspectFeedback() {
+    const root = document.getElementById('step-aspect');
+    if (!root) return;
+    const v = deck.aspect;
+    const diag = aspectDiagnostics(v);
+    root.querySelectorAll('.asp-input-row').forEach((row, i) => {
+      row.classList.toggle('bad', !!diag.rowBad[i]);
+      row.classList.toggle('warn', !!diag.rowWarn[i]);
+    });
+    const total = root.querySelector('.asp-total');
+    if (total) {
+      total.className = 'asp-total ' + (diag.ok ? 'ok' : 'bad');
+      total.textContent = aspectTotalText();
+    }
+    const ul = root.querySelector('.asp-errors');
+    if (ul) ul.innerHTML = diag.errors.map(e => `<li>${UI.esc(e.text)}</li>`).join('');
   }
 
   /* 步骤 2：性格（每属性各 1 张） */
