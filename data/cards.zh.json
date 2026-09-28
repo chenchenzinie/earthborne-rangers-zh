@@ -35,7 +35,7 @@
    "技能"
   ],
   "text_en": "Scout 3 path cards, then draw 1 path card.",
-  "text_zh": "侦察 3 张路径牌，然后抓 1 张路径牌。",
+  "text_zh": "探查 3 张路径卡，然后抽 1 张路径卡。\n<f>小时候，你与父亲常登上「领航者之丘」，俯瞰整个山谷。站在那样的高处，他教会你辨察远方草木与鸟兽最细微的动作与最微末的细节。</f>",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/core/01001.jpg",
@@ -77,9 +77,9 @@
    "经验"
   ],
   "text_en": "Choose up to 4 total moments or attributes from any number of Ranger discards. Place the chosen cards facedown on the top of their Ranger’s fatigue stack.",
-  "text_zh": null,
+  "text_zh": "从任意数量的行者弃牌堆中，合计至多选择 4 张契机或属性卡。将所选卡面朝下置于其行者的疲劳牌堆顶。\n<f>漫步山谷时，你会回想起年少时随四季漂泊所获得的智慧。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01002.jpg",
   "errata": null
  },
@@ -119,9 +119,9 @@
    "经验"
   ],
   "text_en": "Choose up to 4 total moments or attributes not named Paths We've Roamed Before from any number of Ranger discards. Place the chosen cards facedown on the top of their Ranger’s fatigue stack.",
-  "text_zh": null,
+  "text_zh": "从任意数量的行者弃牌堆中，合计至多选择 4 张不名为「曾走过的路」的契机或属性卡。将所选卡面朝下置于其行者的疲劳牌堆顶。\n<f>漫步山谷时，你会回想起年少时随四季漂泊所获得的智慧。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01002.jpg",
   "errata": null
  },
@@ -161,9 +161,9 @@
    "天生"
   ],
   "text_en": "You can only commit this attribute when interacting with a trail.",
-  "text_zh": null,
+  "text_zh": "你仅能在与小径交互时投入此属性。\n<f>自你迈出第一步那天起，就未曾停下脚步。你的心渴望攀上远方的峰峦、漫游无人踏足的景致。你总是望着地平线，从不安于静坐。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01003.jpg",
   "errata": null
  },
@@ -205,9 +205,9 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 morsel):</b> Choose a Ranger. That Ranger soothes fatigue equal to the number of [FIT] in their energy pool.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 份口粮）：</b>选择一名行者。该行者治愈的疲劳等于其能量池中的体质点数。\n<f>这是樱桃苔肉饼、雪花纹巨豆、星豌豆、杏仁，再外加几分惊喜调成的美味杂拌。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01004.jpg",
   "errata": null
  },
@@ -249,9 +249,9 @@
    "专家"
   ],
   "text_en": "When you play this gear, attach a moment to it from your hand.\n<b>Exhaust (use 1 echo):</b> Play the attached moment as if it were in your hand. It remains attached to this gear instead of being discarded.",
-  "text_zh": null,
+  "text_zh": "你打出此装备时，从手中将一张契机附属到它。<b>消耗（使用 1 段回声）：</b>如同在手中一般打出所附契机；它仍附属此装备，而非弃置。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01005.jpg",
   "errata": null
  },
@@ -291,9 +291,9 @@
    "技能"
   ],
   "text_en": "Play a moment from your discard pile without paying its energy cost (X is equal to the chosen moment’s cost).\nThis card can be played at the time specified on the chosen moment.",
-  "text_zh": null,
+  "text_zh": "从你的弃牌堆打出一张契机，无须支付其能量费用（X 等于所选契机的费用）。此卡可在所选契机上指定的时间打出。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01006.jpg",
   "errata": null
  },
@@ -335,9 +335,9 @@
    "工具"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> Spend 1 energy to gain 1 energy of any type.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 充能）：</b>花费 1 点能量以获得 1 点任意类型的能量。\n<f>再没有比梅勒夫多用工具更好的伙伴了。它就像把一座创物者的工坊握在掌心，却远没有那样沉重。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01007.jpg",
   "errata": null
  },
@@ -377,9 +377,9 @@
    "衣物"
   ],
   "text_en": "Unique.\n<b>Response:</b> After you play a moment, soothe 1 fatigue.",
-  "text_zh": null,
+  "text_zh": "独特。<b>响应：</b>你打出一张契机后，治愈 1 点疲劳。\n<f>与母亲并肩跋涉、往返穿越山谷的那些日子里，她教了你许多事；但所有教诲中，没有哪一条比这句更实用：永远穿一双舒适的鞋。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01008.jpg",
   "errata": null
  },
@@ -419,9 +419,9 @@
    "援助"
   ],
   "text_en": "[FOC] + [connection]<b> (use 1 session): Meditate</b> <f>on your journey</f> to shuffle a number of cards from your fatigue stack into your Ranger deck equal to your effort.",
-  "text_zh": null,
+  "text_zh": "专注＋[connection]（使用 1 段冥想）：<b>冥想</b><f>你的旅程</f>，将你疲劳牌堆中等于你精力的若干张卡重洗入你的行者牌组。\n<f>你觉得宁静的冥想是日常生活的必需，而能品味静默时刻的能力，更关乎一个人的身心安适。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01009.jpg",
   "errata": null
  },
@@ -461,9 +461,9 @@
    "工具"
   ],
   "text_en": "[FOC] + [connection]<b> (use 1 session): Meditate</b> <f>on your journey</f> to shuffle a number of cards from your fatigue stack into your Ranger deck equal to your effort.",
-  "text_zh": null,
+  "text_zh": "专注＋[connection]（使用 1 段冥想）：<b>冥想</b><f>你的旅程</f>，将你疲劳牌堆中等于你精力的若干张卡重洗入你的行者牌组。\n<f>你觉得宁静的冥想是日常生活的必需，而能品味静默时刻的能力，更关乎一个人的身心安适。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01009.jpg",
   "errata": null
  },
@@ -503,9 +503,9 @@
    "学识"
   ],
   "text_en": "Choose a ranger. That ranger may discard one of their equipped gear to search their ranger deck for a gear and equip it without paying its energy cost.",
-  "text_zh": null,
+  "text_zh": "选择一名行者。该行者可弃掉一件已装备装备，再从自己的行者牌组中搜寻一件装备，无须支付能量费用便将其装备。\n<f>母亲教会你使用形形色色的工具，你也从她那里透彻地了解了各种工具的构造与实用之道。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01010.jpg",
   "errata": null
  },
@@ -545,7 +545,7 @@
    "衣物"
   ],
   "text_en": "Reduce the equip value of your gear by 1 (to a minimum of 1).\n[AWA] + [reason] <b>use 1 pocket: Open</b> <f>your belt pouch and reach inside</f> to search your Ranger deck for a gear and add it to your hand.",
-  "text_zh": null,
+  "text_zh": "将你装备的负重减少 1（最低为 1）。知觉＋（使用 1 口袋）：打开腰带包伸手入内，从你的行者牌组中搜寻一件装备并加入手牌。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01011.jpg",
@@ -589,9 +589,9 @@
    "科技"
   ],
   "text_en": "Attach to a Ranger’s equipped tech.\nWhen you play this attachment, add 3 tokens to the attached gear.\n<b>Response:</b> When this card becomes unattached, discard 3 tokens from the attached gear.",
-  "text_zh": null,
+  "text_zh": "附属到一名行者的已装备科技上。打出此附装时，向所附装备添加 3 个指示物。<b>响应：</b>此卡解除附属时，从所附装备弃置 3 个指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01012.jpg",
   "errata": null
  },
@@ -633,9 +633,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> Choose a Ranger’s equipped gear. Resolve the chosen gear’s effect as if you had used a token from it and/or exhausted it.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 充能）：</b>选择一名行者的已装备装备。结算所选装备的效果，如同你从中用一个指示物，及／或将其消耗。\n<f>为了让你能从最简朴的物件中发掘出匠心，你的导师鼓励你临摹大师匠人的作品。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01013.jpg",
   "errata": null
  },
@@ -677,9 +677,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> Choose a Ranger’s equipped tech. Resolve the chosen tech’s effect as if you had used a token from it and/or exhausted it.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 充能）：</b>选择一名行者已装备的科技。结算所选科技的效果，如同你从中使用一个指示物，及／或将其消耗。\n<f>为了让你能从最简朴的物件中发掘出匠心，你的导师鼓励你临摹大师匠人的作品。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01013.jpg",
   "errata": null
  },
@@ -719,9 +719,9 @@
    "学识"
   ],
   "text_en": "Choose an attachment in a Ranger’s discard. That Ranger may immediately play that attachment as if it were in their hand.",
-  "text_zh": null,
+  "text_zh": "选择一名行者弃牌堆中的一件附装，该行者可立即像在手牌中一样将其打出。\n<f>你深知灵感并非召之即来。当它降临时，你必须立刻动手。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01014.jpg",
   "errata": null
  },
@@ -763,9 +763,9 @@
    "武器"
   ],
   "text_en": "Discard one of your equipped gear to add [harm] to a being equal to the number of tokens on the discarded gear.",
-  "text_zh": null,
+  "text_zh": "弃掉你一件已装备装备，向一个生灵添加伤害，数量等于所弃装备上的指示物数。\n<f>你永远忘不了弟弟眼角瞥见那只浣熊、误以为是熊懒时脸上的神情。你也记得那只浣熊——被一只腰带包砸中，却毫不在意。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01015.jpg",
   "errata": null
  },
@@ -807,9 +807,9 @@
    "专家"
   ],
   "text_en": "Attach to a Ranger’s equipped gear.\n<b>Response:</b> When a Ranger performs a test from the attached gear, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "附属到一名行者的已装备装备。<b>响应：</b>一名行者以所附装备进行检定时，投入 1 点精力。\n<f>在碳锻炉当学徒的日子里，你从奥林长老那里学到了许多。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01016.jpg",
   "errata": null
  },
@@ -849,9 +849,9 @@
    "模组"
   ],
   "text_en": "Attach to one of your equipped gear.\n<b>Response:</b> After you use a token from the attached gear, soothe 1 fatigue.",
-  "text_zh": null,
+  "text_zh": "附属到你的一件已装备装备。<b>响应：</b>你使用所附装备的一个指示物后，治愈 1 点疲劳。\n<f>劳作时你便心静；而当你用最心爱的装备劳作时，更会被一种深沉的使命感充盈，全然活在当下，生机勃勃。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01017.jpg",
   "errata": null
  },
@@ -893,9 +893,9 @@
    "援助"
   ],
   "text_en": "<b>Use X buffers:</b> When you perform a test, suffer X fewer fatigue from each card between you and the card with which you are interacting.",
-  "text_zh": null,
+  "text_zh": "使用 X 缓冲：你进行检定时，你与交互卡之间每张卡令你承受的疲劳减少 X。\n<f>你用醇木树皮打造了这副徒步护胫，覆上一层锻碳贴面，最后再铺上动感衬里，大功告成。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01018.jpg",
   "errata": null
  },
@@ -935,9 +935,9 @@
    "学识"
   ],
   "text_en": "<b>Response:</b> When you rest, exhaust up to one being for each [AWA] in your energy pool.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你歇息时，按你能量池中每点知觉消耗至多一个生灵。\n<f>在日月之下照料铁毛羊群时，你学会了保持警觉的重要——哪怕一切看似静止。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01019.jpg",
   "errata": null
  },
@@ -979,7 +979,7 @@
    "鸟类"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Add 1[harm] to a being in the same area as this companion.\n[AWA] + [reason]<b>: Survey</b> <f>the way ahead to</f> scout path cards equal to your effort, then draw 1 path card.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。<b>消耗：</b>向与此伙伴同区的一个生灵添加进展。知觉＋：勘察前路，探查等于你精力的路径卡，然后抽 1 张路径卡。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01020.jpg",
@@ -1021,9 +1021,9 @@
    "经验"
   ],
   "text_en": "Each Ranger may discard 1[progress] from a being within reach of them to move that being.",
-  "text_zh": null,
+  "text_zh": "内一个生灵的 1 点伤害，以移动该生灵。\n<f>年复一年，你在近乎孤寂中度过无数时日，除了羊群无人在侧。这期间你悟到：任何生灵都能讲通道理。你只需好言相求（再使上些力气）。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01021.jpg",
   "errata": null
  },
@@ -1063,7 +1063,7 @@
    "经验"
   ],
   "text_en": "One at a time, Each Ranger may move a being within reach of them. Add 1[progress] to each being moved in this way.",
-  "text_zh": null,
+  "text_zh": "一次一个，每名行者可移动一个位于其近旁区内的生灵。以此方式每移动一个生灵，为其添加 1 点进展。\n<f>年复一年，你在近乎孤寂中度过无数时日，除了羊群无人在侧。这期间你悟到：任何生灵都能讲通道理。你只需好言相求（再使上些力气）。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/taboo/set_01/01021.jpg",
@@ -1105,9 +1105,9 @@
    "经验"
   ],
   "text_en": "Move all [progress] from a being to a feature.",
-  "text_zh": null,
+  "text_zh": "将一个生灵身上的全部伤害移动到一个地标。\n<f>你的叔叔逢人便爱讲《牧民与雷尔加兽》的故事。故事里的牧民救下羊群，靠的不是伤害那头巨兽，而是骑着它回到村庄。后来它成了村里深受珍视的一员，在田间刨除斯克罗夫。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01022.jpg",
   "errata": null
  },
@@ -1149,9 +1149,9 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 call):</b> When a Ranger would suffer an injury from a predator or [harm] would be added to a being by a predator, cancel that effect.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 次呼唤）：</b>一名行者将因掠食者承受伤势，或掠食者将向一个生灵添加伤害时，取消该效果。\n<f>这枚哨子是一次短暂夏日恋情中收到的礼物。每次吹响它，你都会想起高悬的耀阳之下、那带着花香的风。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01023.jpg",
   "errata": null
  },
@@ -1191,7 +1191,7 @@
    "学识"
   ],
   "text_en": "Choose a being. Move [progress] from the chosen being to each other card in play, up to 1[progress] per card.",
-  "text_zh": null,
+  "text_zh": "选择一个生灵。将伤害从所选生灵移动到场中每张其他卡上，每张卡至多 1 点伤害。\n<f>独处时，你曾望着风在平原上描画它的轨迹，从而抵达一处宁静。你将生命看作那阵风——短暂而美丽，并为此心怀感激。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01024.jpg",
@@ -1235,7 +1235,7 @@
    "援助"
   ],
   "text_en": "<b>Choose one:</b>\nDiscard 1[harm] from a being to add 3[progress] to it.\nHeal 1 injury from a Ranger.",
-  "text_zh": null,
+  "text_zh": "选择其一：弃置一个生灵身上的 1 点伤害，向其添加 3 点进展。｜为一名行者恢复 1 处伤势。\n<f>草甸的灵语者曾把先辈的疗愈之术传授给你。那些教诲，你从未忘却。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01025.jpg",
@@ -1277,9 +1277,9 @@
    "技能"
   ],
   "text_en": "Attach to a predator.\nAttached card loses the predator trait.\n<b>Response:</b> Before a challenge effect on the attached card would resolve, you may discard 2[progress] from it to cancel the effect.",
-  "text_zh": null,
+  "text_zh": "附属到一个掠食者。所附卡失去掠食者特性。<b>响应：</b>所附卡的挑战效果结算前，你可弃掉其 2",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01026.jpg",
   "errata": null
  },
@@ -1323,7 +1323,7 @@
    "专家"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Move a being and add 2[progress] to it.\n[FIT] + [connection]<b>: Pet</b> <f>your canine companion to</f> ready this being and soothe 1 fatigue.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。<b>消耗：</b>移动一个生灵并为其添加 2 点进展。体质＋：抚摸你的犬类伙伴，使此生灵就绪并治愈 1 点疲劳。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01027.jpg",
@@ -1369,9 +1369,9 @@
    "专家"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Move a being and add 1[progress] to it.\n[FIT] + [connection]<b>: Pet</b> <f>your canine companion to</f> ready this being and soothe 1 fatigue.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。｜消耗：移动一个生灵，并为其添加 1 点进展。｜体质＋[connection]：<b>抚摸</b><f>你的犬类伙伴</f>，使此生灵就绪并治愈 1 点疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01027.jpg",
   "errata": null
  },
@@ -1413,9 +1413,9 @@
    "专家"
   ],
   "text_en": "Search the path deck and discard for a flora and put it into play with this skill attached.\nIncrease the attached flora’s [harm] threshold by 2.",
-  "text_zh": null,
+  "text_zh": "搜寻路径牌组与弃牌堆中的一株植物，将其与此外装附属后置入场。将所附植物的阈值提高 2。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01028.jpg",
   "errata": null
  },
@@ -1457,7 +1457,7 @@
    "自然"
   ],
   "text_en": "<b>Response:</b> When a Ranger performs a test, they may add 1[harm] to a flora to dodge each being in the same area as that flora.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者进行检定时，该行者可向一株植物添加 1 点进展，闪避与该植物同区的每个生灵。\n<f>你的姑婆教过你：只要羚角兽在田野里，穿过森林的路自会显现。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01029.jpg",
@@ -1499,9 +1499,9 @@
    "自然"
   ],
   "text_en": "Attach to any Ranger’s equipped gear.\n<b>Response:</b> When you add [harm] to a being with the attached gear, exhaust that being and attach this card to it.\nThe attached being gains the flora trait.",
-  "text_zh": null,
+  "text_zh": "附属到任何行者的已装备装备。<b>响应：</b>你以所附装备向一个生灵添加伤害后，将该生灵",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01030.jpg",
   "errata": null
  },
@@ -1541,9 +1541,9 @@
    "经验"
   ],
   "text_en": "Add 1 [harm] to a flora to add 3 [progress] to a trail.",
-  "text_zh": null,
+  "text_zh": "1 点进展，以向一条小径添加 3 点进展。\n<f>在全家外出采集的途中，父母总会提醒你留意锡特卡鹿踏出的隐秘通道。这些便捷的近路，通向一丛丛结果的植物——太阳莓荆棘与樱桃苔都在其中。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01031.jpg",
   "errata": null
  },
@@ -1585,7 +1585,7 @@
    "武器"
   ],
   "text_en": "[SPI] + [reason]<b>: Tend</b> <f>to the local plants to</f> add or remove [harm] from a flora equal to your effort.\n[FIT] + [conflict]<b>: Strike [2]</b> <f>out with your gardening tool to</f> add 1[harm] to a being for every 2 effort. If you fail, suffer 1 injury.",
-  "text_zh": null,
+  "text_zh": "精神＋：照料本地植物，向一株植物添加或移除进展，数量等于你的精力。体质＋：以你的园艺工具打击 [2]，每 2 点精力向一个生灵添加 1 点伤害。若失败，承受 1 处伤势。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01032.jpg",
@@ -1627,9 +1627,9 @@
    "自然"
   ],
   "text_en": "Attach to a feature.\nAttached feature gains the flora trait.",
-  "text_zh": null,
+  "text_zh": "附属到一个地标。所附地标获得植物特性。\n<f>你是在山谷那些隐秘角落里长大的——幽僻林间空地上，微小的生态自成天地；醇木残桩中，生命繁盛栖息。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01033.jpg",
   "errata": null
  },
@@ -1669,9 +1669,9 @@
    "食物"
   ],
   "text_en": "<b>Response:</b> After you add 1 or more [harm] to a flora, you may add 1 herb to this gear.\n<b>Exhaust (use 1 herb):</b> Choose a Ranger. That Ranger gains 1 energy of any type.",
-  "text_zh": null,
+  "text_zh": "展后，可在此装备上添加 1 株香草。<b>消耗（使用 1 株香草）：</b>选择一名行者。该行者获得 1 点任意类型的能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01034.jpg",
   "errata": null
  },
@@ -1713,7 +1713,7 @@
    "自然"
   ],
   "text_en": "Each Ranger may add 1 [harm] to a flora to soothe 1 fatigue and gain 1 energy of any type. When you add [harm] to a flora in this way, you may not exceed its [harm] threshold.",
-  "text_zh": null,
+  "text_zh": "每名行者可向一株植物添加 1 点进展，以治愈 1 点疲劳并获得 1 点任意类型的能量。你以此方式向一株植物添加进展时，不得超过其阈值。\n<f>在雪松树荫下筛拣太阳莓的一个个夏天，让你对最新鲜的果实生出深深的亲近。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01035.jpg",
@@ -1757,9 +1757,9 @@
    "食物"
   ],
   "text_en": "<b>Response:</b> After you add 1 or more [harm] to a flora, you may add 1 vittle to this gear.\n<b>Exhaust (use 1 vittle):</b> Choose a Ranger. That Ranger soothes 2 fatigue.",
-  "text_zh": null,
+  "text_zh": "进展后，可在此装备上添加 1 份干粮。<b>消耗（使用 1 份干粮）：</b>选择一名行者。该行者治愈 2 点疲劳。\n<f>把它凑近结果的植物，筛子便会活过来，噼啪作响地汲取能量，把枝头成熟的馈赠吸引过来。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01036.jpg",
   "errata": null
  },
@@ -1795,9 +1795,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> When you perform a test, dodge 1 card.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>你进行检定时，闪避 1 张卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01037.jpg",
   "errata": null
  },
@@ -1833,9 +1833,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Move your [ranger] to a feature. That feature fatigues you.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>将你的行者指示物移动到一处地标。该地标使你疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01038.jpg",
   "errata": null
  },
@@ -1875,9 +1875,9 @@
    "技能"
   ],
   "text_en": "<b>Response:</b> When you Traverse, dodge up to 3 cards.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>穿行时，最多闪避 3 张卡。\n<f>你能感应周遭生命中的能量流转，循着那些细微的讯号，在你的路途上悄然通行，无人注意。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01039.jpg",
   "errata": null
  },
@@ -1919,9 +1919,9 @@
    "科技"
   ],
   "text_en": "<b>[AWA] + [reason] (use 1 drop): Clarify</b> <f>your view of the environment around you</f> to scout path cards equal to your effort, then draw 1 path card.",
-  "text_zh": null,
+  "text_zh": "知觉＋（使用 1 滴）：看清周遭环境，探查等同于你精力的路径卡，然后抽 1 张路径卡。\n<f>你按下涂抹器，一小滴水珠随之鼓起、舒展，化为一枚澄澈的镜片。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01040.jpg",
   "errata": null
  },
@@ -1961,9 +1961,9 @@
    "学识"
   ],
   "text_en": "Exhaust each obstacle. Suffer fatigue equal to the number of obstacles exhausted this way.",
-  "text_zh": null,
+  "text_zh": "消耗每张障碍，并承受疲劳，点数等于以此方式消耗的障碍数。\n<f>导师曾带你前往孤树之外的山丘，蒙上你的双眼，要你在夜里带路回家——唯有星辰为你指引方向。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01041.jpg",
   "errata": null
  },
@@ -2003,9 +2003,9 @@
    "学识"
   ],
   "text_en": "Exhaust each obstacle.",
-  "text_zh": null,
+  "text_zh": "消耗每张障碍。\n<f>导师曾带你前往孤树之外的山丘，蒙上你的双眼，要你在夜里带路回家——唯有星辰为你指引方向。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01041.jpg",
   "errata": null
  },
@@ -2045,9 +2045,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 sensor):</b> When a Ranger performs a <b>Traverse</b> test, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 感应器）：</b>一名行者进行穿行检定时，投入 1 点精力。\n<f>装置发出一阵轻柔的嗡鸣，你顿时对脚下的路更有把握，确信前路所在。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01042.jpg",
   "errata": null
  },
@@ -2091,7 +2091,7 @@
    "武器"
   ],
   "text_en": "<b>Exhaust (use 1 stride):</b> Add 1[progress] to a trail.\n<b>[FIT] + [conflict]: Strike [2]</b> <f>out with your walking implement to</f> add 1[harm] to a being for every 2 effort. If you fail, suffer 1 injury.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 步幅）：为一条小径添加 1 点进展。体质＋：以步行杖打击 [2]，每 2 点精力为一个生灵添加 1 点伤害。若失败，承受 1 处伤势。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01043.jpg",
@@ -2135,9 +2135,9 @@
    "武器"
   ],
   "text_en": "Discard any number of [progress] from a trail to add an equal number of [harm] to a being.",
-  "text_zh": null,
+  "text_zh": "弃置一条小径上任意数量的进展，为一个生灵添加等量的伤害。\n<f>经验告诉你：有时要让固执的掠食者放弃猎物，唯有糊它一脸石头，或是在它面前突降一段朽木。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01044.jpg",
   "errata": null
  },
@@ -2179,9 +2179,9 @@
    "武器"
   ],
   "text_en": "Discard any number of [progress] from a trail to add an equal number of [harm] to a being.",
-  "text_zh": null,
+  "text_zh": "弃置一条小径上任意数量的进展，为一个生灵添加等量的伤害。\n<f>经验告诉你：有时要让固执的掠食者放弃猎物，唯有糊它一脸石头，或是在它面前突降一段朽木。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01044.jpg",
   "errata": null
  },
@@ -2223,9 +2223,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust:</b> When a Ranger scouts, increase the number of cards scouted by 1.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>一名行者探查时，探查的卡数 +1。\n<f>你轻点额侧的传感器，视觉与听觉随之交融，在脑海中唤起一幅超出你耳目平日所能领会景象。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01045.jpg",
   "errata": null
  },
@@ -2263,9 +2263,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> When you rest, add entries equal to the number of [FOC] in your energy pool.\n<b>Use 1 entry:</b> When a Ranger interacts with a feature, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你歇息时，添加记录，数量等于能量池中的专注数。使用 1 记录：一名行者与地标交互时，投入 1 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01046.jpg",
   "errata": null
  },
@@ -2303,9 +2303,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> When you travel, if this trail is attached to the location, travel to a location up to two paths away. Use the terrain of the second path when building the path deck.\n<b>Clear [progress]:</b> Attach this trail to the location.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>旅行时，若此小径附属该地点，则旅行至至多两条路径外的地点。构建路径牌组时使用第二条路径的地形。离场进展：将此小径附属该地点。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01047.jpg",
   "errata": null
  },
@@ -2345,9 +2345,9 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> After you succeed at a <b>Traverse</b> test, add [progress] to a being equal to your effort. This is in addition to the test’s standard effect.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你穿行检定成功后，为一个生灵添加进展，点数等于你的精力。此效果叠加于该检定的标准效果之上。\n<f>借由练习与用心，你学会了向他人展现其面前可能性的辽阔。除了我们给自己设下的限制，再没有别的界限。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01048.jpg",
   "errata": null
  },
@@ -2387,9 +2387,9 @@
    "技能"
   ],
   "text_en": "<b>Response:</b> When you perform a test, discard any number of cards from your fatigue stack to commit 1 effort to that test for every 2 cards discarded this way.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>进行检定时，从疲劳牌堆弃置任意数量的卡，每以此方式弃置 2 张卡，便为该检定投入 1 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01049.jpg",
   "errata": null
  },
@@ -2429,9 +2429,9 @@
    "学识"
   ],
   "text_en": "Choose a trail. Soothe fatigue equal to the number of [progress] on that trail. This fatigue may be divided as you choose between all Rangers.",
-  "text_zh": null,
+  "text_zh": "选择一条小径，治愈疲劳，点数等于该小径上的进展数。这些疲劳可在各行者间由你自行分配。\n<f>你仰面躺下，深深呼吸。此刻，你清晰地感到自己与大地的连结，与一切生灵的连结。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01050.jpg",
   "errata": null
  },
@@ -2467,9 +2467,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Ready a tech.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>使一件科技就绪。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01051.jpg",
   "errata": null
  },
@@ -2505,9 +2505,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Spend 1 energy to add 1 token to a tech.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>花费 1 点能量，向一件科技添加 1 个指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01052.jpg",
   "errata": null
  },
@@ -2548,9 +2548,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 profile):</b> When a Ranger performs an <b>Avoid</b> test, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 份档案）：</b>一名行者进行<b>闪避</b>检定时，投入 1 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01053.jpg",
   "errata": null
  },
@@ -2592,9 +2592,9 @@
    "科技"
   ],
   "text_en": "Attach to a predator.\n<b>Use 1 length:</b> When the attached predator would ready, it remains exhausted.\n[FIT] + [conflict]<b>: Lead</b> <f>the animal to</f> move the attached predator.",
-  "text_zh": null,
+  "text_zh": "附属到一个掠食者。使用 1 段段长：所附掠食者即将就绪时，它保持消耗。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01054.jpg",
   "errata": null
  },
@@ -2634,9 +2634,9 @@
    "科技"
   ],
   "text_en": "Discard this gear from play to exhaust beings equal to the number of charges on this gear.\n<b>Response:</b> After you succeed at an <b>Avoid</b> test, add 1 charge to this gear.",
-  "text_zh": null,
+  "text_zh": "将此装备从场中弃置，以消耗等于此装备上充能数的生灵。<b>响应：</b>你闪避检定成功后，向此装备添加 1 个充能。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01055.jpg",
   "errata": null
  },
@@ -2676,9 +2676,9 @@
    "工具"
   ],
   "text_en": "Attach to a location or feature.\nThe attached card gains the trail trait.\n<b>Response:</b> When 1 or more [progress] is added to the attached trail, increase the number of [progress] added by 1.",
-  "text_zh": null,
+  "text_zh": "附属到一个地点或地标。所附卡获得小径特性。<b>响应：</b>向所附小径添加 1 点或更多进展时，使添加的进展数量增加 1。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01056.jpg",
   "errata": null
  },
@@ -2720,7 +2720,7 @@
    "科技"
   ],
   "text_en": "During your turn, you may treat obstacles as if they did not have the obstacle keyword.\n[FIT] + [reason] <b>(use 1 charge): Climb</b> <f>the obstructing terrain with the agility of a spider to</f> move your [ranger] to an obstacle.",
-  "text_zh": null,
+  "text_zh": "在你的回合中，你可把障碍视为不具有障碍关键词。体质＋（使用 1 充能）：以蜘蛛般的敏捷攀上阻隔地形，将你的行者指示物移动到一个障碍。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01057.jpg",
@@ -2764,9 +2764,9 @@
    "武器"
   ],
   "text_en": "<b>[FOC] + [conflict] (use 1 dart): Shoot</b> <f>one of the featherlight darts to</f> add [harm] to a being equal to your effort. Whether you succeed or fail, dodge all cards between you and that being.",
-  "text_zh": null,
+  "text_zh": "专注＋（使用 1 支飞镖）：射出一支轻羽飞镖，向一个生灵添加伤害，数量等于你的精力。无论成功或失败，闪避你与该生灵之间的所有卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01058.jpg",
   "errata": null
  },
@@ -2808,9 +2808,9 @@
    "工具"
   ],
   "text_en": "When you play this gear, choose an aspect (you may place a spare energy token here as a reminder).\n<b>Exhaust (use 1 sip):</b> Gain 1 energy matching the chosen aspect.",
-  "text_zh": null,
+  "text_zh": "你打出此装备时，选择一种能力（你可在此放置一个备用能量指示物作为提醒）。<b>消耗（使用 1 口啜饮）：</b>获得 1 点匹配所选能力的能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01059.jpg",
   "errata": null
  },
@@ -2851,9 +2851,9 @@
    "科技"
   ],
   "text_en": "<b>Response:</b> After a path card is cleared, add 1 inkrill to this gear.\n<b>Use 1 inkrill:</b> When a Ranger interacts with a feature, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一条路径卡离场后，向此装备添加 1 只墨水虫。使用 1 只墨水虫：一名行者与地标交互时，投入 1 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01060.jpg",
   "errata": null
  },
@@ -2895,9 +2895,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> When you perform a <b>Traverse</b> test, use [FOC] instead of [FIT].",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 充能）：</b>你进行穿行检定时，使用专注而非体质。\n<f>每迈一步，你的徒步杖都会向上弹起，为四肢添上一分浮力，卸去你的负担。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01061.jpg",
   "errata": null
  },
@@ -2937,9 +2937,9 @@
    "学识"
   ],
   "text_en": "<b>Response:</b> After you succeed at an <b>Avoid</b> test, exhaust 1 additional being",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你闪避检定成功后，额外消耗 1 个生灵。\n<f>无论是在工坊还是在自然中，你都能进入一种与周遭融为一体的状态，举手投足间的从容，仿佛对造物之道有着与生俱来的领悟。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01062.jpg",
   "errata": null
  },
@@ -2981,9 +2981,9 @@
    "科技"
   ],
   "text_en": "<b>Use 1 charge:</b> When you would suffer 1 or more fatigue from a path card, reduce the fatigue suffered to 0.",
-  "text_zh": null,
+  "text_zh": "使用 1 充能：你将因一张路径卡承受 1 点或更多疲劳时，将承受的疲劳减少至 0。\n<f>将扣环顺时针一转，斗篷表面便随环境变换纹样与色彩，使你在未经训练的眼睛看来几乎隐形。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01063.jpg",
   "errata": null
  },
@@ -3023,9 +3023,9 @@
    "经验"
   ],
   "text_en": "<b>Reponse:</b> When a Ranger would suffer 1 or more fatigue, they soothe that amount of fatigue instead.",
-  "text_zh": null,
+  "text_zh": "响应：一名行者将承受 1 点或更多疲劳时，其改为治愈该数量的疲劳。\n<f>你从不离开工坊时不带上荒野求生必需的器具。趁手的工具，能把最耗人的苦差变成令人振奋的一刻。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01064.jpg",
   "errata": null
  },
@@ -3061,7 +3061,7 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Reduce a being’s presence to 0 until the end of the turn.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>将一个生灵的妨碍值降为 0，直到本回合结束。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01065.jpg",
@@ -3099,7 +3099,7 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Reduce a being’s presence by 2 until the end of your turn.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>将一个生灵的妨碍值降低 2，直到你的回合结束。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/taboo/set_01/01065.jpg",
@@ -3140,9 +3140,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Spend 1 energy to add 1 token to an aid card.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>花费 1 点能量，向一张助力卡添加 1 个指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01066.jpg",
   "errata": null
  },
@@ -3184,9 +3184,9 @@
    "援助"
   ],
   "text_en": "Attach to a feature.\nReduce the attached feature’s presence by 1 for each marker on this attachment.",
-  "text_zh": null,
+  "text_zh": "附属到一个地标。将所附地标的妨碍值按此附装上每个标记减少 1。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01067.jpg",
   "errata": null
  },
@@ -3226,9 +3226,9 @@
    "援助"
   ],
   "text_en": "Attach to a being.\nReduce the attached being’s presence by 1 for each snare on this attachment.",
-  "text_zh": null,
+  "text_zh": "附属到一个生灵。将所附生灵的妨碍值按此附装上每个陷阱减少 1。\n<f>交错的陷阱网发出轻柔而和谐的嗡鸣，连最凶暴的生灵也能被它安抚。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01068.jpg",
   "errata": null
  },
@@ -3268,9 +3268,9 @@
    "学识"
   ],
   "text_en": "Reduce the presence of each card in play to 0 until the end of the next turn.",
-  "text_zh": null,
+  "text_zh": "将场中每张卡的妨碍值降为 0，直到下一回合结束。\n<f>多年来，你守护着村子的和谐，靠的不只是在乡邻间滋养爱与慈悲，也靠在山林间度过的时光——与自然世界相连。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01069.jpg",
   "errata": null
  },
@@ -3310,9 +3310,9 @@
    "学识"
   ],
   "text_en": "Reduce the presence of each card in play to 0 until the end of the next turn.",
-  "text_zh": null,
+  "text_zh": "将场中每张卡的妨碍值降为 0，直到下一回合结束。\n<f>多年来，你守护着村子的和谐，靠的不只是在乡邻间滋养爱与慈悲，也靠在山林间度过的时光——与自然世界相连。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01069.jpg",
   "errata": null
  },
@@ -3352,9 +3352,9 @@
    "技能"
   ],
   "text_en": "<b>Response:</b> After you succeed at a <b>Connect</b> test, add [progress] to a feature equal to your effort. This is in addition to the test’s standard effect.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你连结检定成功后，向一个地标添加进展，数量等于你的精力。此效果叠加于该检定的标准效果之上。\n<f>你相信，只要肯花时间去追随前人的足迹，总能抵达更深的理解与洞见。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01070.jpg",
   "errata": null
  },
@@ -3396,7 +3396,7 @@
    "武器"
   ],
   "text_en": "<b>[FIT] + [conflict] (use 1 pulse): Strike [2]</b> <f>with a pulse of kinetic energy to</f> add 1[harm] to a being and exhaust it. If you fail, discard 1[progress] from that being; if you cannot, it fatigues you instead.",
-  "text_zh": null,
+  "text_zh": "体质＋（使用 1 道脉冲）：以一道动能脉冲打击 [2]，向一个生灵添加伤害并将其消耗。若失败，从该生灵弃置 1 点伤害；若不能，则改为使你疲劳。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01071.jpg",
@@ -3440,9 +3440,9 @@
    "援助"
   ],
   "text_en": "Attach to a being.\n<b>Response:</b> After a challenge effect on the attached being resolves, add 1 track.\n<b>Use 1 track:</b> When a Ranger performs a test, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "附属到一个生灵。<b>响应：</b>所附生灵上的挑战效果结算后，添加 1 段踪迹。使用 1 段踪迹：一名行者进行检定时，投入 1 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01072.jpg",
   "errata": null
  },
@@ -3484,9 +3484,9 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> When a Ranger performs a <b>Connect</b> test, commit 1 effort.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 充能）：</b>一名行者进行连结检定时，投入 1 点精力。\n<f>装置一启动，你便感到自己无论如何都不会再误解身边的人。每一句话、每一个手势都传递着一种纯粹的心念——唯有最具共情力的人才能领会。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01073.jpg",
   "errata": null
  },
@@ -3526,9 +3526,9 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> When a Ranger would suffer an injury or [harm] would be added to a being, cancel that effect. Suffer 1 injury.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者将承受伤势，或伤害将添加给一个生灵时，取消该效果。承受 1 处伤势。\n<f>你为守护他人而忘我，深知一切创伤皆是暂时的；而你身上留下的疤痕，正是你立下誓言的明证。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01074.jpg",
   "errata": null
  },
@@ -3568,9 +3568,9 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> When a Ranger would suffer an injury or [harm] would be added to a being, cancel that effect.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者将承受伤势，或伤害将添加给一个生灵时，取消该效果。\n<f>你为守护他人而忘我，深知一切创伤皆是暂时的；而你身上留下的疤痕，正是你立下誓言的明证。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01074.jpg",
   "errata": null
  },
@@ -3612,9 +3612,9 @@
    "援助"
   ],
   "text_en": "Attach to a being.\n<b>Use 1 alarm:</b> When a challenge effect on the attached being would resolve, cancel that effect.",
-  "text_zh": null,
+  "text_zh": "附属到一个生灵。使用 1 次警报：所附生灵的挑战效果即将结算时，取消该效果。\n<f>你腰间佩戴的小巧陶制装置会向胸口传来一阵能量脉冲，提醒你潜在的危险。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01075.jpg",
   "errata": null
  },
@@ -3656,9 +3656,9 @@
    "援助"
   ],
   "text_en": "Attach to the location.\n<b>Use 1 alarm:</b> Before a challenge effect on a being would resolve, cancel that effect.",
-  "text_zh": null,
+  "text_zh": "附属到一个地点。｜使用 1 次警报：一个针对生灵的挑战效果即将结算前，取消该效果。\n<f>你腰间佩戴的小巧陶制装置会向胸口传来一阵能量脉冲，提醒你潜在的危险。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01075.jpg",
   "errata": null
  },
@@ -3698,9 +3698,9 @@
    "学识"
   ],
   "text_en": "Exhaust a being. Then add [progress] to that being equal to the number of exhausted beings within reach.",
-  "text_zh": null,
+  "text_zh": "消耗一个生灵。然后向该生灵添加进展，数量等于其近旁区内已消耗生灵的数量。\n<f>我们的先祖拥有丰厚的知识与经验。若身无长物便贸然踏入人生，既愚蠢又毫无必要。有了他们的相助，我们便能守护他们馈赠给我们的一切，并走向兴盛。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01076.jpg",
   "errata": null
  },
@@ -3742,7 +3742,7 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Discard 1[progress] from this being to add 1 token to an aid card and 2[progress] to another being.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。｜<b>消耗：</b>弃置此生灵的 1 点进展，以向一张助力卡添加 1 个指示物，或向另一个生灵添加 2 点进展。\n<f>波科多忠心不渝，见过她的人无不喜爱。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01077.jpg",
@@ -3786,7 +3786,7 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Discard 1[progress] from this being to add 1 token to an aid card or 2[progress] to another being.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。｜<b>消耗：</b>弃置此生灵的 1 点进展，以向一张助力卡添加 1 个指示物，或向另一个生灵添加 2 点进展。\n<f>波科多忠心不渝，见过她的人无不喜爱。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/taboo/set_01/01077.jpg",
@@ -3830,9 +3830,9 @@
    "专家"
   ],
   "text_en": "Search the path deck and discard for a human and put them into play with this card attached.\n<b>Response:</b> When the attached human is cleared, move the [progress] from it to any number of other beings, divided as you choose",
-  "text_zh": null,
+  "text_zh": "搜寻路径牌组与弃牌堆中的一名人类，并将其与此卡附属后置入场。<b>响应：</b>所附人类离场后，将其身上的伤",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01078.jpg",
   "errata": null
  },
@@ -3868,9 +3868,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Scout 1 challenge card.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>探查 1 张挑战卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01079.jpg",
   "errata": null
  },
@@ -3906,9 +3906,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Choose a manifestation in your discard, and add it to your hand.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>从你的弃牌堆选择一张激发，加入手牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01080.jpg",
   "errata": null
  },
@@ -3944,9 +3944,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Discard a card from your hand to choose a manifestation in your discard and add it to your hand.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>从你的手牌弃置一张卡，以从你的弃牌堆选择一张激发，并加入你的手牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01080.jpg",
   "errata": null
  },
@@ -3987,7 +3987,7 @@
    "自然"
   ],
   "text_en": "Manifestation.\nAttach to a feature, and add 2[progress] to it.\n<b>Response:</b> When a Ranger performs a test, they may discard 1 or more [progress] from the attached feature to dodge an equal number of cards in the same area.",
-  "text_zh": null,
+  "text_zh": "激发。附属一处地标，并为其添加 2 点进展。<b>响应：</b>一名行者进行检定时，可弃置附属地标上的 1 个或更多进展，闪避同区域中等量的卡。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01081.jpg",
@@ -4030,7 +4030,7 @@
    "武器"
   ],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\n<b>[AWA] + [conflict]: Strike</b> <f>with a whirling coil of wind and water to</f> add [harm] to a being equal to your effort. Then exhaust that being.",
-  "text_zh": null,
+  "text_zh": "激发。（打出激发须从传导弃置 1 个指示物。）知觉＋：以风与水旋成的鞭索打击，为一个生灵添加伤害，点数等于你的精力。然后消耗该生灵。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01082.jpg",
@@ -4073,9 +4073,9 @@
    "专家"
   ],
   "text_en": "Conduit. Setup.\n<b>Response:</b> After the challenge deck is shuffled, add 1 glint to this conduit.\n<b>Exhaust (use X glints):</b> Scout X path cards.",
-  "text_zh": null,
+  "text_zh": "传导。预设。<b>响应：</b>挑战牌组洗牌后，为此传导添加 1 个微光。<b>消耗（使用 X 微光）：</b>探查 X 张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01083.jpg",
   "errata": null
  },
@@ -4113,9 +4113,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\n<b>Response:</b> When drawing challenge cards during a test, draw and discard challenge cards until you draw one with a +1 in the used aspect. Use that challenge card for this test, and suffer fatigue equal the number of cards discarded this way.",
-  "text_zh": null,
+  "text_zh": "激发。<b>响应：</b>检定时抽挑战卡过程中，反复抽取并弃置挑战卡，直到抽到一张所用能力带 +1 者为止。本次检定使用那张挑战卡，并承受疲劳，点",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01084.jpg",
   "errata": null
  },
@@ -4153,9 +4153,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\n<b>Response:</b> When drawing challenge cards during a test, draw and discard challenge cards one at a time until you choose to stop. Use the last challenge card drawn for this test, and suffer fatigue equal to the number of cards discarded this way.",
-  "text_zh": null,
+  "text_zh": "激发。｜<b>响应：</b>检定时抽取挑战卡的过程中，一次一张地抽取并弃置挑战卡，直到你选择停止为止。本次检定使用最后抽到的那张挑战卡，并承受疲劳，点数等于以此方式弃置的卡数。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01084.jpg",
   "errata": null
  },
@@ -4193,7 +4193,7 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nAdd 1[progress] to each feature and location. Then you may redistribute any number of [progress] between them.",
-  "text_zh": null,
+  "text_zh": "激发。（打出激发须从传导弃置 1 个指示物。）为每处地标与地点添加 1 点进展。随后你可在它们之间重新分配任意数量的进展。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01085.jpg",
@@ -4236,9 +4236,9 @@
    "专家"
   ],
   "text_en": "Conduit. Setup.\n<b>Response:</b> After you succeed at a <b>Traverse</b> test, add 1 stride to this conduit.\n<b>Exhaust (use X strides):</b> Add X[progress] to a trail.",
-  "text_zh": null,
+  "text_zh": "传导。预设。<b>响应：</b>你穿行检定成功后，为此传导添加 1 个步幅。<b>消耗（使用 X 步幅）：</b>为一条小径添加 X 点进展。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01086.jpg",
   "errata": null
  },
@@ -4276,9 +4276,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\n<b>Response:</b> When a Ranger reveals a challenge card during a test, choose which modifier to use from that card. Then choose an additional challenge icon to resolve for this test.",
-  "text_zh": null,
+  "text_zh": "者揭示挑战卡后，选择该卡使用哪个修正值。然后为此检定额外选择一个挑战图标进行结算。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01087.jpg",
   "errata": null
  },
@@ -4318,9 +4318,9 @@
    "科技"
   ],
   "text_en": "<b>Response:</b> After you perform a test in which you committed 1 or more manifestation, gain 1 [FOC].\n<b>Response:</b> When you rest, if you have 1 or more [FOC] in your energy pool, scout 1 challenge card.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你投入了 1 张或以上激发的检定后，获得 1 点专注。<b>响应：</b>你歇息时，若能量池中有 1 点或以上专注，探查 1 张挑战卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01088.jpg",
   "errata": null
  },
@@ -4361,9 +4361,9 @@
    "专家"
   ],
   "text_en": "Conduit. Setup.\n<b>Response:</b> Before you draw a challenge card, name a challenge icon; if that icon is on the drawn card, add 1 vision to this conduit.\n<b>Exhaust (use X visions):</b> Scout X Ranger cards.",
-  "text_zh": null,
+  "text_zh": "传导。预设。<b>响应：</b>抽挑战卡前，指定一个挑战图标；若所抽卡上有该图标，为此传导添加 1 个幻象。<b>消耗（使用 X 幻象）：</b>探查 X 张行者牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01089.jpg",
   "errata": null
  },
@@ -4401,9 +4401,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\nAttach to a being within reach of any Ranger.\n<b> Response:</b> After a challenge effect on the attached being resolves, the Ranger that played this card gains 1 energy of any type.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>所附生灵上的挑战效果结算后，打出此卡的行者获得 1 点任意类型的能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01090.jpg",
   "errata": null
  },
@@ -4441,9 +4441,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nChoose a being in play, and shuffle it into the path deck. Then search the path deck and discard for a being and put it into play.",
-  "text_zh": null,
+  "text_zh": "激发。（打出激发须从传导弃置 1 个指示物。）选择一名在场的生灵，将其洗入路径牌组。然后搜寻路径牌组与弃牌堆中的一个生灵，并置入场。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01091.jpg",
   "errata": null
  },
@@ -4484,9 +4484,9 @@
    "专家"
   ],
   "text_en": "Conduit. Setup.\n<b>Response:</b> After you perform a test in which no challenge effects were resolved, add 1 song to this conduit.\n<b>Exhaust (use X songs):</b> Add X[progress] to a being.",
-  "text_zh": null,
+  "text_zh": "传导。预设。<b>响应：</b>你未结算任何挑战效果的检定后，为此传导添加 1 个歌谣。<b>消耗（使用 X 歌谣）：</b>为一个生灵添加 X 点进展。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01092.jpg",
   "errata": null
  },
@@ -4526,9 +4526,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may suffer 1 fatigue to add it back into your hand.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可承受 1 点疲劳，将其收回手牌。\n<f>一个念头自你感知之外悄然降临；你在澄明中感到安宁，确信前路何在。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01093.jpg",
   "errata": null
  },
@@ -4568,9 +4568,9 @@
    "天生"
   ],
   "text_en": "The number of [conflict] on this attribute is equal to the number of [AWA] in your energy pool.",
-  "text_zh": null,
+  "text_zh": "图标数量等于你能量池中的知觉点数。\n<f>你的感官愈发敏锐，察觉每一次动静与每一声响。当你专注于手头之事时，时间仿佛也慢了下来。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01094.jpg",
   "errata": null
  },
@@ -4610,9 +4610,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, gain 1 [AWA].",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，获得 1 点知觉。\n<f>当你察觉周遭的每一处细节，世界便活了起来：花香的风中草叶轻摇，林中虫鸣成韵，阳光的倒影为视野中的万物勾勒出轮廓。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01095.jpg",
   "errata": null
  },
@@ -4652,7 +4652,7 @@
    "天生"
   ],
   "text_en": "",
-  "text_zh": null,
+  "text_zh": "当你专心于一件事时，你的每一个动作都自有其意，每一步都出于用心与考量。没有哪个细节能逃过你的注意。你已推演过每一种结果，也为未能达成心中设想留好了后手。\n<f>当你专心于一件事时，你的每一个动作都自有其意，每一步都出于用心与考量。没有哪个细节能逃过你的注意。你已推演过每一种结果，也为未能达成心中设想留好了后手。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01096.jpg",
@@ -4694,9 +4694,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may suffer 1 fatigue to add it back into your hand.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可承受 1 点疲劳，将其收回手牌。\n<f>你天生怀有一团不灭的火焰。它有时沉寂，但只要遇上合适的引火之物便会重新燃起；在那些时刻，你照亮了周围的每一个人。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01097.jpg",
   "errata": null
  },
@@ -4736,9 +4736,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may suffer 1 fatigue to gain 1 energy of any type.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可承受 1 点疲劳，获得 1 点任意类型的能量。\n<f>当你与周遭的节律同频而行，深吸清甜的空气，感受心跳的共鸣，你的心神也随之澄澈如洗。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01098.jpg",
   "errata": null
  },
@@ -4778,9 +4778,9 @@
    "天生"
   ],
   "text_en": "The number of [exploration] on this attribute is equal to the number of [FIT] in your energy pool.",
-  "text_zh": null,
+  "text_zh": "图标数量等于你能量池中的体质点数。\n<f>目标在望，你从内心深处汲取力量。四肢涌动着劲力，你笃定地知道：没有什么事是你做不到的。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01099.jpg",
   "errata": null
  },
@@ -4820,7 +4820,7 @@
    "天生"
   ],
   "text_en": "",
-  "text_zh": null,
+  "text_zh": "多年的阅历让你明白，喋喋不休的思绪是达成目标最大的障碍。有人用犹疑与疑虑把世界越弄越复杂，你却只管行动，而后成功。\n<f>多年的阅历让你明白，喋喋不休的思绪是达成目标最大的障碍。有人用犹疑与疑虑把世界越弄越复杂，你却只管行动，而后成功。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01100.jpg",
@@ -4862,9 +4862,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may suffer 1 fatigue to add it back into your hand.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可承受 1 点疲劳，将其收回手牌。\n<f>你从探究事情的细微之处中获得极大的乐趣。在你看来，任何值得去做的事，都值得做到尽善尽美。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01101.jpg",
   "errata": null
  },
@@ -4904,9 +4904,9 @@
    "天生"
   ],
   "text_en": "Before you commit this attribute, you may suffer 1 fatigue. If you do, this attribute gains [reason] [exploration] [conflict].",
-  "text_zh": null,
+  "text_zh": "投入此属性前，你可承受 1 点疲劳。若如此做，此属性获得 1 个倾向图标。\n<f>自小便发现，没有哪样技能能难得倒你。正因如此，你从不害怕任何事——至少总要试上一回。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01102.jpg",
   "errata": null
  },
@@ -4946,9 +4946,9 @@
    "天生"
   ],
   "text_en": "The number of [reason] on this attribute is equal to the number of [FOC] in your energy pool.",
-  "text_zh": null,
+  "text_zh": "图标数量等于你能量池中的专注点数。\n<f>别人的头脑或许在循规蹈矩中最感安逸，你的却只有在挣脱藩篱、于思想的荒野中另辟新径时，才最为活跃。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01103.jpg",
   "errata": null
  },
@@ -4988,7 +4988,7 @@
    "天生"
   ],
   "text_en": "",
-  "text_zh": null,
+  "text_zh": "问题在你脑海中成形，如同一颗多面的宝石，每一个棱角都是一种可能的解法。最快的那一面在你的注视下闪出光芒；很快，宝石便化作一道单线——利刃般的锋口，前路清晰得无可辩驳，又如那磨快的刀锋一般诱人。\n<f>问题在你脑海中成形，如同一颗多面的宝石，每一个棱角都是一种可能的解法。最快的那一面在你的注视下闪出光芒；很快，宝石便化作一道单线——利刃般的锋口，前路清晰得无可辩驳，又如那磨快的刀锋一般诱人。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01104.jpg",
@@ -5030,9 +5030,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may suffer 1 fatigue to add it back into your hand.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可承受 1 点疲劳，将其收回手牌。\n<f>当你把心意说出口时，你出于善意而言，好让你的所求不会被误解为别的什么——除了对平和与理解的渴望。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01105.jpg",
   "errata": null
  },
@@ -5072,9 +5072,9 @@
    "天生"
   ],
   "text_en": "You may commit this attribute to any Ranger's test.",
-  "text_zh": null,
+  "text_zh": "你可将此属性投入到任意行者的检定中。\n<f>你天生能察觉身边人的需要。你会本能地伸出援手，却从不咄咄逼人，不见一丝自我。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01106.jpg",
   "errata": null
  },
@@ -5114,9 +5114,9 @@
    "天生"
   ],
   "text_en": "The number of [connection] on this attribute is equal to the number of [SPI] in your energy pool.",
-  "text_zh": null,
+  "text_zh": "图标数量等于你能量池中的精神点数。\n<f>当你全然地做自己时，便感到与生命的流动合而为一。你身旁的人被你的存在所振奋，为你的笃定所鼓舞，都乐于尽己所能地伸出援手。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01107.jpg",
   "errata": null
  },
@@ -5156,7 +5156,7 @@
    "天生"
   ],
   "text_en": "",
-  "text_zh": null,
+  "text_zh": "你敞开胸怀，感到意识沉入胸膛。当你卸下一切多余的心防——那些妨碍这最真挚连结的东西——一股暖流在体内弥散开来，将自己毫无保留地坦露给他人。\n<f>你敞开胸怀，感到意识沉入胸膛。当你卸下一切多余的心防——那些妨碍这最真挚连结的东西——一股暖流在体内弥散开来，将自己毫无保留地坦露给他人。</f>",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01108.jpg",
@@ -5198,9 +5198,9 @@
    "衣物"
   ],
   "text_en": "<b>Exhaust:</b> When you would suffer 1 or more fatigue from a path card, reduce the amount of fatigue suffered to 0.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>你将因一张路径卡承受 1 点或更多疲劳时，将承受的疲劳减少至 0。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01201.jpg",
   "errata": null
  },
@@ -5238,9 +5238,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>[FOC] + [exploration]: Navigate</b> <f>the winding tunnel to</f> move your [ranger] to this feature.\n<b>Response:</b> When you perform a test, if your [ranger] is on this feature, add 1[harm] to it to dodge each card in the same area.\n<b>Clear [harm]:</b> If your [ranger]is on this feature, suffer 1 injury.",
-  "text_zh": null,
+  "text_zh": "专注＋[exploration]<b>：穿行</b><f>蜿蜒的隧道，</f>将你的[ranger]移动到此地标。\n<b>响应：</b>你进行检定时，若你的[ranger]在此地标上，可向其添加 1[harm]，以闪避同区的每张卡。\n<b>清退[harm]：</b>若你的[ranger]在此地标上，承受 1 处伤势。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01202.jpg",
   "errata": null
  },
@@ -5280,9 +5280,9 @@
    "学识"
   ],
   "text_en": "Search the path deck for a card and place it on top or bottom of the deck.",
-  "text_zh": null,
+  "text_zh": "从路径牌组中搜寻一张卡，将其置于该牌组顶或底。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01203.jpg",
   "errata": null
  },
@@ -5320,9 +5320,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Exhaust (use X sketches):</b> Exhaust a path card with presence X.\n<b>[AWA] + [reason]: Sketch [X]</b> <f>your subject to</f> choose a path card and add X sketches to this book. X is equal to that card's presence.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 X 张速写）：</b>消耗一张妨碍值为 X 的路径卡。\n知觉＋[reason]<b>：速写 [X]</b><f>你的描绘对象，</f>以选择一张路径卡并向本册添加 X 张速写。X 等于该卡的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01204.jpg",
   "errata": null
  },
@@ -5360,9 +5360,9 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\nChoose any number of path cards within reach and shuffle them into the path deck, then draw 1 path card.",
-  "text_zh": null,
+  "text_zh": "激发。\n选择任意数量近旁区内的路径卡，将其洗入路径牌组，然后抽 1 张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01205.jpg",
   "errata": null
  },
@@ -5402,9 +5402,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 form):</b> Exhaust and move a being.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 种形态）：</b>消耗并移动一个生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01206.jpg",
   "errata": null
  },
@@ -5444,9 +5444,9 @@
    "自然"
   ],
   "text_en": "Attach to a path card.\nReduce the attached card's presence by 2.\n<b>Response:</b> When the attached card fatigues a Ranger, add 1[harm] to it.",
-  "text_zh": null,
+  "text_zh": "附属到一张路径卡。\n将所附卡的妨碍值降低 2。\n<b>响应：</b>所附卡令一名行者疲劳时，向其添加 1[harm]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01207.jpg",
   "errata": null
  },
@@ -5487,9 +5487,9 @@
    "科技"
   ],
   "text_en": "<b>[AWA] + [reason] (use 1 graph): Calibrate</b> <f>the device to your current environment to</f> scout 2 path cards for every effort.",
-  "text_zh": null,
+  "text_zh": "知觉＋[reason]<b>（使用 1 份测绘图）：校准</b><f>仪器以适应当前环境，</f>每 1 点精力探查 2 张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01208.jpg",
   "errata": null
  },
@@ -5531,9 +5531,9 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Add 3[harm] to a being and [harm] to Quiet equal to that being's presence.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>向一个生灵添加 3[harm]，并向静默添加伤害，点数等于该生灵的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01209.jpg",
   "errata": {
    "slug": "rewards_9_of_31",
@@ -5576,9 +5576,9 @@
    "武器"
   ],
   "text_en": "<b>[FIT] + [conflict] (use 1 rake): Slash [X]</b> <f>with Umbra's claw to</f> add [harm] to a being equal to your effort. If you fail, suffer 1 injury. X is equal to the being's presence. Do not resolve [crest] effects during this test.",
-  "text_zh": null,
+  "text_zh": "体质＋[conflict]<b>（使用 1 次挥抓）：劈砍 [X]</b><f>以暗影之爪，</f>向一个生灵添加伤害，点数等于你的精力。若你失败，承受 1 处伤势。X 等于该生灵的妨碍值。此检定期间不结算[crest]效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01210.jpg",
   "errata": null
  },
@@ -5620,9 +5620,9 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 vault):</b> Exhaust an obstacle.\n<b>Response:</b> When there are no vaults on this gear, discard it.\n<b>[AWA] + [conflict]: Fish [2]</b> if there is a water card in play to soothe 2 fatigue and add 2[progress] to a water card.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 次撑跃）：</b>消耗一个障碍。\n<b>响应：</b>本装备上没有撑跃时，弃置本装备。\n场上有水域卡时，知觉＋[conflict]<b>：钓取 [2]</b>，以治愈 2 点疲劳并向一张水域卡添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01211.jpg",
   "errata": null
  },
@@ -5664,9 +5664,9 @@
    "武器"
   ],
   "text_en": "<b>[FIT] + [conflict] (use 1 fiber): Slice [X]</b> <f>with the fibrous blade to</f> add [harm] to a being equal to your effort. If you fail, suffer 1 injury. X is equal to the being's presence.",
-  "text_zh": null,
+  "text_zh": "体质＋[conflict]<b>（使用 1 缕纤维）：切割 [X]</b><f>以纤维之刃，</f>向一个生灵添加伤害，点数等于你的精力。若你失败，承受 1 处伤势。X 等于该生灵的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01212.jpg",
   "errata": null
  },
@@ -5704,9 +5704,9 @@
   ],
   "traits_zh": [],
   "text_en": "Setup.\nYou may travel on river paths.\nWhile your [ranger] is on this vehicle, treat the presence of all water features as 1 lower and the presence of all non-water features as 1 higher.\n<b>[FIT] + [reason]: Board</b> <f>the boat to</f> move your [ranger] to this vehicle or return it to your role.",
-  "text_zh": null,
+  "text_zh": "预设。\n你可沿河流路径旅行。\n你的[ranger]在此载具上时，所有水域地标的妨碍值视为低 1，所有非水域地标的妨碍值视为高 1。\n体质＋[reason]<b>：登船</b><f>登上小舟，</f>以将你的[ranger]移动到此载具，或将其移回你的角色。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01213.jpg",
   "errata": null
  },
@@ -5748,16 +5748,16 @@
    "武器"
   ],
   "text_en": "If you have a weapon equipped, add 5 [harm] to a being. Then suffer fatigue equal to the number of [harm] on that being in excess of its harm threshold.",
-  "text_zh": null,
+  "text_zh": "若你装备有武器，向一个生灵添加 5[harm]。然后承受疲劳，点数等于该生灵身上超出其伤害阈值的[harm]数。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01214.jpg",
   "errata": null
  },
  {
   "id": "01215",
   "name_en": "Touch of the Verdessa",
-  "name_zh": "维尔达萨之触",
+  "name_zh": "维尔黛萨之触",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -5791,9 +5791,9 @@
    "自然"
   ],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nAdd 1 [harm] to a flora to add 4 [harm] or 4[progress] to a path card. If that path card is a biomeld, increase the number of [harm] or [progress] added to it by 2.",
-  "text_zh": null,
+  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以向一张路径卡添加 4[harm] 或 4[progress]。若该路径卡为融合体，则向其添加的[harm]或[progress]增加 2。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01215.jpg",
   "errata": null
  },
@@ -5833,9 +5833,9 @@
    "技能"
   ],
   "text_en": "Add 3[progress] to a trail. If it's a mountain or obstacle, increase the number of [progress] added by 2.",
-  "text_zh": null,
+  "text_zh": "向一条小径添加 3[progress]。若它为山地或障碍，则添加的[progress]增加 2。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01216.jpg",
   "errata": null
  },
@@ -5875,9 +5875,9 @@
    "经验"
   ],
   "text_en": "You may move each being. Then resolve a challenge effect on a being of your choice. Resolve this effect even if the being is exhausted.",
-  "text_zh": null,
+  "text_zh": "你可移动每个生灵。然后结算你所选择一个生灵上的一个挑战效果。即使该生灵已消耗，仍结算此效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01217.jpg",
   "errata": null
  },
@@ -5918,9 +5918,9 @@
    "科技"
   ],
   "text_en": "<b>Use 1 needles:</b> When a Ranger reveals a challenge card during a test, choose a modifier from that card. Spend 1 energy matching that modifier's aspect to use it for this test instead.",
-  "text_zh": null,
+  "text_zh": "<b>使用 1 枚指针：</b>一名行者在检定中展示挑战卡时，从该卡选择一个修正值。花费 1 点与该修正值属性相同的能量，改为在本次检定中使用它。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01218.jpg",
   "errata": null
  },
@@ -5958,9 +5958,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Exhaust (use 1 shift):</b> When you perform a test, dodge each card in play. If you fail that test, suffer 1 injury.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 次移位）：</b>你进行检定时，闪避场上的每张卡。若你该检定失败，承受 1 处伤势。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01219.jpg",
   "errata": null
  },
@@ -6000,9 +6000,9 @@
    "学识"
   ],
   "text_en": "Scout 1 path card,1 challenge card, and 1 Ranger card from each Ranger's deck.",
-  "text_zh": null,
+  "text_zh": "探查 1 张路径卡与 1 张挑战卡，并从每名行者的牌组中探查 1 张行者牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01220.jpg",
   "errata": null
  },
@@ -6042,9 +6042,9 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> When a Ranger performs a test, commit X effort.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者进行检定时，投入 X 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01221.jpg",
   "errata": null
  },
@@ -6086,9 +6086,9 @@
    "科技"
   ],
   "text_en": "Attach to a feature.\n<b>Response:</b> After the attached feature is cleared, scout X path cards. X is equal to the number of beings in play.",
-  "text_zh": null,
+  "text_zh": "附属到一处地标。\n<b>响应：</b>所附地标被清除后，探查 X 张路径卡。X 等于场上生灵的数量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01222.jpg",
   "errata": null
  },
@@ -6128,9 +6128,9 @@
    "自然"
   ],
   "text_en": "<b>Use 1 pulse:</b> When you rest, scout 3 Ranger cards.",
-  "text_zh": null,
+  "text_zh": "<b>使用 1 次脉冲：</b>你歇息时，探查 3 张行者牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01223.jpg",
   "errata": null
  },
@@ -6170,9 +6170,9 @@
    "经验"
   ],
   "text_en": "Search your Ranger deck for any number of cards and place them facedown on top of your fatigue stack in the order of your choice.",
-  "text_zh": null,
+  "text_zh": "从你的行者牌组中搜寻任意数量的卡，按你选择的顺序将其面朝下置于你的疲劳牌堆顶。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01224.jpg",
   "errata": null
  },
@@ -6212,9 +6212,9 @@
    "经验"
   ],
   "text_en": "Add 5[progress] to a being. Then, if the being hasn't cleared, resolve each of its challenge effects in an order of your choice. Resolve these effects even if the being is exhausted.",
-  "text_zh": null,
+  "text_zh": "向一个生灵添加 5[progress]。然后，若该生灵未被清除，按你选择的顺序结算其每个挑战效果。即使该生灵已消耗，仍结算这些效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01225.jpg",
   "errata": null
  },
@@ -6254,9 +6254,9 @@
    "学识"
   ],
   "text_en": "Add 1[harm] to each flora. Add X[progress] to each being. Then each ranger soothes X fatigue. X is equal to the total number of [harm] added by this card.",
-  "text_zh": null,
+  "text_zh": "向每名生灵添加 X [progress]。然后每名行者治愈 X 点疲劳。X 等于此卡所添加的 [harm] 总数。\n<f>这锅炖菜的层次丰富，调和得恰到好处——浓郁却不腻口，清爽却又实在，温润抚慰之余又轻盈起泡。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01226.jpg",
   "errata": null
  },
@@ -6296,9 +6296,9 @@
    "学识"
   ],
   "text_en": "Add 1[harm] to up to 5 flora. Add X[progress] to each being. Then each ranger soothes X fatigue. X is equal to the total number of [harm] added by this card.",
-  "text_zh": null,
+  "text_zh": "向每名生灵添加 X [progress]。然后每名行者治愈 X 点疲劳。X 等于此卡所添加的 [harm] 总数。\n<f>这锅炖菜的层次丰富，调和得恰到好处——浓郁却不腻口，清爽却又实在，温润抚慰之余又轻盈起泡。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/taboo/set_01/01226.jpg",
   "errata": null
  },
@@ -6338,9 +6338,9 @@
    "食物"
   ],
   "text_en": "<b>Exhaust (use 1 dollop):</b> Choose a Ranger. That Ranger soothes fatigue equal to the number of [FOC] in their energy pool.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 团蜜）：</b>选择一名行者。该行者治愈疲劳，点数等于其能量池中的专注点数。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01227.jpg",
   "errata": null
  },
@@ -6380,9 +6380,9 @@
    "食物"
   ],
   "text_en": "<b>Exhaust (use 1 bite):</b> Choose a Ranger. That Ranger soothes fatigue equal to the number of [SPI] in their energy pool.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 口份）：</b>选择一名行者。该行者治愈疲劳，点数等于其能量池中的精神点数。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01228.jpg",
   "errata": null
  },
@@ -6422,9 +6422,9 @@
    "衣物"
   ],
   "text_en": "<b>Exhaust:</b> When a Ranger performs a <b>Connect</b> test that interacts with a human, commit 2 effort.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>一名行者进行与人类交互的<b>连结</b>检定时，投入 2 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01229.jpg",
   "errata": null
  },
@@ -6464,9 +6464,9 @@
    "学识"
   ],
   "text_en": "Each Ranger soothes all fatigue.",
-  "text_zh": null,
+  "text_zh": "每名行者治愈全部疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01230.jpg",
   "errata": null
  },
@@ -6508,9 +6508,9 @@
    "援助"
   ],
   "text_en": "Attach to your role.\n<b>Exhaust (use 1 xp):</b> Ready your role.",
-  "text_zh": null,
+  "text_zh": "附属到你的角色。\n<b>消耗（使用 1 点经验）：</b>使你的角色就绪。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/core/01231.jpg",
   "errata": null
  },
@@ -6550,7 +6550,7 @@
    "顽疾"
   ],
   "text_en": "Fatiguing 2\n<b>Response:</b> When you draw this card, attach it to your role.\n<b>[FIT] + [reason]: Treat [2]</b> <f>and bandage the injury to</f> return this card to your collection.",
-  "text_zh": null,
+  "text_zh": "骚扰 2。<b>响应：</b>你抽到此卡时，将其附属到你的角色。体质＋：治疗 [2] 并包扎伤势，将此卡归还你的收藏。",
   "text_zh_mt": null,
   "reviewed": false,
   "image": "img/card/core/01240.jpg",
@@ -6559,7 +6559,7 @@
  {
   "id": "02201",
   "name_en": "Lambance Rig",
-  "name_zh": null,
+  "name_zh": "兰班斯灯架",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6592,16 +6592,16 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 flash)</b>: Choose a path card. That card gains illumination until the end of the turn.\n<b>[FOC] + [reason] (use 1 flash): Distract</b> <f>with a brilliant flash of light to</f> exhaust a being.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 次闪光）：</b>选择一张路径卡。该卡获得照明，直到本回合结束。\n专注＋[reason]<b>（使用 1 次闪光）：致眩</b><f>以一道夺目的强光，</f>消耗一个生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02201.jpg",
   "errata": null
  },
  {
   "id": "02202",
   "name_en": "\"Lucky\" Cloak",
-  "name_zh": null,
+  "name_zh": "「幸运」斗篷",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6634,16 +6634,16 @@
    "衣物"
   ],
   "text_en": "<b>Exhaust:</b> When you would suffer 1 or more fatigue, draw a challenge card and resolve the following effect based on its icon:\n[sun] Soothe that amount of fatigue instead.\n[mountain] Prevent that fatigue.\n[crest] Suffer 1 additional fatigue or discard this gear.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>你将承受 1 点或更多疲劳时，抽一张挑战卡，并依其图标结算以下效果：\n[sun] 改为治愈该数量的疲劳。\n[mountain] 防止该疲劳。\n[crest] 额外承受 1 点疲劳，或弃置本装备。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02202.jpg",
   "errata": null
  },
  {
   "id": "02203",
   "name_en": "A Frog this Way Comes",
-  "name_zh": null,
+  "name_zh": "蛙临此路",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6678,16 +6678,16 @@
    "自然"
   ],
   "text_en": "<b>Choose one:</b>\nExhaust X path cards.\nShuffle a path card with X or less presence into the path deck. Then search the General set for a Fractal Frog and shuffle it into the path deck.",
-  "text_zh": null,
+  "text_zh": "<b>选择其一：</b>\n消耗 X 张路径卡。\n将一张妨碍值为 X 或以下的路径卡洗入路径牌组。然后从通用牌组中搜寻一只分形蛙，并将其洗入路径牌组。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02203.jpg",
   "errata": null
  },
  {
   "id": "02204",
   "name_en": "The Shapeshifter",
-  "name_zh": null,
+  "name_zh": "变形者",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6721,16 +6721,16 @@
    "伙伴"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Shuffle a being attached to this biomeld into the path deck. If that being was a predator, add 3[harm] to another being. If it was a prey, add 4[progress] to another being. Otherwise, exhaust another being.\nIf there is not a being attached to this biomeld, it gains the following test:\n<b>[AWA] + [connection]: Suggest</b> <f>a new form to</f> attach a non-human being from the path discard facedown to this biomeld. Then exhaust this biomeld.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>将附属此融合体的一个生灵洗入路径牌组。若该生灵为掠食者，向另一个生灵添加 3[harm]。若它为猎物，向另一个生灵添加 4[progress]。否则，消耗另一个生灵。\n若此融合体上没有附属生灵，它获得以下检定：\n知觉＋[connection]<b>：启示</b><f>一个新的形态，</f>以将路径弃牌堆中的一个非人类生灵面朝下附属到此融合体。然后消耗此融合体。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02204.jpg",
   "errata": null
  },
  {
   "id": "02205",
   "name_en": "Grasp of the Verdessa",
-  "name_zh": null,
+  "name_zh": "维尔黛萨之握",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6764,16 +6764,16 @@
    "自然"
   ],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nAdd 1[harm] to a flora to place a path card on top of the path deck. If that card is a biomeld, place it on the bottom of the path deck instead.",
-  "text_zh": null,
+  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以将一张路径卡置于路径牌组顶。若该卡为融合体，则改为将其置于路径牌组底。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02205.jpg",
   "errata": null
  },
  {
   "id": "02206",
   "name_en": "Silaro's Fastidiousness",
-  "name_zh": null,
+  "name_zh": "西拉罗的考究",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6806,16 +6806,16 @@
    "学识"
   ],
   "text_en": "Attach to a Ranger's equipped gear.\n<b>Response:</b> After a Ranger succeeds at a test from the attached gear, if it cleared a being, scout 1 path card. If it cleared a feature, add 2[progress] to the location. Otherwise, scout 1 Ranger card.",
-  "text_zh": null,
+  "text_zh": "附属到一名行者的已装备装备。\n<b>响应：</b>一名行者以所附装备进行的检定成功后，若它清除一个生灵，探查 1 张路径卡。若它清除一处地标，向地点添加 2[progress]。否则，探查 1 张行者牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02206.jpg",
   "errata": null
  },
  {
   "id": "02207",
   "name_en": "Fate of the Reclaimers",
-  "name_zh": null,
+  "name_zh": "回收者的命运",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6849,16 +6849,16 @@
    "武器"
   ],
   "text_en": "If you have a weapon equipped, add 3[harm] to a being. It fatigues you. If it fatigues you for 2 or more, add 2 additional [harm].",
-  "text_zh": null,
+  "text_zh": "若你装备有武器，向一个生灵添加 3[harm]。它令你疲劳。若它令你承受 2 点或更多疲劳，额外添加 2[harm]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02207.jpg",
   "errata": null
  },
  {
   "id": "02208",
   "name_en": "Rebreather",
-  "name_zh": null,
+  "name_zh": "循环呼吸器",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6892,16 +6892,16 @@
    "科技"
   ],
   "text_en": "Setup.\n<b>Exhaust (use 1 filter):</b> When you interact with a water card, commit 2 effort.\nThis gear cannot be discarded or returned to your hand by path card effects.",
-  "text_zh": null,
+  "text_zh": "预设。\n<b>消耗（使用 1 枚滤芯）：</b>你与一张水域卡交互时，投入 2 点精力。\n本装备不会因路径卡效果被弃置或返回你的手牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02208.jpg",
   "errata": null
  },
  {
   "id": "02209",
   "name_en": "Gus the Mole",
-  "name_zh": null,
+  "name_zh": "鼹鼠古斯",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6936,16 +6936,16 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Look at the top card of the path deck. Add [progress] equal to its presence to another path card in play that shares its card type.\n<b>[FIT] + [connection]: Nuzzle</b> <f>your little friend to</f> ready this being and soothe 1 fatigue.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>查看路径牌组顶的卡。向场上另一张与其类型相同的路径卡添加进展，点数等于该卡的妨碍值。\n体质＋[connection]<b>：蹭蹭</b><f>你的小家伙，</f>使此生灵就绪并治愈 1 点疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02209.jpg",
   "errata": null
  },
  {
   "id": "02210",
   "name_en": "Portable Generator",
-  "name_zh": null,
+  "name_zh": "便携发电机",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -6979,16 +6979,16 @@
    "科技"
   ],
   "text_en": "Attach to a feature.\n<b>Exhaust:</b> The attached feature gains illumination until the end of the turn. Then, if it's a machine, add 1 unique token to it.",
-  "text_zh": null,
+  "text_zh": "附属到一处地标。\n<b>消耗：</b>所附地标获得照明，直到本回合结束。然后，若它为机械，向其添加 1 个独特指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02210.jpg",
   "errata": null
  },
  {
   "id": "02211",
   "name_en": "Wanderer Spirit",
-  "name_zh": null,
+  "name_zh": "漫游者之灵",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7020,16 +7020,16 @@
   ],
   "traits_zh": [],
   "text_en": "Friendly. Persistent. Unique. Spirit.\n<b>[FOC] + [exploration]: Navigate [2]</b> alongside the spirit to add [progress] to this being equal to your effort. Then you may move your [ranger] to a feature in the same area.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。灵体。\n专注＋[exploration]<b>：引路 [2]</b>，与灵体同行，以向此生灵添加进展，点数等于你的精力。然后你可将你的[ranger]移动到同区的一处地标。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02211.jpg",
   "errata": null
  },
  {
   "id": "02212",
   "name_en": "Expedition Logbook",
-  "name_zh": null,
+  "name_zh": "远征日志",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7060,16 +7060,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>[FOC] + [exploration] (use 1 entry): Consult</b> <f>observations on the arcology to</f> add 1[progress] to a feature for every 2 effort. If that feature is a ruin or machine, add [progress] equal to your effort instead. Then, read [guide] 197.",
-  "text_zh": null,
+  "text_zh": "专注＋[exploration]<b>（使用 1 条记录）：查阅</b><f>对生态建筑的观察记录，</f>每 2 点精力向一处地标添加 1[progress]。若该地标为遗迹或机械，则改为添加进展，点数等于你的精力。然后，阅读[guide] 197。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02212.jpg",
   "errata": null
  },
  {
   "id": "02213",
   "name_en": "The Ambition of the Estians",
-  "name_zh": null,
+  "name_zh": "艾斯蒂安人的野心",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7100,16 +7100,16 @@
   ],
   "traits_zh": [],
   "text_en": "Move a feature. It fatigues you. Then add [progress] to that feature equal to your fatigue.",
-  "text_zh": null,
+  "text_zh": "移动一处地标。它令你疲劳。然后向该地标添加进展，点数等于你的疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02213.jpg",
   "errata": null
  },
  {
   "id": "02214",
   "name_en": "Ren Kobo's Hat",
-  "name_zh": null,
+  "name_zh": "伦·科博的帽子",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7142,16 +7142,16 @@
    "衣物"
   ],
   "text_en": "Unique.\n<b>Exhaust:</b> When you suffer 1 or more fatigue, add an equal number of [progress] to the location.\n<b>Response:</b> If you have 1 or less fatigue, discard this gear.",
-  "text_zh": null,
+  "text_zh": "独特。\n<b>消耗：</b>你承受 1 点或更多疲劳时，向地点添加等量的[progress]。\n<b>响应：</b>若你有 1 点或更少疲劳，弃置本装备。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02214.jpg",
   "errata": null
  },
  {
   "id": "02215",
   "name_en": "As Above, So Below",
-  "name_zh": null,
+  "name_zh": "如其在上，如其在下",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7184,16 +7184,16 @@
    "经验"
   ],
   "text_en": "Each Ranger can move their [ranger] to a being, feature, or the location.",
-  "text_zh": null,
+  "text_zh": "每名行者可将其[ranger]移动到一个生灵、一处地标或地点。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02215.jpg",
   "errata": null
  },
  {
   "id": "02216",
   "name_en": "Lunn's Door Opener",
-  "name_zh": null,
+  "name_zh": "卢恩的开门器",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7226,16 +7226,16 @@
    "科技"
   ],
   "text_en": "Setup.\n<b>Exhaust (use 1 cell):</b> When you interact with a machine, commit 2 effort.\n<b>[FOC] + [reason] (use 1 cell): Interface</b> <f>with a device to</f> add 1 unique token to a machine for every 2 effort.",
-  "text_zh": null,
+  "text_zh": "预设。\n<b>消耗（使用 1 枚电池）：</b>你与一台机械交互时，投入 2 点精力。\n专注＋[reason]<b>（使用 1 枚电池）：接入</b><f>设备，</f>每 2 点精力向一台机械添加 1 个独特指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02216.jpg",
   "errata": null
  },
  {
   "id": "02217",
   "name_en": "Stripe, Loyal Lutrinal",
-  "name_zh": null,
+  "name_zh": "斑斑，忠诚的泳獭",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7270,16 +7270,16 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Discard 3[progress] from this being to resolve a challenge effect on a being.\n<b>[AWA] + [exploration]: Chase [2]</b> <f>the scampering lutrinal to</f> add 1[progress] to a feature for every 2 effort. Then add an equal amount of [progress] to this being and move it.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>从此生灵上弃置 3[progress]，以结算一个生灵上的一个挑战效果。\n知觉＋[exploration]<b>：追逐 [2]</b><f>那只雀跃的泳獭，</f>每 2 点精力向一处地标添加 1[progress]。然后向此生灵添加等量的[progress]并移动它。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02217.jpg",
   "errata": null
  },
  {
   "id": "02218",
   "name_en": "Carried by the Wind",
-  "name_zh": null,
+  "name_zh": "随风而行",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7310,16 +7310,16 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\nAttach to a feature or location.\nWhen you <b>Traverse</b> the attached card, dodge all obstacles. If you fail, prevent the injury and return this manifestation to your hand.",
-  "text_zh": null,
+  "text_zh": "激发。\n附属到一处地标或地点。\n你<b>穿行</b>所附卡时，闪避所有障碍。若你失败，防止该伤势，并将此激发返回你的手牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02218.jpg",
   "errata": null
  },
  {
   "id": "02219",
   "name_en": "Archivist Spirit",
-  "name_zh": null,
+  "name_zh": "档案管理员之灵",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7351,16 +7351,16 @@
   ],
   "traits_zh": [],
   "text_en": "Friendly. Persistent. Unique. Spirit.\n<b>[SPI] + [reason]: Reflect [2]</b> <f>on the spirit's wisdom to</f> add [progress] to this being equal to your effort. Then scout 1 challenge card.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。灵体。\n精神＋[reason]<b>：沉思 [2]</b><f>于灵体的智慧，</f>向此生灵添加进展，点数等于你的精力。然后探查 1 张挑战卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02219.jpg",
   "errata": null
  },
  {
   "id": "02220",
   "name_en": "Call the Scuttlebus",
-  "name_zh": null,
+  "name_zh": "呼叫穿行巴士",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7393,16 +7393,16 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> Before you decide to travel, if there is 2[per_ranger] or more [progress] on the location, you may travel <i>(regardless of the location's [progress] threshold)</i>. If there is 5[per_ranger] or more [progress] on it, travel to a location up to two paths away. Use the terrain of the second path when building the path deck.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你决定旅行前，若地点上有 2[per_ranger] 或更多[progress]，你可旅行<i>（无论该地点的[progress]阈值为何）</i>。若其上有 5[per_ranger] 或更多[progress]，则旅行至至多两条路径外的地点。构建路径牌组时使用第二条路径的地形。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02220.jpg",
   "errata": null
  },
  {
   "id": "02221",
   "name_en": "Quisi's Lantern",
-  "name_zh": null,
+  "name_zh": "基西的提灯",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7437,16 +7437,16 @@
    "援助"
   ],
   "text_en": "While this card has at least 1 gleam remaining, within reach is illuminated.\n<b>Exhaust (use 1 gleam):</b> When you perform a test, dodge each card within reach.",
-  "text_zh": null,
+  "text_zh": "本卡尚余至少 1 点微光时，近旁区处于照明状态。\n<b>消耗（使用 1 点微光）：</b>你进行检定时，闪避近旁区的每张卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02221.jpg",
   "errata": null
  },
  {
   "id": "02222",
   "name_en": "Echoes of the Estians",
-  "name_zh": null,
+  "name_zh": "艾斯蒂安人的回声",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7477,16 +7477,16 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a path card.\n<b>Exhaust:</b> When a Ranger performs a test that interacts with the attached card, commit 2 effort. This test can be performed without commiting energy.",
-  "text_zh": null,
+  "text_zh": "附属到一张路径卡。\n<b>消耗：</b>一名行者进行与所附卡交互的检定时，投入 2 点精力。此检定可不投入能量进行。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02222.jpg",
   "errata": null
  },
  {
   "id": "02223",
   "name_en": "Repellant Spores",
-  "name_zh": null,
+  "name_zh": "驱离孢子",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7521,16 +7521,16 @@
    "科技"
   ],
   "text_en": "Setup.\n<b>Exhaust (use 1 puff):</b> When you interact with a flora, commit 2 effort.\n<b>[FOC] + [reason] (use 1 puff): Release</b> <f>a cloud of spores to</f> exhaust a flora.",
-  "text_zh": null,
+  "text_zh": "预设。\n<b>消耗（使用 1 撮孢子）：</b>你与一株植物交互时，投入 2 点精力。\n专注＋[reason]<b>（使用 1 撮孢子）：释放</b><f>一团孢子，</f>消耗一株植物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02223.jpg",
   "errata": null
  },
  {
   "id": "02224",
   "name_en": "Bursting with Life",
-  "name_zh": null,
+  "name_zh": "生机勃发",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7563,16 +7563,16 @@
    "经验"
   ],
   "text_en": "Manifestation.\nChoose a flora and either remove 1[harm] from it or add 2[progress] to it. Then add 4[progress] to a non-biomeld being in the same area as the chosen flora.",
-  "text_zh": null,
+  "text_zh": "激发。\n选择一株植物，从其移除 1[harm] 或向其添加 2[progress]。然后向与所选植物同区的一个非融合体生灵添加 4[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02224.jpg",
   "errata": null
  },
  {
   "id": "02225",
   "name_en": "Memlev Hammock",
-  "name_zh": null,
+  "name_zh": "梅勒夫吊床",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7607,16 +7607,16 @@
    "工具"
   ],
   "text_en": "<b>Deployed:</b> When you add 1 or more [progress] to a being, increase the [progress] added by 1. When you add 1 or more [progress] to a feature, decrease the [progress] added by 1. This gear gains the following ability:\n<b>Response:</b> When you rest, soothe 2 fatigue.",
-  "text_zh": null,
+  "text_zh": "<b>已部署：</b>你向一个生灵添加 1 点或更多[progress]时，使添加的[progress]增加 1。你向一处地标添加 1 点或更多[progress]时，使添加的[progress]减少 1。本装备获得以下能力：\n<b>响应：</b>你歇息时，治愈 2 点疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02225.jpg",
   "errata": null
  },
  {
   "id": "02226",
   "name_en": "Mycelial Incense",
-  "name_zh": null,
+  "name_zh": "菌丝熏香",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7649,16 +7649,16 @@
    "自然"
   ],
   "text_en": "You can <b>Connect</b> with flora features.\n<b>Exhaust:</b> After you successfully <b>Connect</b> with a flora, soothe 1 fatigue. If that flora has the mycelial keyword, add [progress] equal to your effort to each other flora with the mycelial keyword.",
-  "text_zh": null,
+  "text_zh": "你可与植物地标<b>连结</b>。\n<b>消耗：</b>你与一株植物<b>连结</b>成功后，治愈 1 点疲劳。若该植物具有菌丝关键词，向其他每株具有菌丝关键词的植物添加进展，点数等于你的精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02226.jpg",
   "errata": null
  },
  {
   "id": "02227",
   "name_en": "Gardener Spirit",
-  "name_zh": null,
+  "name_zh": "园丁之灵",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7690,16 +7690,16 @@
   ],
   "traits_zh": [],
   "text_en": "Friendly. Persistent. Unique. Spirit.\n<b>[FIT] + [connection]: Tend [2]</b> <f>to the land alongside the spirit to</f> add [progress] to this being equal to your effort. You may discard 1[harm] from a feature. If it is a flora, soothe 2 fatigue.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。灵体。\n体质＋[connection]<b>：照料 [2]</b><f>这片土地，与灵体并肩，</f>向此生灵添加进展，点数等于你的精力。你可从一处地标弃置 1[harm]。若它为植物，治愈 2 点疲劳。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02227.jpg",
   "errata": null
  },
  {
   "id": "02228",
   "name_en": "The Audacity of the Estians",
-  "name_zh": null,
+  "name_zh": "艾斯蒂安人的胆识",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7730,16 +7730,16 @@
   ],
   "traits_zh": [],
   "text_en": "Choose a Ranger to soothe all of their fatigue. Then that Ranger places an equal number of cards from their hand facedown on top of their fatigue stack in any order.",
-  "text_zh": null,
+  "text_zh": "选择一名行者，治愈其全部疲劳。然后该行者从其手牌中将等量的卡按任意顺序面朝下置于其疲劳牌堆顶。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02228.jpg",
   "errata": null
  },
  {
   "id": "02229",
   "name_en": "Flowsteel Lithophone",
-  "name_zh": null,
+  "name_zh": "流钢石琴",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7773,9 +7773,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 tune):</b> After you play a moment or attachment, soothe 1 fatigue. If that card is a tale, gain 1 energy matching that card's aspect.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 支曲调）：</b>你打出一张契机或附装后，治愈 1 点疲劳。若该卡为故事，获得 1 点与该卡属性相同的能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/loa/02229.jpg",
   "errata": null
  },
@@ -7815,16 +7815,16 @@
    "天生"
   ],
   "text_en": "After you commit this attribute, search your Ranger deck for the next attribute that you can commit to this test and commit it. If this test is successful, place that attribute on top of your fatigue stack.",
-  "text_zh": null,
+  "text_zh": "你投入此属性后，从你的行者牌组中搜寻你能投入本检定的下一张属性卡，并投入之。若本检定成功，将那张属性卡置于你的疲劳牌堆顶。\n<f>遭遇难题时，你常发现自己早已有了对策。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03001.jpg",
   "errata": null
  },
  {
   "id": "03002",
   "name_en": "Grell's Secret Map",
-  "name_zh": "格雷尔的秘密地图",
+  "name_zh": "格雷尔的秘图",
   "set_id": "traveler",
   "set_name_en": "Traveler",
   "set_name_zh": "旅人",
@@ -7858,9 +7858,9 @@
    "专家"
   ],
   "text_en": "Unique. Objective (6 hunches: [aspiration]).\nThis gear does not ready during the refresh phase.\n<b>Exhaust:</b> When a feature with 2 or more presence is cleared, add 1 hunch to this gear and 1[progress] to the location.\n<b>Response:</b> When you travel, ready this gear.",
-  "text_zh": null,
+  "text_zh": "独特。抱负（6 点直觉：[aspiration]）\n本装备在刷新阶段不会就绪。\n<b>消耗：</b>一处妨碍值为 2 或以上的地标被清除后，向本装备添加 1 点直觉，并向该地点添加 1[progress]。\n<b>响应：</b>你旅行时，使本装备就绪。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03002.jpg",
   "errata": null
  },
@@ -7900,9 +7900,9 @@
    "衣物"
   ],
   "text_en": "<b>Exhaust (use 1 insight):</b> Before you play a moment, reduce its cost by 1 (to a minimum of 1).",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 点洞见）：你打出一张契机前，将其费用减少 1（最低为 1）。\n<f>当你把帽子戴到头上，你会留意到内衬的柔软。拉绒的铁毛吸走湿气，带来恰到好处的透气感——随境遇所需，或暖或凉。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03003.jpg",
   "errata": null
  },
@@ -7942,16 +7942,16 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> After a path card is cleared by [progress], choose a Ranger. That Ranger names a trait. Then they search their Ranger deck and discard for the next moment with the chosen trait and add it to their hand.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一张路径卡被 [progress] 清除后，选择一名行者。该行者说出一个特性，然后从自己的行者牌组与弃牌堆中搜寻下一张具有所选特性的契机，并将其加入手牌。\n<f>有时，你只需回顾自己的经历，便能辨明前路。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03004.jpg",
   "errata": null
  },
  {
   "id": "03005",
   "name_en": "Friendly Repair Service",
-  "name_zh": "友情维修服务",
+  "name_zh": "友善维修服务",
   "set_id": "artisan",
   "set_name_en": "Artisan",
   "set_name_zh": "工匠",
@@ -7986,9 +7986,9 @@
    "专家"
   ],
   "text_en": "Objective (6 improvements: [aspiration]).\nAttach to a human.\n<b>Response:</b> When a Ranger <b>Connects</b> with the attached human, the Ranger who played this card may discard 1 token from on of their equipped gear to commit 1 effort.\n<b>Response:</b> After the attached human is cleared with [progress], record 1 improvement and discard this attachment.",
-  "text_zh": null,
+  "text_zh": "抱负（6 点改进：[aspiration]）\n附属到一个人类。\n<b>响应：</b>一名行者与所附人类连结成功后，打出此卡的行者可从其一件已装备装备上弃置 1 个指示物，以投入 1 点精力。\n<b>响应：</b>所附人类被 [progress] 清除后，记录 1 点改进，并弃置此附装。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03005.jpg",
   "errata": null
  },
@@ -8030,9 +8030,9 @@
    "科技"
   ],
   "text_en": "Attach to one of your equipped tech.\n<b>Exhaust:</b> After you succeed at a Traverse test, add 1 token to the attached tech.",
-  "text_zh": null,
+  "text_zh": "附属到你的一件已装备科技。\n<b>消耗：</b>你穿行检定成功后，向所附科技添加 1 个指示物。\n<f>你将装备嵌入腰间的卡座。出门时，随着每一步，装备缓缓充能，你会听见一声轻轻的、能量迸发的闷响。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03006.jpg",
   "errata": null
  },
@@ -8074,16 +8074,16 @@
    "科技"
   ],
   "text_en": "<b>Response:</b> When one of your equipped gear is discarded, you may attach it to this gear, facedown.\n<b>Exhaust:</b> When a Ranger performs a test, commit a card attached to this gear. <i>(Discard the committed card after the test is resolved.)</i>",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你的一件已装备装备被弃置时，你可将其附属到本装备，面朝下。\n<b>消耗：</b>一名行者进行检定时，投入一张附属到本装备的卡。（如常弃置所投入的卡。）",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03007.jpg",
   "errata": null
  },
  {
   "id": "03008",
   "name_en": "Featherweight Gauzeweave",
-  "name_zh": "轻羽纱织物",
+  "name_zh": "羽量纱织",
   "set_id": "artisan",
   "set_name_en": "Artisan",
   "set_name_zh": "工匠",
@@ -8116,16 +8116,16 @@
    "模组"
   ],
   "text_en": "Attach to a Ranger's equipped gear.\nReduce the equip value of the attached gear by 2 (to a minimum of 0).",
-  "text_zh": null,
+  "text_zh": "附属到一名行者的已装备装备。\n将所附装备的负重减少 2（最低为 0）。\n<f>你的导师教导你，构思之初便要考量其物质构成。否则，你或许会把那个想法永远困在草图纸上，让它再也无法走出纸页之外。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03008.jpg",
   "errata": null
  },
  {
   "id": "03009",
   "name_en": "Piercing Whistle",
-  "name_zh": "刺耳哨子",
+  "name_zh": "刺耳哨音",
   "set_id": "shepherd",
   "set_name_en": "Shepherd",
   "set_name_zh": "牧者",
@@ -8158,16 +8158,16 @@
    "技能"
   ],
   "text_en": "Search your Ranger deck for a being and add it to your hand. You may discard another being from your hand to play the being you searched for without paying its energy cost.",
-  "text_zh": null,
+  "text_zh": "从你的行者牌组中搜寻一个生灵并加入手牌。你可从手牌弃掉另一个生灵，以无须支付能量费用地打出你所搜寻的生灵。\n<f>自幼年起，你便有一只能传到极远处的哨子。你最亲近的朋友总不会让你久等。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03009.jpg",
   "errata": null
  },
  {
   "id": "03010",
   "name_en": "Essays on Shepherding",
-  "name_zh": "牧羊随笔",
+  "name_zh": "牧养文集",
   "set_id": "shepherd",
   "set_name_en": "Shepherd",
   "set_name_zh": "牧者",
@@ -8201,16 +8201,16 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 essay):</b> Move a being.\n<b>Use 1 essay:</b> When a being would move, it does not.\n<b>[SPI] + [exploration]: Deepen [2]</b> <f>your understanding to</f> add 1[progress] to a being for every 2 effort. Then add 1 essay to this book.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 篇文章）：移动一个生灵。\n使用 1 篇文章：一个生灵即将移动时，阻止其移动。\n精神＋[exploration]：深化 [2] 你的理解，每 2 点精力向一个生灵添加 1[progress]。然后向本书添加 1 篇文章。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03010.jpg",
   "errata": null
  },
  {
   "id": "03011",
   "name_en": "Zoological Recorder",
-  "name_zh": "动物记录员",
+  "name_zh": "动物学记录仪",
   "set_id": "shepherd",
   "set_name_en": "Shepherd",
   "set_name_zh": "牧者",
@@ -8245,9 +8245,9 @@
    "专家"
   ],
   "text_en": "Objective (7 records: [aspiration]).\n<b>Exhaust:</b> Choose a being in the path discard with the same name as a being in play. If no attached beings have that name, attach the being from the path discard to this gear facedown. If you do, add 1 record to this gear and 2[progress] to the being in play.",
-  "text_zh": null,
+  "text_zh": "抱负（7 点记录：[aspiration]）\n<b>消耗：</b>从路径弃牌堆中选出一个与场中某生灵同名的生灵。若没有已附属的生灵拥有该名称，则将路径弃牌堆中的该生灵面朝下附属到本装备。若你如此做，向本装备添加 1 点记录，并向场中该生灵添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03011.jpg",
   "errata": null
  },
@@ -8287,16 +8287,16 @@
    "经验"
   ],
   "text_en": "Attach to a being within reach.\n<b>Response:</b> After you successfully <b>Connect</b> with the attached being, soothe 1 fatigue.\n<b>Response:</b> When [harm] would be added to the attached being, discard this attachment to prevent that [harm].",
-  "text_zh": null,
+  "text_zh": "附属到一个近旁区内的生灵。\n<b>响应：</b>你与所附生灵连结成功后，治愈 1 点疲劳。\n<b>响应：</b>将向所附生灵添加 [harm] 时，弃置此附装以取消该效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03012.jpg",
   "errata": null
  },
  {
   "id": "03013",
   "name_en": "The Full Understory",
-  "name_zh": "繁茂林下",
+  "name_zh": "丰茂林下",
   "set_id": "forager",
   "set_name_en": "Forager",
   "set_name_zh": "觅食者",
@@ -8331,9 +8331,9 @@
    "自然"
   ],
   "text_en": "Scout X path cards. X is equal to twice the number of flora in play. If there are no flora in play, search the path deck for the next flora and put it into play.",
-  "text_zh": null,
+  "text_zh": "探查路径卡，数量等于场中植物数的两倍。若场中没有植物，从路径牌组搜寻下一株植物并置入场。\n<f>每一块岩石之下，每一棵树之后，土壤湿润的黑暗之中，都有完整的生态在运转——生命盈满至极，在相对的隔绝中安然自乐。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03013.jpg",
   "errata": null
  },
@@ -8373,16 +8373,16 @@
    "自然"
   ],
   "text_en": "Attach to a flora.\n<b>Response:</b> When the attached flora clears by [harm], add [harm] to a being in the same area equal to the amount of [harm] on that flora.",
-  "text_zh": null,
+  "text_zh": "附属到一株植物。\n<b>响应：</b>所附植物被 [progress] 清除后，向同区的一个生灵添加 [harm]，数量等于该植物上的 [progress] 数。\n<f>你闻到近旁一片针叶苔那独特的甜香。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03014.jpg",
   "errata": null
  },
  {
   "id": "03015",
   "name_en": "Mir's Botany",
-  "name_zh": "米尔的植物学",
+  "name_zh": "米尔的植物志",
   "set_id": "forager",
   "set_name_en": "Forager",
   "set_name_zh": "觅食者",
@@ -8416,16 +8416,16 @@
    "援助"
   ],
   "text_en": "<b>[FOC] + [reason] (use 1 lesson): Absorb</b> <f>the botanical knowledge to</f> choose a nature card in your Ranger discard and place it on top of your fatigue stack.",
-  "text_zh": null,
+  "text_zh": "专注＋[reason]（使用 1 段教训）：领会植物学知识，从弃牌堆中选出一张自然卡，并将其置于你的疲劳牌堆顶。\n<f>西里萨娜·米尔成为行者之前，曾游历山谷，详尽无遗地记录此地植物。你有幸得到了一本副本。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03015.jpg",
   "errata": null
  },
  {
   "id": "03016",
   "name_en": "The Brilliant Gardener",
-  "name_zh": "才华横溢的园丁",
+  "name_zh": "杰出的园丁",
   "set_id": "forager",
   "set_name_en": "Forager",
   "set_name_zh": "觅食者",
@@ -8460,16 +8460,16 @@
    "专家"
   ],
   "text_en": "Objective (6 seeds: [aspiration]).\n<b>[SPI] + [reason]: Plant [5]</b> <f>a brightfruit seed to</f> add 1[progress] to a feature and record 1 seed. Reduce the difficulty of this test by 1 for each flora in play.",
-  "text_zh": null,
+  "text_zh": "抱负（6 点种子：[aspiration]）\n精神＋[reason]：栽种 [5] 一颗明果种子，向一处地标添加 1[progress] 并记录 1 点种子。场中每有一株植物，此检定的难度降低 1。\n<f>相传，明果种子只有在由光耀之魂栽种时才会生根。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03016.jpg",
   "errata": null
  },
  {
   "id": "03017",
   "name_en": "Vigilant Lookout",
-  "name_zh": "警戒瞭望员",
+  "name_zh": "警觉的瞭望者",
   "set_id": "explorer",
   "set_name_en": "Explorer",
   "set_name_zh": "探索者",
@@ -8498,16 +8498,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Scout 1 path card.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>探查 1 张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03017.jpg",
   "errata": null
  },
  {
   "id": "03018",
   "name_en": "A Circuitous Route",
-  "name_zh": "迂回路线",
+  "name_zh": "迂回之路",
   "set_id": "explorer",
   "set_name_en": "Explorer",
   "set_name_zh": "探索者",
@@ -8540,9 +8540,9 @@
    "学识"
   ],
   "text_en": "<b>Response:</b> When you would draw a path card, instead discard the top card of the path deck. Then, suffer fatigue equal to that card's presence.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你即将抽一张路径卡时，改为弃置路径牌组顶部的卡。然后，承受与该卡妨碍值相等的疲劳。\n<f>你的导师曾告诉你，一名探索者庄严的责任，是在有选择时走那条更长的路。因为未知就在那里等着。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03018.jpg",
   "errata": null
  },
@@ -8584,16 +8584,16 @@
    "哺乳动物"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Discard 1[progress] from an obstacle to move your [ranger] to it.\n<b>[AWA] + [exploration]: Scavenge [2]</b> <f>for useful scrap to</f> add 1 token to a tech. If you fail, draw a path card.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>从一个障碍上弃置 1[progress]，以将你的 [ranger] 移动到该障碍。\n知觉＋[exploration]：搜寻 [2] 有用的碎料，向一件科技添加 1 个指示物。若失败，抽一张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03019.jpg",
   "errata": null
  },
  {
   "id": "03020",
   "name_en": "Personal Travelogue",
-  "name_zh": "个人旅行见闻录",
+  "name_zh": "私人游记",
   "set_id": "explorer",
   "set_name_en": "Explorer",
   "set_name_zh": "探索者",
@@ -8624,9 +8624,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> When you suffer 1 or more fatigue, add an equal number of stories to this book.\n<b>[SPI] + [exploration]: Reflect [2]</b> <f>on your travels to</f> discard all stories from this book. If you discarded at least 4 stories, shuffle up to 2 cards from your fatigue stack into your deck.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>你承受 1 点或更多疲劳时，向本书添加等量的故事。\n精神＋[exploration]：追忆 [2] 你的旅程，弃置本书上所有的故事。若你弃置了至少 4 个故事，将至多 2 张卡从你的疲劳牌堆重洗入你的牌组。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03020.jpg",
   "errata": null
  },
@@ -8666,16 +8666,16 @@
    "食物"
   ],
   "text_en": "<b>Use 1 slice:</b> After a being enters play, if it's the start of the round, add 1[progress] to that being. If it enters play during a Ranger's turn, add 2◭ to that being instead.",
-  "text_zh": null,
+  "text_zh": "使用 1 切片：一个生灵进入场中后，向该生灵添加 1[progress]。若它在某名行者的回合中进入场中，则改为向该生灵添加 2[progress]。\n<f>在荒野中度过数年之后，你已明白，没有什么比一片刚出炉的蜂蜜面包更能打破僵局——那是所有生灵都钟爱的传统甜点。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03021.jpg",
   "errata": null
  },
  {
   "id": "03022",
   "name_en": "Gregarious Inventor",
-  "name_zh": "合群发明家",
+  "name_zh": "健谈的发明家",
   "set_id": "artificer",
   "set_name_en": "Artificer",
   "set_name_zh": "机匠",
@@ -8704,9 +8704,9 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Choose a Ranger. That Ranger may search their deck for a gear and play it <i>(paying its cost)</i>.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>选择一名行者。该行者可从其牌组中搜寻一件装备并打出（支付其费用）。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03022.jpg",
   "errata": null
  },
@@ -8746,9 +8746,9 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, choose a gear in your Ranger discard and place it on top of your fatigue stack. If your total effort was 3 or more, add it to your hand instead.",
-  "text_zh": null,
+  "text_zh": "在你投入此属性的检定成功后，从你的弃牌堆中选出一件装备，并将其置于你的疲劳牌堆顶。若你的精力为 3 或以上，则改为将其加入你的手牌。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03023.jpg",
   "errata": null
  },
@@ -8790,16 +8790,16 @@
    "工具"
   ],
   "text_en": "<b>Deployed:</b> When you perform an <b>Avoid</b> test, reduce your effort by 1. When you perform a <b>Traverse</b> test, commit 1 effort. This gear gains the following test:\n<b>[FOC] + [exploration]: Study</b> <f>the landscape to</f> move a feature and add 1[progress] to it.",
-  "text_zh": null,
+  "text_zh": "<b>已部署：</b>你进行闪避检定时，将你的精力减少 1。你进行穿行检定时，投入 1 点精力。本装备获得以下检定：\n专注＋[exploration]：察看地形，移动一处地标并向其添加 1[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03024.jpg",
   "errata": null
  },
  {
   "id": "03025",
   "name_en": "Power Cell Recycler",
-  "name_zh": "电芯回收器",
+  "name_zh": "能量电池回收器",
   "set_id": "artificer",
   "set_name_en": "Artificer",
   "set_name_zh": "机匠",
@@ -8832,16 +8832,16 @@
    "科技"
   ],
   "text_en": "<b>Exhaust:</b> Discard 2 tokens from one of your equipped tech to add 1 token to any Ranger's equipped tech.\n<b>Exhaust:</b> Discard a tech from your hand to add 2 tokens to any Ranger's equipped tech.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>从你的一件已装备科技上弃置 2 个指示物，以向任意行者的已装备科技添加 1 个指示物。\n<b>消耗：</b>从你的手牌弃置一张科技，以向任意行者的已装备科技添加 2 个指示物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03025.jpg",
   "errata": null
  },
  {
   "id": "03026",
   "name_en": "Remote Sentinels",
-  "name_zh": "远程哨兵",
+  "name_zh": "遥控哨卫",
   "set_id": "artificer",
   "set_name_en": "Artificer",
   "set_name_zh": "机匠",
@@ -8874,16 +8874,16 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 remote):</b> Move a being, treating it as if it does not have ambush. If you moved it within reach, add 1[progress] to it.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 台遥控器）：移动一个生灵，视其不具有伏击。若你将其移动到你处，向其添加 1[progress]。\n<f>你吹出两个音，第二声拖得悠长。片刻之后，遥控器腾空而起，旋翼发出如蜂鸟振翅般的声响。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03026.jpg",
   "errata": null
  },
  {
   "id": "03027",
   "name_en": "Pathwarden",
-  "name_zh": "道路守卫",
+  "name_zh": "守径人",
   "set_id": "conciliator",
   "set_name_en": "Conciliator",
   "set_name_zh": "调解者",
@@ -8912,16 +8912,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Either move a being, treating it as if it does not have ambush or discard 1[harm] from a being.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>移动一个生灵（视其不具有伏击），或从一个生灵上弃置 1[harm]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03027.jpg",
   "errata": null
  },
  {
   "id": "03028",
   "name_en": "Show No Fear",
-  "name_zh": "无畏无惧",
+  "name_zh": "无所畏惧",
   "set_id": "conciliator",
   "set_name_en": "Conciliator",
   "set_name_zh": "调解者",
@@ -8954,16 +8954,16 @@
    "技能"
   ],
   "text_en": "Discard a being with 0 presence. If that being is a predator, place it on top of the path deck instead.",
-  "text_zh": null,
+  "text_zh": "弃置一个妨碍值为 0 的生灵。若该生灵是掠食者，则改为将其置于路径牌堆顶。\n<f>你想起导师的话：「保持谨慎，但不要显露畏惧。随着你的理解加深，你的畏惧也会随之消减。一切生灵都不过是更伟大整体的显现。我们本为一体。」</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03028.jpg",
   "errata": null
  },
  {
   "id": "03029",
   "name_en": "All Together Now",
-  "name_zh": "大家一起来",
+  "name_zh": "大家一起",
   "set_id": "conciliator",
   "set_name_en": "Conciliator",
   "set_name_zh": "调解者",
@@ -8996,16 +8996,16 @@
    "经验"
   ],
   "text_en": "When you perform a test, discard 2 or more [progress] from beings within reach to commit 1 effort for every 2[progress] discarded.",
-  "text_zh": null,
+  "text_zh": "你进行检定时，从你近旁区内的各生灵上弃置 2[progress] 或更多，每弃置 2[progress] 便投入 1 点精力。\n<f>身为一名调解者，你发现，没有什么比把众人聚在一起，共同完成一件艰难之事更令人喜悦的了。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03029.jpg",
   "errata": null
  },
  {
   "id": "03030",
   "name_en": "Influential",
-  "name_zh": "富有影响力",
+  "name_zh": "深具影响",
   "set_id": "conciliator",
   "set_name_en": "Conciliator",
   "set_name_zh": "调解者",
@@ -9038,9 +9038,9 @@
    "技能"
   ],
   "text_en": "If you commited this attribute while interacting with a being, and the test is successful, you may decide which, if any, of that being's challenge effects resolve.",
-  "text_zh": null,
+  "text_zh": "若你在与一个生灵交互时投入了此属性，且检定成功，则你可决定该生灵的挑战效果中哪些会结算（若有）。\n<f>你花费多年，与你村庄的人们建立了深厚而真挚的情谊。正因如此，你被视作智慧的源泉。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03030.jpg",
   "errata": null
  },
@@ -9082,16 +9082,16 @@
    "援助"
   ],
   "text_en": "<b>Deployed:</b> When you perform a <b>Traverse</b> test, reduce your effort by 1. When you perform a <b>Connect</b> test, commit 1 effort. This gear gains the following ability:\n<b>Use 1 reading:</b> When a Ranger performs a test that is on a being, commit 2 effort.",
-  "text_zh": null,
+  "text_zh": "<b>已部署：</b>你进行穿行检定时，将你的精力减少 1。你进行连结检定时，投入 1 点精力。本装备获得以下能力：\n使用 1 读数：一名行者从某个生灵处进行检定时，投入 2 点精力。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03031.jpg",
   "errata": null
  },
  {
   "id": "03032",
   "name_en": "Anchorite of Stone",
-  "name_zh": "磐石隐者",
+  "name_zh": "石之隐修者",
   "set_id": "shaper",
   "set_name_en": "Shaper",
   "set_name_zh": "塑形者",
@@ -9120,16 +9120,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Add 1 token to a Conduit or ready it.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>向一个传导添加 1 个指示物，或使其就绪。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03032.jpg",
   "errata": null
  },
  {
   "id": "03033",
   "name_en": "Slow Time",
-  "name_zh": "缓慢时间",
+  "name_zh": "延缓时间",
   "set_id": "shaper",
   "set_name_en": "Shaper",
   "set_name_zh": "塑形者",
@@ -9160,16 +9160,16 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\nAttach to a path card.\n<b>Use 1 strain:</b> When the attached card would ready, it remains exhausted.\n<b>Response:</b> When the attached card leaves play, you may discard 1 token from a conduit to attach this manifestation to another path card.",
-  "text_zh": null,
+  "text_zh": "激发。\n附属到一张路径卡。\n使用 1 点拖延：所附卡即将就绪时，它保持消耗。\n<b>响应：</b>所附卡离场前，你可从你的传导上弃置 1 个指示物，以将此卡附属到另一张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03033.jpg",
   "errata": null
  },
  {
   "id": "03034",
   "name_en": "All is Clay",
-  "name_zh": "万物皆陶土",
+  "name_zh": "皆为泥土",
   "set_id": "shaper",
   "set_name_en": "Shaper",
   "set_name_zh": "塑形者",
@@ -9200,16 +9200,16 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation.\nMove any number of beings or features. After moving the last card, each area must have same number of path cards as before you played this manifestation. While moving cards this way, treat them as if they do not have the ambush keyword.",
-  "text_zh": null,
+  "text_zh": "激发。\n移动任意数量的生灵或地标。移动最后一张卡后，每个区域的路径卡数量必须与打出此激发前相同。\n以此方式移动卡时，视它们不具有伏击。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03034.jpg",
   "errata": null
  },
  {
   "id": "03035",
   "name_en": "Conductor",
-  "name_zh": "引导者",
+  "name_zh": "传导者",
   "set_id": "shaper",
   "set_name_en": "Shaper",
   "set_name_zh": "塑形者",
@@ -9240,16 +9240,16 @@
   ],
   "traits_zh": [],
   "text_en": "Manifestation. <i>(To commit this attribute, discard 1 token from a conduit.)</i>\nYou can commit this attribute to any test you perform. When you do, suffer 1 fatigue and double the energy committed to this test.",
-  "text_zh": null,
+  "text_zh": "激发。（投入此属性时，需从一个传导上弃置 1 个指示物。）\n你可将此属性投入到你进行的任何检定中。当你如此做时，承受 1 点疲劳，并使投入本检定的能量翻倍。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03035.jpg",
   "errata": null
  },
  {
   "id": "03036",
   "name_en": "Visions of the Floating Tower",
-  "name_zh": "浮塔幻象",
+  "name_zh": "浮塔幻景",
   "set_id": "shaper",
   "set_name_en": "Shaper",
   "set_name_zh": "塑形者",
@@ -9280,16 +9280,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Use 1 vision:</b> After you discard 1 or more tokens from a conduit, soothe an equal number of fatigue.",
-  "text_zh": null,
+  "text_zh": "使用 1 幻象：你从一个传导上弃置 1 个或更多指示物后，治愈等量的疲劳。\n<f>斯派尔建立后不久，巴斯蒂安·克雷斯开始看见幻景。他描述说，一座山峰之上有一根珍珠般的尖刺，缠绕在朦胧的云雾中，有一双抓握的手从中伸出。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03036.jpg",
   "errata": null
  },
  {
   "id": "03037",
   "name_en": "Keeper of the Grove",
-  "name_zh": "树丛守护者",
+  "name_zh": "林苑守护者",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9318,16 +9318,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Before your first turn of the round, add 2[progress] to a spirit. Then, <b>spiritspeak</b>.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>本轮你的首个回合开始时，向一个灵体添加 2[progress]。然后，通灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03037.jpg",
   "errata": null
  },
  {
   "id": "03038",
   "name_en": "Cartographer of Many Worlds",
-  "name_zh": "万千世界制图师",
+  "name_zh": "万界制图师",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9356,16 +9356,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Spend 1 energy to <b>spiritspeak</b>.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>花费 1 点能量以通灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03038.jpg",
   "errata": null
  },
  {
   "id": "03039",
   "name_en": "Descendant of the Guide",
-  "name_zh": "引路人之后裔",
+  "name_zh": "向导的后裔",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9394,16 +9394,16 @@
   "traits": [],
   "traits_zh": [],
   "text_en": "<b>Exhaust:</b> Perform a spirit speaker test.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>进行一次灵语者检定。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03039.jpg",
   "errata": null
  },
  {
   "id": "03040",
   "name_en": "Clearer of Ways",
-  "name_zh": "开路者",
+  "name_zh": "清路者",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9437,9 +9437,9 @@
    "学识"
   ],
   "text_en": "Attach to a spirit.\nWhen you play this attachment, you may ready the attached spirit.\n<b>Response:</b> When a Ranger performs a test, they may discard 2 or more [progress] from the attached spirit. Dodge a card in the same area as it for every 2[progress] discarded.",
-  "text_zh": null,
+  "text_zh": "附属到一个灵体。\n你打出此附装时，可使所附灵体就绪。\n<b>响应：</b>一名行者进行检定时，其可从所附灵体上弃置 2[progress] 或更多。每弃置 2[progress]，其便闪避同区的一张卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03040.jpg",
   "errata": null
  },
@@ -9480,9 +9480,9 @@
    "专家"
   ],
   "text_en": "Search your deck for a spirit and add it to your hand. If you are <b>spiritspeaking</b>, you may play that spirit, reducing its cost by 1. Otherwise, you may exhaust your role to <b>spiritspeak</b>.",
-  "text_zh": null,
+  "text_zh": "从你的牌组中搜寻一个灵体并加入手牌。若你正在通灵，你可打出该灵体，并将其费用减少 1。否则，你可消耗你的角色以通灵。\n<f>助你的灵体始终与你同在，但你已懂得，给予明确指令时，它们最为有效。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03041.jpg",
   "errata": null
  },
@@ -9520,16 +9520,16 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Spirit.\n<b>Response:</b> Before a Sitka Buck would resolve a challenge effect, discard 2[progress] from this spirit to exhaust the Buck.",
-  "text_zh": null,
+  "text_zh": "留存。灵体。\n<b>响应：</b>一个锡特卡公鹿身上的挑战效果即将结算时，从此灵体上弃置 2[progress] 以消耗该公鹿。\n你可从此灵体上弃置等同于同区某生灵妨碍值的 [progress]，以消耗该生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03042.jpg",
   "errata": null
  },
  {
   "id": "03043",
   "name_en": "Spirit of the Verdessa",
-  "name_zh": "维尔达萨之灵",
+  "name_zh": "维尔黛萨之灵",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9561,16 +9561,16 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Unique. Spirit.\n<b>Exhaust:</b> Discard up to 3[progress] from this spirit to choose a path card in the same area. Reduce that card's presence by the number of [progress] discarded until the end of the turn.",
-  "text_zh": null,
+  "text_zh": "留存。独特。灵体。\n<b>消耗：</b>从此灵体上弃置至多 3[progress]，以选择同区的一张路径卡。该卡的妨碍值减少等同于所弃置 [progress] 的数量，直到回合结束。\n你可从此灵体上弃置 2[progress]，以从路径牌组中搜寻下一个生灵或地标。然后，向该卡添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03043.jpg",
   "errata": null
  },
  {
   "id": "03044",
   "name_en": "The Path Opens Before Me",
-  "name_zh": "道路在我面前展开",
+  "name_zh": "前路为我敞开",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9603,16 +9603,16 @@
    "经验"
   ],
   "text_en": "<b>Response:</b> After you succeed at a test that interacts with a spirit, add [progress] to the location equal to your effort. This is in addition to the test's standard effect.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你与一个灵体交互的检定成功后，向该地点添加等同于你精力的 [progress]。此效果叠加于该检定的标准效果之上。\n<f>你让心中的絮语安静下来，回想你收到的讯息。一如既往，灵体告诉你的话既再简单不过，又无可辩驳地充满智慧。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03044.jpg",
   "errata": null
  },
  {
   "id": "03045",
   "name_en": "Attendant Guide",
-  "name_zh": "侍从引路人",
+  "name_zh": "随侍向导",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9644,16 +9644,16 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a spirit.\n<b>Response:</b> When a Ranger interacts with a card in the same area as the attached spirit, you may exhaust that spirit to commit its approach icons to that test.\n<b>Exhaust:</b> Move the attached spirit.",
-  "text_zh": null,
+  "text_zh": "附属到一个灵体。\n<b>响应：</b>一名行者与所附灵体同区的一张卡交互时，你可消耗该灵体，以将其倾向图标投入到该检定中。\n<b>消耗：</b>移动所附灵体。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03045.jpg",
   "errata": null
  },
  {
   "id": "03046",
   "name_en": "Atrox Spirit",
-  "name_zh": "阿特洛克灵",
+  "name_zh": "阿特罗克斯灵",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9684,9 +9684,9 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Spirit.\n<b>Response:</b> When Pouncing Atrox enters play, discard 2[progress] from this spirit to treat the Atrox as if it did not have ambush.",
-  "text_zh": null,
+  "text_zh": "留存。灵体。\n<b>响应：</b>一只扑击阿特罗克斯进入场中时，从此灵体上弃置 2[progress]，以将那只阿特罗克斯视为不具有伏击。\n你可消耗此灵体，或从此灵体上弃置 2[progress]。若你如此做，从此灵体上移动至多 3[progress] 到同区的一处地标。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03046.jpg",
   "errata": null
  },
@@ -9725,9 +9725,9 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Unique. Spirit.\n<b>Exhaust:</b> When a Ranger interacts with a card in the same area as this spirit, discard 2 or more [progress] from this spirit to commit 1 effort for every 2[progress] discarded.",
-  "text_zh": null,
+  "text_zh": "留存。独特。灵体。\n<b>消耗：</b>一名行者与此灵体同区的一张卡交互时，从此灵体上弃置 2[progress] 或更多，每弃置 2[progress] 投入 1 点精力。\n你可从此灵体上弃置 3[progress]，以消耗同区的一处地标。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03047.jpg",
   "errata": null
  },
@@ -9768,9 +9768,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 beat):</b> When a Ranger reveals a challenge card during a test, choose a challenge effect on an active being. Resolve that effect this test.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 节拍）：一名行者在检定中抽到一张挑战卡时，选择一个活跃生灵上的挑战效果。本次检定中结算该效果。\n<f>仿佛鼓的每一下敲击都唤起一段深邃而古老的记忆，一段所有生灵共享的记忆。那声音既令人安心，又令人振奋。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03048.jpg",
   "errata": null
  },
@@ -9808,9 +9808,9 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Exhaust (use 1 journey):</b> After you succeed at a test that interacts with a spirit, add [progress] to another spirit equal to your effort.\n<b>[SPI] + [reason]: Study [2]</b> <f>the wisdom of your ancestors to</f> add 1[progress] for every 2 effort to a spirit. Then add 1 journey to this book.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 段旅程）：你与一个灵体交互的检定成功后，向另一个灵体添加等同于你精力的 [progress]。\n精神＋[reason]：研习 [2] 你祖先的智慧，每 2 点精力向一个灵体添加 1[progress]。然后向本书添加 1 段旅程。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03049.jpg",
   "errata": null
  },
@@ -9847,10 +9847,10 @@
    "Spirit"
   ],
   "traits_zh": [],
-  "text_en": "Persistent. Spirit.\n<b>Response:</b> When you travel, discard 2[progress] from this spirit to treat all Circling Irix as if they did not have persistent.",
-  "text_zh": null,
+  "text_en": "Persistent. Spirit.\n<b>Exhaust:</b> When you travel, discard 2[progress] from this spirit to treat all Circling Irix as if they did not have persistent.",
+  "text_zh": "留存。灵体。\n<b>消耗：</b>你旅行时，从此灵体上弃置 2[progress]，以将所有盘旋伊里克斯视为不具有留存。\n你可消耗此灵体，或从此灵体上弃置 1[progress]。若你如此做，结算同区另一个生灵上的一个挑战效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03050.jpg",
   "errata": {
    "slug": "spiritspeaker14_of_19",
@@ -9892,16 +9892,16 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Unique. Spirit.",
-  "text_zh": null,
+  "text_zh": "留存。独特。灵体。\n你可从此灵体上移动至多 4[progress] 到同区的另一个灵体。\n你可从此灵体上弃置 3[progress]，以获得 1 点任意类型的能量。\n你可从此灵体上弃置 2[progress]，以探查 1 张挑战卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03051.jpg",
   "errata": null
  },
  {
   "id": "03052",
   "name_en": "That Which Connects Us",
-  "name_zh": "连接我们之物",
+  "name_zh": "连接彼此之物",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9935,16 +9935,16 @@
    "技能"
   ],
   "text_en": "Attach to a being with 1 or less presence.\nThe attached being gains friendly.\n<b>Exhaust:</b> Move up to 2[progress] from the attached being to another being in the same area.",
-  "text_zh": null,
+  "text_zh": "附属到一个妨碍值为 1 或更低的生灵。\n所附生灵获得友善。\n<b>消耗：</b>从所附生灵上移动至多 2[progress] 到同区的另一个生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03052.jpg",
   "errata": null
  },
  {
   "id": "03053",
   "name_en": "Heart Harmonizer",
-  "name_zh": "心灵调和器",
+  "name_zh": "心之谐调器",
   "set_id": "spirit_speaker",
   "set_name_en": "Spirit Speaker",
   "set_name_zh": "灵语者",
@@ -9977,9 +9977,9 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 song):</b> After you succeed at a <b>Connect</b> or <b>Commune</b> test, soothe 1 fatigue.\n<b>Response:</b> When you would suffer an injury, spend 2[progress] from a spirit within reach to prevent it.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 首歌谣）：你连结或通感检定成功后，治愈 1 点疲劳。\n<b>响应：</b>你即将承受一处伤势时，你可从你处的一个灵体上弃置 2[progress] 以取消该效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03053.jpg",
   "errata": null
  },
@@ -10017,9 +10017,9 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Spirit.\n<b>Response:</b> Before a Romping Lutrinal would move, discard 1[progress] from this spirit to prevent it.",
-  "text_zh": null,
+  "text_zh": "留存。灵体。\n<b>响应：</b>一只雀跃泳獭即将移动时，从此灵体上弃置 1[progress] 以阻止其移动。\n你可消耗此灵体，或从此灵体上弃置 2[progress]。若你如此做，从此灵体上移动至多 3[progress] 到同区的一个非灵体生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03054.jpg",
   "errata": null
  },
@@ -10058,16 +10058,16 @@
   ],
   "traits_zh": [],
   "text_en": "Persistent. Unique. Spirit.\n<b>Exhaust:</b> When you would suffer 1 or more fatigue or an injury while this spirit is within reach, discard 3[progress] from it to prevent that fatigue or injury.",
-  "text_zh": null,
+  "text_zh": "留存。独特。灵体。\n<b>消耗：</b>此灵体在你处时，你即将承受 1 点或更多疲劳或一处伤势前，从此灵体上弃置 3[progress] 以取消该效果。\n你可从此灵体上弃置 2[progress]，并选择一张路径卡。若你如此做，该卡上的挑战效果在本次检定中不会结算。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03055.jpg",
   "errata": null
  },
  {
   "id": "03056",
   "name_en": "The Cats of Elder Atma",
-  "name_zh": "阿特马长老的猫",
+  "name_zh": "长老阿特玛的猫",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10098,16 +10098,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> When a Ranger performs a test, they dodge 1 card. If that Ranger has 5 or more fatigue, add this moment back to your hand instead of discarding it.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者进行检定时，其闪避 1 张卡。若该行者有 5 点或更多疲劳，则将此契机返回你的手牌，而非弃置它。\n<f>他们照着长老阿特玛所做，跟着那只猫在林中迅捷穿行，直到来到一片空地……</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03056.jpg",
   "errata": null
  },
  {
   "id": "03057",
   "name_en": "Hush Little Critter",
-  "name_zh": "安静的小动物",
+  "name_zh": "噤声，小家伙",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10138,16 +10138,16 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a being.\n<b>Use 1 hum:</b> When the attached being would ready, it remains exhausted. If its presence is 2 or more, the Ranger who played this attachment suffers 1 fatigue.\n<b>Response:</b> When the attached being readies, discard this attachment.",
-  "text_zh": null,
+  "text_zh": "附属到一个生灵。\n使用 1 点哼唱：所附生灵即将就绪时，它保持消耗。若其妨碍值为 2 或以上，打出此附装的行者承受 1 点疲劳。\n<b>响应：</b>所附生灵就绪时，弃置此附装。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03057.jpg",
   "errata": null
  },
  {
   "id": "03058",
   "name_en": "The Better Part of Valor",
-  "name_zh": "英勇的审慎",
+  "name_zh": "勇武之上策",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10181,9 +10181,9 @@
    "经验"
   ],
   "text_en": "Choose a being within reach of a Ranger. That being fatigues that Ranger. Shuffle that being into the path deck. That Ranger scouts a number of path cards equal to the chosen being's presence, then draws a path card.",
-  "text_zh": null,
+  "text_zh": "选择一名行者近旁区内的一个生灵。该生灵使该行者疲劳。将该生灵重洗入路径牌组。该行者探查的路径卡数量等于所选生灵的妨碍值，然后抽一张路径卡。\n<f>回想那个行者的故事吧：他曾逃离一群狼犬，却一头栽下了悬崖。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03058.jpg",
   "errata": null
  },
@@ -10221,9 +10221,9 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a location or feature.\nWhen you play this attachment on a feature, you may move that feature.\n<b>Exhaust:</b> After a Ranger suffers 1 or more fatigue, add [progress] to the attached card equal to the number of fatigue suffered plus 1.",
-  "text_zh": null,
+  "text_zh": "附属到一个地点或地标。\n当你将此附装打在一处地标上时，你可移动该地标。\n<b>消耗：</b>一名行者承受 1 点或更多疲劳后，向所附卡添加 [progress]，数量等于所承受疲劳数加 1。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03059.jpg",
   "errata": null
  },
@@ -10261,16 +10261,16 @@
   ],
   "traits_zh": [],
   "text_en": "Add 1[harm] to a prey to exhaust and add 3[harm] to a predator.",
-  "text_zh": null,
+  "text_zh": "向一个猎物添加 1[harm] 以将其消耗，并向一个掠食者添加 [harm]。\n<f>……而那公鹿，在被迫至绝境时，后腿直立而起，将狼犬高高挑向空中。狼犬又咬又抓那对鹿角，却被狠狠摔在地上。它躺在那里，心跳了许多下，看上去已然死去……</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03060.jpg",
   "errata": null
  },
  {
   "id": "03061",
   "name_en": "Go Forth, Fearless Ranger",
-  "name_zh": "出发吧，无畏的行者",
+  "name_zh": "前进吧，无畏的行者",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10305,16 +10305,16 @@
    "专家"
   ],
   "text_en": "Objective (9 feats: [aspiration]).\nChoose a Ranger to perform a test, doubling its difficulty. If they succeed, they soothe 2 fatigue. Then record feats equal to the test's original difficulty.",
-  "text_zh": null,
+  "text_zh": "抱负（9 点伟业：[aspiration]）\n选择一名行者进行一次检定，使其难度翻倍。若其成功，治愈 2 点疲劳。然后记录等同于该检定原难度的伟业。\n<f>有时，一位行者需要一点额外的鼓励，才能成就伟业。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03061.jpg",
   "errata": null
  },
  {
   "id": "03062",
   "name_en": "The Tale of Two Rivers",
-  "name_zh": "双河传说",
+  "name_zh": "双河的故事",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10345,16 +10345,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> When a Ranger resolves an effect that scouts and/or draws cards from their deck, they do so from their fatigue stack instead. Then, if that Ranger has 5 or more fatigue, return this moment to your hand.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者从其牌组中探查及／或抽卡时，改为从其疲劳牌堆中如此做。然后，若该行者有 5 点或更多疲劳，将此契机返回你的手牌。\n<f>这个故事最好配上大量拟声词和几件手边的道具来讲。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03062.jpg",
   "errata": null
  },
  {
   "id": "03063",
   "name_en": "Book of Great Deeds",
-  "name_zh": "伟绩之书",
+  "name_zh": "伟业之书",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10385,16 +10385,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> After a Ranger succeeds at a test with 4 or more effort or suffers 2 or more fatigue, add 1 deed to this gear.\n<b>[SPI] + [exploration] (use 1 deed): Recount [2]</b> <f>your adventures to</f> shuffle a card from the top of a Ranger's fatigue stack into their deck. Add 2[progress] to each human within reach of them.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者以 4 点或更多精力检定成功，或承受 2 点或更多疲劳后，向本装备添加 1 点功业。\n精神＋[exploration]（使用 1 点功业）：讲述 [2] 你的冒险，从某名行者的疲劳牌堆顶将一张卡重洗入其牌组。向他们近旁区内的各个人类添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03063.jpg",
   "errata": null
  },
  {
   "id": "03064",
   "name_en": "Transverse Ocarina",
-  "name_zh": "横吹陶笛",
+  "name_zh": "横笛陶笛",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10428,16 +10428,16 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 melody):</b> Ready an attachment or a card with a tale attached to it.\n<b>Exhaust (use X melodies):</b> After you play an attachment on a path card, exhaust that path card. X is equal to that card's presence.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 段旋律）：使一个附装，或一张附有故事的卡就绪。\n消耗（使用 X 段旋律）：你将一个附装打在一张路径卡上后，消耗该路径卡。X 等于该卡的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03064.jpg",
   "errata": null
  },
  {
   "id": "03065",
   "name_en": "The Tireless Artisan",
-  "name_zh": "不知疲倦的工匠",
+  "name_zh": "不倦的工匠",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10468,16 +10468,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> When a Ranger rests, they soothe 2 fatigue. If that Ranger has 5 or more fatigue, they soothe 4 fatigue instead.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>一名行者歇息时，治愈 2 点疲劳。若该行者有 5 点或更多疲劳，则改为治愈 4 点疲劳。\n<f>……而当工匠闭上双眼，她明白了人人都需要不时歇息，而她已经挣得了休息。于是，她睡着了。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03065.jpg",
   "errata": null
  },
  {
   "id": "03066",
   "name_en": "Songweave Mantle",
-  "name_zh": "歌织斗篷",
+  "name_zh": "歌织披风",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10512,16 +10512,16 @@
    "援助"
   ],
   "text_en": "You may play this gear equipped to another Ranger.\n<b>Exhaust (use 1 buffer):</b> When you would suffer 1 or more fatigue, discard a card from your hand. If you do, either prevent 1 of that fatigue or, if you have 5 or more fatigue, prevent all of it.",
-  "text_zh": null,
+  "text_zh": "你可将此装备装备到另一名行者身上。\n消耗（使用 1 点缓冲）：你即将承受 1 点或更多疲劳时，从你的手牌弃置一张卡。若你如此做，取消其中 1 点疲劳；或者，若你有 5 点或更多疲劳，取消其全部。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03066.jpg",
   "errata": null
  },
  {
   "id": "03067",
   "name_en": "The Stouthearted Guardian",
-  "name_zh": "勇敢守护者",
+  "name_zh": "坚毅的守护者",
   "set_id": "talespinner",
   "set_name_en": "Talespinner",
   "set_name_zh": "吟叙者",
@@ -10552,9 +10552,9 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a Ranger's role.\n<b>Response:</b> After you exhaust your role, you may soothe 1 fatigue.\n<b>Response:</b> When you would discard your fatigue stack due to an injury, discard this tale instead.",
-  "text_zh": null,
+  "text_zh": "附属到一名行者的角色。\n<b>响应：</b>你消耗你的角色后，你可治愈 1 点疲劳。\n<b>响应：</b>你因伤势即将弃置你的疲劳牌堆时，改为弃置这个故事。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03067.jpg",
   "errata": null
  },
@@ -10595,9 +10595,9 @@
    "援助"
   ],
   "text_en": "<b>Exhaust (use 1 strum):</b> Choose a Ranger. That Ranger soothes 1 fatigue. If there is a tale attached to their role they soothe 1 additional fatigue.",
-  "text_zh": null,
+  "text_zh": "消耗（使用 1 次拨弦）：选择一名行者。该行者治愈 1 点疲劳。若其角色上附有一个故事，则其额外治愈 1 点疲劳。\n<f>这把鲁特琴出自制琴大师瓦尔·雷兹之手，别无他人。你不得不拿你那套传统的梅西皮亚水壶鼓去换，但值了。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03068.jpg",
   "errata": null
  },
@@ -10637,16 +10637,16 @@
    "天生"
   ],
   "text_en": "After a test in which you committed this attribute, if your effort was 1 or less, you may place this attribute on top of your fatigue stack.",
-  "text_zh": null,
+  "text_zh": "在你投入了此属性的检定后，若你的精力为 1 或更低，你可将此属性置于你的疲劳牌堆顶。\n<f>你一生中面对过许多挑战，尽管多次功亏一篑，你也从未灰心。假以时日，你知道自己终将成功。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03069.jpg",
   "errata": null
  },
  {
   "id": "03070",
   "name_en": "Observant",
-  "name_zh": "善于观察",
+  "name_zh": "明察",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10679,16 +10679,16 @@
    "天生"
   ],
   "text_en": "Before you commit this attribute, you may suffer 1 fatigue. If you do, this attribute gains [conflict] [reason].",
-  "text_zh": null,
+  "text_zh": "在你投入此属性前，你可承受 1 点疲劳。若你如此做，此属性额外获得 1 个[progress]。\n<f>从醇木树皮的错综纹路，到伊里克斯振翅起飞时那不祥的窸窣声——几乎没有细节能逃过你的眼睛，而你会忘掉的更是少之又少。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03070.jpg",
   "errata": null
  },
  {
   "id": "03071",
   "name_en": "Enthusiastic",
-  "name_zh": "热情",
+  "name_zh": "热诚",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10719,16 +10719,16 @@
   ],
   "traits_zh": [],
   "text_en": "After you succeed at a test in which you committed this attribute, if your effort was 3 or more, move 1 being.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，若你的精力为 3 点或以上，移动 1 个生灵。\n<f>你一向认为，若一件事值得去做，就值得全心全意地投入。旁人视你为活得尽兴之人，也因此受到鼓舞。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03071.jpg",
   "errata": null
  },
  {
   "id": "03072",
   "name_en": "Steadfast",
-  "name_zh": "坚定不移",
+  "name_zh": "坚定",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10761,16 +10761,16 @@
    "天生"
   ],
   "text_en": "Before you commit this attribute, you may suffer 1 fatigue. If you do, this attribute gains [exploration] [connection].",
-  "text_zh": null,
+  "text_zh": "在你投入此属性前，你可承受 1 点疲劳。若你如此做，此属性额外获得 1 个[progress]。\n<f>有人或许会把你拒绝妥协看作固执，你却视之为务实。有些信条无需置疑——千百年来的验证早已证明其为真理。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03072.jpg",
   "errata": null
  },
  {
   "id": "03073",
   "name_en": "Deliberate",
-  "name_zh": "深思熟虑",
+  "name_zh": "审慎",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10803,16 +10803,16 @@
    "天生"
   ],
   "text_en": "While you have 6 or more other cards in your hand, this attribute gains [reason] [exploration].",
-  "text_zh": null,
+  "text_zh": "当你手牌中有 6 张或更多其他卡时，此属性额外获得 1 个[progress]。\n<f>对你而言，每件事都始于有意识的思考，继之以有意识的行动。许多人在做着日常琐事时任由思绪漂流，你却宁愿全神贯注于手头之事。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03073.jpg",
   "errata": null
  },
  {
   "id": "03074",
   "name_en": "Ingenious",
-  "name_zh": "机灵",
+  "name_zh": "巧思",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10845,16 +10845,16 @@
    "天生"
   ],
   "text_en": "Before you commit this attribute, you may suffer 1 fatigue. If you do, this attribute gains [reason] [exploration].",
-  "text_zh": null,
+  "text_zh": "在你投入此属性前，你可承受 1 点疲劳。若你如此做，此属性获得[progress]。\n<f>幼时，你发明与创造的天赋便已引人注目。正因这份天赋，你早在正式拜师学艺的许多年前，就被鼓励在村里的工坊中玩耍。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03074.jpg",
   "errata": null
  },
  {
   "id": "03075",
   "name_en": "Sensible",
-  "name_zh": "明智",
+  "name_zh": "明理",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10887,16 +10887,16 @@
    "天生"
   ],
   "text_en": "After you succeed at a test in which you committed this attribute, you may place a card from your hand on top of your fatigue stack to add this attribute back to your hand.",
-  "text_zh": null,
+  "text_zh": "你在一场投入了此属性的检定中成功后，可将一张手牌置于你的疲劳牌堆顶，以将此属性收回手牌。\n<f>少年时，村里的长老便夸你「头脑清醒、遇事有分寸」。如今你依旧如此。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03075.jpg",
   "errata": null
  },
  {
   "id": "03076",
   "name_en": "Magnanimous",
-  "name_zh": "宽宏大量",
+  "name_zh": "豁达",
   "set_id": "personality",
   "set_name_en": "Personality",
   "set_name_zh": "性格",
@@ -10929,16 +10929,16 @@
    "天生"
   ],
   "text_en": "Before you commit this attribute, you may suffer 1 fatigue. If you do, this attribute gains [connection] [conflict].",
-  "text_zh": null,
+  "text_zh": "在你投入此属性前，你可承受 1 点疲劳。若你如此做，此属性额外获得 1 个[progress]。\n<f>你坚信，生活的要诀在于胸怀慷慨——丰盈的心灵常开不败，令人欣喜。你与人一见如故，无论走到哪里，都被当作家人般对待。</f>",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03076.jpg",
   "errata": null
  },
  {
   "id": "03201",
   "name_en": "Gratitude of the Valley",
-  "name_zh": "山谷的感激",
+  "name_zh": "山谷的谢礼",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -10971,16 +10971,16 @@
    "经验"
   ],
   "text_en": "Personal Reward <i>(Friendly Repair Service).</i>\n<b>Response:</b> After you arrive at a location, each Ranger may choose one:\nAdd 2 tokens to one of their equipped gear.\nEquip a gear from their hand without paying its energy cost.",
-  "text_zh": null,
+  "text_zh": "<b>奖励</b>（友善修缮服务）。\n响应：你抵达一处地点后，每名行者可选择一项：\n向其一件已装备装备添加 2 个指示物。\n从手牌装备一件装备，无须支付其能量费用。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03201.jpg",
   "errata": null
  },
  {
   "id": "03202",
   "name_en": "Superior Trail",
-  "name_zh": "绝佳路径",
+  "name_zh": "优良小径",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11011,16 +11011,16 @@
   ],
   "traits_zh": [],
   "text_en": "Personal Reward <i>(Grell's Secret Map)</i>.\n<b>Clear [progress]:</b> For each feature in play, choose one <i>(you may choose the same option more than once)</i>:\nExhaust and move that feature.\nAdd 3[progress] to that feature.\nSoothe fatigue equal to that feature's presence.",
-  "text_zh": null,
+  "text_zh": "<b>奖励</b>（格雷尔的秘密地图）。\n清退[progress]：对场上每一处地标，选择一项：\n消耗并移动该地标。\n向该地标添加 3[progress]。\n治愈疲劳，数量等于该地标的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03202.jpg",
   "errata": null
  },
  {
   "id": "03203",
   "name_en": "Zoological Compendium",
-  "name_zh": "动物学纲要",
+  "name_zh": "动物学汇编",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11054,16 +11054,16 @@
    "科技"
   ],
   "text_en": "Personal Reward <i>(Zoological Recorder)</i>.\n<b>Exhaust:</b> Attach a non-human being from the path discard to this gear, facedown.\n<b>[SPI] + [reason]: Apply</b> <f>the knowledge within to</f> shuffle an attached card into the path deck to choose a being with which it shares a trait. Add 3[progress] to that being and exhaust it.",
-  "text_zh": null,
+  "text_zh": "<b>奖励</b>（动物学记录员）。\n消耗：从路径弃牌堆中将一个非人类生灵面朝下附属到这件装备上。\n精神 ＋[reason]：运用其中的知识，将一张附属卡重洗入路径牌组，以选择一个与其具有相同特性的生灵。向该生灵添加 3[progress]，并消耗它。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03203.jpg",
   "errata": null
  },
  {
   "id": "03204",
   "name_en": "Brightfruit Tree",
-  "name_zh": "亮果树",
+  "name_zh": "光果树",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11094,9 +11094,9 @@
   ],
   "traits_zh": [],
   "text_en": "Personal Reward <i>(The Brilliant Gardener)</i>. Illumination.\n<b>[AWA] + [reason]: Harvest [2]</b> <f>the luminous fruit to</f> add 2[harm] to this flora, soothe 1 fatigue, and shuffle the top card of your fatigue stack into your Ranger deck.\n<b>Response:</b> After a Ranger adds 1 or more [harm] to this flora, they gain 1 energy of any type.",
-  "text_zh": null,
+  "text_zh": "<b>奖励</b>（卓越的园丁）。\n<b>照明</b>。\n知觉 ＋[reason]：<b>采集</b> [2] 这株植物的发光果实，向此植物添加 2[harm]，以治愈 1 点疲劳，并将你疲劳牌堆顶的一张卡重洗入你的行者牌组。\n响应：一名行者向此植物添加 1 点或更多[harm]后，该行者获得 1 点任意类型的能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03204.jpg",
   "errata": null
  },
@@ -11134,16 +11134,16 @@
   ],
   "traits_zh": [],
   "text_en": "Personal Reward <i>(Go Forth, Fearless Ranger)</i>.\nAttach to a Ranger's role without The Bravest Ranger attached.\n<b>Exhaust:</b> When you would suffer 1 or more fatigue, you may instead place that many cards from your hand on top of your fatigue stack.",
-  "text_zh": null,
+  "text_zh": "<b>奖励</b>（前行吧，无畏的行者）。\n附属到一名尚未附属「最勇敢的行者」的行者的角色上。\n消耗：当你即将承受 1 点或更多疲劳时，你可改为从手牌将等量的卡置于你的疲劳牌堆顶。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sotv/03205.jpg",
   "errata": null
  },
  {
   "id": "04201",
   "name_en": "Adaptive Glass Shard",
-  "name_zh": null,
+  "name_zh": "自适应玻璃碎片",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11178,16 +11178,16 @@
    "武器"
   ],
   "text_en": "<b>Exhaust:</b> Add 2 [harm] to a feature or being and 1 crack to this gear.\n<b>Exhaust:</b> When you would suffer an injury, add 2 cracks to this gear instead.\n<b>Response:</b> After 1 or more cracks are added to this gear, discard cards from the top of the challenge deck equal to the number of cracks on this gear. If 2 or more [crest] symbols are discarded, <f>the glass explodes into thousands of pieces.</f> Suffer 1 injury, return this gear to the collection, and remove a checkmark next to Adaptive Glass Shard on your campaign tracker.",
-  "text_zh": null,
+  "text_zh": "<b>消耗：</b>向一处地标或一个生灵添加 2[harm]，并向本装备添加 1 道裂痕。\n<b>消耗：</b>你将承受伤势时，改为向本装备添加 2 道裂痕。\n<b>响应：</b>本装备被添加 1 道或更多裂痕后，从挑战牌组顶弃置卡，数量等于本装备上的裂痕数。若弃置 2 个或更多[crest]符号，<f>玻璃炸裂成千万碎片。</f>承受 1 处伤势，将本装备移回收藏，并在你的战役记录表上移除「自适应玻璃碎片」旁的一个勾选标记。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sib/04201.jpg",
   "errata": null
  },
  {
   "id": "04202",
   "name_en": "True Friendship",
-  "name_zh": null,
+  "name_zh": "真挚友谊",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11220,16 +11220,16 @@
    "经验"
   ],
   "text_en": "If there is a human in play, add 3 [progress] to that human or add 3 [progress] to the location. If Helping Hand is attached to that human, do both instead.",
-  "text_zh": null,
+  "text_zh": "若场上有个人类，向其添加 3[progress] 或向地点添加 3[progress]。若「援手」附属该人类，则改为两者都执行。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sib/04202.jpg",
   "errata": null
  },
  {
   "id": "04203",
   "name_en": "Floral Cloak",
-  "name_zh": null,
+  "name_zh": "花织斗篷",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11262,16 +11262,16 @@
    "衣物"
   ],
   "text_en": "<b>Response:</b> When you pertorm a test, if your [ranger] is on a flora, you may dodge each card in the same area as that flora.\n[AWA] + [exploration]<b>: Blend</b> <f>into the environment to</f> move your [ranger] to a flora.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>你进行检定时，若你的[ranger]在一株植物上，你可闪避与该植物同区的每张卡。\n知觉＋[exploration]<b>：融入</b><f>环境，</f>以将你的[ranger]移动到一株植物。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sib/04203.jpg",
   "errata": null
  },
  {
   "id": "04204",
   "name_en": "Growth Serum",
-  "name_zh": null,
+  "name_zh": "生长血清",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11304,16 +11304,16 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 spray):</b> Discard 1 [harm] from a flora and either exhaust it or resolve its [mountain] effect.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 剂喷剂）：</b>从一株植物弃置 1[harm]，并消耗它或结算其[mountain]效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sib/04204.jpg",
   "errata": null
  },
  {
   "id": "04205",
   "name_en": "Rousing Speech",
-  "name_zh": null,
+  "name_zh": "振奋演说",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11347,16 +11347,16 @@
    "技能"
   ],
   "text_en": "Each Ranger may spend any amount of energy of one aspect to gain that much energy of another aspect.",
-  "text_zh": null,
+  "text_zh": "每名行者可花费任意数量某属性的能量，以获得等量的另一属性能量。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sib/04205.jpg",
   "errata": null
  },
  {
   "id": "05201",
   "name_en": "Climbing Harness",
-  "name_zh": null,
+  "name_zh": "攀登安全带",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11389,16 +11389,16 @@
    "工具"
   ],
   "text_en": "<b>[FIT] + [exploration] (use 1 piton): Climb</b> <f>the terrain to</f> choose an ascent. Then choose options equal to your effort (you may choose an option multiple times):\nAdd 2[progress] to that ascent.\nExhaust that ascent if it is a feature.\nMove your [ranger] to that ascent.",
-  "text_zh": null,
+  "text_zh": "体质＋[exploration]<b>（使用 1 枚岩钉）：攀登</b><f>地形，</f>以选择一段登道。然后选择数量等于你精力的选项（你可多次选择同一选项）：\n向该登道添加 2[progress]。\n若该登道为地标，消耗它。\n将你的[ranger]移动到该登道。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sos/05201.jpg",
   "errata": null
  },
  {
   "id": "05202",
   "name_en": "Memlev Snowshoes",
-  "name_zh": null,
+  "name_zh": "梅勒夫雪鞋",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11433,16 +11433,16 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> Add 2[progress] to an obstacle.",
-  "text_zh": null,
+  "text_zh": "<b>消耗（使用 1 次充能）：</b>向一个障碍添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sos/05202.jpg",
   "errata": null
  },
  {
   "id": "05203",
   "name_en": "Nimbus Spirit",
-  "name_zh": null,
+  "name_zh": "雨云之灵",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11473,16 +11473,16 @@
   ],
   "traits_zh": [],
   "text_en": "Friendly. Persistent. Unique. Spirit.\n<b>[FOC] + [exploration]: Observe</b> <f>the weather patterns to</f> add [progress] to this being equal to your effort. Then scout 1 path card.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。灵体。\n专注＋[exploration]<b>：观测</b><f>天气的走向，</f>向此生灵添加进展，点数等于你的精力。然后探查 1 张路径卡。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sos/05203.jpg",
   "errata": null
  },
  {
   "id": "05204",
   "name_en": "Aspect of the Elk",
-  "name_zh": null,
+  "name_zh": "麋鹿之相",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11513,16 +11513,16 @@
   ],
   "traits_zh": [],
   "text_en": "Attach to a spirit or companion.\n<b>Exhaust:</b> Ready the attached being or add 2[progress] to it.",
-  "text_zh": null,
+  "text_zh": "附属到一个灵体或伙伴。\n<b>消耗：</b>使所附生灵就绪，或向其添加 2[progress]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sos/05204.jpg",
   "errata": null
  },
  {
   "id": "05205",
   "name_en": "Extraspatial Veil",
-  "name_zh": null,
+  "name_zh": "异空间帷幕",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11553,16 +11553,16 @@
   ],
   "traits_zh": [],
   "text_en": "<b>Response:</b> After the weather flips, add 1 shift to this gear.\n<b>Use 1 shift:</b> Before a challenge effect on the weather would resolve, cancel that effect.",
-  "text_zh": null,
+  "text_zh": "<b>响应：</b>天气翻面后，向本装备添加 1 次移位。\n<b>使用 1 次移位：</b>天气上的一个挑战效果即将结算前，取消该效果。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/sos/05205.jpg",
   "errata": null
  },
  {
   "id": "06201",
   "name_en": "Symbiotic Dendrite",
-  "name_zh": null,
+  "name_zh": "共生枝晶",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11597,16 +11597,16 @@
    "援助"
   ],
   "text_en": "<b>[FOC] + [exploration] (use 1 vine): Detect [X]</b> <f>hazards in the environment to</f> exhaust a feature. X is that feature's presence.",
-  "text_zh": null,
+  "text_zh": "专注＋[exploration]<b>（使用 1 根藤蔓）：侦测 [X]</b><f>环境中的险情，</f>以消耗一处地标。X 为该地标的妨碍值。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/itm/06201.jpg",
   "errata": null
  },
  {
   "id": "06202",
   "name_en": "Timely Delivery",
-  "name_zh": null,
+  "name_zh": "及时送达",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11639,16 +11639,16 @@
    "经验"
   ],
   "text_en": "Choose a Ranger. That Ranger may search their Ranger deck or discard for a gear and play it <f>(paying its cost)</f>.",
-  "text_zh": null,
+  "text_zh": "选择一名行者。该行者可从其行者牌组或弃牌堆中搜寻一件装备并打出它<f>（支付其费用）</f>。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/itm/06202.jpg",
   "errata": null
  },
  {
   "id": "06203",
   "name_en": "Lil' Lunn the Crayfish",
-  "name_zh": null,
+  "name_zh": "小龙虾小卢恩",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11680,16 +11680,16 @@
   ],
   "traits_zh": [],
   "text_en": "Friendly. Persistent. Unique.\n<b>[AWA] + [exploration]: Scavenge [2]</b> <f>as Lunn might, to</f> shuffle your discard and choose 1 card at random from it. You may attach that card facedown to this being.\n<b>Exhaust:</b> Play one of your facedown cards attached to this being <f>(paying its cost)</f>.",
-  "text_zh": null,
+  "text_zh": "友善。留存。独特。\n知觉＋[exploration]<b>：拾荒 [2]</b><f>像卢恩那样，</f>洗你的弃牌堆并从中随机选择 1 张卡。你可将该卡面朝下附属到此生灵。\n<b>消耗：</b>打出一张附属此生灵的你的面朝下卡<f>（支付其费用）</f>。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/itm/06203.jpg",
   "errata": null
  },
  {
   "id": "06204",
   "name_en": "Acidic Bile",
-  "name_zh": null,
+  "name_zh": "酸性胆汁",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11724,16 +11724,16 @@
    "武器"
   ],
   "text_en": "Attach to a being or feature.\n<b>Refresh:</b> Add 2[harm] to the attached card.",
-  "text_zh": null,
+  "text_zh": "附属到一个生灵或一处地标。\n<b>刷新：</b>向所附卡添加 2[harm]。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/itm/06204.jpg",
   "errata": null
  },
  {
   "id": "06205",
   "name_en": "Electrostatic Bug Net",
-  "name_zh": null,
+  "name_zh": "静电捕虫网",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11768,9 +11768,9 @@
    "食物"
   ],
   "text_en": "<b>[FIT] + [conflict]: Catch</b> <f>a nearby bug to</f> add 1 grub to this gear. You may also discard 1 unique token from a swarm.\n<b>Exhaust (use 1 grub):</b> When you perform a test, <f>release a distracting bug to</f> dodge 1 being.",
-  "text_zh": null,
+  "text_zh": "体质＋[conflict]<b>：捕捉</b><f>附近的一只虫子，</f>向本装备添加 1 只幼虫。你还可从一个虫群弃置 1 个独特指示物。\n<b>消耗（使用 1 只幼虫）：</b>你进行检定时，<f>放出一只虫子分散注意，</f>闪避 1 个生灵。",
   "text_zh_mt": null,
-  "reviewed": false,
+  "reviewed": true,
   "image": "img/card/itm/06205.jpg",
   "errata": null
  }
