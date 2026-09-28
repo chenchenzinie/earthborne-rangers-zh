@@ -114,8 +114,12 @@ window.ViewDeck = (function () {
       const cards = personalityBy(asp);
       const items = cards.map(c => {
         const sel = deck.personalities.includes(c.id) ? ' sel' : '';
+        const aspTag = c.aspect_id ? `<span class="tag asp-${c.aspect_id}">${c.aspect_id}</span>` : '';
+        const pkTag = c.pack_id ? `<span class="tag pack-${c.pack_id}">${UI.esc(c.pack_name_zh || c.pack_name_en || '')}</span>` : '';
         return `<div class="setup-item${sel}" data-pid="${c.id}">
-          <div>${UI.esc(c.name_zh || c.name_en)}</div><div class="si-en">${UI.esc(c.name_en)}</div></div>`;
+          <div>${UI.esc(c.name_zh || c.name_en)}</div>
+          <div class="si-en">${UI.esc(c.name_en)}</div>
+          <div class="si-tags">${aspTag}${pkTag}</div></div>`;
       }).join('');
       const done = deck.personalities.some(id => DB.byId[id] && DB.byId[id].aspect_id === asp);
       return `<div><div class="pers-col-title ${done ? 'done' : ''}">${['知觉', '体质', '专注', '精神'][idx]}${done ? ' ✓' : ''}</div>${items}</div>`;
@@ -174,10 +178,42 @@ window.ViewDeck = (function () {
   function pickRow(c, picks, max) {
     if (!c) return '';
     const sel = picks.includes(c.id) ? ' sel' : '';
-    return `<div class="pool-row pick-row${sel}" data-pick="${c.id}">
-      <span class="pr-cost tag ${c.aspect_id ? 'asp-' + c.aspect_id : ''}">${c.cost ?? '-'}</span>
+    return `<div class="pool-row pick-row${sel}${unmetClass(c, sel)}" data-pick="${c.id}">
+      ${rowTags(c)}
       <span class="pr-name">${UI.esc(c.name_zh || c.name_en)}<small>${UI.esc(c.name_en)} · ${UI.esc(c.type_zh || '')}</small></span>
-      <span class="pr-ctrl"><b>${sel ? '×' + PICK_COPIES : ''}</b></span></div>`;
+      <span class="pr-ctrl">${unmetTag(c, sel)}<b>${sel ? '×' + PICK_COPIES : ''}</b></span></div>`;
+  }
+  /* 属性需求与满足判定（仿 RangersDB 原站英文模式） */
+  const ASPECT_ORDER = ['AWA', 'FIT', 'FOC', 'SPI'];
+  function aspectValOf(id) {
+    if (!deck.aspect) return null;
+    const a = DB.ranger.aspects.find(x => x.id === deck.aspect);
+    if (!a) return null;
+    const i = ASPECT_ORDER.indexOf(id);
+    return i >= 0 ? a.values[i] : null;
+  }
+  // null = 无需求（属性卡/角色卡 cost=null），true = 满足，false = 不足
+  function cardMeetsAspect(c) {
+    if (c.cost == null || !c.aspect_id) return null;
+    const v = aspectValOf(c.aspect_id);
+    if (v == null) return null;
+    return v >= c.cost;
+  }
+  function rowTags(c) {
+    const costTag = c.cost != null
+      ? `<span class="pr-cost tag asp-${c.aspect_id || 'none'}">${c.cost}${c.aspect_id ? ' ' + c.aspect_id : ''}</span>`
+      : '<span class="pr-cost tag none">—</span>';
+    const packTag = c.pack_id
+      ? `<span class="pr-pack tag pack-${c.pack_id}">${UI.esc(c.pack_name_zh || c.pack_name_en || '')}</span>`
+      : '';
+    return costTag + packTag;
+  }
+  function unmetClass(c, sel) {
+    return (cardMeetsAspect(c) === false && !sel) ? ' unmet' : '';
+  }
+  function unmetTag(c, sel) {
+    return (cardMeetsAspect(c) === false && !sel)
+      ? '<span class="unmet-tag">不满足</span>' : '';
   }
 
   function bindPickEvents(root) {
@@ -212,11 +248,13 @@ window.ViewDeck = (function () {
     p.innerHTML = `<h3><span class="step-num">4</span>兴趣卡（背景 ∪ 专长全池选 1 张，不可带「专家」）</h3>
       ${pool.length ? `<div class="filters"><input type="text" id="interest-q" placeholder="筛选…" value="${UI.esc(poolFilter)}">
         <span class="pick-count">${deck.interest ? '已选 1 张 ×2' : '尚未选择'}</span></div>
-      <div class="pool-list">${list.map(c => `
-        <div class="pool-row pick-row${deck.interest === c.id ? ' sel' : ''}" data-interest="${c.id}">
-          <span class="pr-cost tag ${c.aspect_id ? 'asp-' + c.aspect_id : ''}">${c.cost ?? '-'}</span>
+      <div class="pool-list">${list.map(c => {
+        const sel = deck.interest === c.id;
+        return `<div class="pool-row pick-row${sel ? ' sel' : ''}${unmetClass(c, sel)}" data-interest="${c.id}">
+          ${rowTags(c)}
           <span class="pr-name">${UI.esc(c.name_zh || c.name_en)}<small>${UI.esc(c.name_en)} · ${UI.esc(c.type_zh || '')}</small></span>
-          <span class="pr-ctrl"><b>${deck.interest === c.id ? '×' + PICK_COPIES : ''}</b></span></div>`).join('') || '<div class="empty-hint">无匹配</div>'}</div>`
+          <span class="pr-ctrl">${unmetTag(c, sel)}<b>${sel ? '×' + PICK_COPIES : ''}</b></span></div>`;
+      }).join('') || '<div class="empty-hint">无匹配</div>'}</div>`
       : '<div class="empty-hint">先完成第 3 步选择背景与专长</div>'}`;
     const iq = document.getElementById('interest-q');
     if (iq) iq.addEventListener('input', e => { poolFilter = e.target.value; renderInterest(); });

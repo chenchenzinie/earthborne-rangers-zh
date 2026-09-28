@@ -130,3 +130,45 @@ h2.view-title{margin-bottom:14px}
 .deck-side ul{list-style:none;padding:0;margin:4px 0}
 .deck-side ul li{display:flex;justify-content:space-between;font-size:.85rem;padding:2px 0}
 @media (max-width:900px){.pers-cols{grid-template-columns:repeat(2,1fr)}}
+
+/* ---- 属性需求徽章 + 游戏盒徽章 + 属性不足灰显 ---- */
+/* 属性需求徽章（"3 AWA" 风格，仿 RangersDB 原站） */
+.tag.cost{font-weight:700;letter-spacing:1px;background:var(--bg3)}
+.tag.cost.asp-AWA{color:var(--awa);background:rgba(90,169,230,.18)}
+.tag.cost.asp-FIT{color:var(--fit);background:rgba(230,115,90,.18)}
+.tag.cost.asp-FOC{color:var(--foc);background:rgba(230,198,90,.18)}
+.tag.cost.asp-SPI{color:var(--spi);background:rgba(176,127,230,.18)}
+.tag.cost.asp-none{color:var(--fg-dim)}
+.tag.none{color:var(--fg-dim);opacity:.6}
+
+/* 游戏盒徽章颜色（按扩展盒区分） */
+.tag.pack-core{background:var(--bg3);color:var(--fg-dim)}
+.tag.pack-loa{background:rgba(180,120,60,.22);color:#d6a06a}
+.tag.pack-sotv{background:rgba(127,201,127,.18);color:var(--accent)}
+.tag.pack-sib{background:rgba(176,127,230,.20);color:var(--spi)}
+.tag.pack-sos{background:rgba(60,60,90,.45);color:#9b8ad9}
+.tag.pack-itm{background:rgba(230,90,110,.18);color:var(--danger)}
+
+/* pool-row 内的 pack 徽章小字 */
+.pool-row .pr-pack{font-size:.7rem;padding:1px 6px}
+
+/* setup-item 内的徽章行 */
+.setup-item .si-tags{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:6px;font-size:.68rem}
+.setup-item .si-tags .tag{padding:1px 5px}
+
+/* 属性不足：灰显 + 红色边框 + cost 徽章变红 + 不满足标签 */
+.pool-row.unmet{opacity:.5;border-color:rgba(230,90,110,.55);position:relative}
+.pool-row.unmet .pr-cost{color:var(--danger);background:rgba(230,90,110,.15);border:1px solid var(--danger)}
+.pool-row.unmet:hover{border-color:var(--danger);opacity:.7}
+.unmet-tag{font-size:.65rem;color:var(--danger);font-weight:600;margin-right:6px;
+  background:rgba(230,90,110,.15);padding:1px 6px;border-radius:4px;border:1px solid var(--danger);
+  white-space:nowrap}
+
+/* 卡牌 tile 内的 cost 徽章与 pack 徽章 */
+.card-tile .ct-tags .tag.cost{padding:1px 6px}
+.card-tile .ct-tags .tag.pack-core,
+.card-tile .ct-tags .tag.pack-loa,
+.card-tile .ct-tags .tag.pack-sotv,
+.card-tile .ct-tags .tag.pack-sib,
+.card-tile .ct-tags .tag.pack-sos,
+.card-tile .ct-tags .tag.pack-itm{padding:1px 6px;font-size:.68rem}

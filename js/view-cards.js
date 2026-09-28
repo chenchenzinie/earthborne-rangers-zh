@@ -1,7 +1,7 @@
 /* 卡牌浏览器：筛选 + 无限滚动 + 详情弹窗 */
 window.ViewCards = (function () {
   const PAGE = 60;
-  let state = { q: '', set: '', type: '', aspect: '', onlyUnreviewed: false, shown: 0 };
+  let state = { q: '', set: '', pack: '', type: '', aspect: '', onlyUnreviewed: false, shown: 0 };
   let observer = null;
 
   function options(arr) {
@@ -21,6 +21,7 @@ window.ViewCards = (function () {
     const q = state.q.trim().toLowerCase();
     return DB.cards.filter(c => {
       if (state.set && c.set_id !== state.set) return false;
+      if (state.pack && c.pack_id !== state.pack) return false;
       if (state.type && c.type_id !== state.type) return false;
       if (state.aspect && c.aspect_id !== state.aspect) return false;
       if (state.onlyUnreviewed && c.reviewed) return false;
@@ -35,8 +36,11 @@ window.ViewCards = (function () {
 
   function tile(c) {
     const tags = [];
-    if (c.aspect_zh) tags.push(`<span class="tag asp-${c.aspect_id}">${c.aspect_zh}</span>`);
+    // 属性需求徽章：有 cost 时显示 "3 AWA"，否则只显示属性名
+    if (c.cost != null && c.aspect_id) tags.push(`<span class="tag cost asp-${c.aspect_id}">${c.cost} ${c.aspect_id}</span>`);
+    else if (c.aspect_zh) tags.push(`<span class="tag asp-${c.aspect_id}">${c.aspect_zh}</span>`);
     if (c.type_zh) tags.push(`<span class="tag">${c.type_zh}</span>`);
+    if (c.pack_id) tags.push(`<span class="tag pack-${c.pack_id}">${UI.esc(c.pack_name_zh || c.pack_name_en || '')}</span>`);
     if (c.errata) tags.push('<span class="tag errata">勘误</span>');
     if (!c.reviewed) tags.push('<span class="tag noreview">未精翻</span>');
     return `<div class="card-tile" data-id="${c.id}">
@@ -63,6 +67,7 @@ window.ViewCards = (function () {
 
   function render(el, params) {
     const sets = unique('set_id', 'set_name_zh');
+    const packs = unique('pack_id', 'pack_name_zh');
     const types = unique('type_id', 'type_zh');
     const aspects = [['AWA', '知觉 AWA'], ['FIT', '体质 FIT'], ['FOC', '专注 FOC'], ['SPI', '精神 SPI']];
     el.innerHTML = `
@@ -70,6 +75,7 @@ window.ViewCards = (function () {
       <div class="filters">
         <input type="text" id="f-q" placeholder="搜索卡名 / 正文（中英文）" value="${UI.esc(state.q)}">
         <select id="f-set"><option value="">全部套牌</option>${options(sets)}</select>
+        <select id="f-pack"><option value="">全部游戏盒</option>${options(packs)}</select>
         <select id="f-type"><option value="">全部类型</option>${options(types)}</select>
         <select id="f-aspect"><option value="">全部属性</option>${options(aspects)}</select>
         <label><input type="checkbox" id="f-unrev" ${state.onlyUnreviewed ? 'checked' : ''}> 仅看未精翻</label>
@@ -79,12 +85,14 @@ window.ViewCards = (function () {
       <div id="scroll-sentinel"></div>`;
 
     document.getElementById('f-set').value = state.set;
+    document.getElementById('f-pack').value = state.pack;
     document.getElementById('f-type').value = state.type;
     document.getElementById('f-aspect').value = state.aspect;
 
     const rerender = () => renderList(true);
     document.getElementById('f-q').addEventListener('input', e => { state.q = e.target.value; rerender(); });
     document.getElementById('f-set').addEventListener('change', e => { state.set = e.target.value; rerender(); });
+    document.getElementById('f-pack').addEventListener('change', e => { state.pack = e.target.value; rerender(); });
     document.getElementById('f-type').addEventListener('change', e => { state.type = e.target.value; rerender(); });
     document.getElementById('f-aspect').addEventListener('change', e => { state.aspect = e.target.value; rerender(); });
     document.getElementById('f-unrev').addEventListener('change', e => { state.onlyUnreviewed = e.target.checked; rerender(); });

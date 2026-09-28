@@ -51,6 +51,13 @@ window.UI = (function () {
     const mtBadge = card.text_zh ? '' :
       (card.text_zh_mt ? '<span class="mt-badge">机翻待校对</span>'
         : (card.text_en ? '<span class="mt-badge">英文原文（待翻译）</span>' : ''));
+    // 属性需求徽章：有 cost 时显示 "3 AWA"（仿 RangersDB 原站）
+    const costBadge = card.cost != null
+      ? `<span class="tag cost asp-${card.aspect_id || 'none'}">${card.cost}${card.aspect_id ? ' ' + card.aspect_id : ''}</span>`
+      : '';
+    const packTag = card.pack_id
+      ? `<span class="tag pack-${card.pack_id}">${esc(card.pack_name_zh || card.pack_name_en || '')}</span>`
+      : '';
     let errataHtml = '';
     if (card.errata) {
       const e = (DB.errata.find(x => x.slug === card.errata.slug)) || {};
@@ -64,10 +71,11 @@ window.UI = (function () {
         <h2>${esc(card.name_zh || card.name_en)}</h2>
         <div class="cd-en">${esc(card.name_en)}</div>
         <div class="cd-row">${esc(card.type_zh || card.type_en || '')}
-          ${card.cost != null ? ' · 费用 ' + card.cost : ''}
+          ${costBadge ? ' · 属性需求 ' + costBadge : ''}
           ${card.deck_limit != null ? ' · 牌组上限 ' + card.deck_limit : ''}</div>
         <div class="cd-row">${aspectTag} ${traits}
           <span class="tag">${esc(card.set_name_zh || card.set_name_en || '')}</span>
+          ${packTag}
           ${card.errata ? '<span class="tag errata">有勘误</span>' : ''}
           ${card.reviewed ? '' : '<span class="tag noreview">未精翻</span>'}</div>
         <div class="cd-text">${renderText(txt)}${mtBadge}</div>
