@@ -5791,7 +5791,7 @@
    "自然"
   ],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nAdd 1 [harm] to a flora to add 4 [harm] or 4[progress] to a path card. If that path card is a biomeld, increase the number of [harm] or [progress] added to it by 2.",
-  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以向一张路径卡添加 4[harm] 或 4[progress]。若该路径卡为融合体，则向其添加的[harm]或[progress]增加 2。",
+  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以向一张路径卡添加 4[harm] 或 4[progress]。若该路径卡为生物融合，则向其添加的[harm]或[progress]增加 2。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/core/01215.jpg",
@@ -6128,7 +6128,7 @@
    "自然"
   ],
   "text_en": "<b>Use 1 pulse:</b> When you rest, scout 3 Ranger cards.",
-  "text_zh": "<b>使用 1 次脉冲：</b>你歇息时，探查 3 张行者牌。",
+  "text_zh": "<b>使用 1 道脉冲：</b>你歇息时，探查 3 张行者牌。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/core/01223.jpg",
@@ -6508,7 +6508,7 @@
    "援助"
   ],
   "text_en": "Attach to your role.\n<b>Exhaust (use 1 xp):</b> Ready your role.",
-  "text_zh": "附属到你的角色。\n<b>消耗（使用 1 点经验）：</b>使你的角色就绪。",
+  "text_zh": "附属到你的角色。\n<b>消耗（使用 1 点阅历）：</b>使你的角色就绪。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/core/01231.jpg",
@@ -6721,7 +6721,7 @@
    "伙伴"
   ],
   "text_en": "Friendly. Persistent. Unique.\n<b>Exhaust:</b> Shuffle a being attached to this biomeld into the path deck. If that being was a predator, add 3[harm] to another being. If it was a prey, add 4[progress] to another being. Otherwise, exhaust another being.\nIf there is not a being attached to this biomeld, it gains the following test:\n<b>[AWA] + [connection]: Suggest</b> <f>a new form to</f> attach a non-human being from the path discard facedown to this biomeld. Then exhaust this biomeld.",
-  "text_zh": "友善。留存。独特。\n<b>消耗：</b>将附属此融合体的一个生灵洗入路径牌组。若该生灵为掠食者，向另一个生灵添加 3[harm]。若它为猎物，向另一个生灵添加 4[progress]。否则，消耗另一个生灵。\n若此融合体上没有附属生灵，它获得以下检定：\n知觉＋[connection]<b>：启示</b><f>一个新的形态，</f>以将路径弃牌堆中的一个非人类生灵面朝下附属到此融合体。然后消耗此融合体。",
+  "text_zh": "友善。留存。独特。\n<b>消耗：</b>将附属此生物融合的一个生灵洗入路径牌组。若该生灵为掠食者，向另一个生灵添加 3[harm]。若它为猎物，向另一个生灵添加 4[progress]。否则，消耗另一个生灵。\n若此生物融合上没有附属生灵，它获得以下检定：\n知觉＋[connection]<b>：启示</b><f>一个新的形态，</f>以将路径弃牌堆中的一个非人类生灵面朝下附属到此生物融合。然后消耗此生物融合。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/loa/02204.jpg",
@@ -6764,7 +6764,7 @@
    "自然"
   ],
   "text_en": "Manifestation. <f>(To play a manifestation, discard 1 token from a conduit.)</f>\nAdd 1[harm] to a flora to place a path card on top of the path deck. If that card is a biomeld, place it on the bottom of the path deck instead.",
-  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以将一张路径卡置于路径牌组顶。若该卡为融合体，则改为将其置于路径牌组底。",
+  "text_zh": "激发。<f>（打出激发须从传导弃置 1 个指示物。）</f>\n向一株植物添加 1[harm]，以将一张路径卡置于路径牌组顶。若该卡为生物融合，则改为将其置于路径牌组底。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/loa/02205.jpg",
@@ -7060,7 +7060,7 @@
   ],
   "traits_zh": [],
   "text_en": "<b>[FOC] + [exploration] (use 1 entry): Consult</b> <f>observations on the arcology to</f> add 1[progress] to a feature for every 2 effort. If that feature is a ruin or machine, add [progress] equal to your effort instead. Then, read [guide] 197.",
-  "text_zh": "专注＋[exploration]<b>（使用 1 条记录）：查阅</b><f>对生态建筑的观察记录，</f>每 2 点精力向一处地标添加 1[progress]。若该地标为遗迹或机械，则改为添加进展，点数等于你的精力。然后，阅读[guide] 197。",
+  "text_zh": "专注＋[exploration]<b>（使用 1 条记录）：查阅</b><f>对生态城的观察记录，</f>每 2 点精力向一处地标添加 1[progress]。若该地标为废墟或机械，则改为添加进展，点数等于你的精力。然后，阅读[guide] 197。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/loa/02212.jpg",
@@ -7069,7 +7069,7 @@
  {
   "id": "02213",
   "name_en": "The Ambition of the Estians",
-  "name_zh": "艾斯蒂安人的野心",
+  "name_zh": "埃斯蒂安人的野心",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7446,7 +7446,7 @@
  {
   "id": "02222",
   "name_en": "Echoes of the Estians",
-  "name_zh": "艾斯蒂安人的回声",
+  "name_zh": "埃斯蒂安人的回声",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -7563,7 +7563,7 @@
    "经验"
   ],
   "text_en": "Manifestation.\nChoose a flora and either remove 1[harm] from it or add 2[progress] to it. Then add 4[progress] to a non-biomeld being in the same area as the chosen flora.",
-  "text_zh": "激发。\n选择一株植物，从其移除 1[harm] 或向其添加 2[progress]。然后向与所选植物同区的一个非融合体生灵添加 4[progress]。",
+  "text_zh": "激发。\n选择一株植物，从其移除 1[harm] 或向其添加 2[progress]。然后向与所选植物同区的一个非生物融合生灵添加 4[progress]。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/loa/02224.jpg",
@@ -7699,7 +7699,7 @@
  {
   "id": "02228",
   "name_en": "The Audacity of the Estians",
-  "name_zh": "艾斯蒂安人的胆识",
+  "name_zh": "埃斯蒂安人的胆识",
   "set_id": "reward",
   "set_name_en": "Reward",
   "set_name_zh": "奖励",
@@ -11389,7 +11389,7 @@
    "工具"
   ],
   "text_en": "<b>[FIT] + [exploration] (use 1 piton): Climb</b> <f>the terrain to</f> choose an ascent. Then choose options equal to your effort (you may choose an option multiple times):\nAdd 2[progress] to that ascent.\nExhaust that ascent if it is a feature.\nMove your [ranger] to that ascent.",
-  "text_zh": "体质＋[exploration]<b>（使用 1 枚岩钉）：攀登</b><f>地形，</f>以选择一段登道。然后选择数量等于你精力的选项（你可多次选择同一选项）：\n向该登道添加 2[progress]。\n若该登道为地标，消耗它。\n将你的[ranger]移动到该登道。",
+  "text_zh": "体质＋[exploration]<b>（使用 1 枚岩钉）：攀登</b><f>地形，</f>以选择一段上坡。然后选择数量等于你精力的选项（你可多次选择同一选项）：\n向该上坡添加 2[progress]。\n若该上坡为地标，消耗它。\n将你的[ranger]移动到该上坡。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/sos/05201.jpg",
@@ -11433,7 +11433,7 @@
    "科技"
   ],
   "text_en": "<b>Exhaust (use 1 charge):</b> Add 2[progress] to an obstacle.",
-  "text_zh": "<b>消耗（使用 1 次充能）：</b>向一个障碍添加 2[progress]。",
+  "text_zh": "<b>消耗（使用 1 充能）：</b>向一个障碍添加 2[progress]。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/sos/05202.jpg",
@@ -11768,7 +11768,7 @@
    "食物"
   ],
   "text_en": "<b>[FIT] + [conflict]: Catch</b> <f>a nearby bug to</f> add 1 grub to this gear. You may also discard 1 unique token from a swarm.\n<b>Exhaust (use 1 grub):</b> When you perform a test, <f>release a distracting bug to</f> dodge 1 being.",
-  "text_zh": "体质＋[conflict]<b>：捕捉</b><f>附近的一只虫子，</f>向本装备添加 1 只幼虫。你还可从一个虫群弃置 1 个独特指示物。\n<b>消耗（使用 1 只幼虫）：</b>你进行检定时，<f>放出一只虫子分散注意，</f>闪避 1 个生灵。",
+  "text_zh": "体质＋[conflict]<b>：捕捉</b><f>附近的一只虫子，</f>向本装备添加 1 只幼虫。你还可从一个集群弃置 1 个独特指示物。\n<b>消耗（使用 1 只幼虫）：</b>你进行检定时，<f>放出一只虫子分散注意，</f>闪避 1 个生灵。",
   "text_zh_mt": null,
   "reviewed": true,
   "image": "img/card/itm/06205.jpg",
