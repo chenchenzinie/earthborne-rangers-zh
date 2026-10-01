@@ -1,0 +1,19 @@
+{
+  "name": "地缘行者 · 战役记录器",
+  "short_name": "战役记录器",
+  "description": "地缘行者战役记录表 App：30 天日历与天气、任务进度、行者位置、奖励与重要事件记录（功能对标 TTS 模组 Campaign Tracker）",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#d6c599",
+  "theme_color": "#8a3426",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

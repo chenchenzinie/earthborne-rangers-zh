@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#d6c599">
+<title>地缘行者 · 战役记录器</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="战役记录器">
+<link rel="stylesheet" href="styles.css?v=20261004">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-title">地缘行者</span>
+    <span class="brand-sub">战役记录器 · EARTHBORNE RANGERS</span>
+  </div>
+  <div class="top-actions">
+    <label class="hard-toggle" title="开启后天气整体加码一级（最坏为电光迷雾）">
+      <input type="checkbox" id="hard-weather"> 恶劣天气加码
+    </label>
+    <button class="btn ghost sm" id="btn-export" title="导出 JSON 存档备份">导出存档</button>
+    <button class="btn ghost sm" id="btn-import" title="从 JSON 存档恢复">导入存档</button>
+    <input type="file" id="import-file" accept="application/json,.json" hidden>
+    <button class="btn danger sm" id="btn-clear" title="清空全部记录（不可恢复）">清空</button>
+  </div>
+</header>
+
+<!-- 今日状态条 -->
+<section class="today-bar">
+  <div class="today-day">第 <b id="today-num">1</b> / 30 天</div>
+  <div class="today-weather" id="today-weather">—</div>
+  <div class="today-ctrl">
+    <button class="btn sm" id="btn-prev" title="回退一天（TTS 中为右键日期）">↩ 回退一天</button>
+    <button class="btn primary" id="btn-advance">结束今天 ▶</button>
+  </div>
+</section>
+
+<!-- 提醒横幅 -->
+<div id="reminder-box" class="reminder-box" hidden></div>
+
+<main class="sheet">
+
+  <!-- 日历 -->
+  <section class="panel panel-calendar">
+    <h2 class="panel-title">日历</h2>
+    <div class="calendar-grid" id="calendar-grid"></div>
+    <div class="day-editor" id="day-editor">
+      <div class="de-head">
+        <span>第 <b id="de-day">1</b> 天 · 手册条目编号</span>
+        <small>推进到该天时会提醒阅读（共 3 格）</small>
+      </div>
+      <div class="de-inputs">
+        <input type="text" id="de-1" maxlength="12" placeholder="条目 1，如 94.1">
+        <input type="text" id="de-2" maxlength="12" placeholder="条目 2">
+        <input type="text" id="de-3" maxlength="12" placeholder="条目 3">
+      </div>
+    </div>
+    <div class="weather-legend">
+      <span><i class="dot w1"></i>风和日丽</span>
+      <span><i class="dot w2"></i>倾盆大雨</span>
+      <span><i class="dot w3"></i>狂风呼啸</span>
+      <span><i class="dot w4"></i>电光迷雾（加码）</span>
+    </div>
+  </section>
+
+  <!-- 行者 / 位置 -->
+  <section class="panel panel-ranger">
+    <h2 class="panel-title">行者</h2>
+    <textarea id="rangers" rows="5" placeholder="行者名单（可多行）"></textarea>
+    <h2 class="panel-title mt">当前位置</h2>
+    <label class="loc-row">地点 <input type="text" id="location" placeholder="如：孤树哨站"></label>
+    <label class="loc-row">地形 <input type="text" id="terrain" placeholder="如：草甸 / 河流 / 旧林"></label>
+  </section>
+
+  <!-- 任务 -->
+  <section class="panel panel-missions">
+    <h2 class="panel-title">任务 <small class="muted">（33 个槽位 · 日期 / 名称 / 3 格进度 ◆）</small></h2>
+    <div class="mission-cols" id="mission-cols"></div>
+  </section>
+
+  <!-- 奖励 -->
+  <section class="panel panel-rewards">
+    <h2 class="panel-title">奖励</h2>
+    <div class="reward-cols">
+      <textarea id="rewards1" rows="10" placeholder="已获得的奖励…"></textarea>
+      <textarea id="rewards2" rows="10" placeholder="已获得的奖励…"></textarea>
+      <textarea id="rewards3" rows="10" placeholder="已获得的奖励…"></textarea>
+    </div>
+  </section>
+
+  <!-- 重要事件 -->
+  <section class="panel panel-events">
+    <h2 class="panel-title">重要事件</h2>
+    <div class="event-cols">
+      <textarea id="events1" rows="12" placeholder="重要事件记录 1…"></textarea>
+      <textarea id="events2" rows="12" placeholder="重要事件记录 2…"></textarea>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  非官方粉丝工具 · 数据自动保存在本机 · 建议常点「导出存档」备份 ·
+  功能对标 TTS 模组战役追踪器（Campaign Tracker）
+</footer>
+
+<script src="app.js?v=20261004"></script>
+</body>
+</html>
