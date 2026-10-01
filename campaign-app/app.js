@@ -194,12 +194,12 @@
     hideReminder();
   }
 
-  function showReminder(title, msgs) {
+  function showReminder(title, msgs, label = '阅读提醒', icon = '📖') {
     const box = $('reminder-box');
     if (!msgs.length) { box.hidden = true; return; }
     box.innerHTML =
       `<button class="rem-close" title="关闭">×</button>` +
-      `<h3>📖 ${title} · 阅读提醒</h3><ul>${msgs.map(m => `<li>${m}</li>`).join('')}</ul>`;
+      `<h3>${icon} ${title} · ${label}</h3><ul>${msgs.map(m => `<li>${m}</li>`).join('')}</ul>`;
     box.hidden = false;
     box.querySelector('.rem-close').addEventListener('click', hideReminder);
   }
@@ -266,11 +266,29 @@
   /* ---------- 导出 / 导入 / 清空 ---------- */
   function exportJSON() {
     saveNow();
-    const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
-    const a = document.createElement('a');
     const ts = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const name = `地缘行者战役记录_${ts}.json`;
+    const content = JSON.stringify(state, null, 2);
+    // Windows 桌面版（pywebview）：弹系统"另存为"对话框并反馈结果
+    if (window.pywebview && window.pywebview.api && window.pywebview.api.save_file) {
+      window.pywebview.api.save_file(name, content).then(r => {
+        if (r.ok) {
+          showReminder('导出存档', [`已保存到：${r.path}`], '保存成功', '💾');
+        } else if (r.cancelled) {
+          showReminder('导出存档', ['已取消保存。'], '未保存', '💾');
+        } else {
+          showReminder('导出存档', [`保存失败：${r.error || '未知错误'}`], '保存失败', '💾');
+        }
+      }).catch(e => {
+        showReminder('导出存档', [`保存失败：${e}`], '保存失败', '💾');
+      });
+      return;
+    }
+    // 浏览器 / 手机网页版：走下载
+    const blob = new Blob([content], { type: 'application/json' });
+    const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `地缘行者战役记录_${ts}.json`;
+    a.download = name;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 2000);
   }
