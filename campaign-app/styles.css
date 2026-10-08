@@ -12,6 +12,9 @@
   --w2:#6fa05a;   /* 倾盆大雨 绿 */
   --w3:#b07f3e;   /* 狂风呼啸 棕黄 */
   --w4:#8d5ab0;   /* 电光迷雾 紫 */
+  --u1:#3f8a8a;   /* 万籁俱静 青 */
+  --u2:#cf8a2d;   /* 光辉之雨 金橙 */
+  --u3:#4f63b4;   /* 波光洪流 靛蓝 */
   --danger:#b3402f;
   --shadow:0 2px 8px rgba(80,50,20,.18);
 }
@@ -118,6 +121,9 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
 .day-cell.w2::before{background:var(--w2)}
 .day-cell.w3::before{background:var(--w3)}
 .day-cell.w4::before{background:var(--w4)}
+.day-cell.u1::before{background:var(--u1)}
+.day-cell.u2::before{background:var(--u2)}
+.day-cell.u3::before{background:var(--u3)}
 .day-cell.past{background:var(--paper-deep)}
 .day-cell.current{border:2.5px solid var(--ink);box-shadow:0 0 0 2px rgba(110,47,34,.18)}
 .day-cell.future .d-num{opacity:.6}
@@ -131,6 +137,65 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
 .weather-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.78rem;color:var(--ink-soft)}
 .weather-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
 .dot.w1{background:var(--w1)}.dot.w2{background:var(--w2)}.dot.w3{background:var(--w3)}.dot.w4{background:var(--w4)}
+.dot.u1{background:var(--u1)}.dot.u2{background:var(--u2)}.dot.u3{background:var(--u3)}
+.lg-title{font-weight:700;color:var(--ink)}
+
+/* ===== 今日天气双轨（地上/地下） ===== */
+.wchip{
+  border:1.5px solid var(--line-dark);border-radius:999px;padding:5px 14px;font-size:.88rem;
+  cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:7px;margin-right:8px;
+  color:#fff;background:var(--chipc);
+}
+.wchip b{background:rgba(0,0,0,.25);border-radius:6px;padding:1px 7px;font-size:.74rem}
+.wchip.off{opacity:.42;filter:saturate(.6)}
+.wchip.off:hover{opacity:.8}
+
+/* ===== 竖版地图限宽居中 ===== */
+.map-canvas.portrait{width:60%;margin:0 auto}
+
+/* ===== 地图地点热点 ===== */
+.map-spots{position:absolute;inset:0;pointer-events:none;z-index:4}
+.map-spot{
+  position:absolute;transform:translate(-50%,-50%) rotate(45deg);
+  width:20px;height:20px;padding:0;border:2px solid #4a2410;border-radius:4px;
+  background:rgba(255,242,210,.72);box-shadow:0 1px 3px rgba(0,0,0,.5);
+  cursor:pointer;pointer-events:auto;z-index:5;
+}
+.map-spot:hover{width:26px;height:26px;background:rgba(255,255,255,.95);z-index:8}
+/* 关键地点=金色菱形 / 非关键地点=白色圆形 */
+.map-spot.key{background:#f2b52e;border-color:#7a4a08}
+.map-spot.minor{background:rgba(255,255,255,.9);border-radius:50%}
+.map-spot.key:hover{background:#ffd25e}
+/* 当前选中地点=红色突出（区别于关键地点金色） */
+.map-spot.cur{background:#e64545;border-color:#8b1818;box-shadow:0 0 0 3px rgba(230,69,69,.45),0 1px 4px rgba(0,0,0,.5);z-index:7}
+.map-spot.cur:hover{background:#ff5252}
+.map-spot .ms-lbl{
+  position:absolute;left:50%;top:120%;transform:translateX(-50%) rotate(-45deg);
+  background:rgba(60,30,15,.92);color:#ffeec8;font-size:.66rem;line-height:1.2;white-space:nowrap;
+  padding:2px 6px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .12s;
+}
+.map-spot.cur .ms-lbl{opacity:1}
+.map-spot:hover .ms-lbl{opacity:1}
+
+/* ===== 路径地形笔刷 ===== */
+.terrain-brush{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px}
+.brush-cap{font-size:.82rem;font-weight:700;color:var(--ink)}
+.tbrush{
+  border:1.5px solid var(--line-dark);background:var(--field);color:var(--ink);
+  border-radius:999px;padding:3px 10px;font-size:.76rem;cursor:pointer;display:inline-flex;align-items:center;gap:5px;
+}
+.tbrush.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+.tdot{width:11px;height:11px;border-radius:50%;border:1px solid rgba(0,0,0,.35);display:inline-block}
+.tdot[data-t="山路"]{background:#1a1a1a}.tdot[data-t="老林"]{background:#a04a30}
+.tdot[data-t="树林"]{background:#3e9e3e}.tdot[data-t="草原"]{background:#e0b02e}
+.tdot[data-t="湖岸"]{background:#7a8f9e}.tdot[data-t="河流（需要载具）"]{background:#3aa6d8}
+.tdot[data-t="溪谷"]{background:#5d6d8a}.tdot[data-t="沼泽"]{background:#3a4148}
+.tdot[data-t="洞穴系统"]{background:#e08a3a}.tdot[data-t="蘑菇森林"]{background:#9a6ab0}
+.tdot[data-t="深根盘错"]{background:#4fae5a}.tdot[data-t="古代遗迹"]{background:#7a9aa8}
+.tdot[data-t="水淹遗迹"]{background:#5ab0c8}.tdot[data-t="浸水之路"]{background:#3aa6d8}
+.tdot[data-t="上锁之路"]{background:#d8b33a}.tdot[data-t="植被之路"]{background:#4fae5a}
+.tbrush.on .tdot{box-shadow:0 0 0 1.5px #f6ecd2}
+.brush-tip{font-size:.74rem;color:var(--danger);font-weight:700}
 
 /* ===== 任务表 ===== */
 .mission-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0 18px}
@@ -147,11 +212,113 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
 }
 .pip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-/* ===== 奖励 / 事件 ===== */
-.reward-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.event-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* ===== 奖励（36 栏 · 3 列 12 行）/ 事件 ===== */
+.reward-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 14px}
+.rw-row{display:flex;align-items:center;gap:6px}
+.rw-no{
+  flex:0 0 26px;width:26px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.72rem;color:var(--ink-soft);background:rgba(138,106,58,.13);border-radius:5px;
+}
+.rw-row input{font-size:.82rem;padding:4px 8px;min-width:0;flex:1}
+.event-cols{display:grid;gap:6px 14px}
+.event-cols.ec2{grid-template-columns:repeat(2,1fr)}
+.event-cols.ec3{grid-template-columns:repeat(3,1fr)}
+.ev-row{display:flex;align-items:center;gap:6px}
+.ev-no{
+  flex:0 0 26px;width:26px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.72rem;color:var(--ink-soft);background:rgba(138,106,58,.13);border-radius:5px;
+}
+.ev-row input{font-size:.82rem;padding:4px 8px;min-width:0;flex:1}
 
 .foot{text-align:center;padding:14px;font-size:.74rem;color:var(--ink-soft);border-top:1.5px solid var(--line)}
+
+/* ===== 战役切换 / 存档槽 ===== */
+.campaign-switch{display:flex;gap:6px}
+.camp-tab{
+  border:1.5px solid var(--line-dark);background:transparent;color:var(--ink);
+  border-radius:8px;padding:5px 12px;font-size:.85rem;font-weight:700;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;
+}
+.camp-tab small{font-size:.62rem;font-weight:400;color:var(--ink-soft)}
+.camp-tab.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+.camp-tab.on small{color:#e0cba0}
+.slot-switch{display:flex;gap:6px}
+.slot-tab{
+  border:1.5px dashed var(--line-dark);background:transparent;color:var(--ink);
+  border-radius:8px;padding:5px 10px;font-size:.8rem;font-weight:600;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;min-width:86px;
+}
+.slot-tab small{font-size:.62rem;font-weight:400;color:var(--ink-soft);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slot-tab.on{background:var(--field);border-style:solid;box-shadow:inset 0 0 0 1px var(--ink)}
+
+/* ===== 存档安全提醒 ===== */
+.storage-notice{
+  display:flex;align-items:center;gap:10px;
+  margin:10px 16px 0;padding:8px 14px;border-radius:8px;
+  background:#f6e3c0;border:1.5px solid var(--w3);color:#7a4a12;font-size:.82rem;
+}
+.storage-notice b{color:#a03a10}
+.storage-notice .notice-close{
+  margin-left:auto;border:none;background:none;color:#a03a10;font-size:1.05rem;cursor:pointer;flex:0 0 auto;
+}
+
+/* ===== 地图面板 ===== */
+.panel-map{grid-column:1 / -1}
+.map-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.map-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.map-tab{
+  border:1.5px solid var(--line-dark);background:var(--field);color:var(--ink);
+  border-radius:6px;padding:5px 12px;font-size:.82rem;font-weight:600;cursor:pointer;
+}
+.map-tab.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+.map-zoom{margin-left:auto;font-size:.8rem;color:var(--ink);display:flex;align-items:center;gap:8px}
+.map-zoom input{accent-color:var(--ink)}
+.map-view{
+  overflow:auto;border:1.5px solid var(--line);border-radius:8px;background:#c8b88f;
+  max-height:70vh;
+}
+.map-canvas{position:relative;width:100%;cursor:crosshair}
+.map-canvas img{display:block;width:100%;height:auto;user-select:none}
+.map-pin{
+  position:absolute;transform:translate(-50%,-100%);font-size:1.6rem;pointer-events:none;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));
+}
+.map-loc{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+.map-loc label{display:flex;align-items:center;gap:6px;font-size:.88rem;color:var(--ink);flex:1;min-width:180px}
+.map-loc label input{flex:1}
+.map-hint{margin-top:6px;font-size:.74rem;color:var(--ink-soft)}
+.legend-sep{flex:0 0 auto;border-left:1.5px solid var(--line);height:14px}
+
+/* ===== 任务行（含备注） ===== */
+.mission-row{flex-direction:column;align-items:stretch;gap:3px;padding:6px 0}
+.m-line1{display:flex;align-items:center;gap:6px}
+.m-line1 .m-day{width:42px;flex:0 0 42px}
+.m-line1 .m-day input{text-align:center;font-size:.82rem;padding:5px 2px}
+.m-line1 .m-name{flex:1;min-width:0}
+.m-line1 .m-name input{font-size:.85rem;padding:5px 8px}
+.m-line2{display:flex;padding-left:48px}
+.m-line2 input{font-size:.78rem;padding:3px 8px;color:#6b4a38;background:transparent;border-style:dashed}
+
+/* ===== 自定义搜索下拉面板（限高 + 屏幕适配滚动） ===== */
+.ac-panel{
+  position:fixed;z-index:9999;
+  background:#fffaf0;border:2px solid #8a6a3a;border-radius:8px;
+  box-shadow:0 8px 24px rgba(60,35,10,.28);
+  overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  font-size:.85rem;line-height:1.35;
+}
+.ac-panel::-webkit-scrollbar{width:8px}
+.ac-panel::-webkit-scrollbar-thumb{background:#c9b183;border-radius:4px}
+.ac-panel::-webkit-scrollbar-track{background:transparent}
+.ac-item{padding:5px 10px;cursor:pointer;border-bottom:1px solid rgba(138,106,58,.15);display:flex;gap:9px;align-items:center}
+.ac-item:last-child{border-bottom:none}
+.ac-item.active,.ac-item:hover{background:#f2e2b8}
+.ac-thumb{flex:0 0 auto;width:32px;height:45px;object-fit:cover;border-radius:4px;border:1px solid rgba(74,36,16,.35);background:#eee}
+.ac-txt{flex:1;min-width:0}
+.ac-val{display:block;font-weight:600;color:#3d2410;word-break:break-all}
+.ac-label{display:block;font-size:.72rem;color:#8a7a5c;margin-top:1px;word-break:break-all}
+.ac-empty{padding:8px 10px;color:#a08c66;font-size:.8rem}
 
 /* ===== 手机布局 ===== */
 @media (max-width:860px){
@@ -159,7 +326,7 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
   .panel-rewards,.panel-events{grid-column:1}
   .mission-cols{grid-template-columns:1fr}
   .reward-cols{grid-template-columns:1fr}
-  .event-cols{grid-template-columns:1fr}
+  .event-cols.ec2,.event-cols.ec3{grid-template-columns:1fr}
   .calendar-grid{grid-template-columns:repeat(6,1fr);gap:5px}
   .day-cell{min-height:52px;padding:4px 2px 6px}
   .de-inputs{grid-template-columns:1fr}
@@ -167,6 +334,14 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
   .today-ctrl{margin-left:0;width:100%}
   .today-ctrl .btn{flex:1}
   .top-actions{width:100%;margin-left:0}
+  .campaign-switch,.slot-switch{width:100%}
+  .camp-tab,.slot-tab{flex:1}
+  .slot-tab small{max-width:none}
+  .map-zoom{margin-left:0}
+  .map-view{max-height:55vh}
+  .map-canvas.portrait{width:100%}
+  .wchip{margin-bottom:4px}
+  .storage-notice{font-size:.76rem}
 }
 @media (max-width:420px){
   html{font-size:14px}

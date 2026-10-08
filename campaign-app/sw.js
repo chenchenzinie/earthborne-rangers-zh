@@ -1,16 +1,25 @@
 /* Service Worker：离线缓存全部应用外壳 */
-const CACHE = 'ebr-campaign-v20261004';
+const CACHE = 'ebr-campaign-v20261008i';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css?v=20261004',
-  './app.js?v=20261004',
+  './styles.css?v=20261008i',
+  './data.js?v=20261008i',
+  './app.js?v=20261008i',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
-  './icons/favicon-32.png'
+  './icons/favicon-32.png',
+  './maps/valley-map.jpg',
+  './maps/valley-map-p.jpg',
+  './maps/ancestral-map.jpg',
+  './maps/arcology-map.jpg',
+  './maps/underground-map.jpg',
+  // 奖励牌（引入山谷 31 张 / 先祖遗产 29 张）
+  ...Array.from({ length: 31 }, (_, i) => `./rewards-valley/奖励-${i + 1}-31.jpg`),
+  ...Array.from({ length: 29 }, (_, i) => `./rewards-ancestral/奖励XZ-${i + 1}-29.jpg`),
 ];
 
 self.addEventListener('install', e => {
