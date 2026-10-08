@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="战役记录器">
-<link rel="stylesheet" href="styles.css?v=20261008j">
+<link rel="stylesheet" href="styles.css?v=20261008t">
 </head>
 <body>
 <header class="topbar">
@@ -88,13 +88,31 @@
     </div>
   </section>
 
-  <!-- 行者 / 位置 -->
+  <!-- 行者 / 位置 / 挑战抽牌器 -->
   <section class="panel panel-ranger">
-    <h2 class="panel-title">行者</h2>
-    <textarea id="rangers" rows="5" placeholder="行者名单（可多行）"></textarea>
-    <h2 class="panel-title mt">当前位置</h2>
-    <label class="loc-row">地点 <input type="text" id="location" placeholder="如：孤树基站"></label>
-    <label class="loc-row">地形 <input type="text" id="terrain" placeholder="如：草甸 / 河流 / 旧林"></label>
+    <div class="ranger-flex">
+      <div class="ranger-left">
+        <div class="ranger-names">
+          <h2 class="panel-title">行者</h2>
+          <textarea id="rangers" rows="5" placeholder="行者名单（可多行）"></textarea>
+        </div>
+        <div class="ranger-loc">
+          <h2 class="panel-title">当前位置</h2>
+          <label class="loc-row">地点 <input type="text" id="location" placeholder="如：孤树基站"></label>
+          <label class="loc-row">地形 <input type="text" id="terrain" placeholder="如：草甸 / 河流 / 旧林"></label>
+        </div>
+      </div>
+      <div class="ranger-challenges">
+        <h2 class="panel-title">挑战抽牌器 <small class="muted">（山/战/阳三类 · 四属性调整 · 重洗标记）</small></h2>
+        <div class="ch-head">
+          <span class="ch-deck">剩余 <b id="ch-deck-count">24</b> / 24</span>
+          <button type="button" class="btn sm primary" id="btn-draw" title="从牌堆顶端抽一张挑战牌">抽牌</button>
+          <button type="button" class="btn sm" id="btn-reshuffle" title="把所有已抽牌洗回牌堆">重洗</button>
+        </div>
+        <div class="ch-notice" id="ch-notice" hidden></div>
+        <div class="ch-drawn" id="ch-drawn"></div>
+      </div>
+    </div>
   </section>
 
   <!-- 地图 -->
@@ -149,7 +167,7 @@
   功能对标 TTS 模组战役追踪器（Campaign Tracker）
 </footer>
 
-<script src="data.js?v=20261008j"></script>
-<script src="app.js?v=20261008j"></script>
+<script src="data.js?v=20261008t"></script>
+<script src="app.js?v=20261008t"></script>
 </body>
 </html>

@@ -193,10 +193,47 @@ const REWARDS_ANCESTRAL = [
   { n: 24, name: '生机勃勃', type: '瞬间 · 经验' },
   { n: 25, name: '意悬浮吊床', type: '道具 · 工具 · 科技' },
   { n: 26, name: '菌丝熏香', type: '道具 · 自然' },
-  { n: 27, name: '园丁之魂', type: '动物 · 灵体 · 艾斯迪' },
+  { n: 27, name: '园丁之魂', type: '动物 · 灵体 · 耾斯迪' },
   { n: 28, name: '艾斯迪人的鲁莽', type: '瞬间 · 故事' },
   { n: 29, name: '钢流体石板琴', type: '道具 · 乐器 · 科技' },
 ];
+
+/* ---------- 挑战牌（24 张：山/战/阳 三类各 8 张） ----------
+   每张四属性调整值（知觉/精神/体质/专注，范围 -2 ~ +1）
+   reshuffle=true 表示抽到该牌时需把弃牌堆洗回牌堆
+   图片路径：challenges/挑战-{type}-{n}.jpg，牌背 challenges/挑战牌背.jpg
+---------------------------------------------------------------- */
+const CHALLENGES = [
+  { type:'山', n:1, perception: 1, spirit:-1, constitution: 0, focus: 0, reshuffle:false },
+  { type:'山', n:2, perception:-1, spirit: 0, constitution: 0, focus:-1, reshuffle:false },
+  { type:'山', n:3, perception: 0, spirit:-1, constitution:-1, focus: 0, reshuffle:false },
+  { type:'山', n:4, perception: 1, spirit:-1, constitution:-1, focus: 1, reshuffle:false },
+  { type:'山', n:5, perception: 0, spirit: 1, constitution: 0, focus:-1, reshuffle:false },
+  { type:'山', n:6, perception: 1, spirit: 0, constitution:-1, focus: 0, reshuffle:false },
+  { type:'山', n:7, perception: 0, spirit: 0, constitution:-1, focus: 1, reshuffle:false },
+  { type:'山', n:8, perception:-1, spirit: 1, constitution: 1, focus:-1, reshuffle:false },
+  { type:'战', n:1, perception:-1, spirit: 0, constitution:-1, focus: 0, reshuffle:false },
+  { type:'战', n:2, perception: 0, spirit: 0, constitution: 1, focus:-1, reshuffle:false },
+  { type:'战', n:3, perception: 0, spirit:-1, constitution: 0, focus: 1, reshuffle:false },
+  { type:'战', n:4, perception: 1, spirit: 1, constitution: 0, focus:-2, reshuffle:true  },
+  { type:'战', n:5, perception:-1, spirit:-1, constitution: 0, focus: 0, reshuffle:false },
+  { type:'战', n:6, perception:-1, spirit: 0, constitution: 0, focus: 1, reshuffle:false },
+  { type:'战', n:7, perception: 1, spirit:-2, constitution: 1, focus: 0, reshuffle:true  },
+  { type:'战', n:8, perception: 0, spirit: 1, constitution:-1, focus: 0, reshuffle:false },
+  { type:'阳', n:1, perception: 0, spirit:-1, constitution: 0, focus:-1, reshuffle:false },
+  { type:'阳', n:2, perception: 0, spirit: 1, constitution:-2, focus: 1, reshuffle:true  },
+  { type:'阳', n:3, perception: 0, spirit: 0, constitution:-1, focus:-1, reshuffle:false },
+  { type:'阳', n:4, perception:-2, spirit: 0, constitution: 1, focus: 1, reshuffle:true  },
+  { type:'阳', n:5, perception:-1, spirit: 1, constitution: 0, focus: 0, reshuffle:false },
+  { type:'阳', n:6, perception: 0, spirit:-1, constitution: 1, focus: 0, reshuffle:false },
+  { type:'阳', n:7, perception: 1, spirit: 0, constitution: 0, focus:-1, reshuffle:false },
+  { type:'阳', n:8, perception:-1, spirit: 0, constitution: 1, focus: 0, reshuffle:false },
+];
+const CHALLENGE_TYPES = {
+  '山': { name:'山', cls:'ct-mountain', emblem:'🏔' },
+  '战': { name:'战', cls:'ct-war',      emblem:'⚔' },
+  '阳': { name:'阳', cls:'ct-sun',      emblem:'☀' },
+};
 
 /* ---------- 地图（spots: [名称, x%, y%] 可点击的地点热点） ---------- */
 const MAP_DB = {

@@ -76,6 +76,13 @@ button{font-family:inherit}
 .reminder-box h3{font-size:.95rem;color:var(--ink);margin-bottom:6px}
 .reminder-box ul{margin-left:20px;font-size:.92rem;line-height:1.7}
 .reminder-box .rem-close{float:right;border:none;background:none;color:var(--ink-soft);font-size:1.1rem;cursor:pointer}
+/* 提醒横幅每次重新触发时的 pulse 动画（让用户感知新提示出现） */
+@keyframes reminder-pulse{
+  0%{transform:scale(1);box-shadow:var(--shadow)}
+  50%{transform:scale(1.015);box-shadow:0 4px 16px rgba(110,47,34,.35)}
+  100%{transform:scale(1);box-shadow:var(--shadow)}
+}
+.reminder-box.pulse{animation:reminder-pulse .45s ease}
 
 /* ===== 面板（羊皮纸卡） ===== */
 .sheet{flex:1;padding:14px 16px;max-width:1500px;width:100%;margin:0 auto;
@@ -88,6 +95,78 @@ button{font-family:inherit}
 .panel-missions{grid-column:1 / -1}
 .panel-rewards{grid-column:1}
 .panel-events{grid-column:2}
+/* 行者栏：全宽 + 内部两栏（左=行者名单+当前位置竖叠 / 右=挑战抽牌器） */
+.panel-ranger{grid-column:1 / -1}
+.ranger-flex{display:grid;grid-template-columns:1fr 1.6fr;gap:14px;align-items:start}
+.ranger-flex .panel-title{margin-bottom:8px}
+.ranger-flex .ranger-challenges .panel-title{margin-bottom:12px}
+.ranger-left{display:flex;flex-direction:column;gap:14px}
+.ranger-left .ranger-loc .panel-title{margin-top:0}
+.ranger-flex .loc-row{margin-top:0}
+.ranger-flex .loc-row + .loc-row{margin-top:10px}
+/* 抽牌按钮在重洗确认态：黄底警示色 */
+.btn.warn{background:#e8b54a;color:#3d2410;border-color:#b08020}
+.btn.warn:hover{background:#d8a438}
+
+/* 挑战抽牌器 */
+.ch-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.ch-head .ch-deck{font-size:.9rem;color:var(--ink);font-weight:600}
+.ch-head .ch-deck b{color:var(--danger);font-size:1.1rem}
+.ch-head .btn{flex:0 0 auto}
+/* 抽牌器内部本地提示区（替代顶部 reminder-box，紧贴按钮栏下方） */
+.ch-notice{
+  margin:0 0 10px;padding:8px 12px;border-radius:6px;
+  font-size:.84rem;font-weight:600;line-height:1.45;
+}
+.ch-notice[hidden]{display:none}
+.ch-notice.warn{background:#fff4d6;border:1.5px solid #e8b54a;color:#5a3a10}
+.ch-notice.alert{background:#fde4dc;border:1.5px solid var(--danger);color:#7a1010}
+.ch-notice.info{background:#e8f2e8;border:1.5px solid #3a7a3a;color:#1a4a1a}
+/* 重洗标记内联徽章 */
+.ch-notice .reshuffle-mark{
+  display:inline-block;background:#b3402f;color:#fff;font-size:.74rem;font-weight:700;
+  padding:1px 6px;border-radius:4px;margin-left:4px;vertical-align:1px;
+}
+.ch-drawn{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;
+  background:var(--field);border:1.5px dashed var(--line);border-radius:8px;
+  padding:10px;min-height:120px;max-height:340px;overflow-y:auto;
+}
+.ch-drawn:empty{display:flex;align-items:center;justify-content:center}
+.ch-empty{color:var(--ink-soft);font-size:.84rem;text-align:center;width:100%}
+.ch-card{
+  position:relative;flex:0 0 auto;width:96px;
+  border:1.5px solid var(--line-dark);border-radius:6px;overflow:hidden;
+  background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.18);
+  cursor:default;
+}
+.ch-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:#eee}
+.ch-card.reshuffle{border-color:var(--danger);box-shadow:0 0 0 2px rgba(179,64,47,.25),0 1px 3px rgba(0,0,0,.18)}
+.ch-attrs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border-top:1px solid var(--line-dark)}
+.ch-attr{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2px 0;background:#fffaf0;font-size:.66rem;line-height:1.1;
+}
+.ch-attr-lbl{color:var(--ink-soft);font-size:.6rem}
+.ch-attr-val{font-weight:800;font-size:.85rem}
+.ch-attr.per{background:#eaf5e0}      /* 知觉=绿底 */
+.ch-attr.spi{background:#fbf2c0}      /* 精神=黄底 */
+.ch-attr.con{background:#fbe0d8}      /* 体质=红底 */
+.ch-attr.foc{background:#dfeaf5}      /* 专注=蓝底 */
+.ch-attr.v1 .ch-attr-val{color:#2a7a2a}     /* +1 绿字 */
+.ch-attr.v0 .ch-attr-val{color:#7a6a4a}     /* 0 灰字 */
+.ch-attr.v-1 .ch-attr-val{color:#b04030}   /* -1 红字 */
+.ch-attr.v-2 .ch-attr-val{color:#7a1010}   /* -2 深红字 */
+.ch-reshuffle{
+  position:absolute;top:4px;right:4px;
+  background:var(--danger);color:#fff;border-radius:50%;
+  width:18px;height:18px;font-size:.85rem;line-height:18px;text-align:center;font-weight:800;
+  box-shadow:0 1px 3px rgba(0,0,0,.4);
+}
+/* 类型边框色（按挑战图标分类） */
+.ch-card.ct-mountain{border-top:4px solid #3a7a3a}
+.ch-card.ct-war{border-top:4px solid #b03030}
+.ch-card.ct-sun{border-top:4px solid #d09020}
 .panel-title{font-size:1.02rem;color:var(--ink);margin-bottom:10px;letter-spacing:1px}
 .panel-title .muted{font-weight:400;font-size:.78rem;color:var(--ink-soft)}
 .panel-title.mt{margin-top:14px}
@@ -346,6 +425,13 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
   .mission-cols{grid-template-columns:1fr}
   .reward-cols{grid-template-columns:1fr}
   .event-cols.ec2,.event-cols.ec3{grid-template-columns:1fr}
+  .ranger-flex{grid-template-columns:1fr;gap:10px}
+  .ranger-flex .ranger-challenges .panel-title{margin-top:6px;margin-bottom:8px}
+  .ranger-left .ranger-loc .panel-title{margin-top:6px}
+  .ch-drawn{max-height:280px}
+  .ch-card{width:88px}
+  .ch-attr-val{font-size:.78rem}
+  .ch-attr-lbl{font-size:.56rem}
   .calendar-grid{grid-template-columns:repeat(6,1fr);gap:5px}
   .day-cell{min-height:52px;padding:4px 2px 6px}
   .de-inputs{grid-template-columns:1fr}

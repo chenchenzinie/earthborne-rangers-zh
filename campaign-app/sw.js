@@ -1,11 +1,11 @@
 /* Service Worker：离线缓存全部应用外壳 */
-const CACHE = 'ebr-campaign-v20261008j';
+const CACHE = 'ebr-campaign-v20261008t';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css?v=20261008j',
-  './data.js?v=20261008j',
-  './app.js?v=20261008j',
+  './styles.css?v=20261008t',
+  './data.js?v=20261008t',
+  './app.js?v=20261008t',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -20,6 +20,9 @@ const ASSETS = [
   // 奖励牌（引入山谷 31 张 / 先祖遗产 29 张）
   ...Array.from({ length: 31 }, (_, i) => `./rewards-valley/奖励-${i + 1}-31.jpg`),
   ...Array.from({ length: 29 }, (_, i) => `./rewards-ancestral/奖励XZ-${i + 1}-29.jpg`),
+  // 挑战牌（山/战/阳 三类各 8 张 = 24 张 + 1 张牌背）
+  './challenges/挑战牌背.jpg',
+  ...['山','战','阳'].flatMap(t => Array.from({ length: 8 }, (_, i) => `./challenges/挑战-${t}-${i + 1}.jpg`)),
 ];
 
 self.addEventListener('install', e => {

@@ -28,6 +28,8 @@
   let currentMap = 'valley';
   let brushTerrain = null;  // 地形笔刷
   let dirty = false;
+  let chConfirmPending = false;  // 挑战抽牌：确认界面待处理（按钮显示「确定」）
+  let chConfirmAck = false;      // 当前重洗标记已被玩家确认（抽到下一张重洗牌时重置）
 
   const camp = () => CAMPAIGNS[slot.active];
   const dayCount = () => camp().days;
@@ -64,6 +66,7 @@
       dayEntries: {},
       missions: Array.from({ length: CAMPAIGNS[key].missionSlots }, () => ({ day: '', name: '', prog: 0, note: '' })),
       mapPin: { map: startMap, x: start[1] / 100, y: start[2] / 100 },
+      challenges: blankChallenges(),
     };
   }
   function normalizeCampaign(key, raw) {
@@ -103,7 +106,32 @@
     s.currentDay = Math.min(CAMPAIGNS[key].days + 1, Math.max(1, s.currentDay | 0 || 1));
     s.missions.forEach(m => { m.prog = Math.max(0, Math.min(PIPS, m.prog | 0 || 0)); });
     if (s.mapPin && (typeof s.mapPin !== 'object' || !MAP_DB[s.mapPin.map])) s.mapPin = null;
+    s.challenges = normalizeChallenges(s.challenges);
     return s;
+  }
+  // 挑战牌堆：deck 是剩余牌（数组下标大者=牌堆顶端，pop 抽出），drawn 是已抽牌（按抽牌顺序）
+  function blankChallenges() {
+    const deck = CHALLENGES.map((_, i) => i);
+    // Fisher-Yates 洗牌
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    return { deck, drawn: [] };
+  }
+  function normalizeChallenges(raw) {
+    if (!raw || typeof raw !== 'object') return blankChallenges();
+    let deck = Array.isArray(raw.deck) ? raw.deck.filter(i => Number.isInteger(i) && i >= 0 && i < CHALLENGES.length) : [];
+    let drawn = Array.isArray(raw.drawn) ? raw.drawn.filter(i => Number.isInteger(i) && i >= 0 && i < CHALLENGES.length) : [];
+    // 去重：同一张牌不能同时出现在 deck 和 drawn
+    const all = new Set(drawn);
+    deck = deck.filter(i => !all.has(i));
+    // 若 deck+drawn 不足 24 张（旧存档/数据损坏），用缺失的牌补满 deck
+    const present = new Set([...deck, ...drawn]);
+    const missing = [];
+    for (let i = 0; i < CHALLENGES.length; i++) if (!present.has(i)) missing.push(i);
+    deck = deck.concat(missing);
+    return { deck, drawn };
   }
   function blankSlot() {
     return { v: 2, active: 'valley', valley: blankCampaign('valley'), ancestral: blankCampaign('ancestral') };
@@ -144,6 +172,8 @@
     state = slot[slot.active];
     if (!camp().maps.includes(currentMap)) currentMap = camp().maps[0];
     brushTerrain = null;
+    chConfirmPending = false;
+    chConfirmAck = false;
     selectedDay = Math.min(state.currentDay, dayCount());
     dirty = false;
     try { localStorage.setItem(ACTIVE_KEY, String(i)); } catch (e) {}
@@ -361,6 +391,10 @@
       `<h3>${icon} ${title} · ${label}</h3><ul>${msgs.map(m => `<li>${m}</li>`).join('')}</ul>`;
     box.hidden = false;
     box.querySelector('.rem-close').addEventListener('click', hideReminder);
+    // 每次弹提示时触发一次 pulse 动画，让用户能明显感知"新提示出现"（即使上次提示还未关闭）
+    box.classList.remove('pulse');
+    void box.offsetWidth;
+    box.classList.add('pulse');
   }
   function hideReminder() { $('reminder-box').hidden = true; }
 
@@ -497,6 +531,159 @@
       }
       wrap.appendChild(colEl);
     }
+  }
+
+  /* ---------- 渲染：挑战抽牌器 ---------- */
+  function challengeImg(i) { return `challenges/挑战-${CHALLENGES[i].type}-${CHALLENGES[i].n}.jpg`; }
+  function renderChallenges() {
+    const c = state.challenges;
+    const wrap = $('ch-drawn');
+    wrap.innerHTML = '';
+    // 已抽牌按抽牌顺序展示（最近的在最右）
+    c.drawn.forEach(idx => {
+      const card = CHALLENGES[idx];
+      const t = CHALLENGE_TYPES[card.type];
+      const e = el('div', 'ch-card ' + t.cls + (card.reshuffle ? ' reshuffle' : ''));
+      e.title = `${card.type}${card.n} · 知觉${signed(card.perception)} 精神${signed(card.spirit)} 体质${signed(card.constitution)} 专注${signed(card.focus)}${card.reshuffle ? '（重洗）' : ''}`;
+      const img = document.createElement('img');
+      img.src = challengeImg(idx);
+      img.alt = `${card.type}${card.n}`;
+      img.loading = 'lazy';
+      img.draggable = false;
+      e.appendChild(img);
+      // 四属性迷你数值徽章（左上=知觉/右上=精神/左下=体质/右下=专注，与卡牌四象限一致）
+      const grid = el('div', 'ch-attrs');
+      grid.appendChild(attrCell('知觉', card.perception, 'per'));
+      grid.appendChild(attrCell('精神', card.spirit, 'spi'));
+      grid.appendChild(attrCell('体质', card.constitution, 'con'));
+      grid.appendChild(attrCell('专注', card.focus, 'foc'));
+      e.appendChild(grid);
+      if (card.reshuffle) e.appendChild(el('span', 'ch-reshuffle', '⟲'));
+      wrap.appendChild(e);
+    });
+    if (c.drawn.length === 0) {
+      wrap.appendChild(el('div', 'ch-empty', '尚未抽牌。点击「抽牌」从牌堆顶端抽一张挑战牌。'));
+    }
+    $('ch-deck-count').textContent = c.deck.length;
+    $('btn-draw').disabled = c.deck.length === 0;
+    $('btn-reshuffle').disabled = c.drawn.length === 0;
+    updateDrawButton();
+    updateChallengeNotice();
+  }
+  // 抽牌按钮状态：已抽牌堆里出现重洗标记后，按钮文字在「抽牌/确定」间切换
+  function updateDrawButton() {
+    const btn = $('btn-draw');
+    if (!btn) return;
+    const hasReshuffle = state.challenges.drawn.some(idx => CHALLENGES[idx].reshuffle);
+    if (hasReshuffle && chConfirmPending) {
+      btn.textContent = '确定';
+      btn.classList.add('warn');
+    } else {
+      btn.textContent = '抽牌';
+      btn.classList.remove('warn');
+    }
+  }
+  // 抽牌器内部本地提示：紧贴按钮栏，按状态显示不同颜色
+  // 无论是否抽到重洗牌，都保留这张牌的数值提示；重洗时额外增加重洗提示
+  function updateChallengeNotice() {
+    const el = $('ch-notice');
+    if (!el) return;
+    const c = state.challenges;
+    if (c.drawn.length === 0) {
+      el.hidden = true;
+      el.className = 'ch-notice';
+      el.textContent = '';
+      return;
+    }
+    // 最新抽到的那张牌（用于显示数值）
+    const lastIdx = c.drawn[c.drawn.length - 1];
+    const card = CHALLENGES[lastIdx];
+    const attrs = `知觉${signed(card.perception)} 精神${signed(card.spirit)} 体质${signed(card.constitution)} 专注${signed(card.focus)}`;
+    const cardLine = `<b>${card.type}${card.n}</b> · ${attrs}`;
+    const hasReshuffle = c.drawn.some(idx => CHALLENGES[idx].reshuffle);
+    if (chConfirmPending) {
+      // 确认界面：显示确认提示 + 保留最新一张牌的数值
+      el.hidden = false;
+      el.className = 'ch-notice alert';
+      el.innerHTML = `<b>已出现重洗标记，确定是否继续抽牌</b> · 再次点击「确定」抽牌，或点「重洗」把已抽牌洗回。<br>当前最近抽到：${cardLine}${card.reshuffle ? ' <span class="reshuffle-mark">⟲ 重洗</span>' : ''}`;
+    } else if (hasReshuffle) {
+      // 已抽到重洗牌（未到确认步骤）：显示重洗牌数值 + 提示再次点抽牌会要求确认
+      const lastReshuffleIdx = [...c.drawn].reverse().find(i => CHALLENGES[i].reshuffle);
+      const rc = CHALLENGES[lastReshuffleIdx];
+      const rcAttrs = `知觉${signed(rc.perception)} 精神${signed(rc.spirit)} 体质${signed(rc.constitution)} 专注${signed(rc.focus)}`;
+      el.hidden = false;
+      el.className = 'ch-notice warn';
+      el.innerHTML = `⚠ 已抽到带重洗标记的牌 <b>${rc.type}${rc.n}</b> · ${rcAttrs} <span class="reshuffle-mark">⟲</span><br>再次点「抽牌」会要求确认是否继续。当前最近抽到：${cardLine}${card.reshuffle ? '（重洗）' : ''}`;
+    } else {
+      // 无重洗牌：显示最新一张牌的数值
+      el.hidden = false;
+      el.className = 'ch-notice info';
+      el.textContent = `最近抽到：${card.type}${card.n} · ${attrs}${card.reshuffle ? '（重洗）' : ''}`;
+    }
+  }
+  // 已抽牌堆里是否有重洗标记
+  function hasReshuffleInDrawn() { return state.challenges.drawn.some(idx => CHALLENGES[idx].reshuffle); }
+  function onDrawClick() {
+    // 抽到重洗牌后再次点击「抽牌」：弹出确认界面，按钮变「确定」，本次不抽牌
+    if (hasReshuffleInDrawn() && !chConfirmAck && !chConfirmPending) {
+      chConfirmPending = true;
+      updateDrawButton();
+      updateChallengeNotice();
+      showReminder('挑战牌（重洗待确认）', [
+        '已出现重洗标记：已抽的牌里有带 ⟲ 的牌。',
+        '按规则应先重洗再继续抽牌。',
+        '再次点击「确定」继续抽牌，或点「重洗」把已抽牌洗回。',
+      ], '已出现重洗标记，确定是否继续抽牌', '⚠');
+      return;
+    }
+    // 已确认继续抽牌 / 无重洗：直接抽牌（确认后抽到的普通牌不再弹确认）
+    if (chConfirmPending) { chConfirmPending = false; chConfirmAck = true; }
+    drawChallenge();
+  }
+  function signed(n) { return n > 0 ? `+${n}` : String(n); }
+  function attrCell(label, n, cls) {
+    const c = el('div', `ch-attr ${cls} v${n}`);
+    c.appendChild(el('span', 'ch-attr-val', signed(n)));
+    c.appendChild(el('span', 'ch-attr-lbl', label));
+    return c;
+  }
+  function drawChallenge() {
+    const c = state.challenges;
+    if (c.deck.length === 0) return;
+    const idx = c.deck.pop();
+    c.drawn.push(idx);
+    save();
+    renderChallenges();
+    // 抽到带重洗标记的牌：弹一次"已抽出第 N 张重洗牌"提示（含数值），按钮保持「抽牌」
+    // 再次点击「抽牌」时才弹出确认界面
+    const card = CHALLENGES[idx];
+    if (card.reshuffle) {
+      chConfirmAck = false;  // 新的重洗牌出现，需要重新确认
+      const reshuffleCount = c.drawn.filter(i => CHALLENGES[i].reshuffle).length;
+      const attrs = `知觉 ${signed(card.perception)} / 精神 ${signed(card.spirit)} / 体质 ${signed(card.constitution)} / 专注 ${signed(card.focus)}`;
+      const cnt = reshuffleCount === 1 ? '第一张' : reshuffleCount === 2 ? '第二张' : reshuffleCount === 3 ? '第三张' : reshuffleCount === 4 ? '第四张' : `第 ${reshuffleCount} 张`;
+      showReminder(`已抽出 ${cnt} 带重洗标记的挑战牌`, [
+        `本次抽到：${card.type}${card.n}（${attrs}）`,
+        '该牌带重洗标记（⟲）：按规则应把弃牌堆洗回牌堆。',
+        '再次点击「抽牌」时会要求确认是否继续。',
+      ], `已抽出 ${cnt} 重洗牌`, '⚠');
+    }
+  }
+  function reshuffleChallenges() {
+    // 把所有已抽牌洗回牌堆（重新 Fisher-Yates 洗牌 deck+drawn）
+    const c = state.challenges;
+    const all = [...c.deck, ...c.drawn];
+    for (let i = all.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [all[i], all[j]] = [all[j], all[i]];
+    }
+    c.deck = all;
+    c.drawn = [];
+    chConfirmPending = false;
+    chConfirmAck = false;
+    save();
+    renderChallenges();
+    showReminder('挑战牌堆', [`已洗回 ${all.length} 张，剩余牌堆重置完成。`], '挑战牌堆已重洗', '🔀');
   }
 
   /* ---------- 渲染：可交互地图 ---------- */
@@ -941,6 +1128,7 @@
     renderRewardDatalist();
     renderRewards();
     renderEvents();
+    renderChallenges();
     syncTextFields();
     renderMapTabs();
     renderMap();
@@ -976,6 +1164,9 @@
     });
     $('btn-sync-loc').addEventListener('click', syncLocation);
     $('map-img').addEventListener('dragstart', e => e.preventDefault());
+
+    $('btn-draw').addEventListener('click', onDrawClick);
+    $('btn-reshuffle').addEventListener('click', reshuffleChallenges);
 
     $('btn-export').addEventListener('click', exportJSON);
     $('btn-import').addEventListener('click', () => $('import-file').click());
