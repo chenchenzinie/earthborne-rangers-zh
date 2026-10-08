@@ -1,11 +1,11 @@
 /* Service Worker：离线缓存全部应用外壳 */
-const CACHE = 'ebr-campaign-v20261008i';
+const CACHE = 'ebr-campaign-v20261008j';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css?v=20261008i',
-  './data.js?v=20261008i',
-  './app.js?v=20261008i',
+  './styles.css?v=20261008j',
+  './data.js?v=20261008j',
+  './app.js?v=20261008j',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',

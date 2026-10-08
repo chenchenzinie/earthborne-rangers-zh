@@ -150,8 +150,9 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
 .wchip.off{opacity:.42;filter:saturate(.6)}
 .wchip.off:hover{opacity:.8}
 
-/* ===== 竖版地图限宽居中 ===== */
-.map-canvas.portrait{width:60%;margin:0 auto}
+/* ===== 竖版地图限宽居中（--mz 为缩放滑杆系数） ===== */
+.map-canvas{width:calc(100% * var(--mz,1))}
+.map-canvas.portrait{width:calc(60% * var(--mz,1));margin:0 auto}
 
 /* ===== 地图地点热点 ===== */
 .map-spots{position:absolute;inset:0;pointer-events:none;z-index:4}
@@ -161,21 +162,24 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
   background:rgba(255,242,210,.72);box-shadow:0 1px 3px rgba(0,0,0,.5);
   cursor:pointer;pointer-events:auto;z-index:5;
 }
-.map-spot:hover{width:26px;height:26px;background:rgba(255,255,255,.95);z-index:8}
 /* 关键地点=金色菱形 / 非关键地点=白色圆形 */
 .map-spot.key{background:#f2b52e;border-color:#7a4a08}
 .map-spot.minor{background:rgba(255,255,255,.9);border-radius:50%}
-.map-spot.key:hover{background:#ffd25e}
 /* 当前选中地点=红色突出（区别于关键地点金色） */
 .map-spot.cur{background:#e64545;border-color:#8b1818;box-shadow:0 0 0 3px rgba(230,69,69,.45),0 1px 4px rgba(0,0,0,.5);z-index:7}
-.map-spot.cur:hover{background:#ff5252}
+/* hover 放大仅在鼠标设备生效（触摸屏点击后不会卡在 hover 态） */
+@media (hover:hover) and (pointer:fine){
+  .map-spot:hover{width:26px;height:26px;background:rgba(255,255,255,.95);z-index:8}
+  .map-spot.key:hover{background:#ffd25e}
+  .map-spot.cur:hover{background:#ff5252}
+  .map-spot:hover .ms-lbl{opacity:1}
+}
 .map-spot .ms-lbl{
   position:absolute;left:50%;top:120%;transform:translateX(-50%) rotate(-45deg);
   background:rgba(60,30,15,.92);color:#ffeec8;font-size:.66rem;line-height:1.2;white-space:nowrap;
   padding:2px 6px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .12s;
 }
 .map-spot.cur .ms-lbl{opacity:1}
-.map-spot:hover .ms-lbl{opacity:1}
 
 /* ===== 路径地形笔刷 ===== */
 .terrain-brush{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px}
@@ -320,9 +324,24 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
 .ac-label{display:block;font-size:.72rem;color:#8a7a5c;margin-top:1px;word-break:break-all}
 .ac-empty{padding:8px 10px;color:#a08c66;font-size:.8rem}
 
-/* ===== 手机布局 ===== */
+/* ===== 手机 / 平板竖屏布局 ===== */
 @media (max-width:860px){
-  .sheet{grid-template-columns:1fr;padding:10px}
+  /* 安全区（刘海屏左右内边距） */
+  .topbar{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+  .sheet{
+    grid-template-columns:1fr;
+    padding-left:max(10px,env(safe-area-inset-left));
+    padding-right:max(10px,env(safe-area-inset-right));
+  }
+  .today-bar,.reminder-box{
+    margin-left:max(10px,env(safe-area-inset-left));
+    margin-right:max(10px,env(safe-area-inset-right));
+  }
+  .storage-notice{
+    margin-left:max(10px,env(safe-area-inset-left));
+    margin-right:max(10px,env(safe-area-inset-right));
+  }
+
   .panel-rewards,.panel-events{grid-column:1}
   .mission-cols{grid-template-columns:1fr}
   .reward-cols{grid-template-columns:1fr}
@@ -330,20 +349,61 @@ textarea:focus,input[type=text]:focus{outline:none;border-color:var(--ink);box-s
   .calendar-grid{grid-template-columns:repeat(6,1fr);gap:5px}
   .day-cell{min-height:52px;padding:4px 2px 6px}
   .de-inputs{grid-template-columns:1fr}
-  .today-bar{gap:10px}
-  .today-ctrl{margin-left:0;width:100%}
-  .today-ctrl .btn{flex:1}
+
+  /* 输入框 16px：防止 iOS Safari 聚焦时自动放大整页 */
+  textarea,input[type=text],input[type=number]{font-size:16px}
+
+  /* 顶栏：按钮均分整行，触摸高度 ≥40px */
+  .topbar{gap:8px;padding-top:8px;padding-bottom:8px}
   .top-actions{width:100%;margin-left:0}
+  .top-actions .btn{min-height:40px;flex:1}
+  .hard-toggle{min-height:40px;flex:1 1 100%;font-size:.85rem}
   .campaign-switch,.slot-switch{width:100%}
-  .camp-tab,.slot-tab{flex:1}
+  .camp-tab,.slot-tab{flex:1;min-height:44px}
   .slot-tab small{max-width:none}
-  .map-zoom{margin-left:0}
-  .map-view{max-height:55vh}
-  .map-canvas.portrait{width:100%}
-  .wchip{margin-bottom:4px}
-  .storage-notice{font-size:.76rem}
+
+  /* 今日条 */
+  .today-bar{gap:10px;padding:10px 12px}
+  .today-weather{width:100%;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+  .today-weather .wchip{margin-bottom:0}
+  .today-ctrl{margin-left:0;width:100%}
+  .today-ctrl .btn{flex:1;min-height:44px}
+
+  /* 地图：手机端竖版/横版均全宽；高度放宽，默认整图可见，放大后框内滚动 */
+  .map-toolbar{gap:8px}
+  .map-zoom{margin-left:0;width:100%;order:10}
+  .map-zoom input{flex:1;height:32px;min-width:120px}
+  .map-view{max-height:72vh;-webkit-overflow-scrolling:touch}
+  .map-canvas.portrait{width:calc(100% * var(--mz,1));margin:0}
+  /* 热点加大 + 透明扩展触摸区（约 44px），方便手指点选 */
+  .map-spot{width:24px;height:24px;border-width:2.5px}
+  .map-spot::before{
+    content:'';position:absolute;inset:-10px;transform:rotate(-45deg);
+  }
+  .map-spot .ms-lbl{font-size:.64rem}
+  /* 笔刷按钮加大触摸面积 */
+  .tbrush{padding:8px 14px;font-size:.82rem}
+  .tdot{width:14px;height:14px}
+  /* 地点/地形手动输入区 */
+  .map-loc label{min-width:0}
+  .map-loc .btn{min-height:40px}
+
+  /* 任务行：进度方块加大，便于点按 */
+  .pips{gap:5px}
+  .pip{min-width:34px;min-height:34px}
+
+  .wchip{margin-bottom:4px;padding:8px 12px}
+  .weather-legend{gap:8px 14px}
+  .storage-notice{font-size:.78rem;line-height:1.5}
+  .storage-notice .notice-close{font-size:1.4rem;padding:4px 8px}
+  .reminder-box ul{font-size:.88rem}
+  .rem-close{font-size:1.4rem!important;padding:2px 8px}
+
+  /* 奖励/事件序号与行高略放大 */
+  .rw-row input,.ev-row input{font-size:16px;padding:7px 8px}
+  .rw-no,.ev-no{height:26px;flex-basis:28px;width:28px}
 }
 @media (max-width:420px){
-  html{font-size:14px}
-  .brand-title{font-size:1.1rem}
+  .brand-title{font-size:1.15rem}
+  .brand-sub{font-size:.62rem}
 }

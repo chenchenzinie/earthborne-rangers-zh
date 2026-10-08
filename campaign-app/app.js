@@ -531,7 +531,8 @@
     img.src = map.file;
     canvas.classList.toggle('portrait', !!map.portrait);
     $('map-zoom').value = 100;
-    canvas.style.width = map.portrait ? '60%' : '100%';
+    // 宽度由 CSS 控制（桌面竖版60% / 手机100%），缩放只改变量 --mz，避免内联样式覆盖媒体查询
+    canvas.style.setProperty('--mz', '1');
 
     // 地名 / 地形候选
     const dl = $('map-locations'); dl.innerHTML = '';
@@ -971,8 +972,7 @@
 
     $('map-canvas').addEventListener('click', onMapClick);
     $('map-zoom').addEventListener('input', e => {
-      const base = MAP_DB[currentMap].portrait ? 0.6 : 1;
-      $('map-canvas').style.width = (+e.target.value / 100 * base * 100) + '%';
+      $('map-canvas').style.setProperty('--mz', (+e.target.value / 100).toFixed(2));
     });
     $('btn-sync-loc').addEventListener('click', syncLocation);
     $('map-img').addEventListener('dragstart', e => e.preventDefault());
