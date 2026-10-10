@@ -65,11 +65,26 @@ window.ViewCards = (function () {
     if (sentinel) sentinel.style.display = state.shown < list.length ? 'block' : 'none';
   }
 
+  /* 属性筛选项：从卡牌数据聚合（id + 中文名），不再硬编码——数据改了下拉自动跟随 */
+  const ASPECT_ORDER = ['AWA', 'FIT', 'FOC', 'SPI'];
+  function aspectOptions() {
+    const m = new Map();
+    DB.cards.forEach(c => {
+      if (c.aspect_id && !m.has(c.aspect_id)) m.set(c.aspect_id, c.aspect_zh || c.aspect_id);
+    });
+    return [...m.entries()]
+      .sort((a, b) => {
+        const ia = ASPECT_ORDER.indexOf(a[0]), ib = ASPECT_ORDER.indexOf(b[0]);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      })
+      .map(([id, zh]) => [id, `${zh} ${id}`]);
+  }
+
   function render(el, params) {
     const sets = unique('set_id', 'set_name_zh');
     const packs = unique('pack_id', 'pack_name_zh');
     const types = unique('type_id', 'type_zh');
-    const aspects = [['AWA', '知觉 AWA'], ['FIT', '体质 FIT'], ['FOC', '专注 FOC'], ['SPI', '精神 SPI']];
+    const aspects = aspectOptions();
     el.innerHTML = `
       <h2 class="view-title">卡牌浏览</h2>
       <div class="filters">

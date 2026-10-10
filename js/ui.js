@@ -1,6 +1,8 @@
 /* UI 公共组件：弹窗、卡文渲染、图片地址 */
 window.UI = (function () {
   const REMOTE_IMG = 'https://static.rangersdb.com/';
+  /* 资产版本号：替换 img/ 下卡图（如换汉化图）时同步 +1，游客即可立即看到新图 */
+  const IMG_VER = '20261010';
 
   function esc(s) {
     return (s == null ? '' : String(s))
@@ -19,12 +21,19 @@ window.UI = (function () {
     return t;
   }
 
-  /* 图片：本地优先，加载失败回退 RangersDB 远程 */
+  /* 图片：本地优先，加载失败回退 RangersDB 远程；本地路径带版本号防缓存。
+     无图卡用内联 SVG 占位——空 src 会被浏览器当作页面自身 URL 触发多余请求 */
+  const PLACEHOLDER = 'data:image/svg+xml,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420">' +
+    '<rect width="100%" height="100%" fill="#d8d3c8"/>' +
+    '<text x="50%" y="50%" font-size="20" fill="#8a857a" text-anchor="middle" dominant-baseline="middle">暂无卡图</text></svg>');
   function imgTag(card, cls) {
     const local = card.image || '';
+    const withVer = local ? local + '?v=' + IMG_VER : '';
     const remote = REMOTE_IMG + local;
-    return `<img ${cls ? `class="${cls}"` : ''} loading="lazy" src="${esc(local)}"
-      onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='${esc(remote)}'}else{this.style.visibility='hidden'}"
+    const src = withVer || PLACEHOLDER;
+    return `<img ${cls ? `class="${cls}"` : ''} loading="lazy" src="${esc(src)}"
+      onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='${esc(remote || PLACEHOLDER)}'}else{this.style.visibility='hidden'}"
       alt="${esc(card.name_zh || card.name_en)}">`;
   }
 

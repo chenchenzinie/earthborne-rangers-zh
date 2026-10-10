@@ -10,8 +10,10 @@ window.DB = {
     errata: 'data/errata.json',
     meta: 'data/meta.json',
   };
+  /* cache:'no-cache'：每次都向服务器校验 ETag——数据有更新立即生效，无更新则 304 零下载。
+     修复：裸 fetch 会被浏览器按 max-age=600 缓存，导致更新数据后游客 10 分钟内仍看到旧内容 */
   DB.ready = Promise.all(Object.entries(files).map(([k, url]) =>
-    fetch(url).then(r => {
+    fetch(url, { cache: 'no-cache' }).then(r => {
       if (!r.ok) throw new Error(url + ' 加载失败: ' + r.status);
       return r.json();
     }).then(d => { DB[k] = d; })
