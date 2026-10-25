@@ -1,0 +1,209 @@
+/* ═══════════════════════════════════════════════════════════
+   v34：原声音乐系统（#music-root 内样式，与战役 / 文本系统并列）
+   ═══════════════════════════════════════════════════════════ */
+#music-root{padding:14px 18px 120px; color:var(--ink);}
+.mu-wrap{display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:16px; align-items:start;}
+@media (max-width:1000px){ .mu-wrap{grid-template-columns:minmax(0,1fr);} }
+
+/* ---------- 左：曲目表 ---------- */
+.mu-head{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
+.mu-title-lg{font-size:1.15rem; font-weight:700; color:var(--ink);}
+.mu-sub{font-size:.82rem; color:var(--ink2);}
+.mu-search{
+  flex:1 1 220px; min-width:180px; padding:7px 11px; font-size:.88rem;
+  border:1.5px solid var(--line); border-radius:9px; background:var(--panel); color:var(--ink);
+}
+.mu-search:focus{outline:none; border-color:var(--green);}
+.mu-chips{display:flex; gap:6px; flex-wrap:wrap;}
+.mu-chip{
+  padding:5px 12px; font-size:.82rem; border:1.5px solid var(--line); border-radius:999px;
+  background:var(--panel2); color:var(--ink2); cursor:pointer; font-family:inherit;
+}
+.mu-chip:hover{border-color:var(--green); color:var(--green);}
+.mu-chip.on{background:var(--green); border-color:var(--green); color:#fff;}
+.mu-stat{margin:0 0 8px; font-size:.8rem; color:var(--ink2);}
+
+.mu-list{border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel2);}
+.mu-row{
+  display:grid; grid-template-columns:34px minmax(0,1fr) auto 52px; gap:9px; align-items:center;
+  padding:8px 11px; border-bottom:1px solid var(--line); cursor:pointer; background:none;
+  width:100%; text-align:left; font-family:inherit; color:inherit; font-size:.9rem;
+}
+.mu-row:last-child{border-bottom:none;}
+.mu-row:hover{background:var(--green-soft);}
+.mu-row.on{background:var(--green-soft);}
+.mu-row.on .mu-t1{color:var(--green); font-weight:700;}
+.mu-num{font-size:.78rem; color:var(--ink2); text-align:right; font-variant-numeric:tabular-nums;}
+.mu-t1{font-size:.9rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mu-t2{font-size:.76rem; color:var(--ink2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mu-tag{
+  font-size:.68rem; padding:1px 8px; border-radius:999px; white-space:nowrap;
+  background:var(--green-soft); color:var(--ink2); border:1px solid var(--line);
+}
+.mu-dur{font-size:.78rem; color:var(--ink2); text-align:right; font-variant-numeric:tabular-nums;}
+.mu-empty{padding:22px 12px; text-align:center; color:var(--ink2); font-size:.86rem;}
+
+/* ---------- 右：当前播放 ---------- */
+.mu-now{
+  position:sticky; top:0; border:1px solid var(--line); border-radius:12px;
+  padding:14px; background:var(--panel2); text-align:center;
+}
+/* ---------- v36 / v39b：封面 = 占位层 + 裁切外框 + 内部图片 ----------
+   方形旋转是「整个外框一起转」：转到 45° 时对角线会涨到 1.414 倍，
+   所以占位层在此时按对角线放大（250 → 297），外框自己缩到 70.7%（= 1/√2），
+   转角时正好填满占位，既不变小到突兀，也不会顶到面板外的曲目表。 */
+.mu-coverwrap{
+  width:100%; max-width:250px; aspect-ratio:1; margin:0 auto;
+  display:grid; place-items:center;
+  transition:max-width .22s ease;
+}
+.mu-coverwrap.w-spin{max-width:297px;}
+.mu-coverwrap.w-spin .mu-coverbox{width:70.7%;}
+.mu-coverbox{
+  position:relative; width:100%; max-width:250px; aspect-ratio:1;
+  overflow:hidden; background:var(--green-soft);
+  transition:border-radius .22s ease, width .22s ease, max-width .22s ease, box-shadow .22s ease;
+}
+.mu-cover{width:100%; height:100%; object-fit:cover; display:block; background:var(--green-soft);}
+/* 圆形：唱片 */
+.mu-coverbox.sh-circle{
+  border-radius:50%; max-width:230px; --cov-scale:1.06;
+  box-shadow:0 8px 24px rgba(0,0,0,.22), 0 0 0 6px rgba(127,127,127,.10);
+}
+/* 方形：圆角卡片 */
+.mu-coverbox.sh-square{
+  border-radius:12px; --cov-scale:1.45;
+  box-shadow:0 6px 18px rgba(0,0,0,.16);
+}
+/* 圆形旋转：外框不动，框内图片转 —— 唱片效果，中间轴孔留在正中 */
+.mu-coverbox.sp-inner.spin .mu-cover{animation:mu-spin 18s linear infinite;}
+.mu-coverbox.sp-inner.spin.paused .mu-cover{animation-play-state:paused;}
+/* 方形旋转：整个外框连着图片一起转（图片不再框内自转，也就不用放大裁切） */
+.mu-coverbox.sp-outer{--cov-scale:1;}
+.mu-coverbox.sp-outer.spin{animation:mu-spin 18s linear infinite;}
+.mu-coverbox.sp-outer.spin.paused{animation-play-state:paused;}
+@keyframes mu-spin{
+  from{transform:rotate(0deg) scale(var(--cov-scale,1));}
+  to{transform:rotate(360deg) scale(var(--cov-scale,1));}
+}
+/* 唱片轴孔（仅圆形） */
+.mu-hole{
+  position:absolute; left:50%; top:50%; width:15%; aspect-ratio:1;
+  transform:translate(-50%,-50%); border-radius:50%; display:none;
+  background:var(--panel2); box-shadow:0 0 0 2px rgba(0,0,0,.22) inset, 0 0 6px rgba(0,0,0,.25);
+  pointer-events:none;
+}
+.mu-coverbox.sh-circle .mu-hole{display:block;}
+/* 形状切换 */
+.mu-shapes{
+  display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:11px auto 0; max-width:250px;
+}
+.mu-shape{
+  padding:5px 6px; font-size:.74rem; line-height:1.25; border:1.5px solid var(--line);
+  border-radius:8px; background:var(--panel); color:var(--ink2); cursor:pointer;
+  font-family:inherit; white-space:nowrap;
+}
+.mu-shape:hover{border-color:var(--green); color:var(--green);}
+.mu-shape.on{background:var(--green); border-color:var(--green); color:#fff; font-weight:600;}
+.mu-now-t{font-weight:700; font-size:1rem; margin-top:11px; line-height:1.35;}
+.mu-now-z{font-size:.82rem; color:var(--ink2); margin-top:2px;}
+.mu-now-a{font-size:.76rem; color:var(--ink2); margin-top:3px;}
+.mu-seek{
+  width:100%; margin:12px 0 3px; -webkit-appearance:none; appearance:none; height:5px;
+  border-radius:999px; background:var(--line); cursor:pointer;
+}
+.mu-seek::-webkit-slider-thumb{
+  -webkit-appearance:none; width:14px; height:14px; border-radius:50%;
+  background:var(--green); border:2px solid var(--panel); cursor:pointer;
+}
+.mu-seek::-moz-range-thumb{
+  width:12px; height:12px; border-radius:50%; background:var(--green);
+  border:2px solid var(--panel); cursor:pointer;
+}
+.mu-times{display:flex; justify-content:space-between; font-size:.74rem; color:var(--ink2);
+  font-variant-numeric:tabular-nums;}
+.mu-ctrl{display:flex; align-items:center; justify-content:center; gap:12px; margin:10px 0 4px;}
+.mu-btn{
+  width:36px; height:36px; border-radius:50%; border:1px solid var(--line);
+  background:var(--panel); color:var(--ink); cursor:pointer; font-size:.95rem;
+  display:inline-flex; align-items:center; justify-content:center; font-family:inherit;
+}
+.mu-btn:hover{border-color:var(--green); color:var(--green);}
+.mu-btn.play{width:46px; height:46px; font-size:1.15rem; background:var(--green); color:#fff; border-color:var(--green);}
+.mu-btn.play:hover{background:var(--green2); color:#fff;}
+.mu-extra{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:8px;}
+.mu-mode{
+  padding:4px 10px; font-size:.78rem; border:1px solid var(--line); border-radius:999px;
+  background:var(--panel); color:var(--ink2); cursor:pointer; font-family:inherit;
+}
+.mu-mode:hover{border-color:var(--green); color:var(--green);}
+.mu-vol{
+  -webkit-appearance:none; appearance:none; width:92px; height:4px; border-radius:999px;
+  background:var(--line); cursor:pointer;
+}
+.mu-vol::-webkit-slider-thumb{
+  -webkit-appearance:none; width:12px; height:12px; border-radius:50%;
+  background:var(--green); cursor:pointer;
+}
+.mu-vol::-moz-range-thumb{width:10px; height:10px; border-radius:50%; background:var(--green); cursor:pointer;}
+.mu-tip{margin-top:9px; font-size:.72rem; color:var(--ink2); line-height:1.6; text-align:left;}
+
+/* ═══ v35：音源保护（水印 / 缓冲 / 声明） ═══ */
+#music-root{position:relative;}                 /* 水印层的定位基准 */
+.mu-wm{
+  position:absolute; inset:0; z-index:5; pointer-events:none;
+  background-repeat:repeat; background-size:460px 160px; opacity:1;
+}
+.mu-buf{
+  display:flex; align-items:center; gap:9px; margin:0 0 8px;
+  padding:6px 10px; border:1px solid var(--line); border-radius:9px; background:var(--panel2);
+  font-size:.76rem; color:var(--ink2);
+}
+.mu-buf.hidden{display:none;}
+.mu-buf::before{content:''; flex:0 0 auto;}
+.mu-buf i{
+  display:block; height:4px; width:0; border-radius:999px; background:var(--green);
+  transition:width .2s linear; flex:1 1 auto;
+}
+.mu-buf span{flex:0 0 auto; font-variant-numeric:tabular-nums;}
+.mu-cr{
+  margin-top:16px; padding:11px 14px; border:1px solid var(--line); border-radius:10px;
+  background:var(--panel2); font-size:.78rem; line-height:1.75; color:var(--ink2);
+  max-width:900px;
+}
+.mu-cr b{display:block; margin-bottom:4px; color:var(--ink); font-size:.84rem;}
+.mu-cr p{margin:0;}
+.mu-cr-s{margin-top:5px !important; color:var(--ink2); opacity:.9;}
+
+/* ---------- 底部迷你播放条（跨系统常驻） ---------- */
+.mini-player{
+  position:fixed; left:14px; right:14px; bottom:14px; z-index:45;
+  display:flex; align-items:center; gap:10px; padding:7px 12px;
+  border:1px solid var(--line); border-radius:12px; background:var(--panel);
+  box-shadow:0 6px 22px rgba(0,0,0,.18);
+}
+.mini-player.hidden{display:none;}
+.mp-cover{
+  width:38px; height:38px; object-fit:cover; flex:0 0 auto; background:var(--green-soft);
+  transition:border-radius .2s ease;    /* v36：跟随主封面的圆 / 方 */
+}
+.mp-cover.sh-circle{border-radius:50%;}
+.mp-cover.sh-square{border-radius:8px;}
+.mp-info{min-width:0; flex:1 1 auto;}
+.mp-t{font-size:.84rem; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mp-s{font-size:.72rem; color:var(--ink2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mp-bar{flex:0 1 260px; min-width:90px; height:4px; border-radius:999px; background:var(--line); cursor:pointer; position:relative;}
+.mp-bar-fill{position:absolute; left:0; top:0; bottom:0; border-radius:999px; background:var(--green);}
+.mp-time{font-size:.72rem; color:var(--ink2); font-variant-numeric:tabular-nums; flex:0 0 auto;}
+.mp-btn{
+  width:32px; height:32px; border-radius:50%; border:1px solid var(--line); background:var(--panel2);
+  color:var(--ink); cursor:pointer; font-size:.88rem; display:inline-flex; align-items:center;
+  justify-content:center; flex:0 0 auto; font-family:inherit;
+}
+.mp-btn:hover{border-color:var(--green); color:var(--green);}
+.mp-btn.play{background:var(--green); color:#fff; border-color:var(--green);}
+@media (max-width:700px){
+  .mp-bar{display:none;}
+  .mp-time{display:none;}
+}
+@media (max-width:1000px){ #music-root{padding:10px 10px 130px;} }

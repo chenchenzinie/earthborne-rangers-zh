@@ -1,0 +1,324 @@
+/* ============================================================
+   文本查询系统（#text-root 内样式，与战役系统并列）
+   —— PDF 原页图片浏览 + 内置全文检索
+   ============================================================ */
+#text-root{padding:14px 18px 40px; color:var(--ink);}
+
+.tx-head{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:10px 14px; border:1.5px solid var(--line); border-radius:10px;
+  background:var(--panel2);
+}
+.tx-title{font-size:1.05rem; font-weight:700; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+.tx-title small{font-weight:400; font-size:.76rem;}
+.tx-tools{margin-left:auto; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.tx-input{
+  min-width:180px; flex:1 1 200px; padding:7px 10px; font-size:14px; font-family:inherit;
+  border:1.5px solid var(--line); border-radius:8px; background:var(--field); color:var(--ink);
+}
+/* v31：主检索框加大（用 .tx-input.tx-input-lg 提高优先级，压过全局 input[type=text] 的 13px） */
+.tx-input.tx-input-lg{
+  flex:1 1 320px; min-width:240px; padding:10px 14px; font-size:16px; border-radius:10px;
+}
+.tx-input.tx-input-lg:focus{outline:none; border-color:var(--green); box-shadow:0 0 0 3px var(--green-soft);}
+.tx-input.tx-find-in{font-size:13.5px; padding:8px 11px;}
+.tx-only{font-size:.76rem; color:var(--ink2); display:inline-flex; align-items:center; gap:4px; white-space:nowrap;}
+.tx-stat{font-size:.78rem; color:var(--ink2); white-space:nowrap; min-width:104px;}
+
+.tx-body{display:grid; grid-template-columns:minmax(200px,270px) minmax(0,1fr); gap:14px; margin-top:12px;}
+
+/* 左侧：书籍 + 缩略图 / 检索结果 */
+.tx-side{display:flex; flex-direction:column; gap:10px; min-width:0;}
+/* 左侧：导览（搜索 + 类别筛选） */
+.tx-find{margin-bottom:8px;}
+.tx-find-in{width:100%; flex:none; min-width:0; font-size:13px; padding:6px 10px;}
+.tx-filters{display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px;}
+.tx-fchip{
+  padding:4px 9px; font-size:.72rem; font-family:inherit; cursor:pointer;
+  border:1.5px solid var(--line); border-radius:20px; background:var(--panel); color:var(--ink2);
+}
+.tx-fchip:hover{border-color:var(--green); color:var(--green);}
+.tx-fchip.on{background:var(--green); border-color:var(--green); color:#fff; font-weight:600;}
+
+.tx-books{display:flex; flex-direction:column; gap:6px;}
+.tx-books > .tx-list-head{margin-bottom:2px;}
+.tx-book{
+  display:flex; align-items:center; gap:8px; width:100%; text-align:left;
+  padding:8px 10px; border:1.5px solid var(--line); border-radius:9px;
+  background:var(--panel); color:var(--ink); cursor:pointer; font-family:inherit; font-size:.86rem;
+}
+.tx-book:hover{border-color:var(--green);}
+.tx-book.on{background:var(--green); color:#fff; border-color:var(--green); font-weight:600;}
+.tx-bk-kind{
+  flex:0 0 auto; font-size:.68rem; padding:2px 6px; border-radius:6px;
+  background:var(--green-soft); color:var(--ink);
+}
+.tx-book.on .tx-bk-kind{background:rgba(255,255,255,.25); color:#fff;}
+.tx-bk-title{flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.tx-bk-n{flex:0 0 auto; font-size:.72rem; opacity:.75;}
+
+.tx-list{
+  border:1.5px solid var(--line); border-radius:10px; background:var(--panel);
+  max-height:min(46vh,520px); overflow:auto; padding:6px;
+}
+.tx-list-head{
+  font-size:.76rem; color:var(--ink2); padding:5px 8px; position:sticky; top:-6px; z-index:2;
+  background:var(--panel); border-bottom:1px solid var(--line); margin:-6px -6px 4px;
+}
+.tx-thumbs{display:grid; grid-template-columns:repeat(auto-fill,minmax(64px,1fr)); gap:6px;}
+.tx-thumb{
+  position:relative; padding:0; border:1.5px solid var(--line); border-radius:7px;
+  background:var(--panel2); cursor:pointer; overflow:hidden; line-height:0;
+}
+.tx-thumb:hover{border-color:var(--green);}
+.tx-thumb.on{border-color:var(--green); box-shadow:0 0 0 2px var(--green-soft);}
+.tx-thumb-img{width:100%; height:auto; display:block;}
+.tx-thumb-n{
+  position:absolute; left:0; bottom:0; line-height:1.5; font-size:.62rem;
+  padding:0 4px; background:rgba(0,0,0,.55); color:#fff; border-radius:0 5px 0 0;
+}
+.tx-empty{padding:14px; text-align:center; color:var(--ink2); font-size:.82rem;}
+
+/* 检索结果行 */
+.tx-row{
+  display:flex; flex-direction:column; gap:2px; width:100%; text-align:left;
+  padding:7px 9px; margin-bottom:4px; border:none; border-radius:8px;
+  background:transparent; color:var(--ink); cursor:pointer; font-family:inherit; font-size:.82rem;
+}
+.tx-row:hover{background:var(--green-soft);}
+.tx-row.on{background:var(--green); color:#fff;}
+.tx-row-book{font-size:.7rem; opacity:.85;}
+.tx-row-snip{font-size:.78rem; line-height:1.45; opacity:.92;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+.tx-row mark, .tx-hitbar mark{background:#ffe08a; color:inherit; border-radius:3px; padding:0 1px;}
+
+/* v31：检索范围条（全部 / 本册 / 各类别） */
+.tx-scope-row{
+  display:flex; align-items:center; gap:9px; flex-wrap:wrap; margin-top:8px;
+  padding:8px 12px; border:1.5px solid var(--line); border-radius:10px; background:var(--panel2);
+}
+.tx-scope-l{font-size:.78rem; color:var(--ink2); font-weight:600; flex:none;}
+.tx-scope{display:flex; gap:5px; flex-wrap:wrap; flex:1 1 auto; min-width:0;}
+.tx-schip{
+  padding:5px 11px; font-size:.78rem; font-family:inherit; cursor:pointer; white-space:nowrap;
+  border:1.5px solid var(--line); border-radius:20px; background:var(--panel); color:var(--ink2);
+}
+.tx-schip:hover{border-color:var(--green); color:var(--green);}
+.tx-schip.on{background:var(--green); border-color:var(--green); color:#fff; font-weight:600;}
+.tx-toast{font-size:.78rem; color:var(--green); margin-left:auto; white-space:nowrap;}
+.tx-toast.bad{color:var(--red, #a33);}
+
+/* v31：书名 / 类别（Tag）条 */
+.tx-meta{
+  display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+  padding:8px 12px; border:1.5px solid var(--line); border-radius:10px; background:var(--panel2);
+}
+.tx-meta-kind-tag{
+  flex:none; font-size:.72rem; font-weight:600; padding:3px 9px; border-radius:6px;
+  background:var(--green-soft); color:var(--ink);
+}
+.tx-meta-title{font-size:.95rem; font-weight:700;}
+.tx-meta-note{font-size:.74rem; color:var(--ink2); flex:1 1 240px; min-width:0;}
+.tx-meta-form{display:flex; align-items:center; gap:7px; flex-wrap:wrap;}
+.tx-meta-in{
+  padding:6px 10px; font-size:14px; font-family:inherit; width:min(240px,44vw);
+  border:1.5px solid var(--line); border-radius:8px; background:var(--field); color:var(--ink);
+}
+.tx-meta-kind{width:104px;}
+.tx-meta-tip{font-size:.74rem; color:var(--ink2);}
+
+/* 右侧：页图 */
+.tx-main{display:flex; flex-direction:column; gap:8px; min-width:0;}
+.tx-pager{
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+  padding:7px 10px; border:1.5px solid var(--line); border-radius:10px; background:var(--panel2);
+}
+.tx-pnum{
+  width:62px; padding:5px 6px; font-size:13px; font-family:inherit; text-align:center;
+  border:1.5px solid var(--line); border-radius:8px; background:var(--field); color:var(--ink);
+}
+.tx-pnum-sep{font-size:.78rem; color:var(--ink2);}
+.tx-pg-sep{width:1px; height:18px; background:var(--line); margin:0 3px;}
+.tx-zoom{font-size:.76rem; color:var(--ink2); min-width:62px; text-align:center; cursor:pointer;}
+.tx-zoom:hover{color:var(--green);}
+.tx-pg-title{margin-left:auto; font-size:.76rem; color:var(--ink2);}
+
+/* v28：页图默认按阅读区 50% 完整呈现；v31：可用翻页条的 −/＋ 在 25%~300% 之间调，超出部分可滚动 */
+.tx-doc{
+  border:1.5px solid var(--line); border-radius:10px; background:var(--panel);
+  padding:10px; min-width:0; overflow:auto;
+}
+.tx-stage{display:flex; justify-content:center; background:#efe7d3; border-radius:8px; padding:6px;}
+.tx-page{
+  display:block; width:50%; height:auto; margin:0 auto;   /* 具体比例由 JS 写在行内 */
+  border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.18);
+}
+.tx-hitbar{
+  display:flex; align-items:flex-start; gap:8px; flex-wrap:wrap; margin-bottom:8px;
+  padding:7px 10px; border-radius:8px; background:var(--green-soft); font-size:.78rem; line-height:1.6;
+}
+.tx-hitbar-l{flex:0 0 auto; font-weight:700; color:var(--ink);}
+.tx-hitbar-snip{flex:1 1 240px; min-width:0; color:var(--ink);}
+.tx-doc-note{margin-top:8px; font-size:.74rem; color:var(--ink2); border-top:1px dashed var(--line); padding-top:8px;}
+
+/* 手机：单列 */
+@media (max-width:900px){
+  #text-root{padding:10px 10px 40px;}
+  .tx-head{padding:9px 10px;}
+  .tx-tools{width:100%; margin-left:0;}
+  .tx-input{flex:1 1 130px; min-width:0; font-size:16px;}
+  .tx-stat{min-width:0;}
+  .tx-body{grid-template-columns:minmax(0,1fr);}
+  .tx-find-in{font-size:16px;}
+  .tx-list{max-height:34vh; order:3;}
+  .tx-books{order:2;}
+  .tx-filters{order:1;}
+  .tx-find{order:0;}
+  .tx-main{order:1; margin-bottom:10px;}
+  .tx-doc{overflow:auto; padding:6px;}
+  .tx-scope-row{padding:7px 9px;}
+  .tx-meta{padding:7px 9px;}
+  .tx-meta-in{width:min(200px,60vw); font-size:16px;}
+  .tx-pg-title{width:100%; margin-left:0; order:9;}
+}
+
+/* ═══════════ v33：侧栏两大分组（PDF 资料 / 卡牌图集）可折叠 ═══════════ */
+.tx-sec{margin-bottom:8px;}
+.tx-sec-head{
+  display:flex; align-items:center; gap:7px; width:100%; text-align:left;
+  padding:7px 10px; border:1.5px solid var(--line); border-radius:9px;
+  background:var(--panel2); color:var(--ink); cursor:pointer;
+  font-family:inherit; font-size:.84rem; font-weight:600;
+}
+.tx-sec-head:hover{border-color:var(--green); color:var(--green);}
+.tx-sec-head.open{border-color:var(--green); background:var(--green-soft);}
+.tx-sec-arrow{font-size:.7rem; opacity:.8; flex:0 0 auto;}
+.tx-sec-icon{font-size:.95rem; flex:0 0 auto;}
+.tx-sec-label{flex:0 1 auto; flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.tx-sec-n{flex:0 0 auto; font-size:.72rem; font-weight:400; opacity:.75;}
+.tx-sec-body{display:flex; flex-direction:column; gap:5px; padding:6px 0 2px 4px;}
+
+/* ============================================================
+   v40：村村通宝典 —— 文本查询系统顶置栏
+   浏览态 = 普通文本阅览；编辑态 = Word 式排版工具条 + 可编辑区
+   ============================================================ */
+.tx-cun{
+  margin-top:12px; border:1.5px solid var(--green); border-radius:12px;
+  background:var(--panel); overflow:hidden;
+}
+.tx-cun[hidden]{display:none;}
+
+.cun-head{
+  display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+  padding:9px 12px; background:var(--green-soft); border-bottom:1.5px solid var(--green);
+}
+.cun-fold{
+  flex:none; width:22px; height:22px; line-height:1; font-size:.7rem;
+  border:1.5px solid var(--line); border-radius:6px; background:var(--panel);
+  color:var(--ink); cursor:pointer; font-family:inherit;
+}
+.cun-fold:hover{border-color:var(--green); color:var(--green);}
+.cun-title{font-size:.98rem; font-weight:800; letter-spacing:.02em;}
+.cun-when{font-size:.72rem; color:var(--ink2);}
+.cun-head .flex-spacer{flex:1 1 auto;}
+
+/* 浏览态正文：就是正常阅读排版，不加多余装饰 */
+.cun-body{padding:14px 16px; font-size:15px; line-height:1.75; color:var(--ink);}
+.cun-body > :first-child{margin-top:0;}
+.cun-body > :last-child{margin-bottom:0;}
+.cun-body h1,.cun-body h2,.cun-body h3{line-height:1.35; margin:.7em 0 .4em;}
+.cun-body h1{font-size:1.42rem;} .cun-body h2{font-size:1.2rem;} .cun-body h3{font-size:1.05rem;}
+.cun-body p{margin:.5em 0;}
+.cun-body ul,.cun-body ol{margin:.5em 0 .5em 1.4em; padding-left:.4em;}
+.cun-body li{margin:.2em 0;}
+.cun-body blockquote{
+  margin:.6em 0; padding:.5em .9em; border-left:3px solid var(--green);
+  background:var(--panel2); color:var(--ink2); border-radius:0 8px 8px 0;
+}
+.cun-body hr{border:none; border-top:1.5px solid var(--line); margin:.9em 0;}
+.cun-body code{
+  font-family:ui-monospace,Consolas,monospace; font-size:.92em;
+  padding:1px 5px; border-radius:5px; background:var(--panel2);
+}
+.cun-body table{border-collapse:collapse; margin:.6em 0; font-size:.94rem;}
+.cun-body th,.cun-body td{border:1px solid var(--line); padding:5px 9px;}
+.cun-body th{background:var(--panel2);}
+.cun-body a{color:var(--green);}
+.cun-body img{max-width:100%; height:auto; border-radius:8px;}
+.cun-empty{font-size:.84rem; color:var(--ink2);}
+
+/* ---- 编辑态：工具条 ---- */
+.cun-tb{
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+  padding:8px 10px; border-bottom:1.5px solid var(--line); background:var(--panel2);
+}
+.cun-tb-grp{
+  display:inline-flex; align-items:center; gap:3px;
+  padding-right:6px; margin-right:2px; border-right:1px solid var(--line);
+}
+.cun-tb-grp:last-child{border-right:none;}
+.cun-tb-btn{
+  min-width:28px; height:26px; padding:0 7px; font-family:inherit; font-size:.78rem;
+  border:1.5px solid var(--line); border-radius:6px; background:var(--panel);
+  color:var(--ink); cursor:pointer;
+}
+.cun-tb-btn:hover{border-color:var(--green); color:var(--green); background:var(--green-soft);}
+.cun-tb-btn.cun-b{font-weight:800;}
+.cun-tb-btn.cun-i{font-style:italic;}
+.cun-tb-btn.cun-u{text-decoration:underline;}
+.cun-tb-btn.cun-s{text-decoration:line-through;}
+.cun-tb-btn.cun-tb-w{min-width:auto; font-size:.74rem;}
+.cun-tb-sel{
+  height:26px; padding:0 6px; font-family:inherit; font-size:.76rem;
+  border:1.5px solid var(--line); border-radius:6px; background:var(--panel); color:var(--ink);
+}
+.cun-color{
+  width:19px; height:19px; padding:0; border:1.5px solid var(--line); border-radius:50%;
+  cursor:pointer; flex:none;
+}
+.cun-color:hover{transform:scale(1.14);}
+
+/* ---- 编辑态：可编辑区（白纸感，仿 Word） ---- */
+.cun-ed{
+  min-height:190px; max-height:52vh; overflow:auto;
+  padding:16px 18px; margin:12px; background:var(--panel);
+  border:1.5px solid var(--line); border-radius:10px;
+  font-size:15px; line-height:1.75; color:var(--ink);
+}
+.cun-ed:focus{outline:none; border-color:var(--green); box-shadow:0 0 0 3px var(--green-soft);}
+.cun-ed h1,.cun-ed h2,.cun-ed h3{line-height:1.35; margin:.7em 0 .4em;}
+.cun-ed h1{font-size:1.42rem;} .cun-ed h2{font-size:1.2rem;} .cun-ed h3{font-size:1.05rem;}
+.cun-ed p{margin:.5em 0;}
+.cun-ed ul,.cun-ed ol{margin:.5em 0 .5em 1.4em; padding-left:.4em;}
+.cun-ed blockquote{
+  margin:.6em 0; padding:.5em .9em; border-left:3px solid var(--green);
+  background:var(--panel2); border-radius:0 8px 8px 0;
+}
+.cun-ed hr{border:none; border-top:1.5px solid var(--line); margin:.9em 0;}
+
+.cun-foot{display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:0 12px 12px;}
+.cun-tip{font-size:.74rem; color:var(--ink2); flex:1 1 200px; min-width:0;}
+
+/* ============================================================
+   v42：内置 Word 浏览器
+   · 上传 .docx → 解析成排版正文 → 在线改 → 保存推送
+   · 只读态（无编辑权限）：选不中、右键无效、复制不走，只能看
+   ============================================================ */
+.tx-cun .cun-lock{
+  flex:none; font-size:.72rem; padding:1px 8px; border-radius:6px;
+  background:var(--panel2); color:var(--ink2); border:1px solid var(--line);
+  white-space:nowrap;
+}
+.cun-body.cun-ro{
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+  cursor:default;
+}
+.cun-body.cun-ro ::selection{background:transparent; color:inherit;}
+.cun-body.cun-ro img{-webkit-user-drag:none; pointer-events:none;}
+
+/* Word 文档转换后可能带出 h4~h6，补齐层级，避免跟正文一样大 */
+.cun-body h4,.cun-body h5,.cun-body h6{line-height:1.35; margin:.6em 0 .35em; font-size:1rem;}
+.cun-ed h4,.cun-ed h5,.cun-ed h6{line-height:1.35; margin:.6em 0 .35em; font-size:1rem;}
+/* Word 常用：首行缩进 / 居中段落 / 分页隔断，按原样呈现 */
+.cun-body p[style*="text-align"], .cun-ed p[style*="text-align"]{text-align:inherit;}
+.cun-body img{max-width:100%; height:auto;}

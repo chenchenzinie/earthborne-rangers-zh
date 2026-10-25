@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地缘行者 · 游戏辅助系统</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 L38 14 L38 34 L24 45 L10 34 L10 14 Z' fill='none' stroke='%233d6b47' stroke-width='3'/%3E%3Cpath d='M24 12 L31 17.5 L31 26 L24 31.5 L17 26 L17 17.5 Z' fill='%233d6b47'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20261024a">
+  <link rel="stylesheet" href="campaign.css?v=20261012b">
+  <link rel="stylesheet" href="text.css?v=20261012b">
+  <link rel="stylesheet" href="music.css?v=20261012b">
+</head>
+<body>
+<div id="app">
+
+  <!-- ═══════════ 主界面（无需注册即可进入） ═══════════ -->
+  <div id="main" class="main">
+    <header class="topbar">
+      <button id="nav-toggle" class="nav-toggle" title="收起/展开导航">☰</button>
+      <div class="brand">
+        <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true">
+          <path d="M24 3 L38 14 L38 34 L24 45 L10 34 L10 14 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M24 12 L31 17.5 L31 26 L24 31.5 L17 26 L17 17.5 Z" fill="currentColor" opacity=".85"/>
+        </svg>
+        <span>地缘行者 · 游戏辅助系统</span>
+      </div>
+      <!-- v26：个人中心的独立入口（左上角人头），与右上角 👤 等价 -->
+      <button id="btn-me-l" class="me-icon hidden" title="个人中心" aria-label="个人中心">👤</button>
+      <div class="sys-switch" id="sys-switch" role="tablist" aria-label="系统切换">
+        <button type="button" class="sys-tab active" data-sys="cards"><span class="sys-ico">🃏</span><span class="sys-name">卡牌管理系统</span></button>
+        <button type="button" class="sys-tab" data-sys="campaign"><span class="sys-ico">🗺️</span><span class="sys-name">战役管理系统</span></button>
+        <button type="button" class="sys-tab" data-sys="text"><span class="sys-ico">📖</span><span class="sys-name">文本查询系统</span></button>
+        <button type="button" class="sys-tab" data-sys="music"><span class="sys-ico">🎵</span><span class="sys-name">原声音乐</span></button>
+        <button type="button" class="sys-tab" data-sys="admin"><span class="sys-ico">🛠️</span><span class="sys-name">后台管理系统</span></button>
+      </div>
+      <div class="top-right">
+        <button id="ver-chip" class="ver-chip hidden" title="查看当前版本与更新公告"></button>
+        <span id="sync-badge" class="sync-badge hidden"></span>
+        <span id="current-profile" class="profile-chip"></span>
+        <button id="btn-account" class="btn btn-ghost" title="登录 / 注册">登录 / 注册</button>
+        <button id="btn-me" class="btn btn-ghost hidden" title="个人中心">👤</button>
+      </div>
+    </header>
+
+    <nav id="sidenav" class="sidenav"></nav>
+
+    <div id="cloud-banner" class="cloud-banner hidden"></div>
+    <div id="session-bar" class="session-bar hidden"></div>
+
+    <main id="view" class="view"></main>
+
+    <!-- ═══════════ 战役管理系统（独立子系统，与卡牌管理系统并列） ═══════════ -->
+    <section id="camp-root" aria-label="战役管理系统">
+      <div class="camp-head" id="camp-head">
+      <header class="camp-bar">
+        <div class="brand">
+          <span class="brand-title">战役记录器</span>
+          <span class="brand-sub">引入山谷 / 先祖遗产 · 三存档槽</span>
+        </div>
+
+        <!-- 战役切换 -->
+        <div class="campaign-switch" id="campaign-switch" role="tablist" aria-label="战役切换">
+          <button type="button" class="camp-tab" data-camp="valley">引入山谷<small>基础</small></button>
+          <button type="button" class="camp-tab" data-camp="ancestral">先祖遗产<small>扩展</small></button>
+        </div>
+
+        <!-- 存档槽 -->
+        <div class="slot-switch" id="slot-switch" aria-label="存档槽">
+          <button type="button" class="slot-tab" data-slot="0">存档槽 1</button>
+          <button type="button" class="slot-tab" data-slot="1">存档槽 2</button>
+          <button type="button" class="slot-tab" data-slot="2">存档槽 3</button>
+        </div>
+
+        <div class="top-actions">
+          <label class="hard-toggle" title="开启后天气整体加码一级（最坏为电光迷雾）">
+            <input type="checkbox" id="hard-weather"> 恶劣天气加码
+          </label>
+          <button class="btn ghost sm" id="btn-export" title="导出当前存档槽的 JSON 存档备份">导出存档</button>
+          <button class="btn ghost sm" id="btn-import" title="从 JSON 存档恢复到当前存档槽">导入存档</button>
+          <input type="file" id="import-file" accept="application/json,.json" hidden>
+          <button class="btn ghost sm" id="btn-cloud-push" title="把当前存档槽（含基础/扩展两套战役）上传到你的账号云端同一槽号">⬆ 上传云端</button>
+          <button class="btn ghost sm" id="btn-cloud-pull" title="从账号云端读取存档，可选择恢复到任意本地存档槽">⬇ 读取云端</button>
+          <button class="btn danger sm" id="btn-clear" title="清空当前战役的全部记录（不可恢复）">清空</button>
+        </div>
+      </header>
+
+        <!-- 今日状态条（第几天 / 天气 —— 随抬头一起强制置顶） -->
+        <div class="today-bar">
+          <div class="today-day">第 <b id="today-num">1</b> / 30 天</div>
+          <div class="today-weather" id="today-weather">—</div>
+          <div class="today-ctrl">
+            <button class="btn sm" id="btn-prev" title="回退一天（TTS 中为右键日期）">↩ 回退一天</button>
+            <button class="btn primary" id="btn-advance">结束今天 ▶</button>
+          </div>
+        </div>
+
+        <!-- 提醒横幅（弹出提示 —— 同样随抬头置顶） -->
+        <div id="reminder-box" class="reminder-box" hidden></div>
+
+        <!-- v41：视图切换（战役面板 / 旅行日记） -->
+        <div class="view-switch" id="camp-view-switch" role="tablist" aria-label="视图切换">
+          <button type="button" class="view-tab on" data-view="sheet" aria-selected="true">📋 战役面板</button>
+          <button type="button" class="view-tab" data-view="diary" aria-selected="false">📔 旅行日记</button>
+        </div>
+      </div>
+
+      <!-- 存档安全提醒（常驻，不占置顶区） -->
+      <div class="storage-notice" id="storage-notice">
+        <span>⚠ 存档仅保存在当前浏览器中：<b>如果不手动导出存档，保存的相关记录有可能被浏览器删除。</b>请定期点击「导出存档」备份。</span>
+        <button type="button" class="notice-close" id="notice-close" title="本次不再显示">×</button>
+      </div>
+
+      <div class="sheet" id="camp-sheet">
+
+        <!-- 组件全被关闭时的提示（由功能开关控制显隐） -->
+        <div class="camp-off-note" id="camp-off-note" hidden>
+          <h2 class="camp-off-title">组件未开放</h2>
+          <p class="muted">当前账号的权限下，战役管理系统的<b>所有组件都已被关闭</b>。
+            管理员可在「卡牌 / 战役系统切换 → 🛠️ 后台管理 → 功能开关」里，
+            展开「🗺️ 战役管理系统」母选项，把需要的组件单独打开。</p>
+        </div>
+
+        <!-- 日历 -->
+        <section class="panel panel-calendar">
+          <h2 class="panel-title">日历</h2>
+          <div class="calendar-grid" id="calendar-grid"></div>
+          <div class="day-editor" id="day-editor">
+            <div class="de-head">
+              <span>第 <b id="de-day">1</b> 天 · 手册条目编号</span>
+              <small>推进到该天时会提醒阅读（共 3 格）</small>
+            </div>
+            <div class="de-inputs">
+              <input type="text" id="de-1" maxlength="12" placeholder="条目 1，如 94.1">
+              <input type="text" id="de-2" maxlength="12" placeholder="条目 2">
+              <input type="text" id="de-3" maxlength="12" placeholder="条目 3">
+            </div>
+          </div>
+          <div class="weather-legend" id="weather-legend">
+            <span><i class="dot w1"></i>风和日丽</span>
+            <span><i class="dot w2"></i>倾盆大雨</span>
+            <span><i class="dot w3"></i>狂风呼啸</span>
+            <span><i class="dot w4"></i>电光迷雾（加码）</span>
+          </div>
+        </section>
+
+        <!-- 行者 / 位置 / 挑战抽牌器 -->
+        <section class="panel panel-ranger">
+          <div class="ranger-flex">
+            <div class="ranger-left">
+              <div class="ranger-names">
+                <h2 class="panel-title">行者</h2>
+                <textarea id="rangers" rows="5" placeholder="行者名单（可多行）"></textarea>
+              </div>
+              <div class="ranger-loc">
+                <h2 class="panel-title">当前位置</h2>
+                <label class="loc-row">地点 <input type="text" id="location" placeholder="如：孤树基站"></label>
+                <label class="loc-row">地形 <input type="text" id="terrain" placeholder="如：草甸 / 河流 / 旧林"></label>
+              </div>
+            </div>
+            <div class="ranger-challenges">
+              <h2 class="panel-title">挑战抽牌器 <small class="muted">（山/战/阳三类 · 四属性调整 · 重洗标记）</small></h2>
+              <div class="ch-head">
+                <span class="ch-deck">剩余 <b id="ch-deck-count">24</b> / 24</span>
+                <button type="button" class="btn sm primary" id="btn-draw" title="从牌堆顶端抽一张挑战牌">抽牌</button>
+                <button type="button" class="btn sm" id="btn-reshuffle" title="把所有已抽牌洗回牌堆">重洗</button>
+              </div>
+              <div class="ch-notice" id="ch-notice" hidden></div>
+              <div class="ch-drawn" id="ch-drawn"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 地图 -->
+        <section class="panel panel-map">
+          <h2 class="panel-title">地图 <small class="muted">（点一下=选中最近地点并记录旅行 · 按住拖动=平移地图 · 地点图标默认隐藏，悬停/当前地点会浮现）</small></h2>
+          <div class="map-toolbar">
+            <div class="map-tabs" id="map-tabs"></div>
+            <label class="map-zoom">缩放 <input type="range" id="map-zoom" min="100" max="600" step="20" value="100"><b id="map-zoom-val">100%</b></label>
+          </div>
+          <div class="map-view" id="map-view">
+            <div class="map-canvas" id="map-canvas">
+              <img id="map-img" alt="战役地图" draggable="false">
+              <div class="map-spots" id="map-spots"></div>
+            </div>
+          </div>
+          <div class="terrain-brush" id="terrain-brush"></div>
+          <div class="map-loc">
+            <label>地点 <input type="text" id="map-location" data-ac="map-locations" placeholder="输入或选择地名（可搜索）"></label>
+            <datalist id="map-locations"></datalist>
+            <label>地形 <input type="text" id="map-terrain" data-ac="map-terrains" placeholder="输入或选择地形"></label>
+            <datalist id="map-terrains"></datalist>
+            <button class="btn sm" id="btn-sync-loc" type="button" title="把这里的地点/地形写入左侧「当前位置」">⇪ 同步到战役记录表</button>
+          </div>
+          <p class="map-hint">玩法：① <b>点一下地图</b>＝自动吸附并选中最近的地点，弹出提示确认（含路径地形），地点图标平时隐藏、鼠标悬停或当前所在地点会浮现；② <b>按住拖动</b>＝平移地图（不会误标点；地图区没有滚动条，只能这样移动）；③ 缩放 <b>100%＝整张地图完整显示</b>，往右放大后靠拖动查看其余部分；④ 先选上方地形笔刷再点击＝记录该处路径地形；⑤ 下方输入框可随时手动修改。</p>
+        </section>
+
+        <!-- 任务 -->
+        <section class="panel panel-missions">
+          <h2 class="panel-title">任务 <small class="muted" id="mission-hint">（日期 / 名称可搜索 / 3 格进度 ◆ / 备注）</small></h2>
+          <datalist id="mission-names"></datalist>
+          <div class="mission-cols" id="mission-cols"></div>
+        </section>
+
+        <!-- 奖励 -->
+        <section class="panel panel-rewards">
+          <h2 class="panel-title">奖励 <small class="muted" id="reward-hint">（36 栏 · 名称可输入编号或文字搜索 · 带牌面缩略图）</small></h2>
+          <datalist id="reward-names"></datalist>
+          <div class="reward-cols" id="reward-cols"></div>
+        </section>
+
+        <!-- 重要事件 -->
+        <section class="panel panel-events">
+          <h2 class="panel-title">重要事件 <small class="muted" id="event-hint"></small></h2>
+          <div class="event-cols" id="event-cols"></div>
+        </section>
+
+        <!-- 玩家牌组（联动卡牌管理系统） -->
+        <section class="panel panel-decks">
+          <h2 class="panel-title">玩家牌组 <small class="muted" id="deck-hint">（4 栏 · 粘贴卡牌管理系统的牌组代码 / 直接从我的牌组导入 · 与上方行者栏、奖励栏联动）</small></h2>
+          <div class="deck-cols" id="deck-cols"></div>
+        </section>
+
+      </div>
+
+      <!-- ═══════════ v41：旅行日记（子界面 · 按天记录见闻） ═══════════ -->
+      <section class="panel panel-diary" id="camp-diary" hidden>
+        <div class="diary-head">
+          <h2 class="panel-title">📔 旅行日记
+            <small class="muted">（一天结束时记一笔见闻 · 每个存档各自独立 · 输入即自动保存）</small></h2>
+          <div class="diary-nav">
+            <button type="button" class="btn sm" id="diary-prev" title="上一天">← 上一天</button>
+            <span class="diary-day-label">第 <b id="diary-day">1</b> 天</span>
+            <button type="button" class="btn sm" id="diary-next" title="下一天">下一天 →</button>
+            <button type="button" class="btn sm" id="diary-today" title="跳回当前正在进行的一天">回到今天</button>
+          </div>
+        </div>
+        <div class="diary-meta" id="diary-meta"></div>
+        <div class="diary-body">
+          <div class="diary-days" id="diary-days"></div>
+          <div class="diary-main">
+            <textarea id="diary-text"
+              placeholder="今天走过哪里、遇见了谁、发生了什么……&#10;随手记，输完自动存进当前存档槽。"></textarea>
+            <div class="diary-foot">
+              <span id="diary-stat" class="diary-stat"></span>
+              <span class="diary-tip">公开可用，无需权限 · 内容随本存档的「导出存档 / 导入存档 / 上传云端」一起走</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="foot">
+        非官方粉丝工具 · 战役存档保存在本机浏览器 · 请常点「导出存档」备份 ·
+        功能对标 TTS 模组战役追踪器（Campaign Tracker）
+      </footer>
+    </section>
+
+    <!-- ═══════════ v32：战役记录器 · 云端存档弹窗 ═══════════ -->
+    <div id="cs-modal" class="modal cs-modal hidden" role="dialog" aria-modal="true" aria-label="云端战役存档">
+      <div class="modal-box cs-box">
+        <button id="cs-close" class="btn btn-ghost modal-close">✕</button>
+        <h2 class="login-title">云端战役存档</h2>
+        <p class="login-sub" id="cs-sub">读取你账号下的云端存档，可恢复到任意本地存档槽。</p>
+        <div class="cs-list" id="cs-list"></div>
+        <div class="cs-foot">
+          <span class="small muted" id="cs-msg"></span>
+          <span class="flex-spacer"></span>
+          <button type="button" class="btn btn-sm" id="cs-refresh">重新读取</button>
+          <button type="button" class="btn btn-primary" id="cs-ok">关闭</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ 文本查询系统（独立子系统，管理员可用） ═══════════ -->
+    <section id="text-root" aria-label="文本查询系统"></section>
+
+    <!-- ═══════════ v34：原声音乐系统（独立子系统） ═══════════ -->
+    <section id="music-root" aria-label="原声音乐"></section>
+  </div>
+
+  <!-- ═══════════ 登录 / 注册 弹窗 ═══════════ -->
+  <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box login-box">
+      <button id="login-close" class="btn btn-ghost modal-close">✕</button>
+      <h2 class="login-title">账号</h2>
+      <p class="login-sub">注册后构筑与收藏自动保存到云端，换设备也能继续。<br>不注册也能浏览全部卡牌。</p>
+
+      <div class="anon-box">
+        <button type="button" id="lg-anon" class="btn btn-primary" style="width:100%">免注册，直接开始</button>
+        <p class="small muted" style="margin:8px 0 0">点一下就会建一个匿名账号，构筑和收藏照样存云端。<br>以后想换设备，在「个人中心」绑个邮箱就能找回。</p>
+        <p id="lg-anon-msg" class="form-msg"></p>
+      </div>
+      <div class="anon-divider"><span>或使用邮箱账号</span></div>
+
+      <div class="tabs" id="login-tabs">
+        <button class="tab active" data-tab="pw">密码登录</button>
+        <button class="tab" data-tab="otp">注册新账号</button>
+        <button class="tab" data-tab="reset">修改密码</button>
+      </div>
+
+      <form id="form-pw" class="tabpane" autocomplete="on">
+        <label>邮箱<input id="pw-email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+        <label>密码<input id="pw-pass" type="password" placeholder="登录密码" autocomplete="current-password"></label>
+        <label>邀请码（可空）<input id="pw-invite" type="text" placeholder="有内测邀请码请填入，登录后自动升级" autocomplete="off" style="text-transform:uppercase"></label>
+        <p id="pw-msg" class="form-msg"></p>
+        <button type="submit" class="btn btn-primary">登录</button>
+        <button type="button" id="pw-forgot" class="btn btn-link">忘记密码？</button>
+        <button type="button" id="pw-alt" class="btn btn-link hidden">还没有账号？立即注册</button>
+      </form>
+
+      <!-- 注册：国内站没有可靠的免费发信通道，所以不走邮件验证码，改为邮箱 + 密码直接注册 -->
+      <form id="form-otp" class="tabpane hidden" autocomplete="on">
+        <label>邮箱<input id="otp-email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+        <label>设置密码<input id="otp-pass" type="password" placeholder="至少 6 位，换设备登录要用" autocomplete="new-password"></label>
+        <label>确认密码<input id="otp-code" type="password" placeholder="再输一次" autocomplete="new-password"></label>
+        <label>邀请码（可空）<input id="otp-invite" type="text" placeholder="有内测邀请码请填入，注册后自动成为内测账号" autocomplete="off" style="text-transform:uppercase"></label>
+        <p id="otp-msg" class="form-msg"></p>
+        <button type="submit" class="btn btn-primary">注册并登录</button>
+        <button type="button" id="otp-send" style="display:none">获取验证码</button>
+      </form>
+
+      <!-- 修改密码：国内站没有可靠发信通道，不走向邮件验证码，
+           直接用「当前密码 → 新密码」，服务端校验旧密码后换哈希 -->
+      <form id="form-reset" class="tabpane hidden" autocomplete="on" novalidate>
+        <p id="reset-note" class="login-sub" style="margin:0 0 10px"></p>
+        <input id="reset-email" type="hidden">
+        <label>当前密码<input id="reset-code" type="password" placeholder="当前登录密码" autocomplete="current-password"></label>
+        <label>新密码<input id="reset-pass" type="password" placeholder="至少 6 位" autocomplete="new-password"></label>
+        <label>确认新密码<input id="reset-pass2" type="password" placeholder="再输一次" autocomplete="new-password"></label>
+        <p id="reset-msg" class="form-msg"></p>
+        <button type="submit" class="btn btn-primary" id="reset-go">保存新密码</button>
+        <button type="button" id="reset-send" style="display:none">获取验证码</button>
+      </form>
+
+      <p class="login-foot">未登录时数据只存在本机浏览器，可在「个人中心」导出备份 JSON。</p>
+    </div>
+  </div>
+
+  <!-- 卡牌大图弹窗（支持左右浏览：按钮 / ←→ / 手机滑动） -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="卡牌大图浏览">
+    <button id="modal-prev" class="modal-nav prev" data-mstep="-1" aria-label="上一张">‹</button>
+    <div class="modal-box">
+      <button id="modal-close" class="btn btn-ghost modal-close">✕</button>
+      <div class="modal-stage" id="modal-stage">
+        <img id="modal-img" src="" alt="卡牌大图">
+      </div>
+      <div id="modal-meta" class="modal-meta"></div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" id="modal-prev2" data-mstep="-1">← 上一张</button>
+        <span id="modal-count" class="modal-count"></span>
+        <button class="btn btn-sm" id="modal-next2" data-mstep="1">下一张 →</button>
+      </div>
+    </div>
+    <button id="modal-next" class="modal-nav next" data-mstep="1" aria-label="下一张">›</button>
+  </div>
+
+  <!-- ═══════════ 更新公告弹窗（新版本首次进入自动弹一次 / 点顶栏版本号） ═══════════ -->
+  <div id="release-modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="更新公告">
+    <div class="modal-box login-box rel-box">
+      <button id="rel-close" class="btn btn-ghost modal-close">✕</button>
+      <div class="rel-head">
+        <span class="rel-badge" id="rel-badge">V1.0</span>
+        <h2 class="login-title" id="rel-title">更新公告</h2>
+      </div>
+      <p class="login-sub" id="rel-sub"></p>
+      <div id="rel-body" class="rel-body"></div>
+      <div class="rel-foot">
+        <span class="small muted" id="rel-msg"></span>
+        <span class="flex-spacer"></span>
+        <button class="btn btn-primary" id="rel-ok">知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 诊断弹窗（Ctrl+Shift+D） ═══════════ -->
+  <div id="diag-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box login-box">
+      <button id="diag-close" class="btn btn-ghost modal-close">✕</button>
+      <h2 class="login-title">连接诊断</h2>
+      <p class="login-sub">注册或同步异常时，把下面内容复制发我即可定位。</p>
+      <pre id="diag-text" style="white-space:pre-wrap;font-size:11.5px;line-height:1.7;
+        background:var(--panel2);padding:10px 12px;border-radius:8px;margin:0 0 12px;max-height:46vh;overflow:auto"></pre>
+      <button class="btn btn-primary" id="diag-copy">复制诊断信息</button>
+    </div>
+  </div>
+
+  <!-- ═══════════ 单账号权限弹窗（管理员） ═══════════ -->
+  <div id="perm-modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="单账号权限">
+    <div class="modal-box login-box">
+      <button id="perm-close" class="btn btn-ghost modal-close">✕</button>
+      <h2 class="login-title">单账号权限</h2>
+      <p class="login-sub" id="perm-sub"></p>
+      <div id="perm-body" class="perm-body"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+        <span class="small muted" id="perm-msg"></span>
+        <span class="flex-spacer"></span>
+        <button class="btn btn-sm" id="perm-reset">全部恢复继承</button>
+        <button class="btn btn-sm" id="perm-refresh">刷新</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+</div>
+
+<!-- 云后端：腾讯云 EdgeOne Pages 自建后端（前端 + 边缘函数 + KV 同一个项目）。
+     停用的两套：
+       WorkBuddy 云 —— 按资源点计费，2500 点半个月耗尽后整体停服；
+       Supabase —— *.supabase.co 境内被按域名重置，免费版还不能绑自定义域名。
+     EdgeOne 免费版按容量计费（KV 1GB / 函数 300 万次/月），*.edgeone.app 免备案。
+     后端代码：edgeone/functions/api/[[default]].js
+     部署步骤：edgeone/部署步骤.md
+     回退：把下面两行换回 vendor/workbuddy-cloud-sdk.js + cloud.js（回退说明见该文档末节）。 -->
+<script src="cloud-config.js?v=20261024a"></script>
+<script src="cloud-eo.js?v=20261025b"></script>
+<script src="data/data-cards.js?v=20261012b"></script>
+<script src="data/data-traits.js?v=20261012b"></script>
+<script src="data/data-books.js?v=20261012b"></script>
+<script src="data/data-bgm.js?v=20261012b"></script>
+<script src="campaign-data.js?v=20261012b"></script>
+<script src="campaign-app.js?v=20261019a"></script>
+<script src="vendor/mammoth.browser.min.js?v=20261012b"></script>
+<script src="text-app.js?v=20261019a"></script>
+<script src="music-app.js?v=20261019a"></script>
+<script src="app.js?v=20261025b"></script>
+</body>
+</html>

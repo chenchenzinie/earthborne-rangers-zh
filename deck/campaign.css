@@ -1,0 +1,694 @@
+/* 战役记录系统样式（由 campaign-app/styles.css 自动加 #camp-root 命名空间生成） */
+/* 生成器：_extract/ns_campaign_css.js —— 修改源文件后重跑，不要手改本文件 */
+#camp-root{
+  --paper:#e3d5ad;
+  --paper-dark:#d6c599;
+  --paper-deep:#c9b685;
+  --ink:#6e2f22;
+  --ink-soft:#8a4a36;
+  --line:#a86a4e;
+  --line-dark:#7c4533;
+  --field:#f4ecd2;
+  --w1:#5a8fbf;   /* 风和日丽 蓝 */
+  --w2:#6fa05a;   /* 倾盆大雨 绿 */
+  --w3:#b07f3e;   /* 狂风呼啸 棕黄 */
+  --w4:#8d5ab0;   /* 电光迷雾 紫 */
+  --u1:#3f8a8a;   /* 万籁俱静 青 */
+  --u2:#cf8a2d;   /* 光辉之雨 金橙 */
+  --u3:#4f63b4;   /* 波光洪流 靛蓝 */
+  --danger:#b3402f;
+  --shadow:0 2px 8px rgba(80,50,20,.18);
+}
+#camp-root *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+#camp-root{font-size:15px}
+#camp-root{
+  font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  color:#3d2419;background:var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(255,250,230,.35), transparent 60%),
+    radial-gradient(ellipse at 90% 100%, rgba(120,70,30,.10), transparent 55%);
+  min-height:100vh;display:flex;flex-direction:column;
+}
+#camp-root button{font-family:inherit}
+#camp-root .camp-bar{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:10px 16px;background:linear-gradient(180deg,var(--paper-dark),var(--paper-deep));
+  border-bottom:2px solid var(--line-dark);position:sticky;top:0;z-index:30;
+}
+#camp-root .brand{display:flex;flex-direction:column;line-height:1.15}
+#camp-root .brand-title{font-size:1.25rem;font-weight:800;color:var(--ink);letter-spacing:2px}
+#camp-root .brand-sub{font-size:.66rem;color:var(--ink-soft);letter-spacing:1px}
+#camp-root .top-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#camp-root .hard-toggle{font-size:.82rem;color:var(--ink);display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
+#camp-root .hard-toggle input{accent-color:var(--ink);width:16px;height:16px}
+#camp-root .btn{
+  border:1.5px solid var(--line-dark);background:var(--field);color:var(--ink);
+  border-radius:6px;padding:7px 14px;font-size:.9rem;cursor:pointer;font-weight:600;
+}
+#camp-root .btn:hover{filter:brightness(.96)}
+#camp-root .btn.sm{padding:5px 10px;font-size:.8rem}
+#camp-root .btn.ghost{background:transparent}
+#camp-root .btn.primary{background:var(--ink);color:#f6ecd2;border-color:var(--ink);padding:9px 20px;font-size:1rem}
+#camp-root .btn.primary:hover{background:#5a261b}
+#camp-root .btn.danger{color:var(--danger);border-color:var(--danger)}
+#camp-root .btn:disabled{opacity:.4;cursor:not-allowed}
+#camp-root .today-bar{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  margin:12px 16px 0;padding:12px 16px;
+  background:var(--field);border:1.5px solid var(--line);border-radius:10px;box-shadow:var(--shadow);
+}
+#camp-root .today-day{font-size:1.05rem;color:var(--ink)}
+#camp-root .today-day b{font-size:1.5rem;color:var(--ink)}
+#camp-root .today-weather{
+  font-weight:700;font-size:.95rem;padding:5px 14px;border-radius:999px;color:#fff;
+}
+#camp-root .today-ctrl{margin-left:auto;display:flex;gap:8px}
+#camp-root .reminder-box{
+  margin:10px 16px 0;padding:12px 16px;border-radius:10px;
+  background:#fbf3dc;border:2px solid var(--w1);box-shadow:var(--shadow);
+}
+#camp-root .reminder-box h3{font-size:.95rem;color:var(--ink);margin-bottom:6px}
+#camp-root .reminder-box ul{margin-left:20px;font-size:.92rem;line-height:1.7}
+#camp-root .reminder-box .rem-close{float:right;border:none;background:none;color:var(--ink-soft);font-size:1.1rem;cursor:pointer}
+@keyframes reminder-pulse{
+  0%{transform:scale(1);box-shadow:var(--shadow)}
+  50%{transform:scale(1.015);box-shadow:0 4px 16px rgba(110,47,34,.35)}
+  100%{transform:scale(1);box-shadow:var(--shadow)}
+}
+#camp-root .reminder-box.pulse{animation:reminder-pulse .45s ease}
+/* v25：5 秒倒计时 + 缓慢消散 */
+#camp-root .reminder-box{transition:opacity .3s ease}
+#camp-root .reminder-box.fading{opacity:0; transition:opacity 1.5s ease}
+#camp-root .rem-foot{margin-top:8px; display:flex; align-items:center; gap:10px}
+#camp-root .rem-timer{font-size:.72rem; color:var(--ink-soft); white-space:nowrap}
+#camp-root .rem-bar{
+  flex:1 1 auto; height:3px; border-radius:2px; overflow:hidden;
+  background:rgba(110,47,34,.16); min-width:60px;
+}
+#camp-root .rem-bar i{
+  display:block; height:100%; width:100%; background:var(--ink);
+  transition:width 1s linear;
+}
+#camp-root .sheet{flex:1;padding:14px 16px;max-width:1500px;width:100%;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#camp-root .panel{
+  background:var(--paper-dark);border:1.5px solid var(--line);border-radius:10px;
+  padding:14px 16px;box-shadow:var(--shadow);
+}
+#camp-root .panel-calendar{grid-column:1 / -1}
+#camp-root .panel-missions{grid-column:1 / -1}
+#camp-root .panel-rewards{grid-column:1}
+#camp-root .panel-events{grid-column:2}
+#camp-root .panel-ranger{grid-column:1 / -1}
+#camp-root .ranger-flex{display:grid;grid-template-columns:1fr 1.6fr;gap:14px;align-items:start}
+#camp-root .ranger-flex .panel-title{margin-bottom:8px}
+#camp-root .ranger-flex .ranger-challenges .panel-title{margin-bottom:12px}
+#camp-root .ranger-left{display:flex;flex-direction:column;gap:14px}
+#camp-root .ranger-left .ranger-loc .panel-title{margin-top:0}
+#camp-root .ranger-flex .loc-row{margin-top:0}
+#camp-root .ranger-flex .loc-row + .loc-row{margin-top:10px}
+#camp-root .btn.warn{background:#e8b54a;color:#3d2410;border-color:#b08020}
+#camp-root .btn.warn:hover{background:#d8a438}
+#camp-root .ch-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+#camp-root .ch-head .ch-deck{font-size:.9rem;color:var(--ink);font-weight:600}
+#camp-root .ch-head .ch-deck b{color:var(--danger);font-size:1.1rem}
+#camp-root .ch-head .btn{flex:0 0 auto}
+#camp-root .ch-notice{
+  margin:0 0 10px;padding:8px 12px;border-radius:6px;
+  font-size:.84rem;font-weight:600;line-height:1.45;
+}
+#camp-root .ch-notice[hidden]{display:none}
+#camp-root .ch-notice.warn{background:#fff4d6;border:1.5px solid #e8b54a;color:#5a3a10}
+#camp-root .ch-notice.alert{background:#fde4dc;border:1.5px solid var(--danger);color:#7a1010}
+#camp-root .ch-notice.info{background:#e8f2e8;border:1.5px solid #3a7a3a;color:#1a4a1a}
+#camp-root .ch-notice .reshuffle-mark{
+  display:inline-block;background:#b3402f;color:#fff;font-size:.74rem;font-weight:700;
+  padding:1px 6px;border-radius:4px;margin-left:4px;vertical-align:1px;
+}
+#camp-root .ch-drawn{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;
+  background:var(--field);border:1.5px dashed var(--line);border-radius:8px;
+  padding:10px;min-height:120px;max-height:340px;overflow-y:auto;
+}
+#camp-root .ch-drawn:empty{display:flex;align-items:center;justify-content:center}
+#camp-root .ch-empty{color:var(--ink-soft);font-size:.84rem;text-align:center;width:100%}
+#camp-root .ch-card{
+  position:relative;flex:0 0 auto;width:96px;
+  border:1.5px solid var(--line-dark);border-radius:6px;overflow:hidden;
+  background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.18);
+  cursor:default;
+}
+#camp-root .ch-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:#eee}
+#camp-root .ch-card.reshuffle{border-color:var(--danger);box-shadow:0 0 0 2px rgba(179,64,47,.25),0 1px 3px rgba(0,0,0,.18)}
+#camp-root .ch-attrs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border-top:1px solid var(--line-dark)}
+#camp-root .ch-attr{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2px 0;background:#fffaf0;font-size:.66rem;line-height:1.1;
+}
+#camp-root .ch-attr-lbl{color:var(--ink-soft);font-size:.6rem}
+#camp-root .ch-attr-val{font-weight:800;font-size:.85rem}
+#camp-root .ch-attr.per{background:#eaf5e0}
+#camp-root .ch-attr.spi{background:#fbf2c0}
+#camp-root .ch-attr.con{background:#fbe0d8}
+#camp-root .ch-attr.foc{background:#dfeaf5}
+#camp-root .ch-attr.v1 .ch-attr-val{color:#2a7a2a}
+#camp-root .ch-attr.v0 .ch-attr-val{color:#7a6a4a}
+#camp-root .ch-attr.v-1 .ch-attr-val{color:#b04030}
+#camp-root .ch-attr.v-2 .ch-attr-val{color:#7a1010}
+#camp-root .ch-reshuffle{
+  position:absolute;top:4px;right:4px;
+  background:var(--danger);color:#fff;border-radius:50%;
+  width:18px;height:18px;font-size:.85rem;line-height:18px;text-align:center;font-weight:800;
+  box-shadow:0 1px 3px rgba(0,0,0,.4);
+}
+#camp-root .ch-card.ct-mountain{border-top:4px solid #3a7a3a}
+#camp-root .ch-card.ct-war{border-top:4px solid #b03030}
+#camp-root .ch-card.ct-sun{border-top:4px solid #d09020}
+#camp-root .panel-title{font-size:1.02rem;color:var(--ink);margin-bottom:10px;letter-spacing:1px}
+#camp-root .panel-title .muted{font-weight:400;font-size:.78rem;color:var(--ink-soft)}
+#camp-root .panel-title.mt{margin-top:14px}
+#camp-root textarea, #camp-root input[type=text]{
+  width:100%;border:1.5px solid var(--line);background:var(--field);color:#3d2419;
+  border-radius:6px;padding:8px 10px;font-size:.9rem;font-family:inherit;resize:vertical;
+}
+#camp-root textarea:focus, #camp-root input[type=text]:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 2px rgba(110,47,34,.15)}
+#camp-root .loc-row{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:.9rem;color:var(--ink)}
+#camp-root .loc-row input{flex:1}
+#camp-root .calendar-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:7px}
+#camp-root .day-cell{
+  position:relative;border:1.5px solid var(--line);border-radius:8px;background:var(--field);
+  padding:6px 2px 8px;text-align:center;cursor:pointer;user-select:none;min-height:58px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+}
+#camp-root .day-cell:hover{border-color:var(--ink)}
+#camp-root .day-cell .d-num{font-size:.95rem;font-weight:800;color:var(--ink);line-height:1.1}
+#camp-root .day-cell .d-x{font-size:.85rem;color:var(--danger);font-weight:800;line-height:1}
+#camp-root .day-cell .d-dots{display:flex;gap:3px;margin-top:auto}
+#camp-root .day-cell .d-dots i{width:6px;height:6px;border-radius:50%;background:var(--line);opacity:.45}
+#camp-root .day-cell .d-dots i.on{opacity:1;background:var(--ink)}
+#camp-root .day-cell::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:5px;border-radius:7px 0 0 7px;
+}
+#camp-root .day-cell.w1::before{background:var(--w1)}
+#camp-root .day-cell.w2::before{background:var(--w2)}
+#camp-root .day-cell.w3::before{background:var(--w3)}
+#camp-root .day-cell.w4::before{background:var(--w4)}
+#camp-root .day-cell.u1::before{background:var(--u1)}
+#camp-root .day-cell.u2::before{background:var(--u2)}
+#camp-root .day-cell.u3::before{background:var(--u3)}
+#camp-root .day-cell.past{background:var(--paper-deep)}
+#camp-root .day-cell.current{border:2.5px solid var(--ink);box-shadow:0 0 0 2px rgba(110,47,34,.18)}
+#camp-root .day-cell.future .d-num{opacity:.6}
+#camp-root .day-cell.selected{outline:2px dashed var(--ink);outline-offset:1px}
+#camp-root .day-editor{margin-top:12px;background:var(--field);border:1.5px dashed var(--line);border-radius:8px;padding:10px 12px}
+#camp-root .de-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;color:var(--ink);font-size:.9rem;margin-bottom:8px}
+#camp-root .de-head small{color:var(--ink-soft);font-size:.74rem}
+#camp-root .de-inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+#camp-root .weather-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.78rem;color:var(--ink-soft)}
+#camp-root .weather-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+#camp-root .dot.w1{background:var(--w1)}
+#camp-root .dot.w2{background:var(--w2)}
+#camp-root .dot.w3{background:var(--w3)}
+#camp-root .dot.w4{background:var(--w4)}
+#camp-root .dot.u1{background:var(--u1)}
+#camp-root .dot.u2{background:var(--u2)}
+#camp-root .dot.u3{background:var(--u3)}
+#camp-root .lg-title{font-weight:700;color:var(--ink)}
+#camp-root .wchip{
+  border:1.5px solid var(--line-dark);border-radius:999px;padding:5px 14px;font-size:.88rem;
+  cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:7px;margin-right:8px;
+  color:#fff;background:var(--chipc);
+}
+#camp-root .wchip b{background:rgba(0,0,0,.25);border-radius:6px;padding:1px 7px;font-size:.74rem}
+#camp-root .wchip.off{opacity:.42;filter:saturate(.6)}
+#camp-root .wchip.off:hover{opacity:.8}
+/* v20：容器不再出现滚动条 —— 只能按住拖动平移（scrollLeft/Top 仍由 JS 程序设置） */
+#camp-root .map-spots{position:absolute;inset:0;pointer-events:none;z-index:4}
+#camp-root .map-spot{
+  position:absolute;transform:translate(-50%,-50%) rotate(45deg);
+  width:20px;height:20px;padding:0;border:2px solid #4a2410;border-radius:4px;
+  background:rgba(255,242,210,.72);box-shadow:0 1px 3px rgba(0,0,0,.5);
+  cursor:pointer;pointer-events:auto;z-index:5;
+}
+#camp-root .map-spot.key{background:#f2b52e;border-color:#7a4a08}
+#camp-root .map-spot.minor{background:rgba(255,255,255,.9);border-radius:50%}
+#camp-root .map-spot.cur{background:#e64545;border-color:#8b1818;box-shadow:0 0 0 3px rgba(230,69,69,.45),0 1px 4px rgba(0,0,0,.5);z-index:7}
+@media (hover:hover) and (pointer:fine){#camp-root .map-spot:hover{width:26px;height:26px;background:rgba(255,255,255,.95);z-index:8}
+#camp-root .map-spot.key:hover{background:#ffd25e}
+#camp-root .map-spot.cur:hover{background:#ff5252}
+#camp-root .map-spot:hover .ms-lbl{opacity:1}}
+#camp-root .map-spot .ms-lbl{
+  position:absolute;left:50%;top:120%;transform:translateX(-50%) rotate(-45deg);
+  background:rgba(60,30,15,.92);color:#ffeec8;font-size:.66rem;line-height:1.2;white-space:nowrap;
+  padding:2px 6px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .12s;
+}
+#camp-root .map-spot.cur .ms-lbl{opacity:1}
+#camp-root .terrain-brush{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px}
+#camp-root .brush-cap{font-size:.82rem;font-weight:700;color:var(--ink)}
+#camp-root .tbrush{
+  border:1.5px solid var(--line-dark);background:var(--field);color:var(--ink);
+  border-radius:999px;padding:3px 10px;font-size:.76rem;cursor:pointer;display:inline-flex;align-items:center;gap:5px;
+}
+#camp-root .tbrush.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+#camp-root .tdot{width:11px;height:11px;border-radius:50%;border:1px solid rgba(0,0,0,.35);display:inline-block}
+#camp-root .tdot[data-t="山路"]{background:#1a1a1a}
+#camp-root .tdot[data-t="老林"]{background:#a04a30}
+#camp-root .tdot[data-t="树林"]{background:#3e9e3e}
+#camp-root .tdot[data-t="草原"]{background:#e0b02e}
+#camp-root .tdot[data-t="湖岸"]{background:#7a8f9e}
+#camp-root .tdot[data-t="河流（需要载具）"]{background:#3aa6d8}
+#camp-root .tdot[data-t="溪谷"]{background:#5d6d8a}
+#camp-root .tdot[data-t="沼泽"]{background:#3a4148}
+#camp-root .tdot[data-t="洞穴系统"]{background:#e08a3a}
+#camp-root .tdot[data-t="蘑菇森林"]{background:#9a6ab0}
+#camp-root .tdot[data-t="深根盘错"]{background:#4fae5a}
+#camp-root .tdot[data-t="古代遗迹"]{background:#7a9aa8}
+#camp-root .tdot[data-t="水淹遗迹"]{background:#5ab0c8}
+#camp-root .tdot[data-t="浸水之路"]{background:#3aa6d8}
+#camp-root .tdot[data-t="上锁之路"]{background:#d8b33a}
+#camp-root .tdot[data-t="植被之路"]{background:#4fae5a}
+#camp-root .tbrush.on .tdot{box-shadow:0 0 0 1.5px #f6ecd2}
+#camp-root .brush-tip{font-size:.74rem;color:var(--danger);font-weight:700}
+#camp-root .mission-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0 18px}
+#camp-root .mission-row{display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:1px dashed var(--line)}
+#camp-root .mission-row .m-day{width:42px;flex:0 0 42px}
+#camp-root .mission-row .m-day input{text-align:center;font-size:.82rem;padding:5px 2px}
+#camp-root .mission-row .m-name{flex:1;min-width:0}
+#camp-root .mission-row .m-name input{font-size:.85rem;padding:5px 8px}
+#camp-root .pips{display:flex;gap:3px;flex:0 0 auto}
+#camp-root .pip{
+  width:26px;height:26px;border:1.5px solid var(--line);border-radius:5px;background:var(--field);
+  color:transparent;cursor:pointer;font-size:.95rem;line-height:1;display:flex;align-items:center;justify-content:center;
+  user-select:none;
+}
+#camp-root .pip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#camp-root .reward-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 14px}
+#camp-root .rw-row{display:flex;align-items:center;gap:6px}
+#camp-root .rw-no{
+  flex:0 0 26px;width:26px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.72rem;color:var(--ink-soft);background:rgba(138,106,58,.13);border-radius:5px;
+}
+#camp-root .rw-row input{font-size:.82rem;padding:4px 8px;min-width:0;flex:1}
+#camp-root .event-cols{display:grid;gap:6px 14px}
+#camp-root .event-cols.ec2{grid-template-columns:repeat(2,1fr)}
+#camp-root .event-cols.ec3{grid-template-columns:repeat(3,1fr)}
+#camp-root .ev-row{display:flex;align-items:center;gap:6px}
+#camp-root .ev-no{
+  flex:0 0 26px;width:26px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.72rem;color:var(--ink-soft);background:rgba(138,106,58,.13);border-radius:5px;
+}
+#camp-root .ev-row input{font-size:.82rem;padding:4px 8px;min-width:0;flex:1}
+#camp-root .foot{text-align:center;padding:14px;font-size:.74rem;color:var(--ink-soft);border-top:1.5px solid var(--line)}
+#camp-root .campaign-switch{display:flex;gap:6px}
+#camp-root .camp-tab{
+  border:1.5px solid var(--line-dark);background:transparent;color:var(--ink);
+  border-radius:8px;padding:5px 12px;font-size:.85rem;font-weight:700;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;
+}
+#camp-root .camp-tab small{font-size:.62rem;font-weight:400;color:var(--ink-soft)}
+#camp-root .camp-tab.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+#camp-root .camp-tab.on small{color:#e0cba0}
+#camp-root .slot-switch{display:flex;gap:6px}
+#camp-root .slot-tab{
+  border:1.5px dashed var(--line-dark);background:transparent;color:var(--ink);
+  border-radius:8px;padding:5px 10px;font-size:.8rem;font-weight:600;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;min-width:86px;
+}
+#camp-root .slot-tab small{font-size:.62rem;font-weight:400;color:var(--ink-soft);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#camp-root .slot-tab.on{background:var(--field);border-style:solid;box-shadow:inset 0 0 0 1px var(--ink)}
+#camp-root .storage-notice{
+  display:flex;align-items:center;gap:10px;
+  margin:10px 16px 0;padding:8px 14px;border-radius:8px;
+  background:#f6e3c0;border:1.5px solid var(--w3);color:#7a4a12;font-size:.82rem;
+}
+#camp-root .storage-notice b{color:#a03a10}
+#camp-root .storage-notice .notice-close{
+  margin-left:auto;border:none;background:none;color:#a03a10;font-size:1.05rem;cursor:pointer;flex:0 0 auto;
+}
+#camp-root .panel-map{grid-column:1 / -1}
+#camp-root .map-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+#camp-root .map-tabs{display:flex;gap:6px;flex-wrap:wrap}
+#camp-root .map-tab{
+  border:1.5px solid var(--line-dark);background:var(--field);color:var(--ink);
+  border-radius:6px;padding:5px 12px;font-size:.82rem;font-weight:600;cursor:pointer;
+}
+#camp-root .map-tab.on{background:var(--ink);color:#f6ecd2;border-color:var(--ink)}
+#camp-root .map-zoom{margin-left:auto;font-size:.8rem;color:var(--ink);display:flex;align-items:center;gap:8px}
+#camp-root .map-zoom input{accent-color:var(--ink); width:190px}
+#camp-root #map-zoom-val{
+  min-width:52px; text-align:right; font-variant-numeric:tabular-nums;
+  font-weight:700; color:var(--ink);
+}
+#camp-root #map-zoom-val.is-fit{opacity:.6; font-weight:600}
+#camp-root .map-view{
+  overflow:hidden;border:1.5px solid var(--line);border-radius:8px;background:#c8b88f;
+  max-height:78vh;    /* v20：JS 读这个值算「整图完整显示」的基准，改这里即可 */
+}
+/* v20：尺寸由 JS 按「整图完整显示」基准计算（canvas 显式宽高），这里只做水平居中 */
+#camp-root .map-canvas{position:relative;margin:0 auto;cursor:crosshair}
+#camp-root .map-canvas img{display:block;width:100%;height:100%;user-select:none}
+#camp-root .map-pin{
+  position:absolute;transform:translate(-50%,-100%);font-size:1.6rem;pointer-events:none;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));
+}
+#camp-root .map-loc{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+#camp-root .map-loc label{display:flex;align-items:center;gap:6px;font-size:.88rem;color:var(--ink);flex:1;min-width:180px}
+#camp-root .map-loc label input{flex:1}
+#camp-root .map-hint{margin-top:6px;font-size:.74rem;color:var(--ink-soft)}
+#camp-root .legend-sep{flex:0 0 auto;border-left:1.5px solid var(--line);height:14px}
+#camp-root .mission-row{flex-direction:column;align-items:stretch;gap:3px;padding:6px 0}
+#camp-root .m-line1{display:flex;align-items:center;gap:6px}
+#camp-root .m-line1 .m-day{width:42px;flex:0 0 42px}
+#camp-root .m-line1 .m-day input{text-align:center;font-size:.82rem;padding:5px 2px}
+#camp-root .m-line1 .m-name{flex:1;min-width:0}
+#camp-root .m-line1 .m-name input{font-size:.85rem;padding:5px 8px}
+#camp-root .m-line2{display:flex;padding-left:48px}
+#camp-root .m-line2 input{font-size:.78rem;padding:3px 8px;color:#6b4a38;background:transparent;border-style:dashed}
+.ac-panel{
+  position:fixed;z-index:9999;
+  background:#fffaf0;border:2px solid #8a6a3a;border-radius:8px;
+  box-shadow:0 8px 24px rgba(60,35,10,.28);
+  overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  font-size:.85rem;line-height:1.35;
+}
+.ac-panel::-webkit-scrollbar{width:8px}
+.ac-panel::-webkit-scrollbar-thumb{background:#c9b183;border-radius:4px}
+.ac-panel::-webkit-scrollbar-track{background:transparent}
+.ac-item{padding:5px 10px;cursor:pointer;border-bottom:1px solid rgba(138,106,58,.15);display:flex;gap:9px;align-items:center}
+.ac-item:last-child{border-bottom:none}
+.ac-item.active, .ac-item:hover{background:#f2e2b8}
+.ac-thumb{flex:0 0 auto;width:32px;height:45px;object-fit:cover;border-radius:4px;border:1px solid rgba(74,36,16,.35);background:#eee}
+.ac-txt{flex:1;min-width:0}
+.ac-val{display:block;font-weight:600;color:#3d2410;word-break:break-all}
+.ac-label{display:block;font-size:.72rem;color:#8a7a5c;margin-top:1px;word-break:break-all}
+.ac-empty{padding:8px 10px;color:#a08c66;font-size:.8rem}
+@media (max-width:860px){#camp-root .camp-bar{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+#camp-root .sheet{
+    grid-template-columns:1fr;
+    padding-left:max(10px,env(safe-area-inset-left));
+    padding-right:max(10px,env(safe-area-inset-right));
+  }
+#camp-root .today-bar, #camp-root .reminder-box{
+    margin-left:max(10px,env(safe-area-inset-left));
+    margin-right:max(10px,env(safe-area-inset-right));
+  }
+#camp-root .storage-notice{
+    margin-left:max(10px,env(safe-area-inset-left));
+    margin-right:max(10px,env(safe-area-inset-right));
+  }
+#camp-root .panel-rewards, #camp-root .panel-events{grid-column:1}
+#camp-root .mission-cols{grid-template-columns:1fr}
+#camp-root .reward-cols{grid-template-columns:1fr}
+#camp-root .event-cols.ec2, #camp-root .event-cols.ec3{grid-template-columns:1fr}
+#camp-root .ranger-flex{grid-template-columns:1fr;gap:10px}
+#camp-root .ranger-flex .ranger-challenges .panel-title{margin-top:6px;margin-bottom:8px}
+#camp-root .ranger-left .ranger-loc .panel-title{margin-top:6px}
+#camp-root .ch-drawn{max-height:280px}
+#camp-root .ch-card{width:88px}
+#camp-root .ch-attr-val{font-size:.78rem}
+#camp-root .ch-attr-lbl{font-size:.56rem}
+#camp-root .calendar-grid{grid-template-columns:repeat(6,1fr);gap:5px}
+#camp-root .day-cell{min-height:52px;padding:4px 2px 6px}
+#camp-root .de-inputs{grid-template-columns:1fr}
+#camp-root textarea, #camp-root input[type=text], #camp-root input[type=number]{font-size:16px}
+#camp-root .camp-bar{gap:8px;padding-top:8px;padding-bottom:8px}
+#camp-root .top-actions{width:100%;margin-left:0}
+#camp-root .top-actions .btn{min-height:40px;flex:1}
+#camp-root .hard-toggle{min-height:40px;flex:1 1 100%;font-size:.85rem}
+#camp-root .campaign-switch, #camp-root .slot-switch{width:100%}
+#camp-root .camp-tab, #camp-root .slot-tab{flex:1;min-height:44px}
+#camp-root .slot-tab small{max-width:none}
+#camp-root .today-bar{gap:10px;padding:10px 12px}
+#camp-root .today-weather{width:100%;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+#camp-root .today-weather .wchip{margin-bottom:0}
+#camp-root .today-ctrl{margin-left:0;width:100%}
+#camp-root .today-ctrl .btn{flex:1;min-height:44px}
+#camp-root .map-toolbar{gap:8px}
+#camp-root .map-zoom{margin-left:0;width:100%;order:10}
+#camp-root .map-zoom input{flex:1;height:32px;min-width:120px}
+#camp-root .map-view{max-height:72vh;-webkit-overflow-scrolling:touch}
+#camp-root .map-canvas.portrait{margin:0 auto}
+#camp-root .map-spot{width:24px;height:24px;border-width:2.5px}
+#camp-root .map-spot::before{
+    content:'';position:absolute;inset:-10px;transform:rotate(-45deg);
+  }
+#camp-root .map-spot .ms-lbl{font-size:.64rem}
+#camp-root .tbrush{padding:8px 14px;font-size:.82rem}
+#camp-root .tdot{width:14px;height:14px}
+#camp-root .map-loc label{min-width:0}
+#camp-root .map-loc .btn{min-height:40px}
+#camp-root .pips{gap:5px}
+#camp-root .pip{min-width:34px;min-height:34px}
+#camp-root .wchip{margin-bottom:4px;padding:8px 12px}
+#camp-root .weather-legend{gap:8px 14px}
+#camp-root .storage-notice{font-size:.78rem;line-height:1.5}
+#camp-root .storage-notice .notice-close{font-size:1.4rem;padding:4px 8px}
+#camp-root .reminder-box ul{font-size:.88rem}
+#camp-root .rem-close{font-size:1.4rem!important;padding:2px 8px}
+#camp-root .rw-row input, #camp-root .ev-row input{font-size:16px;padding:7px 8px}
+#camp-root .rw-no, #camp-root .ev-no{height:26px;flex-basis:28px;width:28px}}
+@media (max-width:420px){#camp-root .brand-title{font-size:1.15rem}
+#camp-root .brand-sub{font-size:.62rem}}
+
+/* ===== 与卡牌管理系统统一配色：复用站点主题变量 ===== */
+/* 中转变量：源 :root 被本脚本改写成 #camp-root 后，若在同一元素上写「--ink: var(--ink)」
+   会形成自引用循环而失效（表现为所有强调色透明）。故先在 :root 上把站点变量另存一份，
+   再由 #camp-root 引用这份副本。 */
+:root{
+  --camp-ink:var(--ink); --camp-ink2:var(--ink2); --camp-bg:var(--bg);
+  --camp-panel:var(--panel); --camp-panel2:var(--panel2); --camp-line:var(--line);
+  --camp-red:var(--red); --camp-amber:var(--amber); --camp-blue:var(--blue);
+  --camp-green:var(--green); --camp-shadow:var(--shadow);
+}
+#camp-root{
+  --paper:var(--camp-bg);
+  --paper-dark:var(--camp-panel);
+  --paper-deep:var(--camp-panel2);
+  --field:var(--camp-panel2);
+  --ink:var(--camp-ink);
+  --ink-soft:var(--camp-ink2);
+  --line:var(--camp-line);
+  --line-dark:var(--camp-line);
+  --danger:var(--camp-red);
+  --shadow:var(--camp-shadow);
+  color:var(--camp-ink);
+  background:transparent;
+  background-image:none;
+}
+#camp-root .camp-bar{background:var(--panel2);border-bottom:1px solid var(--line)}
+#camp-root .brand-title{color:var(--ink)}
+#camp-root .btn{background:var(--panel2);color:var(--ink);border-color:var(--line)}
+#camp-root .btn:hover{filter:none;background:var(--green-soft)}
+#camp-root .btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+#camp-root .btn.primary:hover{background:var(--green2)}
+#camp-root .btn.danger{color:var(--red);border-color:var(--red)}
+#camp-root .btn.warn{background:var(--amber-soft);color:var(--amber);border-color:var(--amber)}
+#camp-root .reminder-box{background:var(--panel2);border-color:var(--blue)}
+#camp-root .reminder-box h3{color:var(--ink)}
+#camp-root .panel-title{color:var(--ink)}
+#camp-root input,#camp-root textarea,#camp-root select{
+  background:var(--panel2);color:var(--ink);border-color:var(--line);
+}
+#camp-root .storage-notice{background:var(--amber-soft);color:var(--amber)}
+
+/* ===== v14：抬头强制置顶 / 进度反色 / 地图隐藏式触点与拖动平移 ===== */
+
+/* 1) 抬头整块 sticky：品牌栏 + 第几天 + 天气 + 提醒横幅，向下滚动始终浮在最上层 */
+#camp-root .camp-head{
+  position:sticky; top:0; z-index:60; background:var(--bg); width:100%;
+  box-shadow:0 3px 12px rgba(0,0,0,.16);
+  /* v25：下滑时整块抬头向上滑出（渐变），上滑或鼠标移到顶部再回落 */
+  transition:transform .34s ease, opacity .26s ease;
+}
+body.bars-hidden #camp-root .camp-head{
+  transform:translateY(-102%); opacity:0; pointer-events:none;
+}
+#camp-root .camp-bar{position:static; z-index:auto; border-bottom:1px solid var(--line)}
+#camp-root .today-bar{
+  margin:0; border-radius:0; border-left:0; border-right:0; border-top:0; box-shadow:none;
+  background:var(--panel2);
+}
+#camp-root .reminder-box{
+  margin:0; border-radius:0; border-left:0; border-right:0; border-top:0; box-shadow:none;
+}
+#camp-root .reminder-box[hidden]{display:none}
+@media (max-width:860px){ #camp-root .camp-head{max-height:46vh; overflow:auto} }
+
+/* 2) 进度标记反色凸显：任务 3 格 ◆ / 日历已过与当天 / 日历三小圆点 */
+#camp-root .pip{color:var(--ink2); opacity:.5}
+#camp-root .pip.on{
+  background:var(--ink); color:var(--bg); border-color:var(--ink); opacity:1;
+  font-weight:700; box-shadow:0 1px 3px rgba(0,0,0,.28);
+}
+#camp-root .day-cell.past{background:var(--ink); border-color:var(--ink)}
+#camp-root .day-cell.past .d-num{color:var(--bg)}
+#camp-root .day-cell.past .d-x{color:#ffb4a8}
+#camp-root .day-cell.current{background:var(--ink); border-color:var(--bg); box-shadow:0 0 0 3px var(--amber)}
+#camp-root .day-cell.current .d-num{color:var(--bg)}
+#camp-root .day-cell.current .d-x{color:#ffb4a8}
+#camp-root .day-cell .d-dots i{
+  width:7px; height:7px; background:transparent; border:1.5px solid var(--line); opacity:.6;
+}
+#camp-root .day-cell .d-dots i.on{background:var(--ink); border-color:var(--ink); opacity:1}
+#camp-root .day-cell.past .d-dots i,
+#camp-root .day-cell.current .d-dots i{border-color:rgba(255,255,255,.5)}
+#camp-root .day-cell.past .d-dots i.on,
+#camp-root .day-cell.current .d-dots i.on{background:var(--bg); border-color:var(--bg)}
+
+/* 3) 地图：地点/路径图标做成隐藏式触点（默认不可见，悬停或当前地点才浮现） */
+#camp-root .map-spot{width:32px; height:32px; opacity:0; transition:opacity .15s ease}
+#camp-root .map-spot:hover, #camp-root .map-spot.cur{opacity:1}
+#camp-root .map-spot.cur{background:var(--red); border-color:var(--ink)}
+#camp-root .map-spot.cur .ms-lbl{opacity:1}
+#camp-root .tdot{display:none}          /* 路径栏色点同样隐藏，只留文字按钮 */
+
+/* 4) 地图拖动平移：按住移动=平移，位移小于阈值才算点击 */
+#camp-root .map-canvas{cursor:grab; touch-action:none}
+#camp-root .map-canvas.dragging{cursor:grabbing}
+#camp-root .map-view{overscroll-behavior:contain;
+  scrollbar-width:none;-ms-overflow-style:none}      /* v20：彻底不显示滚动条 */
+#camp-root .map-view::-webkit-scrollbar{width:0;height:0;display:none}
+
+/* ============================================================
+   v15（手工追加段）：战役各组件的「功能开关」门控
+   —— 由 app.js 的 applyCampGates() 在 #camp-root 上加/摘 class，
+      重渲染后依然生效；组件关闭即整块隐藏。
+   ============================================================ */
+#camp-root.camp-off-head .today-bar,
+#camp-root.camp-off-head .reminder-box{display:none !important}
+#camp-root.camp-off-calendar .panel-calendar{display:none !important}
+#camp-root.camp-off-saves #campaign-switch,
+#camp-root.camp-off-saves #slot-switch,
+#camp-root.camp-off-saves .top-actions{display:none !important}
+#camp-root.camp-off-weather .hard-toggle{display:none !important}
+#camp-root.camp-off-rangers .ranger-left{display:none !important}
+#camp-root.camp-off-challenges .ranger-challenges{display:none !important}
+#camp-root.camp-off-rangers.camp-off-challenges .panel-ranger{display:none !important}
+#camp-root.camp-off-map .panel-map{display:none !important}
+#camp-root.camp-off-missions .panel-missions{display:none !important}
+#camp-root.camp-off-rewards .panel-rewards{display:none !important}
+#camp-root.camp-off-events .panel-events{display:none !important}
+#camp-root .camp-off-note{
+  background:var(--field, #f4ecd2); border:1px dashed var(--line, #a86a4e);
+  border-radius:8px; padding:14px 16px; font-size:.92rem; line-height:1.7; color:var(--ink-soft, #8a4a36);
+  grid-column:1 / -1
+}
+#camp-root .camp-off-title{font-size:1rem; font-weight:700; color:var(--ink, #6e2f22); margin-bottom:8px}
+#camp-root .camp-off-note[hidden]{display:none}
+
+/* ============================================================
+   v19（手工追加段）：玩家牌组栏（联动卡牌管理系统）
+   ============================================================ */
+#camp-root .deck-cols{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px;}
+#camp-root .deck-slot{border:1px solid var(--line, #a86a4e); border-radius:10px; padding:10px 12px;
+  background:var(--panel2, #faf8f2); display:flex; flex-direction:column; gap:6px; min-width:0;}
+#camp-root .deck-slot.empty{border-style:dashed;}
+#camp-root .ds-head{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+#camp-root .ds-head b{font-size:14px;}
+#camp-root .ds-name{font-weight:700; color:var(--ink, #6e2f22); word-break:break-all;}
+#camp-root .ds-meta{font-size:12.5px; line-height:1.6; color:var(--ink-soft, #8a4a36); word-break:break-all;}
+#camp-root .ds-btns{display:flex; gap:6px; flex-wrap:wrap; margin-top:2px;}
+#camp-root .ds-code{width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px;
+  border:1px solid var(--line, #a86a4e); border-radius:7px; background:var(--panel, #fff); color:var(--ink, #6e2f22);}
+#camp-root .ds-sel{max-width:100%; padding:5px 6px; font-size:12.5px;
+  border:1px solid var(--line, #a86a4e); border-radius:7px; background:var(--panel, #fff); color:var(--ink, #6e2f22);}
+@media (max-width:900px){
+  #camp-root .deck-cols{grid-template-columns:repeat(2, minmax(0,1fr));}
+}
+@media (max-width:520px){
+  #camp-root .deck-cols{grid-template-columns:minmax(0,1fr);}
+}
+#camp-root.camp-off-decks .panel-decks{display:none !important}
+
+/* ═══════════ v32：战役记录器 · 云端存档弹窗 ═══════════ */
+.cs-box{max-width:560px; width:calc(100vw - 32px); max-height:88vh; overflow:auto;}
+.cs-list{display:flex; flex-direction:column; gap:10px; margin:12px 0 6px;}
+.cs-card{border:1px solid var(--line, #a86a4e); border-radius:10px; padding:10px 12px;
+  background:var(--panel2, #faf8f2);}
+.cs-card.cs-blank{border-style:dashed; opacity:.8;}
+.cs-head{display:flex; align-items:center; gap:8px; justify-content:space-between; flex-wrap:wrap;}
+.cs-head b{font-size:14px; color:var(--ink, #6e2f22);}
+.cs-tag{font-size:12px; padding:2px 9px; border-radius:999px;
+  background:var(--green-soft, #e5efdf); color:var(--ink-soft, #8a4a36); white-space:nowrap;}
+.cs-meta{margin-top:4px; word-break:break-all;}
+.cs-acts{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:9px;}
+.cs-acts-label{font-size:12.5px; color:var(--ink-soft, #8a4a36); margin-right:2px;}
+.cs-empty{padding:16px 10px; text-align:center; color:var(--ink-soft, #8a4a36); font-size:13px; line-height:1.7;}
+.cs-foot{display:flex; align-items:center; gap:8px; margin-top:6px;}
+
+/* ══════════════════════════════════════════════════════════════
+   v41：旅行日记（战役记录器子界面）
+   沿用战役系统既有视觉语言：墨棕 ink 主色 + 8px 圆角 + 选中反色，
+   不引入新配色；面板外观直接继承 .panel，这里只写布局
+   ══════════════════════════════════════════════════════════════ */
+
+/* ---- 视图切换条：与 .camp-tab 同一套描边/圆角/反色选中 ---- */
+#camp-root .view-switch{display:flex; gap:6px; flex-wrap:wrap; margin:10px 16px 0;}
+#camp-root .view-tab{
+  border:1.5px solid var(--line-dark); background:transparent; color:var(--ink);
+  border-radius:8px; padding:5px 12px; font-family:inherit;
+  font-size:.85rem; font-weight:700; line-height:1.2; cursor:pointer;
+}
+#camp-root .view-tab:hover{border-color:var(--ink);}
+#camp-root .view-tab.on{background:var(--ink); color:#f6ecd2; border-color:var(--ink);}
+
+/* ---- 日记面板：外观走 .panel，只补布局 ---- */
+#camp-root .panel-diary{flex:1; width:calc(100% - 32px); max-width:1500px; margin:14px auto;}
+#camp-root .panel-diary[hidden]{display:none !important;}
+
+#camp-root .diary-head{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:10px; flex-wrap:wrap;
+}
+#camp-root .diary-nav{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+#camp-root .diary-day-label{font-size:.85rem; color:var(--ink-soft); white-space:nowrap;}
+#camp-root .diary-day-label b{font-size:1.15rem; color:var(--ink);}
+
+#camp-root .diary-meta{
+  font-size:.78rem; color:var(--ink-soft); margin:8px 0 10px;
+  padding:6px 10px; border-radius:6px; background:var(--field);
+}
+#camp-root .diary-meta b{color:var(--ink);}
+#camp-root .diary-now{color:var(--ink); font-weight:700;}
+
+/* ---- 天数格子：空=虚线描边（同 slot-tab），有内容=实线+内描边，当前=反色（同 camp-tab）---- */
+#camp-root .diary-days{display:flex; flex-wrap:wrap; gap:5px; margin-bottom:10px;}
+#camp-root .dd-cell{
+  min-width:40px; height:32px; padding:0 6px; font-family:inherit;
+  font-size:.8rem; font-weight:600; color:var(--ink); background:transparent;
+  border:1.5px dashed var(--line-dark); border-radius:8px; cursor:pointer;
+}
+#camp-root .dd-cell:hover{border-color:var(--ink);}
+#camp-root .dd-cell.has{border-style:solid; background:var(--field); box-shadow:inset 0 0 0 1px var(--ink);}
+#camp-root .dd-cell.on{background:var(--ink); border-style:solid; border-color:var(--ink); color:#f6ecd2; font-weight:700;}
+
+/* ---- 正文输入区 ---- */
+#camp-root .diary-main textarea#diary-text{
+  width:100%; box-sizing:border-box; min-height:44vh; resize:vertical;
+  padding:12px 14px; font-family:inherit; font-size:.95rem; line-height:1.85;
+  border:1.5px solid var(--line); border-radius:8px;
+  background:var(--field); color:var(--ink);
+}
+#camp-root .diary-main textarea#diary-text:focus{
+  outline:none; border-color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink);
+}
+#camp-root .diary-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:10px; flex-wrap:wrap; margin-top:8px;
+}
+#camp-root .diary-stat{font-size:.76rem; color:var(--ink-soft);}
+#camp-root .diary-stat .ok{color:var(--ink); font-weight:700;}
+#camp-root .diary-tip{font-size:.72rem; color:var(--ink-soft); opacity:.9;}
+
+@media (max-width:640px){
+  #camp-root .view-switch{
+    margin-left:max(10px,env(safe-area-inset-left));
+    margin-right:max(10px,env(safe-area-inset-right));
+  }
+  #camp-root .panel-diary{width:calc(100% - 20px);}
+  #camp-root .dd-cell{min-width:36px; height:30px; font-size:.76rem;}
+}
+@media (max-width:520px){
+  #camp-root .panel-diary{padding:12px 10px;}
+}
