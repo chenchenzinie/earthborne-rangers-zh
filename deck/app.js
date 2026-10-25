@@ -800,7 +800,11 @@ function setSys(s) {
   }
   if (SYS.cur === 'text' && !SYS.textBooted && window.TextApp) {
     SYS.textBooted = true;
-    /* 离线版的书本数据是懒加载：等 load 完再 boot，否则书架是空的 */
+    /* 离线版的书本数据是懒加载：等 load 完再 boot，否则书架是空的。
+       弱网下这 1.1MB 要几秒，先给个提示，别让人对着空白页等。 */
+    if (!(window.BOOKS && window.BOOKS.length)) {
+      toast('正在加载规则书文本（约 1.1MB，首次进入需几秒）…', 3200);
+    }
     ensureBooks().then(() => {
       try { window.TextApp.boot(); }
       catch (e) { console.warn('文本查询模块启动失败', e); toast('文本查询模块启动失败，请刷新重试', 3600); }
