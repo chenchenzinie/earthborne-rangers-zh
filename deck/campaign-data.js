@@ -130,7 +130,7 @@ const MISSIONS_ANCESTRAL = [
   { n: 42, name: '理想城的奥秘', type: '尾声', goal: '当以下条目全都写在了战役记录表时：1.140' },
 ];
 
-/* ---------- 奖励牌 · 引入山谷（31 张，图片 rewards-valley/奖励-n-31.jpg） ---------- */
+/* ---------- 奖励牌 · 引入山谷（31 张，图片 rewards-valley/奖励-n-31.webp） ---------- */
 const REWARDS_VALLEY = [
   { n: 1, name: '猞猁皮斗篷', type: '道具 · 服装' },
   { n: 2, name: '地虫隧道', type: '地标 · 地下' },
@@ -165,7 +165,7 @@ const REWARDS_VALLEY = [
   { n: 31, name: '行者徽章', type: '附件 · 服装 · 辅助' },
 ];
 
-/* ---------- 奖励牌 · 先祖遗产（29 张，图片 rewards-ancestral/奖励XZ-n-29.jpg） ---------- */
+/* ---------- 奖励牌 · 先祖遗产（29 张，图片 rewards-ancestral/奖励XZ-n-29.webp） ---------- */
 const REWARDS_ANCESTRAL = [
   { n: 1, name: '氛围灯', type: '道具 · 科技' },
   { n: 2, name: '“幸运”斗篷', type: '道具 · 服装' },
@@ -201,7 +201,7 @@ const REWARDS_ANCESTRAL = [
 /* ---------- 挑战牌（24 张：山/战/阳 三类各 8 张） ----------
    每张四属性调整值（知觉/精神/体质/专注，范围 -2 ~ +1）
    reshuffle=true 表示抽到该牌时需把弃牌堆洗回牌堆
-   图片路径：challenges/挑战-{type}-{n}.jpg，牌背 challenges/挑战牌背.jpg
+   图片路径：challenges/挑战-{type}-{n}.webp，牌背 challenges/挑战牌背.webp
 ---------------------------------------------------------------- */
 const CHALLENGES = [
   { type:'山', n:1, perception: 1, spirit:-1, constitution: 0, focus: 0, reshuffle:false },
@@ -242,7 +242,7 @@ const MAP_DB = {
     short: '山谷（地上）',
     region: 'surface',
     portrait: true,
-    file: 'maps/valley-map-p.jpg',
+    file: 'maps/valley-map-p.webp',
     spots: [
       ['尖塔镇', 45, 38], ['北方哨站', 60, 3.5], ['青空湖', 50, 20.5], ['黄金湖畔', 56.5, 10.5],
       ['宁姆山', 74, 17], ['断崖遗址', 83.5, 26.5], ['翠沟', 91, 42.5], ['嗜地兽', 85.5, 54],
@@ -289,7 +289,7 @@ const MAP_DB = {
     short: '山谷（地上）',
     region: 'surface',
     portrait: true,
-    file: 'maps/ancestral-map.jpg',
+    file: 'maps/ancestral-map.webp',
     spots: [
       ['孤树基站', 42, 5], ['先祖树林', 23, 25], ['磐石野地', 54, 19], ['古保市场', 39, 36],
       ['尖塔镇', 73, 39.5], ['锤线崖', 10.5, 50], ['源泉基站', 38, 47.5], ['绿石楠丘', 61, 58],
@@ -310,7 +310,7 @@ const MAP_DB = {
     short: '理想城（地下1-2层）',
     region: 'underground',
     portrait: true,
-    file: 'maps/arcology-map.jpg',
+    file: 'maps/arcology-map.webp',
     spots: [
       ['大烟囱', 46, 13], ['阳光绿洲', 68, 15.5], ['地虫网络', 70, 36.5], ['淋洗室', 18.5, 38.5],
       ['奥林的秘库', 54, 45.5], ['永夜沙漠', 34, 47.5], ['支干线', 43, 61], ['终端干线', 65.5, 62],
@@ -333,7 +333,7 @@ const MAP_DB = {
     short: '地下三层',
     region: 'underground',
     portrait: true,
-    file: 'maps/underground-map.jpg',
+    file: 'maps/underground-map.webp',
     spots: [
       ['蓄水池', 20, 21], ['颠倒森林', 14, 40], ['翠球', 39, 35.5], ['记忆植物园', 89, 39.5],
       ['碳锻压迷宫', 78.5, 19], ['星鼻鼹狭廊', 78, 53], ['树根隧道', 19.5, 55], ['腔体', 48, 75.5],

@@ -6,10 +6,10 @@
 <title>地缘行者 · 游戏辅助系统</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 L38 14 L38 34 L24 45 L10 34 L10 14 Z' fill='none' stroke='%233d6b47' stroke-width='3'/%3E%3Cpath d='M24 12 L31 17.5 L31 26 L24 31.5 L17 26 L17 17.5 Z' fill='%233d6b47'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css?v=20261024a">
-  <link rel="stylesheet" href="campaign.css?v=20261012b">
-  <link rel="stylesheet" href="text.css?v=20261012b">
+  <link rel="stylesheet" href="campaign.css?v=20261026a">
+  <link rel="stylesheet" href="text.css?v=20261026a">
   <link rel="stylesheet" href="music.css?v=20261012b">
-<!-- 离线版已裁掉首屏无用负载：data/data-books.js / vendor/mammoth.browser.min.js -->
+<!-- 离线版首屏减负：data/data-books.js 改为懒加载；不再引用 vendor/mammoth.browser.min.js -->
 </head>
 <body>
 <div id="app">
@@ -412,14 +412,15 @@
      部署步骤：edgeone/部署步骤.md
      回退：把下面两行换回 vendor/workbuddy-cloud-sdk.js + cloud.js（回退说明见该文档末节）。 -->
 <script src="cloud-config.js?v=20261024a"></script>
-<script src="cloud-eo.js?v=20261025b"></script>
+<script src="cloud-eo.js?v=20261026a"></script>
 <script src="data/data-cards.js?v=20261012b"></script>
 <script src="data/data-traits.js?v=20261012b"></script>
+  <script>window.__BOOKS_LAZY__="data/data-books.js?v=20261012b";window.__BOOKS_IMG_OFF__=true;</script>
 <script src="data/data-bgm.js?v=20261012b"></script>
-<script src="campaign-data.js?v=20261012b"></script>
-<script src="campaign-app.js?v=20261019a"></script>
-<script src="text-app.js?v=20261019a"></script>
+<script src="campaign-data.js?v=20261026a"></script>
+<script src="campaign-app.js?v=20261026a"></script>
+<script src="text-app.js?v=20261026a"></script>
 <script src="music-app.js?v=20261019a"></script>
-<script src="app.js?v=20261025b"></script>
+<script src="app.js?v=20261026a"></script>
 </body>
 </html>

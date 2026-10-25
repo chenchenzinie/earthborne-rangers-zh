@@ -474,8 +474,8 @@ const ROLE_NAME  = { guest: '游客', user: '普通用户', beta: '内测账号'
 const FEATURE_DEFS = {
   /* —— 母选项（分组总开关）：关闭后其下所有子项一律不可用 —— */
   cardsys:   { label: '卡牌管理系统', enabled: true,  min: 'guest' },
-  campaign:  { label: '战役管理系统', enabled: false, min: 'admin' },  // 未上线：仅管理员
-  textsys:   { label: '文本查询系统', enabled: true,  min: 'admin' },  // 规则书/战役书/相关数据，仅管理员
+  campaign:  { label: '战役管理系统', enabled: true,  min: 'guest' },  // 已开放（2026-10-26 起全站可用）
+  textsys:   { label: '文本查询系统', enabled: true,  min: 'guest' },  // 规则书/战役书/相关数据，全站可查
   music:     { label: '原声音乐',     enabled: true,  min: 'user'  },  // v34：官方 OST 播放器，登录后可用
   /* —— 卡牌管理系统子项 —— */
   cards:     { label: '卡牌列表', enabled: true,  min: 'guest' },
@@ -487,26 +487,26 @@ const FEATURE_DEFS = {
   dashboard: { label: '数据看板', enabled: true,  min: 'admin' },
   editor:    { label: '表单编辑', enabled: true,  min: 'admin' },
   merge:     { label: '卡牌整合', enabled: true,  min: 'admin' },
-  deckrules: { label: '组卡限制联动', enabled: true,  min: 'admin' },  // 不占侧栏，属于卡牌系统
+  deckrules: { label: '组卡限制联动', enabled: true,  min: 'guest' },  // 不占侧栏，属于卡牌系统
   /* —— 独立项（不属于任何母选项） —— */
   account:   { label: '个人中心', enabled: true,  min: 'user'  },
   admin:     { label: '后台管理', enabled: true,  min: 'admin' },
   /* —— 战役管理系统子项（各组件可单独开关 / 单独设定权限） —— */
-  'camp.head':      { label: '抬头与今日状态', enabled: true, min: 'admin' },
-  'camp.calendar':  { label: '30 天日历',      enabled: true, min: 'admin' },
-  'camp.rangers':   { label: '行者与当前位置', enabled: true, min: 'admin' },
-  'camp.challenges':{ label: '挑战抽牌器',     enabled: true, min: 'admin' },
-  'camp.map':       { label: '交互地图',       enabled: true, min: 'admin' },
-  'camp.missions':  { label: '任务进度',       enabled: true, min: 'admin' },
-  'camp.rewards':   { label: '奖励',           enabled: true, min: 'admin' },
-  'camp.events':    { label: '重要事件',       enabled: true, min: 'admin' },
-  'camp.saves':     { label: '战役与存档',     enabled: true, min: 'admin' },
-  'camp.weather':   { label: '恶劣天气加码',   enabled: true, min: 'admin' },
-  'camp.decks':     { label: '玩家牌组栏',     enabled: true, min: 'admin' },   // 联动卡牌管理系统
+  'camp.head':      { label: '抬头与今日状态', enabled: true, min: 'guest' },
+  'camp.calendar':  { label: '30 天日历',      enabled: true, min: 'guest' },
+  'camp.rangers':   { label: '行者与当前位置', enabled: true, min: 'guest' },
+  'camp.challenges':{ label: '挑战抽牌器',     enabled: true, min: 'guest' },
+  'camp.map':       { label: '交互地图',       enabled: true, min: 'guest' },
+  'camp.missions':  { label: '任务进度',       enabled: true, min: 'guest' },
+  'camp.rewards':   { label: '奖励',           enabled: true, min: 'guest' },
+  'camp.events':    { label: '重要事件',       enabled: true, min: 'guest' },
+  'camp.saves':     { label: '战役与存档',     enabled: true, min: 'guest' },
+  'camp.weather':   { label: '恶劣天气加码',   enabled: true, min: 'guest' },
+  'camp.decks':     { label: '玩家牌组栏',     enabled: true, min: 'guest' },   // 联动卡牌管理系统
   /* —— 文本查询系统子项 —— */
   'textsys.metaedit': { label: '书籍信息编辑与推送', enabled: true, min: 'admin' },
   /* —— v40：村村通宝典（顶置栏）—— 查看与编辑拆成两个独立权限 —— */
-  'textsys.cun.view': { label: '村村通宝典 · 查看', enabled: true, min: 'admin' },
+  'textsys.cun.view': { label: '村村通宝典 · 查看', enabled: true, min: 'guest' },
   'textsys.cun.edit': { label: '村村通宝典 · 编辑', enabled: true, min: 'admin' },
   /* —— v35：原声音乐子项 —— */
   'music.guard': { label: '音源保护（防盗链）', enabled: true, min: 'guest' },
@@ -670,7 +670,9 @@ function renderSidenav() {
   /* v26：个人中心 / 后台管理不再出现在卡牌系统的侧栏（已独立成系统） */
   nav.innerHTML = ROUTE_META.filter(m => !m.standalone && canSee(m.key)).map(m =>
     `<a href="#${m.key}" data-route="${m.key}">${m.icon} ${m.label}</a>`).join('')
-    + `<div class="sidenav-foot">按《规则手册》P32–33<br>构筑规则校验<br><br>${isSignedIn() ? '已登录 · 数据存云端' : '游客模式 · 数据存本机'}</div>`;
+    + `<div class="sidenav-foot">按《规则手册》P32–33<br>构筑规则校验<br><br>${
+        OFFLINE_MODE ? '离线版 · 数据存本机'
+        : isSignedIn() ? '已登录 · 数据存云端' : '游客模式 · 数据存本机'}</div>`;
   renderSysSwitch();
 }
 
@@ -721,7 +723,7 @@ function renderSysSwitch() {
     b.classList.toggle('locked', !ok);
     const meta = SYS_META[s];
     b.title = (OFFLINE_MODE && s === 'text')
-      ? '文本查询系统：离线版未包含规则书高清扫描图（约 2.4GB），请直接用本地规则书 PDF'
+      ? '文本查询系统：全书文字检索、卡牌图集可用；规则书原页扫描图（约 2.4GB）未随离线包发布'
       : meta ? (typeof meta.tip === 'function' ? meta.tip(ok) : meta.tip) : '';
   });
   /* 个人中心：顶栏左右两侧的人头按钮，位于该系统时高亮；未登录时隐藏 */
@@ -758,6 +760,26 @@ function applyCampGates() {
   if (note) note.hidden = !((preview || featureSelfOn('campaign')) && !any);
 }
 
+/* ---------- 规则书 / 战役书文本（data/data-books.js，1.1MB）的按需加载 ----------
+   默认随包静态引用；离线版打包时会被改成懒加载（写入 window.__BOOKS_LAZY__），
+   只有真正进入「文本查询系统」时才去取，首屏不再为它付流量。 */
+let _booksPromise = null;
+function ensureBooks() {
+  if (window.BOOKS && window.BOOKS.length) return Promise.resolve(window.BOOKS);
+  if (_booksPromise) return _booksPromise;
+  const src = window.__BOOKS_LAZY__;
+  /* 没给懒加载路径（线上静态版）：数据本就该在，返回现有值让页面自行降级 */
+  if (!src) return Promise.resolve(window.BOOKS || []);
+  _booksPromise = new Promise(resolve => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = () => resolve(window.BOOKS || []);
+    s.onerror = () => { console.warn('[books] 加载失败，文本查询系统将显示为空：' + src); resolve([]); };
+    document.head.appendChild(s);
+  });
+  return _booksPromise;
+}
+
 function setSys(s) {
   /* v26：cards / campaign / text / admin 为顶栏四个并列系统；me（个人中心）由头像进入 */
   SYS.cur = ['campaign', 'text', 'music', 'admin', 'me'].includes(s) ? s : 'cards';
@@ -778,8 +800,11 @@ function setSys(s) {
   }
   if (SYS.cur === 'text' && !SYS.textBooted && window.TextApp) {
     SYS.textBooted = true;
-    try { window.TextApp.boot(); }
-    catch (e) { console.warn('文本查询模块启动失败', e); toast('文本查询模块启动失败，请刷新重试', 3600); }
+    /* 离线版的书本数据是懒加载：等 load 完再 boot，否则书架是空的 */
+    ensureBooks().then(() => {
+      try { window.TextApp.boot(); }
+      catch (e) { console.warn('文本查询模块启动失败', e); toast('文本查询模块启动失败，请刷新重试', 3600); }
+    });
   }
   if (SYS.cur === 'music' && !SYS.musicBooted && window.MusicApp) {
     SYS.musicBooted = true;
@@ -5923,6 +5948,10 @@ function renderFeaturePanel(v) {
   if (!box) return;
   box.innerHTML = `
     <h3 style="margin-bottom:8px">功能开关</h3>
+    ${OFFLINE_MODE ? `<p class="small" style="margin-bottom:10px;padding:8px 10px;border-radius:8px;
+        background:rgba(196,146,66,.12);color:var(--ink2)">
+      📴 离线版没有服务端：这里的开关<b>只读</b>（改动无法保存到任何地方）。下表显示的是随包发布的默认值，
+      目前全部开放；要改默认值请直接改 <code>app.js</code> 的 <code>FEATURE_DEFS</code> 后重新打包。</p>` : ''}
     <p class="small muted" style="margin-bottom:10px">
       分为两大母选项：<b>🃏 卡牌管理系统</b> 与 <b>🗺️ 战役管理系统</b>（各自带总开关与最低权限）；
       <b>个人中心</b>、<b>后台管理</b> 独立于母选项之外，不可关闭，以免把自己关在门外。<br>

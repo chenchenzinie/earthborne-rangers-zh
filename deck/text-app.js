@@ -55,6 +55,12 @@
   const kindOf = b => b.kind || '资料';
   /* v31：书名 / 类别是否可编辑（管理员 + 后台「书籍信息编辑与推送」开关开启） */
   const canEditMeta = () => typeof window.bookMetaEditable === 'function' && window.bookMetaEditable() === true;
+  /* 离线版：原页扫描图（books/，约 2.4GB）不随包发布 —— 打包脚本会置
+     window.__BOOKS_IMG_OFF__ = true。此时正文只给文字层和一句说明，
+     不再为每一页发出注定 404 的图片请求（整本书会刷出上百条 404）。 */
+  const NO_SCAN = () => { try { return !!window.__BOOKS_IMG_OFF__; } catch (e) { return false; } };
+  /* 只对「PDF 资料」这类生效：卡牌图集用的是 images/*.webp，离线包里本来就有 */
+  const noScanBook = b => NO_SCAN() && groupOf(b) === 'pdf';
 
   /* v31：检索范围（全部 / 本册 / 某个类别） */
   function inScope(bi) {
@@ -248,11 +254,13 @@
       const cell = el('button', 'tx-thumb' + (i === curPage ? ' on' : ''));
       cell.type = 'button';
       cell.title = '第 ' + pg.n + ' 页';
-      const im = el('img', 'tx-thumb-img');
-      im.loading = 'lazy';
-      im.src = pg.thumb;
-      im.alt = '第 ' + pg.n + ' 页';
-      cell.appendChild(im);
+      if (!noScanBook(b)) {
+        const im = el('img', 'tx-thumb-img');
+        im.loading = 'lazy';
+        im.src = pg.thumb;
+        im.alt = '第 ' + pg.n + ' 页';
+        cell.appendChild(im);
+      }
       cell.appendChild(el('span', 'tx-thumb-n', String(pg.n)));
       cell.addEventListener('click', () => { curPage = i; renderList(); renderDoc(); });
       grid.appendChild(cell);
@@ -405,19 +413,29 @@
     }
 
     const stage = el('div', 'tx-stage');
-    const img = el('img', 'tx-page');
-    img.id = 'tx-page';
-    img.src = pg.img;
-    img.alt = `${b.title} 第 ${pg.n} 页`;
-    img.style.width = zoom + '%';        // v31：默认 50% 整页完整呈现，可 25%~300% 调
-    stage.appendChild(img);
+    if (noScanBook(b)) {
+      const ph = el('div', 'tx-noscan');
+      ph.innerHTML = `<b>本页扫描图未随离线包发布</b>
+        <span>全书文字检索、页码定位、卡牌图集都可用；需要对照原版排版时请打开本地 PDF
+        （规则手册 / 先祖遗产 / 引入山谷战役书）。</span>`;
+      stage.appendChild(ph);
+    } else {
+      const img = el('img', 'tx-page');
+      img.id = 'tx-page';
+      img.src = pg.img;
+      img.alt = `${b.title} 第 ${pg.n} 页`;
+      img.style.width = zoom + '%';        // v31：默认 50% 整页完整呈现，可 25%~300% 调
+      stage.appendChild(img);
+    }
     box.appendChild(stage);
 
-    /* 预取前后页，翻页更顺 */
-    [curPage + 1, curPage - 1].forEach(i => {
-      const p2 = (b.pages || [])[i];
-      if (p2) { const im = new Image(); im.src = p2.img; }
-    });
+    /* 预取前后页，翻页更顺（离线版无扫描图，不用预取） */
+    if (!noScanBook(b)) {
+      [curPage + 1, curPage - 1].forEach(i => {
+        const p2 = (b.pages || [])[i];
+        if (p2) { const im = new Image(); im.src = p2.img; }
+      });
+    }
 
     renderPager();
   }
@@ -448,7 +466,12 @@
     bar.appendChild(mk('下一页 ▶', () => go(1), '', '键盘 →'));
     const sep = el('span', 'tx-pg-sep');
     bar.appendChild(sep);
-    bar.appendChild(mk('⤢ 原图', () => { if (pg) window.open(pg.img, '_blank'); }, '', '在新标签打开原图'));
+    const openOrig = mk('⤢ 原图', () => { if (pg) window.open(pg.img, '_blank'); }, '', '在新标签打开原图');
+    if (noScanBook(b)) {
+      openOrig.disabled = true;
+      openOrig.title = '离线版未包含原页扫描图';
+    }
+    bar.appendChild(openOrig);
     /* v31 缩放：默认 50%，每档 25%，最大 300% */
     bar.appendChild(el('span', 'tx-pg-sep'));
     bar.appendChild(mk('−', () => setZoom(zoom - ZOOM_STEP), '', '缩小 25%（键盘 -）'));
@@ -651,7 +674,10 @@
       cunDraft = ed ? ed.innerHTML : cunDraft;
     };
     bar.appendChild(sel);
-    /* v42：编辑中也能直接导入 Word —— 导入的内容接着在编辑器里改 */
+    /* v42：编辑中也能直接导入 Word —— 导入的内容接着在编辑器里改
+       离线版没有随包发布 mammoth（628KB），按钮一律不出现，
+       免得点了只弹「解析组件未加载」。 */
+    if (typeof window.mammoth === 'undefined' || !window.mammoth.convertToHtml) return bar;
     const gw = el('span', 'cun-tb-grp');
     const bw = el('button', 'cun-tb-btn cun-tb-w', '📄 导入 Word');
     bw.type = 'button';
@@ -772,12 +798,15 @@
         setTimeout(() => { const e = $('tx-cun-ed'); if (e) { e.focus(); } }, 0);
       };
       head.appendChild(ed);
-      const up = el('button', 'btn btn-sm', '📄 上传 Word');
-      up.type = 'button';
-      up.id = 'tx-cun-upload';
-      up.title = '上传 .docx 更新宝典（解析后可直接在线修改，确认后再保存推送）';
-      up.onclick = () => cunFileInput().click();
-      head.appendChild(up);
+      /* 没有 mammoth（离线版没打包它）就不给「上传 Word」入口 */
+      if (typeof window.mammoth === 'object' && window.mammoth && window.mammoth.convertToHtml) {
+        const up = el('button', 'btn btn-sm', '📄 上传 Word');
+        up.type = 'button';
+        up.id = 'tx-cun-upload';
+        up.title = '上传 .docx 更新宝典（解析后可直接在线修改，确认后再保存推送）';
+        up.onclick = () => cunFileInput().click();
+        head.appendChild(up);
+      }
     }
     if (!canEdit) head.appendChild(el('span', 'cun-lock', '🔒 只读'));
     box.appendChild(head);

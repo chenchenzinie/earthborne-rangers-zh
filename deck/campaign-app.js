@@ -45,8 +45,8 @@
   /* 资源根目录：合入「地缘行者·游戏辅助系统」后，战役图片统一放在 campaign/ 下 */
   const ASSET = 'campaign/';
   const rewardImg = m => slot.active === 'valley'
-    ? `${ASSET}rewards-valley/奖励-${m.n}-31.jpg`
-    : `${ASSET}rewards-ancestral/奖励XZ-${m.n}-29.jpg`;
+    ? `${ASSET}rewards-valley/奖励-${m.n}-31.webp`
+    : `${ASSET}rewards-ancestral/奖励XZ-${m.n}-29.webp`;
   // 当前天气区域（基础战役恒为地上；扩展可在地上/地下间切换）
   const region = () => (slot.active === 'ancestral' && state.region === 'underground') ? 'underground' : 'surface';
   const wtable = () => camp().weather[region()];
@@ -739,7 +739,7 @@
   }
 
   /* ---------- 渲染：挑战抽牌器 ---------- */
-  function challengeImg(i) { return `${ASSET}challenges/挑战-${CHALLENGES[i].type}-${CHALLENGES[i].n}.jpg`; }
+  function challengeImg(i) { return `${ASSET}challenges/挑战-${CHALLENGES[i].type}-${CHALLENGES[i].n}.webp`; }
   function renderChallenges() {
     const c = state.challenges;
     const wrap = $('ch-drawn');

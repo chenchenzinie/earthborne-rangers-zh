@@ -83,8 +83,9 @@ const userRole = () => {
   /* 离线版（enabled:false）没有账号体系，也就无处登录 ——
      如果这里的游客身份照旧返回 'guest'，构筑器 / 校对这些最低要求
      'user' 的页面会永远进不去，等于整站残废。
-     所以离线模式下「本机使用者」直接按普通用户对待，数据本来也只存在本机。 */
-  if (OFFLINE_MODE) return 'user';
+     所以离线模式下「本机使用者」直接按最高权限对待：这台机器上只有
+     作者自己，没有别人可防；数据本来也只存在本机。 */
+  if (OFFLINE_MODE) return 'admin';
   return CLOUD_DOWN ? 'user' : 'guest';
 };
 
@@ -601,7 +602,11 @@ async function cloudHasAnyAdmin() {
 }
 
 /* ---------------- 管理后台：能在国内站生效的部分 ---------------- */
+/* 离线版（cloudOn()=false）没有服务端：后台的账号统计 / 登录记录 / 功能开关
+   一律返回空，绝不发注定 404 的 /api 请求（否则控制台会报错，也违背
+   「打开就是完整站点、零后端依赖」的承诺）。 */
 async function adminSetFeature(key, enabled, minRole) {
+  if (!cloudOn()) return { error: { message: '离线版没有服务端，功能开关不可修改（默认值已在 app.js 里）' } };
   const r = await api('set_feature', { key, enabled, min_role: minRole });
   if (!r.ok) return { error: { message: r.error.message } };
   FEATURES = r.features || FEATURES;
@@ -609,12 +614,14 @@ async function adminSetFeature(key, enabled, minRole) {
 }
 
 async function adminUserStats() {
+  if (!cloudOn()) return { data: [], users: [] };
   const r = await api('user_stats', null, 'GET');
   if (!r.ok) return { data: null, error: { message: r.error.message } };
   return { data: r.data, users: r.users || [] };
 }
 
 async function adminRecentLogins() {
+  if (!cloudOn()) return { data: [] };
   const r = await api('recent_logins', null, 'GET');
   if (!r.ok) return { data: [], error: { message: r.error.message } };
   return { data: r.data || [] };
