@@ -2801,7 +2801,7 @@ function builder(v) {
         </div>
         <label class="fld" style="margin-top:12px">技能 / 效果文本<textarea id="rc-text" rows="3" placeholder="例如：消耗：当你执行检定时，回避 1 张牌。">${esc(rc.text || '')}</textarea></label>
         <div style="display:flex;gap:12px;align-items:flex-start;margin-top:12px;flex-wrap:wrap">
-          <img id="rc-thumb" alt="底图" src="${esc(rc.img || 'images/t0303.jpg')}"
+          <img id="rc-thumb" alt="底图" src="${esc(rc.img || 'images/t0303.webp')}"
                style="width:110px;aspect-ratio:3/4.2;object-fit:cover;border-radius:8px;border:1px solid var(--line)">
           <div>
             <label class="btn btn-sm" style="cursor:pointer">上传自定义底图
@@ -5634,7 +5634,7 @@ function exportDeck(d, mode) {
     const mkCard = (c, i) => ({
       Name: 'Card', Nickname: `${c.name} ×2`,
       Transform: { posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 180, rotZ: 0, scaleX: 1, scaleY: 1, scaleZ: 1 },
-      CustomDeck: { '1': { FaceURL: ttsURL(c.img), BackURL: ttsURL('images/t0000.jpg'), NumWidth: 1, NumHeight: 1, BackIsHidden: true, UniqueBack: false } },
+      CustomDeck: { '1': { FaceURL: ttsURL(c.img), BackURL: ttsURL('images/t0000.webp'), NumWidth: 1, NumHeight: 1, BackIsHidden: true, UniqueBack: false } },
       DeckIDs: [2000 + i, 2000 + i],
     });
     const deck = {
@@ -5645,7 +5645,7 @@ function exportDeck(d, mode) {
         ContainedObjects: data.deckCards.map(mkCard),
         DeckIDs: data.deckCards.flatMap((c, i) => [2000 + i, 2000 + i]),
         CustomDeck: Object.fromEntries(data.deckCards.map((c, i) => [String(2000 + i), {
-          FaceURL: ttsURL(c.img), BackURL: ttsURL('images/t0000.jpg'),
+          FaceURL: ttsURL(c.img), BackURL: ttsURL('images/t0000.webp'),
           NumWidth: 1, NumHeight: 1, BackIsHidden: true, UniqueBack: false }])),
       }],
     };

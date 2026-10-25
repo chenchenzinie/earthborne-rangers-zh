@@ -19,7 +19,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0065.jpg",
+  "img": "images/t0065.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-1"
@@ -39,7 +39,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0066.jpg",
+  "img": "images/t0066.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-2"
@@ -59,7 +59,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0067.jpg",
+  "img": "images/t0067.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-3"
@@ -79,7 +79,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0068.jpg",
+  "img": "images/t0068.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-4"
@@ -99,7 +99,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0069.jpg",
+  "img": "images/t0069.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-5"
@@ -119,7 +119,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0070.jpg",
+  "img": "images/t0070.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-6"
@@ -139,7 +139,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0071.jpg",
+  "img": "images/t0071.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-7"
@@ -159,7 +159,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0072.jpg",
+  "img": "images/t0072.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-8"
@@ -179,7 +179,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0073.jpg",
+  "img": "images/t0073.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-9"
@@ -199,7 +199,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0074.jpg",
+  "img": "images/t0074.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-10"
@@ -219,7 +219,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0075.jpg",
+  "img": "images/t0075.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-11"
@@ -239,7 +239,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0076.jpg",
+  "img": "images/t0076.webp",
   "copies": 2,
   "review": true,
   "id": "at-base-12"
@@ -259,7 +259,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0077.jpg",
+  "img": "images/t0077.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-1"
@@ -279,7 +279,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0078.jpg",
+  "img": "images/t0078.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-2"
@@ -299,7 +299,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0079.jpg",
+  "img": "images/t0079.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-3"
@@ -319,7 +319,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0080.jpg",
+  "img": "images/t0080.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-4"
@@ -339,7 +339,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0081.jpg",
+  "img": "images/t0081.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-5"
@@ -359,7 +359,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0082.jpg",
+  "img": "images/t0082.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-6"
@@ -379,7 +379,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0083.jpg",
+  "img": "images/t0083.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-7"
@@ -399,7 +399,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0084.jpg",
+  "img": "images/t0084.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-8"
@@ -419,7 +419,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0085.jpg",
+  "img": "images/t0085.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-9"
@@ -439,7 +439,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0086.jpg",
+  "img": "images/t0086.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-10"
@@ -459,7 +459,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0087.jpg",
+  "img": "images/t0087.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-11"
@@ -479,7 +479,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0088.jpg",
+  "img": "images/t0088.webp",
   "copies": 2,
   "review": true,
   "id": "at-valley-12"
@@ -496,7 +496,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0243.jpg",
+  "img": "images/t0243.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-1"
@@ -513,7 +513,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0238.jpg",
+  "img": "images/t0238.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-2"
@@ -530,7 +530,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0240.jpg",
+  "img": "images/t0240.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-3"
@@ -547,7 +547,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0244.jpg",
+  "img": "images/t0244.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-4"
@@ -564,7 +564,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0246.jpg",
+  "img": "images/t0246.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-5"
@@ -581,7 +581,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0239.jpg",
+  "img": "images/t0239.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-6"
@@ -598,7 +598,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0245.jpg",
+  "img": "images/t0245.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-7"
@@ -617,7 +617,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0242.jpg",
+  "img": "images/t0242.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-8"
@@ -634,7 +634,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0241.jpg",
+  "img": "images/t0241.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-9"
@@ -651,7 +651,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0250.jpg",
+  "img": "images/t0250.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-10"
@@ -668,7 +668,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0255.jpg",
+  "img": "images/t0255.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-11"
@@ -687,7 +687,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0252.jpg",
+  "img": "images/t0252.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-12"
@@ -704,7 +704,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0253.jpg",
+  "img": "images/t0253.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-13"
@@ -721,7 +721,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0251.jpg",
+  "img": "images/t0251.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-14"
@@ -736,7 +736,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0249.jpg",
+  "img": "images/t0249.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-15"
@@ -753,7 +753,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0248.jpg",
+  "img": "images/t0248.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-16"
@@ -770,7 +770,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0254.jpg",
+  "img": "images/t0254.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-17"
@@ -787,7 +787,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0247.jpg",
+  "img": "images/t0247.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-18"
@@ -804,7 +804,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0263.jpg",
+  "img": "images/t0263.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-19"
@@ -823,7 +823,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0256.jpg",
+  "img": "images/t0256.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-20"
@@ -840,7 +840,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0257.jpg",
+  "img": "images/t0257.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-21"
@@ -857,7 +857,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0258.jpg",
+  "img": "images/t0258.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-22"
@@ -874,7 +874,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0259.jpg",
+  "img": "images/t0259.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-23"
@@ -891,7 +891,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0262.jpg",
+  "img": "images/t0262.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-24"
@@ -908,7 +908,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0260.jpg",
+  "img": "images/t0260.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-25"
@@ -925,7 +925,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0261.jpg",
+  "img": "images/t0261.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-26"
@@ -942,7 +942,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0264.jpg",
+  "img": "images/t0264.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-27"
@@ -959,7 +959,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0270.jpg",
+  "img": "images/t0270.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-28"
@@ -976,7 +976,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0265.jpg",
+  "img": "images/t0265.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-29"
@@ -993,7 +993,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0272.jpg",
+  "img": "images/t0272.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-30"
@@ -1010,7 +1010,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0268.jpg",
+  "img": "images/t0268.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-31"
@@ -1027,7 +1027,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0271.jpg",
+  "img": "images/t0271.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-32"
@@ -1046,7 +1046,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0273.jpg",
+  "img": "images/t0273.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-33"
@@ -1063,7 +1063,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0267.jpg",
+  "img": "images/t0267.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-34"
@@ -1078,7 +1078,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0266.jpg",
+  "img": "images/t0266.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-35"
@@ -1095,7 +1095,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0269.jpg",
+  "img": "images/t0269.webp",
   "copies": 2,
   "review": true,
   "id": "bg-base-36"
@@ -1112,7 +1112,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0275.jpg",
+  "img": "images/t0275.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-1"
@@ -1131,7 +1131,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0274.jpg",
+  "img": "images/t0274.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-2"
@@ -1148,7 +1148,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0276.jpg",
+  "img": "images/t0276.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-3"
@@ -1165,7 +1165,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0277.jpg",
+  "img": "images/t0277.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-4"
@@ -1182,7 +1182,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0281.jpg",
+  "img": "images/t0281.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-5"
@@ -1201,7 +1201,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0279.jpg",
+  "img": "images/t0279.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-6"
@@ -1216,7 +1216,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0278.jpg",
+  "img": "images/t0278.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-7"
@@ -1233,7 +1233,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0280.jpg",
+  "img": "images/t0280.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-8"
@@ -1250,7 +1250,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0282.jpg",
+  "img": "images/t0282.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-9"
@@ -1269,7 +1269,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0285.jpg",
+  "img": "images/t0285.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-10"
@@ -1286,7 +1286,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0284.jpg",
+  "img": "images/t0284.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-11"
@@ -1303,7 +1303,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0283.jpg",
+  "img": "images/t0283.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-12"
@@ -1322,7 +1322,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0288.jpg",
+  "img": "images/t0288.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-13"
@@ -1339,7 +1339,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0287.jpg",
+  "img": "images/t0287.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-14"
@@ -1356,7 +1356,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0289.jpg",
+  "img": "images/t0289.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-15"
@@ -1373,7 +1373,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0286.jpg",
+  "img": "images/t0286.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-16"
@@ -1390,7 +1390,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "精神 响应：当1名行者休息时，其缓解2点疲劳。 如果那名行者有至少5点疲劳，则改为缓解 4点疲劳。",
-  "img": "images/t0291.jpg",
+  "img": "images/t0291.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-17"
@@ -1407,7 +1407,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0300.jpg",
+  "img": "images/t0300.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-18"
@@ -1424,7 +1424,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0301.jpg",
+  "img": "images/t0301.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-19"
@@ -1441,7 +1441,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0298.jpg",
+  "img": "images/t0298.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-20"
@@ -1458,7 +1458,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "附属到1名行者的角色上。 响应：在你消耗了你的角色后，你可以缓解 1点疲劳。 响应：当你将要因受到损伤而弃置疲劳堆 时，改为弃置本牌。 急中生智",
-  "img": "images/t0293.jpg",
+  "img": "images/t0293.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-21"
@@ -1475,7 +1475,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0299.jpg",
+  "img": "images/t0299.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-22"
@@ -1492,7 +1492,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0295.jpg",
+  "img": "images/t0295.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-23"
@@ -1509,7 +1509,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0297.jpg",
+  "img": "images/t0297.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-24"
@@ -1526,7 +1526,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0296.jpg",
+  "img": "images/t0296.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-25"
@@ -1543,7 +1543,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0302.jpg",
+  "img": "images/t0302.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-26"
@@ -1560,7 +1560,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0292.jpg",
+  "img": "images/t0292.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-27"
@@ -1577,7 +1577,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "精神 消耗(使用1次弹奏）：选择1名行者。所选 行者缓解1点疲劳。如果其角色上附属了故 事，则额外缓解1点疲劳。",
-  "img": "images/t0294.jpg",
+  "img": "images/t0294.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-28"
@@ -1594,7 +1594,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "精神 你打出本牌时，可以将其装备给其他行者。 消耗（使用1次缓冲）：当你将要受到疲劳时， 弃置1张手牌来防止1点疲劳。如果你有至 少5点疲劳，则改为防止那些疲劳。 安抚小动物",
-  "img": "images/t0290.jpg",
+  "img": "images/t0290.webp",
   "copies": 2,
   "review": true,
   "id": "bg-valley-29"
@@ -1609,7 +1609,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：支付1点能量，来向1个科技增加1个标记。",
-  "img": "images/t0115.jpg",
+  "img": "images/t0115.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-1"
@@ -1626,7 +1626,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0110.jpg",
+  "img": "images/t0110.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-1"
@@ -1643,7 +1643,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0111.jpg",
+  "img": "images/t0111.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-2"
@@ -1660,7 +1660,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0118.jpg",
+  "img": "images/t0118.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-3"
@@ -1677,7 +1677,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0114.jpg",
+  "img": "images/t0114.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-4"
@@ -1694,7 +1694,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0112.jpg",
+  "img": "images/t0112.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-5"
@@ -1711,7 +1711,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0122.jpg",
+  "img": "images/t0122.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-6"
@@ -1728,7 +1728,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0117.jpg",
+  "img": "images/t0117.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-7"
@@ -1745,7 +1745,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0121.jpg",
+  "img": "images/t0121.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-8"
@@ -1762,7 +1762,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0120.jpg",
+  "img": "images/t0120.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-9"
@@ -1777,7 +1777,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：准备1个科技。",
-  "img": "images/t0109.jpg",
+  "img": "images/t0109.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-2"
@@ -1794,7 +1794,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0119.jpg",
+  "img": "images/t0119.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-10"
@@ -1811,7 +1811,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0113.jpg",
+  "img": "images/t0113.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-11"
@@ -1828,7 +1828,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0116.jpg",
+  "img": "images/t0116.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-12"
@@ -1847,7 +1847,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0125.jpg",
+  "img": "images/t0125.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-13"
@@ -1862,7 +1862,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0126.jpg",
+  "img": "images/t0126.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-14"
@@ -1879,7 +1879,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0131.jpg",
+  "img": "images/t0131.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-15"
@@ -1898,7 +1898,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0128.jpg",
+  "img": "images/t0128.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-16"
@@ -1915,7 +1915,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0134.jpg",
+  "img": "images/t0134.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-17"
@@ -1932,7 +1932,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0133.jpg",
+  "img": "images/t0133.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-18"
@@ -1949,7 +1949,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0124.jpg",
+  "img": "images/t0124.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-19"
@@ -1968,7 +1968,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0132.jpg",
+  "img": "images/t0132.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-20"
@@ -1985,7 +1985,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0130.jpg",
+  "img": "images/t0130.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-21"
@@ -2002,7 +2002,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0136.jpg",
+  "img": "images/t0136.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-22"
@@ -2021,7 +2021,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0135.jpg",
+  "img": "images/t0135.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-23"
@@ -2036,7 +2036,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：从你的弃牌堆中选择1张显灵牌，将其加入你的手中。",
-  "img": "images/t0129.jpg",
+  "img": "images/t0129.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-3"
@@ -2053,7 +2053,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0127.jpg",
+  "img": "images/t0127.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-24"
@@ -2068,7 +2068,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：侦查1张挑战牌。",
-  "img": "images/t0123.jpg",
+  "img": "images/t0123.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-4"
@@ -2085,7 +2085,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0146.jpg",
+  "img": "images/t0146.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-25"
@@ -2102,7 +2102,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0149.jpg",
+  "img": "images/t0149.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-26"
@@ -2119,7 +2119,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0142.jpg",
+  "img": "images/t0142.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-27"
@@ -2136,7 +2136,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0148.jpg",
+  "img": "images/t0148.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-28"
@@ -2153,7 +2153,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0144.jpg",
+  "img": "images/t0144.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-29"
@@ -2168,7 +2168,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：当你执行检定时，回避1张牌。",
-  "img": "images/t0137.jpg",
+  "img": "images/t0137.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-5"
@@ -2183,7 +2183,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：将你的→移动到1个地标上。那个地标对你造成疲劳。",
-  "img": "images/t0143.jpg",
+  "img": "images/t0143.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-6"
@@ -2200,7 +2200,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0145.jpg",
+  "img": "images/t0145.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-30"
@@ -2217,7 +2217,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0141.jpg",
+  "img": "images/t0141.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-31"
@@ -2234,7 +2234,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0140.jpg",
+  "img": "images/t0140.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-32"
@@ -2251,7 +2251,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0147.jpg",
+  "img": "images/t0147.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-33"
@@ -2268,7 +2268,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0138.jpg",
+  "img": "images/t0138.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-34"
@@ -2285,7 +2285,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0139.jpg",
+  "img": "images/t0139.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-35"
@@ -2302,7 +2302,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0150.jpg",
+  "img": "images/t0150.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-36"
@@ -2321,7 +2321,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0156.jpg",
+  "img": "images/t0156.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-37"
@@ -2338,7 +2338,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0160.jpg",
+  "img": "images/t0160.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-38"
@@ -2355,7 +2355,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0162.jpg",
+  "img": "images/t0162.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-39"
@@ -2372,7 +2372,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0152.jpg",
+  "img": "images/t0152.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-40"
@@ -2389,7 +2389,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0164.jpg",
+  "img": "images/t0164.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-41"
@@ -2404,7 +2404,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：将1只动物的存在度减少至0，直至本回合结束。",
-  "img": "images/t0151.jpg",
+  "img": "images/t0151.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-7"
@@ -2421,7 +2421,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0153.jpg",
+  "img": "images/t0153.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-42"
@@ -2436,7 +2436,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0154.jpg",
+  "img": "images/t0154.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-43"
@@ -2453,7 +2453,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0158.jpg",
+  "img": "images/t0158.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-44"
@@ -2470,7 +2470,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0163.jpg",
+  "img": "images/t0163.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-45"
@@ -2487,7 +2487,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0161.jpg",
+  "img": "images/t0161.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-46"
@@ -2502,7 +2502,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：支付1点能量，来向1张辅助牌增加1个标记。",
-  "img": "images/t0157.jpg",
+  "img": "images/t0157.webp",
   "copies": 1,
   "review": true,
   "id": "ro-base-8"
@@ -2519,7 +2519,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0159.jpg",
+  "img": "images/t0159.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-47"
@@ -2536,7 +2536,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0155.jpg",
+  "img": "images/t0155.webp",
   "copies": 2,
   "review": true,
   "id": "ex-base-48"
@@ -2551,7 +2551,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0166.jpg",
+  "img": "images/t0166.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-1"
@@ -2568,7 +2568,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0168.jpg",
+  "img": "images/t0168.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-2"
@@ -2585,7 +2585,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0167.jpg",
+  "img": "images/t0167.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-3"
@@ -2600,7 +2600,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "（山谷卫士 · 待校）",
-  "img": "images/t0165.jpg",
+  "img": "images/t0165.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-1"
@@ -2617,7 +2617,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0169.jpg",
+  "img": "images/t0169.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-4"
@@ -2634,7 +2634,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0172.jpg",
+  "img": "images/t0172.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-5"
@@ -2649,7 +2649,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "（山谷卫士 · 待校）",
-  "img": "images/t0170.jpg",
+  "img": "images/t0170.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-2"
@@ -2664,7 +2664,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0173.jpg",
+  "img": "images/t0173.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-6"
@@ -2681,7 +2681,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0171.jpg",
+  "img": "images/t0171.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-7"
@@ -2698,7 +2698,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0174.jpg",
+  "img": "images/t0174.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-8"
@@ -2715,7 +2715,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0179.jpg",
+  "img": "images/t0179.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-9"
@@ -2732,7 +2732,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0178.jpg",
+  "img": "images/t0178.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-10"
@@ -2749,7 +2749,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0177.jpg",
+  "img": "images/t0177.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-11"
@@ -2766,7 +2766,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0176.jpg",
+  "img": "images/t0176.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-12"
@@ -2781,7 +2781,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "（山谷卫士 · 待校）",
-  "img": "images/t0175.jpg",
+  "img": "images/t0175.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-3"
@@ -2796,7 +2796,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：支付1点能量来通灵。",
-  "img": "images/t0191.jpg",
+  "img": "images/t0191.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-4"
@@ -2815,7 +2815,7 @@ const CARDS = [
    "专家"
   ],
   "text": "知觉 从你的牌库中检索1个灵体，并将具加入你 的手中。如果你处于通灵状态，你可以打出 那个灵体，令其费用减少1点。否则，你可以 消耗你的角色来通灵。 锡特卡鹿灵",
-  "img": "images/t0198.jpg",
+  "img": "images/t0198.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-13"
@@ -2834,7 +2834,7 @@ const CARDS = [
    "专家"
   ],
   "text": null,
-  "img": "images/t0194.jpg",
+  "img": "images/t0194.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-14"
@@ -2851,7 +2851,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0185.jpg",
+  "img": "images/t0185.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-15"
@@ -2868,7 +2868,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0182.jpg",
+  "img": "images/t0182.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-16"
@@ -2883,7 +2883,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：在每轮中你的第一个回合开始前，向1个灵体增加2^。然后，通灵。",
-  "img": "images/t0180.jpg",
+  "img": "images/t0180.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-5"
@@ -2900,7 +2900,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0189.jpg",
+  "img": "images/t0189.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-17"
@@ -2917,7 +2917,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0186.jpg",
+  "img": "images/t0186.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-18"
@@ -2932,7 +2932,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "消耗：执行一项通灵检定。",
-  "img": "images/t0192.jpg",
+  "img": "images/t0192.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-6"
@@ -2949,7 +2949,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0188.jpg",
+  "img": "images/t0188.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-19"
@@ -2966,7 +2966,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0197.jpg",
+  "img": "images/t0197.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-20"
@@ -2983,7 +2983,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0187.jpg",
+  "img": "images/t0187.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-21"
@@ -3000,7 +3000,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "知觉 附属到1个灵体上。 当你打出本牌时，你可以准备被附属的灵体 响应：当1名行者执行检定时，那名行者可 以从被附属的灵体上弃置至少2^。每弃置",
-  "img": "images/t0193.jpg",
+  "img": "images/t0193.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-22"
@@ -3017,7 +3017,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0183.jpg",
+  "img": "images/t0183.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-23"
@@ -3034,7 +3034,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "知觉 持续。独特。灵体。 消耗：从本牌上弃置最多3人，来选 择相同区域的1张道路牌。直至回合 结束前，所选卡牌的存在度减少此效 果弃置的人数。",
-  "img": "images/t0196.jpg",
+  "img": "images/t0196.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-24"
@@ -3051,7 +3051,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "",
-  "img": "images/t0190.jpg",
+  "img": "images/t0190.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-25"
@@ -3068,7 +3068,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0195.jpg",
+  "img": "images/t0195.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-26"
@@ -3085,7 +3085,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0184.jpg",
+  "img": "images/t0184.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-27"
@@ -3102,7 +3102,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": "知觉 持续。灵体。 响应：在1只\"公锡特卡鹿\"上的1个 挑战效果将要结算前，从本牌上弃置 2人，来消耗那只动物。 你可以从本牌上弃置与相同区域中1只动",
-  "img": "images/t0181.jpg",
+  "img": "images/t0181.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-28"
@@ -3119,7 +3119,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0204.jpg",
+  "img": "images/t0204.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-29"
@@ -3134,7 +3134,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": "（山谷卫士 · 待校）",
-  "img": "images/t0200.jpg",
+  "img": "images/t0200.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-7"
@@ -3149,7 +3149,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0203.jpg",
+  "img": "images/t0203.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-30"
@@ -3166,7 +3166,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0201.jpg",
+  "img": "images/t0201.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-31"
@@ -3183,7 +3183,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0202.jpg",
+  "img": "images/t0202.webp",
   "copies": 2,
   "review": true,
   "id": "ex-valley-32"
@@ -3198,7 +3198,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0205.jpg",
+  "img": "images/t0205.webp",
   "copies": 2,
   "review": true,
   "id": "in-base-1"
@@ -3215,7 +3215,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0006.jpg",
+  "img": "images/t0006.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-1"
@@ -3232,7 +3232,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0009.jpg",
+  "img": "images/t0009.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-2"
@@ -3249,7 +3249,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0001.jpg",
+  "img": "images/t0001.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-3"
@@ -3266,7 +3266,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0007.jpg",
+  "img": "images/t0007.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-4"
@@ -3283,7 +3283,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0023.jpg",
+  "img": "images/t0023.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-5"
@@ -3300,7 +3300,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0005.jpg",
+  "img": "images/t0005.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-6"
@@ -3317,7 +3317,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0012.jpg",
+  "img": "images/t0012.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-7"
@@ -3334,7 +3334,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0027.jpg",
+  "img": "images/t0027.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-8"
@@ -3351,7 +3351,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0019.jpg",
+  "img": "images/t0019.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-9"
@@ -3368,7 +3368,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0013.jpg",
+  "img": "images/t0013.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-10"
@@ -3385,7 +3385,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0026.jpg",
+  "img": "images/t0026.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-11"
@@ -3402,7 +3402,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0008.jpg",
+  "img": "images/t0008.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-12"
@@ -3419,7 +3419,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0025.jpg",
+  "img": "images/t0025.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-13"
@@ -3436,7 +3436,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0011.jpg",
+  "img": "images/t0011.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-14"
@@ -3453,7 +3453,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0017.jpg",
+  "img": "images/t0017.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-15"
@@ -3470,7 +3470,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0022.jpg",
+  "img": "images/t0022.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-16"
@@ -3487,7 +3487,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0010.jpg",
+  "img": "images/t0010.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-17"
@@ -3504,7 +3504,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0000.jpg",
+  "img": "images/t0000.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-18"
@@ -3521,7 +3521,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0002.jpg",
+  "img": "images/t0002.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-19"
@@ -3538,7 +3538,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0016.jpg",
+  "img": "images/t0016.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-20"
@@ -3555,7 +3555,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0024.jpg",
+  "img": "images/t0024.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-21"
@@ -3572,7 +3572,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0003.jpg",
+  "img": "images/t0003.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-22"
@@ -3589,7 +3589,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0004.jpg",
+  "img": "images/t0004.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-23"
@@ -3606,7 +3606,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0020.jpg",
+  "img": "images/t0020.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-24"
@@ -3623,7 +3623,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0014.jpg",
+  "img": "images/t0014.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-25"
@@ -3640,7 +3640,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0018.jpg",
+  "img": "images/t0018.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-26"
@@ -3657,7 +3657,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0021.jpg",
+  "img": "images/t0021.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-27"
@@ -3674,7 +3674,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0015.jpg",
+  "img": "images/t0015.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-28"
@@ -3691,7 +3691,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0028.jpg",
+  "img": "images/t0028.webp",
   "copies": 2,
   "review": true,
   "id": "rw-ancestral-29"
@@ -3708,7 +3708,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0052.jpg",
+  "img": "images/t0052.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-1"
@@ -3725,7 +3725,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0050.jpg",
+  "img": "images/t0050.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-2"
@@ -3742,7 +3742,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0056.jpg",
+  "img": "images/t0056.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-3"
@@ -3759,7 +3759,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0034.jpg",
+  "img": "images/t0034.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-4"
@@ -3774,7 +3774,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0058.jpg",
+  "img": "images/t0058.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-5"
@@ -3791,7 +3791,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0040.jpg",
+  "img": "images/t0040.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-6"
@@ -3808,7 +3808,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0036.jpg",
+  "img": "images/t0036.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-7"
@@ -3825,7 +3825,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0049.jpg",
+  "img": "images/t0049.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-8"
@@ -3842,7 +3842,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0057.jpg",
+  "img": "images/t0057.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-9"
@@ -3859,7 +3859,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0054.jpg",
+  "img": "images/t0054.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-10"
@@ -3876,7 +3876,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0041.jpg",
+  "img": "images/t0041.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-11"
@@ -3893,7 +3893,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0047.jpg",
+  "img": "images/t0047.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-12"
@@ -3910,7 +3910,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0037.jpg",
+  "img": "images/t0037.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-13"
@@ -3927,7 +3927,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0030.jpg",
+  "img": "images/t0030.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-14"
@@ -3944,7 +3944,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0059.jpg",
+  "img": "images/t0059.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-15"
@@ -3961,7 +3961,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0044.jpg",
+  "img": "images/t0044.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-16"
@@ -3978,7 +3978,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0038.jpg",
+  "img": "images/t0038.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-17"
@@ -3995,7 +3995,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0031.jpg",
+  "img": "images/t0031.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-18"
@@ -4012,7 +4012,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0045.jpg",
+  "img": "images/t0045.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-19"
@@ -4029,7 +4029,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0043.jpg",
+  "img": "images/t0043.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-20"
@@ -4046,7 +4046,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0029.jpg",
+  "img": "images/t0029.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-21"
@@ -4063,7 +4063,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0042.jpg",
+  "img": "images/t0042.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-22"
@@ -4080,7 +4080,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0051.jpg",
+  "img": "images/t0051.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-23"
@@ -4097,7 +4097,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0032.jpg",
+  "img": "images/t0032.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-24"
@@ -4114,7 +4114,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0046.jpg",
+  "img": "images/t0046.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-25"
@@ -4131,7 +4131,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0035.jpg",
+  "img": "images/t0035.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-26"
@@ -4148,7 +4148,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0053.jpg",
+  "img": "images/t0053.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-27"
@@ -4165,7 +4165,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0048.jpg",
+  "img": "images/t0048.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-28"
@@ -4182,7 +4182,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0039.jpg",
+  "img": "images/t0039.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-29"
@@ -4197,7 +4197,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0055.jpg",
+  "img": "images/t0055.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-30"
@@ -4214,7 +4214,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0033.jpg",
+  "img": "images/t0033.webp",
   "copies": 2,
   "review": true,
   "id": "rw-base-31"
@@ -4231,7 +4231,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0061.jpg",
+  "img": "images/t0061.webp",
   "copies": 2,
   "review": true,
   "id": "rw-valley-1"
@@ -4248,7 +4248,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0063.jpg",
+  "img": "images/t0063.webp",
   "copies": 2,
   "review": true,
   "id": "rw-valley-2"
@@ -4265,7 +4265,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0062.jpg",
+  "img": "images/t0062.webp",
   "copies": 2,
   "review": true,
   "id": "rw-valley-3"
@@ -4282,7 +4282,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0060.jpg",
+  "img": "images/t0060.webp",
   "copies": 2,
   "review": true,
   "id": "rw-valley-4"
@@ -4299,7 +4299,7 @@ const CARDS = [
   },
   "keywords": [],
   "text": null,
-  "img": "images/t0064.jpg",
+  "img": "images/t0064.webp",
   "copies": 2,
   "review": true,
   "id": "rw-valley-5"
@@ -4314,7 +4314,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0303.jpg",
+  "img": "images/t0303.webp",
   "copies": 1,
   "review": false,
   "customizable": true,
@@ -4330,7 +4330,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0309.jpg",
+  "img": "images/t0309.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-13"
@@ -4345,7 +4345,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0310.jpg",
+  "img": "images/t0310.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-14"
@@ -4360,7 +4360,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0311.jpg",
+  "img": "images/t0311.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-15"
@@ -4375,7 +4375,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0312.jpg",
+  "img": "images/t0312.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-16"
@@ -4390,7 +4390,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0313.jpg",
+  "img": "images/t0313.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-17"
@@ -4405,7 +4405,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0314.jpg",
+  "img": "images/t0314.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-18"
@@ -4420,7 +4420,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0315.jpg",
+  "img": "images/t0315.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-19"
@@ -4435,7 +4435,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0316.jpg",
+  "img": "images/t0316.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-20"
@@ -4450,7 +4450,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0317.jpg",
+  "img": "images/t0317.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-21"
@@ -4465,7 +4465,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0318.jpg",
+  "img": "images/t0318.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-22"
@@ -4480,7 +4480,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0319.jpg",
+  "img": "images/t0319.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-23"
@@ -4495,7 +4495,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0320.jpg",
+  "img": "images/t0320.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-24"
@@ -4510,7 +4510,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0321.jpg",
+  "img": "images/t0321.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-25"
@@ -4525,7 +4525,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0322.jpg",
+  "img": "images/t0322.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-26"
@@ -4540,7 +4540,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0323.jpg",
+  "img": "images/t0323.webp",
   "copies": 1,
   "review": true,
   "id": "ro-valley-27"
@@ -4555,7 +4555,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0089.jpg",
+  "img": "images/t0089.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-1"
@@ -4570,7 +4570,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0091.jpg",
+  "img": "images/t0091.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-2"
@@ -4585,7 +4585,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0093.jpg",
+  "img": "images/t0093.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-3"
@@ -4600,7 +4600,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0095.jpg",
+  "img": "images/t0095.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-4"
@@ -4615,7 +4615,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0097.jpg",
+  "img": "images/t0097.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-5"
@@ -4630,7 +4630,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0099.jpg",
+  "img": "images/t0099.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-6"
@@ -4645,7 +4645,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0101.jpg",
+  "img": "images/t0101.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-7"
@@ -4660,7 +4660,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0103.jpg",
+  "img": "images/t0103.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-8"
@@ -4675,7 +4675,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0105.jpg",
+  "img": "images/t0105.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-9"
@@ -4690,7 +4690,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0107.jpg",
+  "img": "images/t0107.webp",
   "copies": 2,
   "review": true,
   "id": "st-valley-10"
@@ -4705,7 +4705,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0229.jpg",
+  "img": "images/t0229.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-1"
@@ -4720,7 +4720,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0219.jpg",
+  "img": "images/t0219.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-2"
@@ -4735,7 +4735,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0216.jpg",
+  "img": "images/t0216.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-3"
@@ -4750,7 +4750,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0226.jpg",
+  "img": "images/t0226.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-4"
@@ -4765,7 +4765,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0227.jpg",
+  "img": "images/t0227.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-5"
@@ -4780,7 +4780,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0215.jpg",
+  "img": "images/t0215.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-6"
@@ -4795,7 +4795,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0221.jpg",
+  "img": "images/t0221.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-7"
@@ -4810,7 +4810,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0222.jpg",
+  "img": "images/t0222.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-8"
@@ -4825,7 +4825,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0228.jpg",
+  "img": "images/t0228.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-9"
@@ -4840,7 +4840,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0223.jpg",
+  "img": "images/t0223.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-10"
@@ -4855,7 +4855,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0214.jpg",
+  "img": "images/t0214.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-11"
@@ -4870,7 +4870,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0225.jpg",
+  "img": "images/t0225.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-12"
@@ -4885,7 +4885,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0217.jpg",
+  "img": "images/t0217.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-13"
@@ -4900,7 +4900,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0224.jpg",
+  "img": "images/t0224.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-14"
@@ -4915,7 +4915,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0218.jpg",
+  "img": "images/t0218.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-15"
@@ -4930,7 +4930,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0220.jpg",
+  "img": "images/t0220.webp",
   "copies": 2,
   "review": true,
   "id": "tr-base-16"
@@ -4945,7 +4945,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0231.jpg",
+  "img": "images/t0231.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-1"
@@ -4960,7 +4960,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0233.jpg",
+  "img": "images/t0233.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-2"
@@ -4975,7 +4975,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0237.jpg",
+  "img": "images/t0237.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-3"
@@ -4990,7 +4990,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0234.jpg",
+  "img": "images/t0234.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-4"
@@ -5005,7 +5005,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0230.jpg",
+  "img": "images/t0230.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-5"
@@ -5020,7 +5020,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0236.jpg",
+  "img": "images/t0236.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-6"
@@ -5035,7 +5035,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0235.jpg",
+  "img": "images/t0235.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-7"
@@ -5050,7 +5050,7 @@ const CARDS = [
   "attr": {},
   "keywords": [],
   "text": null,
-  "img": "images/t0232.jpg",
+  "img": "images/t0232.webp",
   "copies": 2,
   "review": true,
   "id": "tr-valley-8"
